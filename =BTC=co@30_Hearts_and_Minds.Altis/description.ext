@@ -5,6 +5,21 @@ onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
 
+//Edited - Force Disable AI
+disabledAI = 1;
+
+// Edited - Disable Wreck Control
+wreckManagerMode = 0; //Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
+//wreckLimit = 5; //Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately. 
+//wreckRemovalMinTime = 600; //Minimal time in seconds a wreck stays in the scene (can't be removed sooner). 
+//wreckRemovalMaxTime = 900; //Maximal time in seconds after which a wreck is removed (can't stay longer)
+
+// Edited - Enable Dead Body Control
+corpseManagerMode = 1; //Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
+corpseLimit = 15; //Max number of bodies which can be available at the same time. When exceeded, start deleting immediately. 
+corpseRemovalMinTime = 90; //Minimal time in seconds a body stays in the scene (can't be removed sooner). 
+corpseRemovalMaxTime = 900; //Maximal time in seconds after which a dead body is removed (can't stay longer) 
+
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
@@ -29,9 +44,14 @@ class RscTitles {
 
 #include "core\fnc\task\tasktypes.hpp"
 
+//Edited: Add VCOM function
+#include "vcom\defines.hpp"
+
 class CfgFunctions {
     #include "core\fnc\eh\functions.hpp"
     // add your own functions below
+    //Edited: Add VCOM function
+    #include "vcom\cfgFunctions.hpp"
 };
 
 // CBA XEH
@@ -51,6 +71,180 @@ class Extended_InitPost_EventHandlers {
     };
 };
 
-// Disable BI wreck system (H&M handle it internally)
-wreckManagerMode = 0;
-corpseManagerMode = 0;
+//Edited: Add VCOM function
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = false;jip = true; };
+		class VCM_PublicScript { allowedTargets = false;jip = true; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = false;jip = true; };
+		class SpawnScript { allowedTargets = false;jip = true; };
+		class enableSimulationGlobal { allowedTargets = false;jip = true; };
+		class VCM_fnc_KnowAbout { allowedTargets = false;jip = true; };
+		
+	};
+	
+};
+
+class CfgVcomSettings
+{
+	VcomActive = true; // Set to false to disable VCOM. Can be reenabled by changing to true
+	Debug = false; //Enable debug mode
+	EnabledSides[] = {east, resistance}; // Which sides vcom affects. civilian can be added if they are hostile
+	SuppressionActive = true; // AI Suppression system
+	HealingActive = false; // AI Healing system
+	WaypointGeneration = true; // Generate flanking/reinforcement waypoints
+	FormationChange = true; // Whether AI should change formation depending on surroundings
+	FFEArtillery = true; //Fire For Effect Artillery handling.
+	FullSpeed = true; // AI will enforce "FULL" speed mode
+	
+	MagLimit = 2; // AI will search for ammo when at or below this limit
+	MineChance = 30; // % chance of AI placing mines
+	LightGarrisonChance = 30;  // % chance of AI temporarily garrisoning a structure
+	RagdollChance = 75; // % chance of AI ragdolling when hit
+	VehicleStealing = true; // Whether AI should consider stealing vehicles
+	StealingDistance = 250; // Search distance for vehicles
+	VehicleStealClassnames = true; //If true, crewmen can steal tanks/tracked vehicles. pilots can steal aircraft. Everyone else can steal wheeled vehicles. False = Any AI class can steal anything.	
+	HearingDistance = 1200; // Hearing distance
+	WarnDistance = 2500; // Reinforcement distance
+	WarnDelay = 30; // Delay for reinforcement calls
+	StaticArmTime = 300; //How long AI will stay mounted on a turret
+	SkillClasses = [];
+	
+	//VCOM DRIVING. Experimental feature
+	DrivingActivate = false;
+	DriverLimit = 4; // How many drivers per cycle can be processed
+	DrivingDelay = 750; // Cycle delay in milliseconds
+	DrivingDist = 10; // Distance to search for obstacles
+	
+	// Max 100 - 0 minimum skill
+	// https://community.bistudio.com/wiki/Arma_3_AI_Skill
+	class SkillPresets
+	{
+		Active = false;
+		SkillPreset = "AIPresetHigh";
+		class AIPresetLow
+		{
+			aimingAccuracy = 15;
+			aimingShake = 10;
+			aimingSpeed = 25;
+			commanding = 100;
+			courage = 100;
+			endurance = 100;
+			general = 100;
+			reloadSpeed = 100;
+			spotDistance = 90;
+			spotTime = 90;
+		};
+		class AIPresetMed
+		{
+			aimingAccuracy = 25;
+			aimingShake = 15;
+			aimingSpeed = 35;
+			commanding = 100;
+			courage = 100;
+			endurance = 100;
+			general = 100;
+			reloadSpeed = 100;
+			spotDistance = 90;
+			spotTime = 90;
+		};
+		class AIPresetHigh
+		{
+			aimingAccuracy = 70;
+			aimingShake = 50;
+			aimingSpeed = 80;
+			commanding = 100;
+			courage = 100;
+			endurance = 100;
+			general = 100;
+			reloadSpeed = 100;
+			spotDistance = 100;
+			spotTime = 100;
+		};
+		
+		// This acts as a percentage modifier for the above preset
+		// Alternatively, if SkillChange is false it replaces it the way listed
+		class SideSkill
+		{
+			Active = false;
+			class west
+			{
+				aimingAccuracy = 25;
+				aimingShake = 15;
+				aimingSpeed = 35;
+				commanding = 100;
+				courage = 100;
+				endurance = 100;
+				general = 100;
+				reloadSpeed = 100;
+				spotDistance = 90;
+				spotTime = 90;
+			};
+			class east
+			{
+				aimingAccuracy = 70;
+				aimingShake = 50;
+				aimingSpeed = 80;
+				commanding = 100;
+				courage = 100;
+				endurance = 100;
+				general = 100;
+				reloadSpeed = 100;
+				spotDistance = 100;
+				spotTime = 100;
+			};
+			class resistance
+			{
+				aimingAccuracy = 70;
+				aimingShake = 50;
+				aimingSpeed = 80;
+				commanding = 100;
+				courage = 100;
+				endurance = 100;
+				general = 100;
+				reloadSpeed = 100;
+				spotDistance = 100;
+				spotTime = 100;
+			};
+			class civilian
+			{
+				aimingAccuracy = 100;
+				aimingShake = 100;
+				aimingSpeed = 100;
+				commanding = 100;
+				courage = 100;
+				endurance = 100;
+				general = 100;
+				reloadSpeed = 100;
+				spotDistance = 100;
+				spotTime = 100;
+			};
+		};
+	};
+	
+	// Classname specific skill settings, if active overwrites the above two, same format as AI presets
+	class classnameSkill
+	{
+		Active = false;
+		//Example
+		class  B_Story_SF_Captain_F
+		{
+			aimingAccuracy = 35;
+			aimingShake = 40;
+			aimingSpeed = 45;
+			commanding = 100;
+			courage = 100;
+			endurance = 100;
+			general = 100;
+			reloadSpeed = 100;
+			spotDistance = 85;
+			spotTime = 85;
+		};
+	};
+};

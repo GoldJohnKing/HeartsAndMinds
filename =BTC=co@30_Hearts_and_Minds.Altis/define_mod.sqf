@@ -1,3 +1,5 @@
+//This file is heavily edited by Gold John King in order to fit the needs of =SGLA=.
+
 btc_custom_loc = [
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS X(Number),RADIUS X(Number),IS OCCUPIED(Bool)]
@@ -28,10 +30,103 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = [];
-private _magazines = [];
-private _items = [];
-private _backpacks = [];
+private _weapons = [
+    "ffaa_armas_m95",
+    "ffaa_armas_aw50"
+];
+private _magazines = [
+    "ffaa_127x99_ap",
+    "ffaa_127x99_he",
+    "rhs_mag_m4009",
+    "Titan_AP"
+];
+private _items = [
+    "ffaa_optic_5x25x56",
+    "ffaa_optic_3x12x50",
+    "ffaa_optic_lv",
+    "ffaa_optic_Mk4_v1",
+    "ffaa_optic_Mk4_v2",
+    "ffaa_optic_enasa",
+    "ffaa_optic_acog",
+    "H_HelmetO_ViperSP_hex_F",
+    "H_HelmetO_ViperSP_ghex_F",
+    "I_UavTerminal",
+    "O_UavTerminal",
+    "C_UavTerminal",
+    "NVGogglesB_gry_F",
+    "NVGogglesB_grn_F",
+    "NVGogglesB_blk_F",
+    "ACE_bodyBag",
+    "ACE_Sandbag_empty",
+    "ACE_adenosine",
+    "ACE_atropine",
+    "ACE_tourniquet",
+    "ACE_surgicalKit",
+    "ACE_personalAidKit",
+    "rhsusf_m112_mag",
+    "rhsusf_m112x4_mag",
+    "TFAR_rf7800str",
+    "TFAR_anprc148jem",
+    "TFAR_anprc154",
+    "TFAR_fadak",
+    "TFAR_pnr1000a",
+    "TFAR_microdagr"
+];
+private _backpacks = [
+    "I_HMG_01_weapon_F",
+    "O_HMG_01_weapon_F",
+    "I_HMG_01_A_weapon_F",
+    "O_HMG_01_A_weapon_F",
+    "I_HMG_01_high_weapon_F",
+    "O_HMG_01_high_weapon_F",
+    "I_GMG_01_weapon_F",
+    "O_GMG_01_weapon_F",
+    "I_GMG_01_A_weapon_F",
+    "O_GMG_01_A_weapon_F",
+    "I_GMG_01_high_weapon_F",
+    "O_GMG_01_high_weapon_F",
+    "I_Mortar_01_support_F",
+    "O_Mortar_01_support_F",
+    "I_Mortar_01_weapon_F",
+    "O_Mortar_01_weapon_F",
+    "I_HMG_01_support_F",
+    "O_HMG_01_support_F",
+    "I_HMG_01_support_high_F",
+    "O_HMG_01_support_high_F",
+    "I_AA_01_weapon_F",
+    "O_AA_01_weapon_F",
+    "I_AT_01_weapon_F",
+    "O_AT_01_weapon_F",
+    "I_UAV_01_backpack_F",
+    "O_UAV_01_backpack_F",
+    "I_UAV_06_backpack_F",
+    "O_UAV_06_backpack_F",
+    "I_UAV_06_medical_backpack_F",
+    "O_UAV_06_medical_backpack_F",
+    "C_UAV_06_backpack_F",
+    "C_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_01_backpack_F",
+    "C_IDAP_UAV_06_backpack_F",
+    "C_IDAP_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_06_antimine_backpack_F",
+    "O_Static_Designator_02_weapon_F",
+    "B_Respawn_Sleeping_bag_blue_F",
+    "B_Respawn_Sleeping_bag_brown_F",
+    "B_Respawn_TentDome_F",
+    "B_Respawn_Sleeping_bag_F",
+    "B_Respawn_TentA_F",
+    "B_Patrol_Respawn_bag_F",
+    "TFAR_anprc155",
+    "TFAR_anprc155_coyote",
+    "TFAR_anarc164",
+    "TFAR_mr3000",
+    "TFAR_mr3000_multicam",
+    "TFAR_mr3000_rhs",
+    "TFAR_mr3000_bwmod",
+    "TFAR_mr3000_bwmod_tropen",
+    "TFAR_mr6000l",
+    "TFAR_bussole"
+];
 
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
 

@@ -33,9 +33,9 @@ btc_side_list_use = btc_side_list_use - [_side];
 btc_side_aborted = false;
 btc_side_done = false;
 btc_side_failed = false;
-
+//Edited: Default = btc_fnc_side_supply
 switch (_side) do {
-    case 0 : {[] call btc_fnc_side_supply;};
+    case 0 : {[] call btc_fnc_side_hack;};
     case 1 : {[] call btc_fnc_side_mines;};
     case 2 : {[] call btc_fnc_side_vehicle;};
     case 3 : {[] call btc_fnc_side_get_city;};

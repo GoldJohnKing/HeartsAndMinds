@@ -1,0 +1,13 @@
+Modified Files:
+\mission.sqm
+\description.ext
+\define_mod.sqf
+\stringtable.xml
+\core\fnc\city\init.sqf
+\core\fnc\db\autosave.sqf
+\core\fnc\side\create.sqf
+
+Added Files:
+\notes.txt
+\res
+\Vcom

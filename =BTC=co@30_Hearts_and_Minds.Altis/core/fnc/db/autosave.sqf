@@ -25,5 +25,5 @@ if (btc_p_auto_db > 0) then {
     [{
         [] spawn btc_fnc_db_save;
         call btc_fnc_db_autosave;
-    }, [], btc_p_auto_db * 60 * 60 - 300] call CBA_fnc_waitAndExecute;
+    }, [], btc_p_auto_db * 60 * 60 - 360] call CBA_fnc_waitAndExecute;//Edited - Default = 300
 };
