@@ -30,8 +30,79 @@ btc_custom_loc = [
 */
 private _weapons = [];
 private _magazines = [];
-private _items = [];
-private _backpacks = [];
+private _items = [
+    "rhsusf_m112_mag",
+    "rhsusf_m112x4_mag",
+    "ACE_bodyBag",
+    "ACE_Sandbag_empty",
+    "ACE_surgicalKit",
+    "H_HelmetO_ViperSP_hex_F",
+    "H_HelmetO_ViperSP_ghex_F",
+    "I_UavTerminal",
+    "O_UavTerminal",
+    "C_UavTerminal"
+];
+private _backpacks = [
+    "I_HMG_01_weapon_F",
+    "O_HMG_01_weapon_F",
+    "I_HMG_01_A_weapon_F",
+    "O_HMG_01_A_weapon_F",
+    "I_HMG_01_high_weapon_F",
+    "O_HMG_01_high_weapon_F",
+    "I_GMG_01_weapon_F",
+    "O_GMG_01_weapon_F",
+    "I_GMG_01_A_weapon_F",
+    "O_GMG_01_A_weapon_F",
+    "I_GMG_01_high_weapon_F",
+    "O_GMG_01_high_weapon_F",
+    "I_Mortar_01_support_F",
+    "O_Mortar_01_support_F",
+    "I_Mortar_01_weapon_F",
+    "O_Mortar_01_weapon_F",
+    "I_HMG_01_support_F",
+    "O_HMG_01_support_F",
+    "I_HMG_01_support_high_F",
+    "O_HMG_01_support_high_F",
+    "I_AA_01_weapon_F",
+    "O_AA_01_weapon_F",
+    "I_AT_01_weapon_F",
+    "O_AT_01_weapon_F",
+    "I_UAV_01_backpack_F",
+    "O_UAV_01_backpack_F",
+    "I_UAV_06_backpack_F",
+    "O_UAV_06_backpack_F",
+    "I_UAV_06_medical_backpack_F",
+    "O_UAV_06_medical_backpack_F",
+    "C_UAV_06_backpack_F",
+    "C_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_01_backpack_F",
+    "C_IDAP_UAV_06_backpack_F",
+    "C_IDAP_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_06_antimine_backpack_F",
+    "O_Static_Designator_02_weapon_F",
+    "B_Respawn_Sleeping_bag_blue_F",
+    "B_Respawn_Sleeping_bag_brown_F",
+    "B_Respawn_TentDome_F",
+    "B_Respawn_Sleeping_bag_F",
+    "B_Respawn_TentA_F",
+    "B_Patrol_Respawn_bag_F"
+];
+
+/*
+    Not Knowing which categories do they belong to, but they shall be banned, either.
+[
+    "U_B_Protagonist_VR",
+    "U_O_Protagonist_VR",
+    "U_I_Protagonist_VR",
+    "U_C_Protagonist_VR",
+    "bipod_03_F_blk",
+    "bipod_02_F_blk",
+    "bipod_02_F_tan",
+    “bipod_02_F_hex",
+    "bipod_03_F_oli",
+    "optic_nightstalker"
+];
+ */
 
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
 
