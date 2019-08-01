@@ -57,12 +57,21 @@ for "_i" from 0 to (count _locations - 1) do {
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
-        /*
+        
         //if you want a safe area
-        if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 500, 500, 0, false]) exitWith {};
-        */
+        if ((getMarkerPos "btc_base_1") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base_2") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base_3") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base_4") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base_5") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base_6") inArea [_position, 1500, 1500, 0, false]) exitWith {};
+        if ((getMarkerPos "safezone_1") inArea [_position, 500, 500, 0, false]) exitWith {};
+        if ((getMarkerPos "safezone_2") inArea [_position, 500, 500, 0, false]) exitWith {};
+        if ((getMarkerPos "safezone_3") inArea [_position, 500, 500, 0, false]) exitWith {};
+        if ((getMarkerPos "safezone_4") inArea [_position, 500, 500, 0, false]) exitWith {};
+        if ((getMarkerPos "safezone_5") inArea [_position, 500, 500, 0, false]) exitWith {};
 
-        [_position, _type, _name, _radius_x, _radius_y, random 1 > 0.45] call btc_fnc_city_create;
+        [_position, _type, _name, _radius_x, _radius_y, random 1 > 0.1] call btc_fnc_city_create;
     };
 };
 

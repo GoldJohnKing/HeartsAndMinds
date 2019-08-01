@@ -1,0 +1,4 @@
+Edited Files:
+/core/def/mission.sqf
+/core/def/param.hpp
+/core/fnc/city/init.sqf
