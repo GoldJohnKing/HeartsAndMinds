@@ -99,7 +99,7 @@ _trigger attachTo [_captive, [0, 0, 0]];
 
 [12] remoteExec ["btc_fnc_show_hint", -2];
 
-waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || !(alive _captive) || (_captive inArea [getPosWorld btc_create_object_point, 100, 100, 0, false]))};
+waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || !(alive _captive) || (_captive inArea [getPosWorld btc_create_object_point, 150, 150, 0, false]))};//Edited: Default = 100
 
 btc_side_assigned = false;
 publicVariable "btc_side_assigned";

@@ -5,6 +5,21 @@ onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
 
+//Edited - Force Disable AI in Player's Faction
+disabledAI = 1;
+
+// Edited - Force Disable Wreck Control
+wreckManagerMode = 0; //Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
+
+// Edited - Force Enable Dead Body Control
+corpseManagerMode = 1; //Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
+corpseLimit = 15; //Max number of bodies which can be available at the same time. When exceeded, start deleting immediately. 
+corpseRemovalMinTime = 90; //Minimal time in seconds a body stays in the scene (can't be removed sooner). 
+corpseRemovalMaxTime = 900; //Maximal time in seconds after which a dead body is removed (can't stay longer) 
+
+//Edited: Disable some chat channel:
+disableChannels[] = {1,2,3,4,5};
+
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
@@ -32,6 +47,8 @@ class RscTitles {
 class CfgFunctions {
     #include "core\fnc\eh\functions.hpp"
     // add your own functions below
+    //Edited: Add VCOM Functions
+    #include "vcom\cfgFunctions.hpp"
 };
 
 // CBA XEH
@@ -51,6 +68,16 @@ class Extended_InitPost_EventHandlers {
     };
 };
 
-// Disable BI wreck system (H&M handle it internally)
-wreckManagerMode = 0;
-corpseManagerMode = 0;
+class CfgRemoteExec {
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions {
+		mode = 2;
+		jip = 1;		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+	};
+};

@@ -235,6 +235,11 @@ btc_fnc_task_set_done = compile preprocessFileLineNumbers "core\fnc\task\set_don
 //SIDE
 btc_fnc_side_abort = compile preprocessFileLineNumbers "core\fnc\side\abort.sqf";
 
+//Edited: Add SGLA Custom Functions
+sgla_fnc_infFriendlyFire = compile preprocessFileLineNumbers "core\fnc\sgla\inf_friendly_fire.sqf";
+sgla_fnc_vehFriendlyFire = compile preprocessFileLineNumbers "core\fnc\sgla\veh_friendly_fire.sqf";
+sgla_fnc_playerKilled = compile preprocessFileLineNumbers "core\fnc\sgla\player_killed.sqf";
+
 /////////////////////CLIENT\\\\\\\\\\\\\\\\\\\\\
 if (!isDedicated) then {
     //DB

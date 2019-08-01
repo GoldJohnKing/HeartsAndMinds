@@ -60,6 +60,7 @@ private _bank = if (random 1 > 0.5) then {
 };
 [_heli, _pitch, _bank] call BIS_fnc_setPitchBank;
 private _fx = createVehicle ["test_EmptyObjectForSmoke", _pos, [], 0, "CAN_COLLIDE"];
+_fx attachTo [_heli, [0.5, -2, 1]];
 
 private _group = createGroup btc_player_side;
 _group setVariable ["no_cache", true];
@@ -83,11 +84,11 @@ private _triggers = [];
     _triggers pushBack _trigger;
 } forEach units _group;
 
-waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || (_units select {_x distance btc_create_object_point > 100} isEqualTo []) || (_units select {alive _x} isEqualTo []))};
+waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || (_units select {_x distance btc_create_object_point > 150} isEqualTo []) || (_units select {alive _x} isEqualTo []))};//Edited: Default = 100
 
 btc_side_assigned = false;
 publicVariable "btc_side_assigned";
-[[], [_heli, _fx] + _triggers + _units, [_group]] call btc_fnc_delete;
+[[], [_heli, _fx] + _triggers, [_group]] call btc_fnc_delete;
 
 if (btc_side_aborted || btc_side_failed || (_units select {alive _x} isEqualTo [])) exitWith {
     13 remoteExec ["btc_fnc_task_fail", 0];

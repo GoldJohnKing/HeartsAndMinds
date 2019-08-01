@@ -61,8 +61,10 @@ for "_i" from 0 to (count _locations - 1) do {
         //if you want a safe area
         if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 500, 500, 0, false]) exitWith {};
         */
+        //Edited: Add safe areas
+        if ((getMarkerPos "btc_safezone") inArea [_position, 10000, 10000, 0, false]) exitWith {};
 
-        [_position, _type, _name, _radius_x, _radius_y, random 1 > 0.45] call btc_fnc_city_create;
+        [_position, _type, _name, _radius_x, _radius_y, random 1 > 0.75] call btc_fnc_city_create;//Edited: Default = random 1 > 0.45
     };
 };
 
