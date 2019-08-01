@@ -4,6 +4,11 @@ btc_custom_loc = [
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,800,true]
 */
+    [(getMarkerPos "btc_custom_loc_1"),"NameVillage","Mountain 1",150,150,true],
+    [(getMarkerPos "btc_custom_loc_2"),"NameCity","Mountain 1",100,100,true],
+    [(getMarkerPos "btc_custom_loc_3"),"Hill","Mountain 1",150,150,true],
+    [(getMarkerPos "btc_custom_loc_4"),"NameCity","Mountain 1",150,150,true]
+
 ];
 
 /*

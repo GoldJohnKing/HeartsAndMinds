@@ -32,11 +32,15 @@ class RscTitles {
 class CfgFunctions {
     #include "core\fnc\eh\functions.hpp"
     // add your own functions below
+    // VCOM AI
+    #include "vcom\cfgFunctions.hpp"
 };
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+    // VCOM AI
+    VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
 };
 
 class Extended_InitPost_EventHandlers {
@@ -51,6 +55,24 @@ class Extended_InitPost_EventHandlers {
     };
 };
 
+// Edited: Stop Disabling BI Wreck System
 // Disable BI wreck system (H&M handle it internally)
-wreckManagerMode = 0;
-corpseManagerMode = 0;
+//wreckManagerMode = 0;
+//corpseManagerMode = 0;
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+	};
+};

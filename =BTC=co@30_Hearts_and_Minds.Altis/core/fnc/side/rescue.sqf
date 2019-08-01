@@ -83,7 +83,8 @@ private _triggers = [];
     _triggers pushBack _trigger;
 } forEach units _group;
 
-waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || (_units select {_x distance btc_create_object_point > 100} isEqualTo []) || (_units select {alive _x} isEqualTo []))};
+//Edited: Have a larger range and different circle point, default: 100
+waitUntil {sleep 5; (btc_side_aborted || btc_side_failed || (_units select {_x distance btc_create_object_point > 300} isEqualTo []) || (_units select {alive _x} isEqualTo []))};
 
 btc_side_assigned = false;
 publicVariable "btc_side_assigned";
