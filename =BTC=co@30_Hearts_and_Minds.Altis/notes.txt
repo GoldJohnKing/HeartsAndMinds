@@ -1,0 +1,19 @@
+Modified Files:
+\mission.sqm
+\description.ext
+\define_mod.sqf
+\init.sqf
+\stringtable.xml
+\core\def\mission.sqf
+\core\def\param.hpp
+\core\fnc\city\init.sqf
+\core\fnc\eh\veh_init.sqf
+\core\fnc\side\create.sqf
+
+Replaced Files:
+\core\img\btc.paa
+
+Added Files:
+\notes.txt
+\res
+\Vcom

@@ -34,8 +34,8 @@ btc_side_aborted = false;
 btc_side_done = false;
 btc_side_failed = false;
 
-switch (_side) do {
-    case 0 : {[] call btc_fnc_side_supply;};
+switch (_side) do { // Edited: Disable some side-missions
+    case 0 : {[] call btc_fnc_side_hack;}; // Edited: Default = btc_fnc_side_supply
     case 1 : {[] call btc_fnc_side_mines;};
     case 2 : {[] call btc_fnc_side_vehicle;};
     case 3 : {[] call btc_fnc_side_get_city;};
@@ -46,7 +46,7 @@ switch (_side) do {
     case 8 : {[] call btc_fnc_side_underwater_generator;};
     case 9 : {[] call btc_fnc_side_convoy;};
     case 10 : {[] call btc_fnc_side_rescue;};
-    case 11 : {[] call btc_fnc_side_capture_officer;};
+    case 11 : {[] call btc_fnc_side_hostage;}; // Edited: Default = btc_fnc_side_capture_officer
     case 12 : {[] call btc_fnc_side_hostage;};
     case 13 : {[] call btc_fnc_side_hack;};
 };

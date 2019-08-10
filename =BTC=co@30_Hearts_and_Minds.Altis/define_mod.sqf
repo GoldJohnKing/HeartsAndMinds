@@ -1,9 +1,16 @@
+//Edited: This file is heavily edited by Gold John King in order to fit the needs of =MPRI=.
+
 btc_custom_loc = [
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS X(Number),RADIUS X(Number),IS OCCUPIED(Bool)]
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,800,true]
 */
+    // Edited: Add custom warzones
+    [getMarkerPos "custom_loc_1","NameVillage","Hill 1335",400,400,true],
+    [getMarkerPos "custom_loc_2","NameVillage","Northwest Kinduf",300,300,true],
+    [getMarkerPos "custom_loc_3","NameVillage","Old Castle",300,300,true],
+    [getMarkerPos "custom_loc_4","NameVillage","The Great Village",400,400,true]
 ];
 
 /*
@@ -28,10 +35,108 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = [];
-private _magazines = [];
-private _items = [];
-private _backpacks = [];
+private _weapons = [
+];
+private _magazines = [
+    "rhs_mag_m4009",
+    "Titan_AP"
+];
+private _items = [
+    "H_HelmetO_ViperSP_hex_F",
+    "H_HelmetO_ViperSP_ghex_F",
+    "I_UavTerminal",
+    "O_UavTerminal",
+    "C_UavTerminal",
+    "I_E_UavTerminal",
+    "NVGogglesB_gry_F",
+    "NVGogglesB_grn_F",
+    "NVGogglesB_blk_F",
+    "ACE_bodyBag",
+    "ACE_Sandbag_empty",
+    "TFAR_rf7800str",
+    "TFAR_anprc148jem",
+    "TFAR_anprc154",
+    "TFAR_fadak",
+    "TFAR_pnr1000a",
+    "TFAR_microdagr"
+];
+private _backpacks = [
+    "I_HMG_01_weapon_F",
+    "O_HMG_01_weapon_F",
+    "I_HMG_01_A_weapon_F",
+    "O_HMG_01_A_weapon_F",
+    "I_HMG_01_high_weapon_F",
+    "O_HMG_01_high_weapon_F",
+    "I_GMG_01_weapon_F",
+    "O_GMG_01_weapon_F",
+    "I_GMG_01_A_weapon_F",
+    "O_GMG_01_A_weapon_F",
+    "I_GMG_01_high_weapon_F",
+    "O_GMG_01_high_weapon_F",
+    "I_Mortar_01_support_F",
+    "O_Mortar_01_support_F",
+    "I_Mortar_01_weapon_F",
+    "O_Mortar_01_weapon_F",
+    "I_HMG_01_support_F",
+    "O_HMG_01_support_F",
+    "I_HMG_01_support_high_F",
+    "O_HMG_01_support_high_F",
+    "I_AA_01_weapon_F",
+    "O_AA_01_weapon_F",
+    "I_AT_01_weapon_F",
+    "O_AT_01_weapon_F",
+    "I_UAV_01_backpack_F",
+    "O_UAV_01_backpack_F",
+    "I_UAV_06_backpack_F",
+    "O_UAV_06_backpack_F",
+    "I_UAV_06_medical_backpack_F",
+    "O_UAV_06_medical_backpack_F",
+    "C_UAV_06_backpack_F",
+    "C_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_01_backpack_F",
+    "C_IDAP_UAV_06_backpack_F",
+    "C_IDAP_UAV_06_medical_backpack_F",
+    "C_IDAP_UAV_06_antimine_backpack_F",
+    "I_E_UAV_06_backpack_F",
+	"I_E_UAV_06_medical_backpack_F",
+	"I_E_UAV_01_backpack_F",
+	"I_UGV_02_Demining_backpack_F",
+	"O_UGV_02_Demining_backpack_F",
+	"I_E_UGV_02_Demining_backpack_F",
+	"I_UGV_02_Science_backpack_F",
+	"O_UGV_02_Science_backpack_F",
+	"I_E_UGV_02_Science_backpack_F",
+	"C_IDAP_UGV_02_Demining_backpack_F",
+	"I_E_Mortar_01_support_F",
+	"I_E_Mortar_01_Weapon_F",
+	"I_E_HMG_01_support_F",
+	"I_E_HMG_01_support_high_F",
+	"I_E_HMG_01_Weapon_F",
+	"I_E_HMG_01_high_Weapon_F",
+	"I_E_GMG_01_Weapon_F",
+	"I_E_GMG_01_high_Weapon_F",
+	"I_E_HMG_01_A_Weapon_F",
+    "I_E_GMG_01_A_Weapon_F",
+    "I_E_AA_01_weapon_F",
+    "I_E_AT_01_weapon_F",
+    "O_Static_Designator_02_weapon_F",
+    "B_Respawn_Sleeping_bag_blue_F",
+    "B_Respawn_Sleeping_bag_brown_F",
+    "B_Respawn_TentDome_F",
+    "B_Respawn_Sleeping_bag_F",
+    "B_Respawn_TentA_F",
+    "B_Patrol_Respawn_bag_F",
+    "TFAR_anprc155",
+    "TFAR_anprc155_coyote",
+    "TFAR_anarc164",
+    "TFAR_mr3000",
+    "TFAR_mr3000_multicam",
+    "TFAR_mr3000_rhs",
+    "TFAR_mr3000_bwmod",
+    "TFAR_mr3000_bwmod_tropen",
+    "TFAR_mr6000l",
+    "TFAR_bussole"
+];
 
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
 
