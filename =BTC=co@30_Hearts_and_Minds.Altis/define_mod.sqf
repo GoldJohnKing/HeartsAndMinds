@@ -139,7 +139,8 @@ private _backpacks = [
     "TFAR_mr3000_bwmod",
     "TFAR_mr3000_bwmod_tropen",
     "TFAR_mr6000l",
-    "TFAR_bussole"
+    "TFAR_bussole",
+    "B_rhsusf_B_BACKPACK"
 ];
 
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];

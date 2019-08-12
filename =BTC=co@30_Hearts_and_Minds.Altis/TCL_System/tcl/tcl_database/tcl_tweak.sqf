@@ -13,16 +13,16 @@ if (TCL_Server) then
 		TCL_Tweak = [ // Edited: Modify default settings
 			
 			// 0 ( Behaviour )
-			15,
+			0,
 			
 			// 1 ( Push and Stop Distance )
-			250,
+			100,
 			
 			// 2 ( Push Chance )
 			75,
 			
 			// 3 ( Push Factor )
-			5
+			7
 		];
 		
 		if (TCL_FilePatching) then
