@@ -44,7 +44,7 @@ switch (_side) do { // Edited: Disable some side-missions
     case 6 : {[] call btc_fnc_side_checkpoint;};
     case 7 : {[] call btc_fnc_side_civtreatment_boat;};
     case 8 : {[] call btc_fnc_side_underwater_generator;};
-    case 9 : {[] call btc_fnc_side_convoy;};
+    case 9 : {[] call btc_fnc_side_checkpoint;}; // Edited： Default = btc_fnc_side_convoy
     case 10 : {[] call btc_fnc_side_rescue;};
     case 11 : {[] call btc_fnc_side_hostage;}; // Edited: Default = btc_fnc_side_capture_officer
     case 12 : {[] call btc_fnc_side_hostage;};

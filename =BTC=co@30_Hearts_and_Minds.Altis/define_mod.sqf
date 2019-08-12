@@ -58,7 +58,11 @@ private _items = [
     "TFAR_anprc154",
     "TFAR_fadak",
     "TFAR_pnr1000a",
-    "TFAR_microdagr"
+    "TFAR_microdagr",
+    "JAS_GPNVG18_blk_TI",
+    "JAS_GPNVG18_Tan_TI",
+    "JAS_GPNVG18_Full_blk_TI",
+    "JAS_GPNVG18_Full_Tan_TI"
 ];
 private _backpacks = [
     "I_HMG_01_weapon_F",
