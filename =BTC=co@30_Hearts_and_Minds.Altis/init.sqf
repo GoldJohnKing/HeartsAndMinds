@@ -19,5 +19,12 @@ if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
 
-// Edited: Add VCOM Functions
-[] execVM "Vcom\VcomInit.sqf";
+// Edited: Add TCL Functions
+TCL_Path = "TCL_System\";
+call compile preprocessFileLineNumbers (TCL_Path+"TCL_Preprocess.sqf");
+
+// Edited: Put TCL Settings Here
+//TCL_Debug = [True, True, True, True, True, True, True];
+
+// Edited: TCL Functions Init
+TCL_Initialize = True;
