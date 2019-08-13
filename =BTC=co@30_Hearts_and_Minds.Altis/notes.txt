@@ -7,6 +7,7 @@ Modified Files:
 \core\init_server.sqf
 \core\def\mission.sqf
 \core\def\param.hpp
+\core\fnc\compile.sqf
 \core\fnc\city\init.sqf
 \core\fnc\db\add_veh.sqf
 \core\fnc\eh\player.sqf

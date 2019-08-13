@@ -29,7 +29,7 @@ if (isNil "TCL_System") then
 		True,
 		
 		// 6 ( Skill Divider )
-		3,
+		5,
 		
 		// 7 ( Spawn )
 		True,

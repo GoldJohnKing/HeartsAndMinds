@@ -26,8 +26,8 @@ if (TCL_Server) then
 			75,
 			
 			// 7 ( Flare )
-			True,
-			90,
+			False,
+			50,
 			
 			// 9 ( Artillery )
 			True,

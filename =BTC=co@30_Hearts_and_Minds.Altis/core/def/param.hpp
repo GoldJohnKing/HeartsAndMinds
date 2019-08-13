@@ -93,7 +93,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ARMEDHIDEOUT"]);
         values[] = {0,1};
         texts[] = {$STR_DISABLED,$STR_ENABLED};
-        default = 0;
+        default = 1;
     };
     class btc_p_veh_armed_spawn_more { // Add armed vehicles in Side mission/Cache:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ARMEDOTHER"]);
@@ -147,7 +147,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_HIDE_NUMBERS"]);
         values[]={99,1,2,3,4,5};
         texts[]={$STR_3DEN_ATTRIBUTES_OBJECTTEXTURE_RANDOM_TEXT,"1","2","3","4","5"}; //texts[]={"Random","1","2","3","4","5"};
-        default = 8;
+        default = 5;
     };
     class btc_p_cache_info_def { // Info cache distance:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DISTANCE"]);
