@@ -1,5 +1,10 @@
 /////////////////////SERVER\\\\\\\\\\\\\\\\\\\\\
 if (isServer) then {
+    // Edited: Add Custom Functions
+    custom_fnc_infFriendlyFire = compile preprocessFileLineNumbers "core\fnc\custom\inf_friendly_fire.sqf";
+    custom_fnc_vehFriendlyFire = compile preprocessFileLineNumbers "core\fnc\custom\veh_friendly_fire.sqf";
+    custom_fnc_playerKilled = compile preprocessFileLineNumbers "core\fnc\custom\player_killed.sqf";
+
     //CACHE
     btc_fnc_cache_find_pos = compile preprocessFileLineNumbers "core\fnc\cache\find_pos.sqf";
     btc_fnc_cache_hd_cache = compile preprocessFileLineNumbers "core\fnc\cache\hd_cache.sqf";

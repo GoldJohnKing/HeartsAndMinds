@@ -34,7 +34,7 @@ if (TCL_Server) then
 			180,
 			
 			// 11 ( Synchronize )
-			False
+			True
 		];
 		
 		if (TCL_FilePatching) then

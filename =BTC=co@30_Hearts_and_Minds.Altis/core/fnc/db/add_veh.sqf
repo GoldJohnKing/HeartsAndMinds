@@ -35,3 +35,6 @@ _veh addMPEventHandler ["MPKilled", {
 if ((isNumber (configfile >> "CfgVehicles" >> typeOf _veh >> "ace_fastroping_enabled")) && !(typeOf _veh isEqualTo "RHS_UH1Y_d")) then {
     [_veh] call ace_fastroping_fnc_equipFRIES
 };
+
+// Edited: Add vehicle friendly fire logging
+_veh addMPEventHandler ["MPHit", custom_fnc_vehFriendlyFire];

@@ -29,7 +29,7 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldN
 
 setTimeMultiplier btc_p_acctime;
 
-{[_x, 30, false] call btc_fnc_eh_veh_add_respawn;} forEach btc_helo;
+{[_x, 300, false] call btc_fnc_eh_veh_add_respawn;} forEach btc_helo; // Edited: Increase time before btc_helo respawn, default = 30
 
 if (btc_p_side_mission_cycle) then {
     [true] spawn btc_fnc_side_create;

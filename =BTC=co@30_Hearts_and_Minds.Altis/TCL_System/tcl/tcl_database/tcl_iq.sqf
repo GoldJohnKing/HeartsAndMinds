@@ -16,7 +16,7 @@ if (TCL_Server) then
 			1,
 			
 			// 1 ( Distance )
-			300,
+			500,
 			
 			// 2 ( KnowsAbout )
 			3
