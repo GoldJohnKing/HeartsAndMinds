@@ -7,10 +7,11 @@ btc_custom_loc = [
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,800,true]
 */
     // Edited: Add custom warzones
-    [getMarkerPos "custom_loc_1","NameVillage","Hill 1335",400,400,true],
+    [getMarkerPos "custom_loc_1","NameVillage","Hill 1335",500,500,true],
     [getMarkerPos "custom_loc_2","NameVillage","Northwest Kinduf",300,300,true],
     [getMarkerPos "custom_loc_3","NameVillage","Old Castle",300,300,true],
-    [getMarkerPos "custom_loc_4","NameVillage","The Great Village",400,400,true]
+    [getMarkerPos "custom_loc_4","NameVillage","The Great Village",500,500,true],
+    [getMarkerPos "custom_loc_5","NameVillage","Bagdir",300,300,true]
 ];
 
 /*

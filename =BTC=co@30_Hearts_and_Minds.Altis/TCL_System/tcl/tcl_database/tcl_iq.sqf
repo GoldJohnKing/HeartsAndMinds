@@ -16,10 +16,10 @@ if (TCL_Server) then
 			1,
 			
 			// 1 ( Distance )
-			500,
+			300,
 			
 			// 2 ( KnowsAbout )
-			3
+			5
 		];
 		
 		if (TCL_FilePatching) then
