@@ -39,7 +39,6 @@ btc_custom_loc = [
 private _weapons = [
 ];
 private _magazines = [
-    "rhs_mag_m4009",
     "Titan_AP"
 ];
 private _items = [
@@ -125,12 +124,6 @@ private _backpacks = [
     "I_E_AA_01_weapon_F",
     "I_E_AT_01_weapon_F",
     "O_Static_Designator_02_weapon_F",
-    "B_Respawn_Sleeping_bag_blue_F",
-    "B_Respawn_Sleeping_bag_brown_F",
-    "B_Respawn_TentDome_F",
-    "B_Respawn_Sleeping_bag_F",
-    "B_Respawn_TentA_F",
-    "B_Patrol_Respawn_bag_F",
     "TFAR_anprc155",
     "TFAR_anprc155_coyote",
     "TFAR_anarc164",
