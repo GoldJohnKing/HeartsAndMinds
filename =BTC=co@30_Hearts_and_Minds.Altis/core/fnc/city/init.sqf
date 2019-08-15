@@ -55,12 +55,6 @@ for "_i" from 0 to (count _locations - 1) do {
         private _radius_x = getNumber(_current >> "RadiusA");
         private _radius_y = getNumber(_current >> "RadiusB");
 
-        // Edited: Add city radius check, if radius is too small, force it to 500m
-        if (_radius_x < 500 || _radius_y < 500) then {
-            _radius_x = 500;
-            _radius_y = 500;
-        };
-
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
         /*
@@ -74,6 +68,11 @@ for "_i" from 0 to (count _locations - 1) do {
         if ((getMarkerPos "safezone_4") inArea [_position, 250, 250, 0, false]) exitWith {};
         if ((getMarkerPos "safezone_5") inArea [_position, 100, 100, 0, false]) exitWith {};
 
+        if (_radius_x < 500 || _radius_y < 500) then { // Edited: Add city radius check, if radius is too small, force it to 500m, default = 80
+            _radius_x = 500;
+            _radius_y = 500;
+        };
+        
         [_position, _type, _name, _radius_x, _radius_y, true] call btc_fnc_city_create; // Edited: Default = random 1 > 0.45
     };
 };
