@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_log_lift_hook
+Function: btc_fnc_lift_hook
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_log_lift_hook;
+        _result = [] call btc_fnc_lift_hook;
     (end)
 
 Author:
@@ -24,7 +24,7 @@ params [
     ["_chopper", vehicle player, [objNull]]
 ];
 
-private _array = [_chopper] call btc_fnc_log_get_liftable;
+private _array = [_chopper] call btc_fnc_lift_getLiftable;
 private _cargo_array = nearestObjects [_chopper, _array, 30];
 _cargo_array = _cargo_array - [_chopper];
 _cargo_array = _cargo_array select {
@@ -64,7 +64,7 @@ if ((_bbr isEqualTo []) OR (_ropes_check isEqualTo [])) then {
     private _support = _cargo;
     private _bbr_z = 0;
     if (!alive _cargo) then {
-        _support = [_cargo, _chopper] call btc_fnc_log_lift_hook_fake;
+        _support = [_cargo, _chopper] call btc_fnc_lift_hookFake;
         _bbr_z = _support distance _cargo;
         sleep 0.3;
     };
@@ -88,11 +88,11 @@ sleep 1;
 if ((_mass + 400) > _max_cargo) then {
     private _new_mass = _max_cargo - 1000;
     if (_new_mass < 0) then {_new_mass = 50;};
-    [_cargo, _new_mass] remoteExec ["setMass", _cargo];
+    [_cargo, _new_mass] remoteExecCall ["setMass", _cargo];
 };
 
 _chopper setVariable ["cargo", _cargo];
 
 waitUntil {sleep 5; (!alive player || !alive _cargo || !btc_lifted || vehicle player isEqualTo player)};
 
-[_cargo, _mass] remoteExec ["setMass", _cargo];
+[_cargo, _mass] remoteExecCall ["setMass", _cargo];

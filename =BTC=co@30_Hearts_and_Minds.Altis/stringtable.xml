@@ -188,6 +188,10 @@
             <Key ID="STR_BTC_HAM_PARAM_SPAWN_TITLE">
                 <Original>&lt;&lt; 重生设置 &gt;&gt;</Original>
             </Key>
+            <Key ID="STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB">
+                <Original>Probability for a city to be free:</Original>
+                <German>Wahrscheinlichkeit, dass eine Stadt unbesetzt ist:</German>
+            </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY">
                 <Original>敌军密度:</Original>
             </Key>
@@ -228,6 +232,18 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_IED_DRONE">
                 <Original>敌方炸弹无人机:</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT">
+                <Original>IEDs type of placement:</Original>
+                <German>IED Art der Platzierung</German>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT_MIDDLE">
+                <Original>Middle</Original>
+                <German>Straßenmitte</German>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT_ROADSIDE">
+                <Original>Roadside</Original>
+                <German>Straßenrand</German>
             </Key>
         </Container>
         <Container name="Parameters: Hideout/Cache">
@@ -323,6 +339,11 @@
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_AUTOLOADOUT">
                 <Original>预设装备 (见 /define_mod.sqf)</Original>
             </Key>
+            <Key ID="STR_BTC_HAM_PARAM_ARSENAL_RMVWEAPONS">
+                <Original>Remove all weapons</Original>
+                <German>nur Waffen entfernen</German>
+                <Chinesesimp>移除所有武器</Chinesesimp>
+            </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR_FILTER">
                 <Original>根据玩家角色限制 (仅对ACE3军火库生效)</Original>
             </Key>
@@ -346,6 +367,10 @@
             <Key ID="STR_BTC_HAM_PARAM_OTHER_DISABLESPAWN">
                 <Original>当飞机或直升机(&gt;190Km/h)飞掠城市上空时, 不激活城市:</Original>
             </Key>
+            <Key ID="STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS">
+                <Original>Autodetect Headless client:</Original>
+                <German>Headless-Client automatisch erkennen:</German>
+            </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_DEBUG">
                 <Original>调试:</Original>
             </Key>
@@ -356,6 +381,14 @@
     </Package>
     <Package name="Missions">
         <Container name="Mission: Defeat the Oplitas">
+            <Key ID="STR_BTC_HAM_MISSION_OBJ_DESC">
+                <Original>Objectives must be accomplished.</Original>
+                <German>Ziele müssen erreicht werden.</German>
+            </Key>
+            <Key ID="STR_BTC_HAM_MISSION_OBJ_TITLE">
+                <Original>Main objectives</Original>
+                <German>Hauptziele</German>
+            </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_TITLE">
                 <Original>打败Oplitas</Original>
             </Key>
@@ -783,6 +816,10 @@
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_DIARYLOG">
                 <Original>日志</Original>
             </Key>
+            <Key ID="STR_BTC_HAM_CON_INFO_PICTURE">
+                <Original>Pictures of cache number %1</Original>
+                <German>Bilder des Waffenlagers %1</German>
+            </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_SEARCH_BAR">
                 <Original>搜寻情报中 . . .</Original>
             </Key>
@@ -863,6 +900,13 @@
             </Key>
         </Container>
         <Container name="Other: Hints ">
+            <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_MU">
+                <Original>Map updated</Original>
+                <Spanish>Mapa actualizado</Spanish>
+                <German>Karte aktualisiert</German>
+                <Portuguese>Mapa atualizado</Portuguese>
+                <Chinesesimp>地图已更新</Chinesesimp>
+            </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_0">
                 <Original>武器箱已摧毁!</Original>
             </Key>
@@ -931,7 +975,7 @@
                 <Original>集装箱及其货物已记录! 清空该区域以创建一个复制品。</Original>
             </Key>
         </Container>
-        <Container name="Other: Endmission ">
+        <Container name="Other: Endmission">
             <Key ID="STR_BTC_HAM_O_COMMON_ENDMISSION">
                 <Original>所有敌军藏匿点已被摧毁, 敌军终于被打败了! 任务完成</Original>
             </Key>
@@ -1013,6 +1057,16 @@
             </Key>
             <Key ID="STR_BTC_HAM_LOG_RWRECK_ISHELO">
                 <Original>此残骸将会重生</Original>
+            </Key>
+        </Container>
+        <Container name="Logistic: Delete">
+            <Key ID="STR_BTC_HAM_LOG_DELETE">
+                <Original>No object to delete found</Original>
+                <German>Kein Objekt zum löschen gefunden</German>
+            </Key>
+            <Key ID="STR_BTC_HAM_LOG_LPDELETE">
+                <Original>Can't delete object not created by Logistic Point</Original>
+                <German>Objekt konnte nicht gelöscht werden, da es nicht am Logisik-Punkt erstellt worden ist</German>
             </Key>
         </Container>
         <Container name="Logistic: Tow ">

@@ -28,19 +28,22 @@ if (btc_debug) then {
     ["...1", __FILE__, [btc_debug, false, true]] call btc_fnc_debug_message;
 };
 
-[8] remoteExec ["btc_fnc_show_hint", 0];
+[8] remoteExecCall ["btc_fnc_show_hint", 0];
 
 btc_db_is_saving = true;
 
-for "_i" from 0 to (count btc_city_all - 1) do {
-    private _s = [_i] spawn btc_fnc_city_de_activate;
-    waitUntil {scriptDone _s};
-};
+{
+    if (!isNull _x) then {
+        private _s = [_forEachIndex] spawn btc_fnc_city_de_activate;
+        waitUntil {scriptDone _s};
+    };
+} forEach btc_city_all;
+
 if (btc_debug) then {
     ["...2", __FILE__, [btc_debug, false, true]] call btc_fnc_debug_message;
 };
 
-call btc_fnc_db_delete;
+[false] call btc_fnc_db_delete;
 
 //Version
 profileNamespace setVariable [format ["btc_hm_%1_version", _name], btc_version];
@@ -70,7 +73,7 @@ private _cities_status = [];
     if (btc_debug_log) then {
         [format ["ID %1 - IsOccupied %2", _x getVariable "id", _x getVariable "occupied"], __FILE__, [false]] call btc_fnc_debug_message;
     };
-} forEach btc_city_all;
+} forEach (btc_city_all select {!(isNull _x)});
 profileNamespace setVariable [format ["btc_hm_%1_cities", _name], _cities_status];
 
 //HIDEOUT
@@ -114,18 +117,21 @@ private _cache_markers = [];
     _cache_markers pushBack _data;
 } forEach btc_cache_markers;
 _array_cache pushBack _cache_markers;
-profileNamespace setVariable [format ["btc_hm_%1_cache", _name], _array_cache];
+_array_cache pushBack [btc_cache_pictures select 0, btc_cache_pictures select 1, []];
+profileNamespace setVariable [format ["btc_hm_%1_cache", _name], +_array_cache];
 
 //REPUTATION
 profileNamespace setVariable [format ["btc_hm_%1_rep", _name], btc_global_reputation];
 
 //FOBS
-private _fobs = [[], []];
+private _fobs = [];
 {
-    private _pos = getMarkerPos _x;
-    (_fobs select 0) pushBack [_x, _pos];
+    if !(isNull ((btc_fobs select 2) select _forEachIndex)) then {
+        private _pos = getMarkerPos _x;
+        private _direction = getDir ((btc_fobs select 1) select _forEachIndex);
+        _fobs pushBack [markerText _x, _pos, _direction];
+    };
 } forEach (btc_fobs select 0);
-(_fobs select 1) append (btc_fobs select 1);
 profileNamespace setVariable [format ["btc_hm_%1_fobs", _name], _fobs];
 
 //Vehicles status
@@ -186,6 +192,6 @@ saveProfileNamespace;
 if (btc_debug) then {
     ["...3", __FILE__, [btc_debug, false, true]] call btc_fnc_debug_message;
 };
-[9] remoteExec ["btc_fnc_show_hint", 0];
+[9] remoteExecCall ["btc_fnc_show_hint", 0];
 
 btc_db_is_saving = false;

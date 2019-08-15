@@ -27,12 +27,16 @@ A side mission can be requested by the officer with his self interaction menu.
 If you don't want to complete a task, you can always abort it with the self interaction menu.
 
 
-## FOB
- In this mission a FOB is a forward spawn point, to create a FOB approach the red box at the logistic point and require a blue container.
-- Deploy:
-Move it where you want to deploy a new FOB and interact with it to set it up. Keep in mind that you can not deploy a FOB close to the main base (2.500m) and the terrain needs to be flat.
-- Dismantle:
-You can dismantle a FOB by interacting with the flag on the HQ roof.
+## FOB/Rallypoint
+- FOB:
+	In this mission a FOB is a forward spawn point, to create a FOB approach the red box at the logistic point and require a blue container.
+	- Deploy:
+	Move it where you want to deploy a new FOB and interact with it to set it up. Keep in mind that you can not deploy a FOB close to the main base (2.500m) and the terrain needs to be flat.
+	- Dismantle:
+	You can dismantle a FOB by interacting with the flag on the HQ roof.
+
+- Rallypoint:
+	You can also use the Zeus rallypoint backpack available in Arsenal. Those have a limited number of respawn.
 
 
 ## Sling loading
@@ -83,9 +87,9 @@ Intel can be retrieved in the following:
 Keep in mind that only the interpreter can talk to civilians and they can lie if your reputation level is low.
 When you find an intel from a dead body or interrogate a prisoner, a marker will appear in the map. Remember, prisoner have a random number of intel more or less interesting.
 
-There are two types of marker:
-- Red question mark : ammo cache intel
-- Red exclamation mark : hideout intel
+There are two types of intel:
+- Red question mark and pictures under diary log map menu: ammo cache intel
+- Red exclamation mark: hideout intel
 
 When you destroy an hideout or an ammo cache, all the markers related to it will be deleted.
 
