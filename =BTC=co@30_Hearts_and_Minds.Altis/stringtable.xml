@@ -89,7 +89,7 @@
         </Container>
         <Container name="Documentation: Logistic point">
             <Key ID="STR_BTC_HAM_DOC_LOGISTICP_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 后勤点可以生成新的物件(如弹药、防御工事、用于支线任务的救援补给等), 也可以维修受损载具。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 后勤点可以生成新的物件(如弹药、防御工事、用于支线任务的救援物资等), 也可以维修受损载具。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Logistic">
@@ -161,7 +161,7 @@
                 <Original>载入存档 (如果可用)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_DB_ASAVE">
-                <Original>自动保存 (存档时会暂停游戏进程, 可能破坏玩家的沉浸感)</Original>
+                <Original>所有玩家离线后自动存档</Original>
             </Key>
         </Container>
         <Container name="Parameters: Factions">
@@ -189,8 +189,7 @@
                 <Original>&lt;&lt; 重生设置 &gt;&gt;</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB">
-                <Original>Probability for a city to be free:</Original>
-                <German>Wahrscheinlichkeit, dass eine Stadt unbesetzt ist:</German>
+                <Original>城市无人居住的几率:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY">
                 <Original>敌军密度:</Original>
@@ -234,16 +233,13 @@
                 <Original>敌方炸弹无人机:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT">
-                <Original>IEDs type of placement:</Original>
-                <German>IED Art der Platzierung</German>
+                <Original>IED放置位置</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT_MIDDLE">
-                <Original>Middle</Original>
-                <German>Straßenmitte</German>
+                <Original>道路中间</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_IED_PLACEMENT_ROADSIDE">
-                <Original>Roadside</Original>
-                <German>Straßenrand</German>
+                <Original>道路两旁</Original>
             </Key>
         </Container>
         <Container name="Parameters: Hideout/Cache">
@@ -340,9 +336,7 @@
                 <Original>预设装备 (见 /define_mod.sqf)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_RMVWEAPONS">
-                <Original>Remove all weapons</Original>
-                <German>nur Waffen entfernen</German>
-                <Chinesesimp>移除所有武器</Chinesesimp>
+                <Original>移除所有武器</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_ARSENAL_ARSENALRESTR_FILTER">
                 <Original>根据玩家角色限制 (仅对ACE3军火库生效)</Original>
@@ -368,8 +362,7 @@
                 <Original>当飞机或直升机(&gt;190Km/h)飞掠城市上空时, 不激活城市:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS">
-                <Original>Autodetect Headless client:</Original>
-                <German>Headless-Client automatisch erkennen:</German>
+                <Original>自动检测无头客户端</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_DEBUG">
                 <Original>调试:</Original>
@@ -382,12 +375,10 @@
     <Package name="Missions">
         <Container name="Mission: Defeat the Oplitas">
             <Key ID="STR_BTC_HAM_MISSION_OBJ_DESC">
-                <Original>Objectives must be accomplished.</Original>
-                <German>Ziele müssen erreicht werden.</German>
+                <Original>必须完成的目标。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_OBJ_TITLE">
-                <Original>Main objectives</Original>
-                <German>Hauptziele</German>
+                <Original>主要目标</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_TITLE">
                 <Original>打败Oplitas</Original>
@@ -436,13 +427,19 @@
                 <Original>抓捕敌方军官</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_DESC">
-                <Original>一名敌军军官已经伪装起来, 随同车队进行转移。找到他并把他带回基地, 进行进一步的审问。 他是对当地恐怖活动负责的主要人物之一!</Original>
+                <Original>一名敌军军官已经伪装起来, 随同车队进行转移。找到他并把他带回基地, 进行进一步的审问。他是当地恐怖主义活动的主要责任人之一!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_FAILED_TEXT">
-                <Original>敌方军官未被抓捕</Original>
+            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_SURRENDER_DESC">
+                <Original>迫使这名军官投降。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_WIN_TEXT">
-                <Original>敌方军官已被抓捕!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_SURRENDER_TITLE">
+                <Original>迫使军官投降</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_HANDCUFF_DESC">
+                <Original>给这名军官戴上手铐。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CAPOFF_HANDCUFF_TITLE">
+                <Original>铐住军官</Original>
             </Key>
         </Container>
         <Container name="Checkpoint">
@@ -452,11 +449,11 @@
             <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESC">
                 <Original>在 %1 地区发现检查站。当地居民请求您摧毁武器箱和相应的检查站!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_FAILED_TEXT">
-                <Original>检查站未摧毁</Original>
+            <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESTROY_DESC">
+                <Original>通过摧毁这一物件来摧毁该检查点。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_WIN_TEXT">
-                <Original>检查站已被摧毁!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_CHECKPOINT_DESTROY_TITLE">
+                <Original>摧毁该检查点</Original>
             </Key>
         </Container>
         <Container name="Civ treatment boat">
@@ -511,23 +508,26 @@
             </Key>
         </Container>
         <Container name="Hack">
-            <Key ID="STR_BTC_HAM_SIDE_HACK_STARTCHAT">
-                <Original>保护终端机, 直到导弹系统被成功入侵!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_HACK_STARTHACK">
+                <Original>保护终端, 直到导弹系统被成功入侵!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_ACEACTION">
-                <Original>开始系统入侵</Original>
+                <Original>开始入侵</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_TITLE">
-                <Original>在 %1 地区入侵导弹系统</Original>
+                <Original>在 %1 地区入侵导弹控制终端</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
-                <Original>在 %1 地区入侵一枚带有控制终端的导弹原型的系统。守住你的位置, 直到系统入侵完成!</Original>
+                <Original>在 %1 地区对一枚带有控制终端的导弹原型进行黑客入侵。守住你的位置, 直到入侵完成!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_HACK_FAILED_TEXT">
-                <Original>导弹系统未被入侵</Original>
+            <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_DESC">
+                <Original>使用该终端开始黑客入侵。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_HACK_WIN_TEXT">
-                <Original>导弹系统已被入侵!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_TITLE">
+                <Original>进行黑客入侵</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_HACK_DEFEND_TITLE">
+                <Original>保护终端</Original>
             </Key>
         </Container>
         <Container name="Hostage">
@@ -568,25 +568,37 @@
             <Key ID="STR_BTC_HAM_SIDE_RESC_DESC">
                 <Original>MAYDAY-MAYDAY, 一架直升机在 %1 附近坠毁。指挥部正在请求你的帮助。前去搜救这名飞行员, 并将其带回基地!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_RESC_FAILED_TEXT">
-                <Original>飞行员未获救</Original>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_DESC">
+                <Original>找到该直升机的飞行员。他应该在直升机残骸附近。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_RESC_WIN_TEXT">
-                <Original>飞行员已获救!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_TITLE">
+                <Original>找到飞行员</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BACK_DESC">
+                <Original>将他带回基地后勤点。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BACK_TITLE">
+                <Original>将他带回</Original>
             </Key>
         </Container>
         <Container name="Supply">
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_TITLE">
-                <Original>在 %1 发放救援补给</Original>
+                <Original>在 %1 发放救援物资</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_DESC">
-                <Original>%1 的居民正在挨饿, 在后勤点生成一些救援补给并带给他们!</Original>
+                <Original>%1 的居民正在挨饿, 在后勤点生成一些救援物资并带给他们!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_FAILED_TEXT">
-                <Original>救援补给未送达</Original>
+            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_MOVE_DESC">
+                <Original>在后勤点申请救援物资, 并将其运送至补给区域。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_WIN_TEXT">
-                <Original>救援补给已分发</Original>
+            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_MOVE_TITLE">
+                <Original>运送物资</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_UNLOAD_DESC">
+                <Original>从集装箱中卸载救援物资。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_UNLOAD_TITLE">
+                <Original>卸载救援物资</Original>
             </Key>
         </Container>
         <Container name="Tower">
@@ -644,11 +656,31 @@
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_DESC">
                 <Original>%1 已被Oplitas占领! 当地居民受到恐吓, 他们正在请求帮助!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CONQUER_FAILED_TEXT">
-                <Original>该城市未被夺回</Original>
+        </Container>
+        <Container name="Kill">
+            <Key ID="STR_BTC_HAM_SIDE_KILL_TITLE">
+                <Original>刺杀 %1</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CONQUER_WIN_TEXT">
-                <Original>该城市已经安全!</Original>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_DESC">
+                <Original>在 %2 地区刺杀 %1, 然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_IN_TITLE">
+                <Original>杀死 %1</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_IN_DESC">
+                <Original>在 %2 地区杀死 %1。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_DOGTAG_TITLE">
+                <Original>拿取狗牌</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_DOGTAG_DESC">
+                <Original>拿取 %1 的狗牌。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_BRING_TITLE">
+                <Original>将狗牌带回基地</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_KILL_BRING_DESC">
+                <Original>将 %1 的狗牌带回基地后勤点。</Original>
             </Key>
         </Container>
     </Package>
@@ -817,8 +849,7 @@
                 <Original>日志</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_PICTURE">
-                <Original>Pictures of cache number %1</Original>
-                <German>Bilder des Waffenlagers %1</German>
+                <Original>武器箱 %1 的照片</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_SEARCH_BAR">
                 <Original>搜寻情报中 . . .</Original>
@@ -901,11 +932,7 @@
         </Container>
         <Container name="Other: Hints ">
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_MU">
-                <Original>Map updated</Original>
-                <Spanish>Mapa actualizado</Spanish>
-                <German>Karte aktualisiert</German>
-                <Portuguese>Mapa atualizado</Portuguese>
-                <Chinesesimp>地图已更新</Chinesesimp>
+                <Original>地图已更新</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_0">
                 <Original>武器箱已摧毁!</Original>
@@ -940,8 +967,17 @@
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_10">
                 <Original>数据库已删除!</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_11">
-                <Original>一个检查站被摧毁!</Original>
+            <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_14">
+                <Original>我们有一张武器箱所在房屋的照片:</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_15">
+                <Original>我们有一张武器箱所在地的照片:</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_O_TASK_NOSIDE">
+                <Original>未分配支线任务</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_O_TASK_NOTASIDE">
+                <Original>只能中止支线任务</Original>
             </Key>
         </Container>
         <Container name="Other: Shortcuts">
@@ -1061,12 +1097,10 @@
         </Container>
         <Container name="Logistic: Delete">
             <Key ID="STR_BTC_HAM_LOG_DELETE">
-                <Original>No object to delete found</Original>
-                <German>Kein Objekt zum löschen gefunden</German>
+                <Original>没有可删除的物件</Original>
             </Key>
             <Key ID="STR_BTC_HAM_LOG_LPDELETE">
-                <Original>Can't delete object not created by Logistic Point</Original>
-                <German>Objekt konnte nicht gelöscht werden, da es nicht am Logisik-Punkt erstellt worden ist</German>
+                <Original>只能删除由后勤点创建的物件</Original>
             </Key>
         </Container>
         <Container name="Logistic: Tow ">
