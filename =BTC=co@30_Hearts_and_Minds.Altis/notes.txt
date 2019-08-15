@@ -11,6 +11,7 @@ Modified Files:
 \core\fnc\city\init.sqf
 \core\fnc\db\add_veh.sqf
 \core\fnc\eh\player.sqf
+\core\fnc\eh\veh_add_respawn.sqf
 \core\fnc\eh\veh_init.sqf
 \core\fnc\side\create.sqf
 
