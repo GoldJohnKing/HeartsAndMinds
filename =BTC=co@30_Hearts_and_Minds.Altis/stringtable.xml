@@ -5,9 +5,6 @@
             <Key ID="STR_BTC_HAM_DESCR_NAME">
                 <Original>心灵与智慧 Hearts and Minds [MPRI专用版]</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_DESCR_AUTHOR">
-                <Original>GoldJohnKing修改/汉化, Giallustio</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_DESCR_MISSION">
                 <Original>军事职业资源公司 QQ群: 708118128</Original>
             </Key>
@@ -66,7 +63,7 @@
         </Container>
         <Container name="Documentation: Vehicles">
             <Key ID="STR_BTC_HAM_DOC_VEHICLES_TEXT">
-                <Original>&lt;marker name='blufor_base'&gt;&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\destroy_ca.paa' width='20' height='20' color='#FFBF00'/&gt; 载具重生:&lt;/marker&gt;&lt;br/&gt; 当载具损毁时, 它不会自行在基地重生。你需要采用车辆牵引或直升机吊挂的方式将其残骸运回基地, 并在后勤点对其进行维修(与后勤点的红色箱子进行互动)。直升机的残骸只能使用吊挂的方式运输。 &lt;br/&gt; 支奴干(Chinook)是唯一的例外, 它会在损毁后30秒于基地重生。 &lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20' color='#FFBF00'/&gt; 弹药补给:&lt;/marker&gt;&lt;br/&gt; 你可以在后勤点生成对应口径的弹药, 对载具进行弹药补给。与红色箱子互动, 选择对应的载具类型及口径, 弹药箱将会生成。将生成的弹药箱搬到载具附近, 与载具互动, 即可执行补给。注意: 如需启用此功能, 需要将任务参数中的弹药补给选项设置为 "Total Magazine" 或 "Calibre Based Number" (而非 "Entire Vehicle")。</Original>
+                <Original>&lt;marker name='blufor_base'&gt;&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\destroy_ca.paa' width='20' height='20'/&gt; 载具重生:&lt;/marker&gt;&lt;br/&gt; 当载具损毁时, 它不会自行在基地重生。你需要采用车辆牵引或直升机吊挂的方式将其残骸运回基地, 并在后勤点对其进行维修(与后勤点的红色箱子进行互动)。直升机的残骸只能使用吊挂的方式运输。 &lt;br/&gt; 支奴干(Chinook)是唯一的例外, 它会在损毁后30秒于基地重生。 &lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 弹药补给:&lt;/marker&gt;&lt;br/&gt; 你可以在后勤点生成对应口径的弹药, 对载具进行弹药补给。与红色箱子互动, 选择对应的载具类型及口径, 弹药箱将会生成。将生成的弹药箱搬到载具附近, 与载具互动, 即可执行补给。注意: 如需启用此功能, 需要将任务参数中的弹药补给选项设置为 "Total Magazine" 或 "Calibre Based Number" (而非 "Entire Vehicle")。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Side Mission">
@@ -94,12 +91,12 @@
         </Container>
         <Container name="Documentation: Logistic">
             <Key ID="STR_BTC_HAM_DOC_LOGISTIC_TEXT">
-                <Original>&lt;marker name='blufor_base'&gt;货运系统:&lt;/marker&gt;&lt;br/&gt; 使用ACE3货运系统。 &lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt;牵引系统:&lt;/marker&gt;&lt;br/&gt; 如需牵引一辆载具, 与其互动并选择"启用牵引"。&lt;br/&gt;然后, 将牵引车辆(前车)置于被牵引车辆(后车)前方, 并在互动菜单中选择"牵引"。&lt;br/&gt; 如果两辆车的距离过远, 或前车无法牵引这一载荷(比如汽车(Car)无法牵引卡车(Truck)或坦克(Tank)), 则该选项不可用。&lt;br/&gt; 如需取消牵引, 与两车之一互动并选择"取消牵引"。&lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt;对象放置:&lt;/marker&gt;&lt;br/&gt; 此选项允许您移动重物以建造一个小的前哨基地。&lt;br/&gt; 选择该选项后, 将会出现移动对象所需的键位提示。</Original>
+                <Original>&lt;img image='\z\ace\addons\cargo\UI\Icon_Module_Cargo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;货运系统:&lt;/marker&gt;&lt;br/&gt; 使用ACE3货运系统。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\attach\UI\attach_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;牵引系统:&lt;/marker&gt;&lt;br/&gt; 如需牵引一辆载具, 与其互动并选择"启用牵引"。&lt;br/&gt;然后, 将牵引车辆(前车)置于被牵引车辆(后车)前方, 并在互动菜单中选择"牵引"。&lt;br/&gt; 如果两辆车的距离过远, 或前车无法牵引这一载荷(比如汽车(Car)无法牵引卡车(Truck)或坦克(Tank)), 则该选项不可用。&lt;br/&gt; 如需取消牵引, 与两车之一互动并选择"取消牵引"。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\dragging\UI\icons\box_carry.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;对象放置:&lt;/marker&gt;&lt;br/&gt; 此选项允许您移动重物以建造一个小的前哨基地。&lt;br/&gt; 选择该选项后, 将会出现移动对象所需的键位提示。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Hideout">
             <Key ID="STR_BTC_HAM_DOC_HIDEOUT_TEXT">
-                <Original>藏匿点是Oplitas组织活动的地方。&lt;br/&gt;他们从这里派遣增援, 进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动, 那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败Oplitas, 你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='256' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点, 只需在靠近旗帜的弹药箱上放置一个炸药包, 然后炸掉它!</Original>
+                <Original>藏匿点是Oplitas组织活动的地方。&lt;br/&gt;他们从这里派遣增援, 进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动, 那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败Oplitas, 你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点, 只需在靠近旗帜的弹药箱上放置一个炸药包, 然后炸掉它!</Original>
             </Key>
         </Container>
         <Container name="Documentation: IED">
@@ -142,9 +139,6 @@
             </Key>
         </Container>
         <Container name="Documentation: Interaction">
-            <Key ID="STR_BTC_HAM_DOC_INTERACTION_TITLE">
-                <Original>互动</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_DOC_INTERACTION_TEXT">
                 <Original> &lt;img image='\z\ace\addons\interaction\UI\Icon_Module_Interaction_ca.paa' width='20' height='20'/&gt;使用 ACE 3 互动系统。</Original>
             </Key>
@@ -391,37 +385,20 @@
             </Key>
         </Container>
         <Container name="Mission: Destroy all the hideouts">
-            <Key ID="STR_BTC_HAM_MISSION_DESTORY_TITLE">
-                <Original>摧毁所有藏匿点</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_MISSION_DESTORY_DESC">
+            <Key ID="STR_BTC_HAM_MISSION_DESTROY_DESC">
                 <Original>摧毁所有Oplitas藏匿点</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_MISSION_DESTORY_WIN_TEXT">
-                <Original>所有藏匿点都被摧毁了!</Original>
+            <Key ID="STR_BTC_HAM_MISSION_DESTROY_TITLE">
+                <Original>摧毁所有藏匿点</Original>
             </Key>
         </Container>
         <Container name="Mission: Seize the last positions">
             <Key ID="STR_BTC_HAM_MISSION_SEIZE_TITLE">
                 <Original>夺取最后一个Oplitas据点</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_MISSION_SEIZE_MRK">
-                <Original>夺取最后一个Oplitas战匪的据点</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_MISSION_SEIZE_DESC">
-                <Original>夺取最后一个被Oplitas战匪占领的据点</Original>
-            </Key>
         </Container>
     </Package>
     <Package name="Side Missions">
-        <Container name="Basics">
-            <Key ID="STR_BTC_HAM_SIDE_BASIC_WIN_TITLE">
-                <Original>支线任务完成!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_BASIC_LOSE_TITLE">
-                <Original>支线任务失败!</Original>
-            </Key>
-        </Container>
         <Container name="Capture officer">
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_TITLE">
                 <Original>抓捕敌方军官</Original>
@@ -463,12 +440,6 @@
             <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_DESC">
                 <Original>一位当地居民正在 %1 地区呼叫医疗支援, 治疗并护理患者, 直至其伤势稳定。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_FAILED_TEXT">
-                <Original>患者的伤势未稳定</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_WIN_TEXT">
-                <Original>平民的伤势已经稳定!</Original>
-            </Key>
         </Container>
         <Container name="Civ treatment">
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_MRK">
@@ -479,12 +450,6 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
                 <Original>一位平民正在 %1 地区呼叫医疗支援, 治疗并护理患者, 直至其伤势稳定。</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_FAILED_TEXT">
-                <Original>患者的伤势未稳定</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_WIN_TEXT">
-                <Original>平民的伤势已经稳定!</Original>
             </Key>
         </Container>
         <Container name="Convoy">
@@ -499,12 +464,6 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONVOY_DESC">
                 <Original>一队Oplitas武装车队将要攻打 %1。当地居民请求在其抵达之前将其摧毁!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CONVOY_FAILED_TEXT">
-                <Original>武装车队未被摧毁</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_CONVOY_WIN_TEXT">
-                <Original>武装车队已被摧毁!</Original>
             </Key>
         </Container>
         <Container name="Hack">
@@ -531,20 +490,11 @@
             </Key>
         </Container>
         <Container name="Hostage">
-            <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_MRK">
-                <Original>人质</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_TITLE">
                 <Original>在 %1 附近解救人质</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_DESC">
                 <Original>在 %1 地区解救人质。当地居民正在请求你的帮助!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_FAILED_TEXT">
-                <Original>人质未被解救</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_WIN_TEXT">
-                <Original>人质已重获自由!</Original>
             </Key>
         </Container>
         <Container name="Mines">
@@ -553,12 +503,6 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MINES_DESC">
                 <Original>%1 附近有雷区, 把它们清除掉!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_MINES_FAILED_TEXT">
-                <Original>雷区未清除</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_MINES_WIN_TEXT">
-                <Original>雷区已被清除!</Original>
             </Key>
         </Container>
         <Container name="Rescue">
@@ -608,12 +552,6 @@
             <Key ID="STR_BTC_HAM_SIDE_TOWER_DESC">
                 <Original>在 %1 地区发现了一座 Oplitas 通讯信号塔。当地居民请求您将其摧毁。(使用一个M183炸药包)</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_TOWER_FAILED_TEXT">
-                <Original>信号塔未摧毁</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_TOWER_WIN_TEXT">
-                <Original>信号塔已摧毁!</Original>
-            </Key>
         </Container>
         <Container name="Underwater generator">
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_MRK">
@@ -625,28 +563,13 @@
             <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_DESC">
                 <Original>在 %1 地区发现了一部水下发电机。当地居民请求您将其摧毁。</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_FAILED_TEXT">
-                <Original>水下发电机未被摧毁</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_UNDERWATER_WIN_TEXT">
-                <Original>水下发电机已被摧毁!</Original>
-            </Key>
         </Container>
         <Container name="Vehicle">
-            <Key ID="STR_BTC_HAM_SIDE_VEHICLE_MRK">
-                <Original>载具需要援助</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_TITLE">
                 <Original>%1 附近的载具需要援助</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
                 <Original>一辆被IED损坏的载具在 %1 附近等待援助! 修好它!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_VEHICLE_FAILED_TEXT">
-                <Original>载具未被修复</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_SIDE_VEHICLE_WIN_TEXT">
-                <Original>载具已被修复</Original>
             </Key>
         </Container>
         <Container name="Conquer">
@@ -741,9 +664,6 @@
             </Key>
         </Container>
         <Container name="Action(ACE): Side missions">
-            <Key ID="STR_BTC_HAM_ACTION_SIDEMISSION_MAIN">
-                <Original>支线任务</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_ACTION_SIDEMISSION_ABORT">
                 <Original>中止</Original>
             </Key>
@@ -775,12 +695,6 @@
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_VEHINIT_UHOOK">
                 <Original>取消牵引</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_VEHINIT_DEPLOYROPES">
-                <Original>部署绳索</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_ACTION_VEHINIT_CUTROPES">
-                <Original>断开绳索</Original>
             </Key>
         </Container>
         <Container name="Action(ACE): Copy Paste">
@@ -938,7 +852,7 @@
                 <Original>武器箱已摧毁!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_1">
-                <Original>发现了关于弹药箱的情报! 地图已更新</Original>
+                <Original>发现了关于弹药箱的情报!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_2">
                 <Original>藏匿点已摧毁! 还有 %1 处剩余</Original>
@@ -946,11 +860,8 @@
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_3">
                 <Original>这具尸体没有任何情报</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_4">
-                <Original>发现了关于武器箱和藏匿点的情报! 地图已更新</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_5">
-                <Original>发现了关于藏匿点的情报! 地图已更新</Original>
+                <Original>发现了关于藏匿点的情报!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
                 <Original>在上个敌军藏匿点中, 我们发现了写有Oplitas占领的全部城市的重要情报! 夺取最后一个敌军据点, 一举消灭他们! </Original>
@@ -1036,35 +947,12 @@
         </Container>
         <Container name="Logistic: Hook ">
             <Key ID="STR_BTC_HAM_LOG_HOOK_HINFO">
-                <Original>与牵引车(前车)互动以牵引它! (当前载具(后车)无法牵引如下类型的载具: %1)</Original>
+                <Original>与牵引车(前车)互动以牵引它!&lt;br/&gt;(当前载具(后车)无法牵引如下类型的载具: %1)</Original>
             </Key>
         </Container>
         <Container name="Logistic: Lift deploy ropes ">
             <Key ID="STR_BTC_HAM_LOG_LDR_ACTIONHUD">
                 <Original>启用/关闭抬头显示(HUD)</Original>
-            </Key>
-        </Container>
-        <Container name="Logistic: Load ">
-            <Key ID="STR_BTC_HAM_LOG_LOAD_TOOFAR">
-                <Original>%1 与 %2 距离过远!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_TOOFAST">
-                <Original>%1 正在移动!</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_TOOBIG">
-                <Original>无法将 %1 装进 %2</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_NOSPACE">
-                <Original>剩余空间不足以将 %1 装进 %2</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_BAR">
-                <Original>正在将 %1 装进 %2. . .</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_FIN">
-                <Original>%1 已被装进 %2</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_LOG_LOAD_ABORT">
-                <Original>装载中止</Original>
             </Key>
         </Container>
         <Container name="Logistic: Place ">
