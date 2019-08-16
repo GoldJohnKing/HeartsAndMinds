@@ -216,7 +216,7 @@ if (isServer) then {
     };
 
     // Edited: BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24];
     btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6];
 
     // The two arrays below are prefixes of buildings and their multiplier.
@@ -289,6 +289,7 @@ btc_civ_type_veh = btc_civ_type_veh - ["C_Van_02_vehicle_F","C_IDAP_Van_02_vehic
 //btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
 btc_w_civs = ["V_PlateCarrierIAGL_dgtl", "MMG_02_camo_F", "130Rnd_338_Mag", "rhs_weap_M320", "rhs_mag_M397_HET"];
 btc_g_civs = ["rhs_mag_m67", "rhs_mag_m67", "HandGrenade", "HandGrenade"];
+
 
 //Cache
 btc_cache_type = ["Box_East_Ammo_F"];
@@ -475,14 +476,14 @@ btc_log_def_rc = [
 btc_fnc_log_get_nottowable = {
     params ["_tower"];
 
-    switch (true) do { // Edited: Make it easier to tow aircrafts
+    switch (true) do { // Edited: Make Helis and Planes towable
         //The tower is a tank so it can't tow: plane and helicopter
         case (_tower isKindOf "Tank") : {["Plane", "Helicopter"];};
-        case (_tower isKindOf "Truck_F") : {["Ship"];}; //["Plane", "Helicopter"]
-        case (_tower isKindOf "Truck") : {["Ship"];}; //["Plane", "Helicopter"]
-        case (_tower isKindOf "Ship") : {["Plane"];}; //["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter"]
+        case (_tower isKindOf "Truck_F") : {[];}; // Default: "Plane", "Helicopter"
+        case (_tower isKindOf "Truck") : {[];}; // Default: "Plane", "Helicopter"
+        case (_tower isKindOf "Ship") : {["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter"];};
         //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        case (_tower isKindOf "Car") : {["Truck", "Truck_F", "Tank", "Plane", "Helicopter"];};
+        case (_tower isKindOf "Car") : {["Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];}; // Default: "Truck", "Truck_F", "Tank", "Plane", "Helicopter"
         default {["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];};
     };
 };
