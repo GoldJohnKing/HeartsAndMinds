@@ -76,8 +76,7 @@
         </Container>
         <Container name="Documentation: FOB">
             <Key ID="STR_BTC_HAM_DOC_FOB_TITLE">
-                <Original>FOB/Rallypoint</Original>
-                <Chinesesimp>FOB/集合点</Chinesesimp>
+                <Original>FOB/集合点</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_FOB_TEXT">
                 <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move1_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move2_ca.paa' width='20' height='20' /&gt; &lt;marker name='blufor_base'&gt;FOB:&lt;/marker&gt;&lt;br/&gt; FOB 可作为前线复活点使用。要创建FOB, 请在后勤点申请蓝色货运集装箱。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa' width='20' height='20'/&gt;  &lt;marker name='blufor_base'&gt;部署:&lt;/marker&gt; &lt;br/&gt; 将FOB集装箱移动至部署位置并与其互动即可建造FOB。请谨记: 只有在主基地2500米范围外的地形平坦区域才能建立FOB。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;拆除:&lt;/marker&gt; &lt;br/&gt; 你可以与指挥部(HQ)屋顶的旗杆互动, 以拆除FOB。</Original>
@@ -123,21 +122,7 @@
         </Container>
         <Container name="Documentation: Orders">
             <Key ID="STR_BTC_HAM_DOC_ORDERS_TITLE">
-                <Original>Order</Original>
-                <English>Order</English>
-                <Czech>Pořadí</Czech>
-                <German>Reihenfolge</German>
-                <Russian>Порядок</Russian>
-                <Polish>Kolejność</Polish>
-                <Italian>Ordine</Italian>
-                <Spanish>Orden</Spanish>
-                <French>Ordre</French>
-                <Chinese>命令</Chinese>
-                <Japanese>命令</Japanese>
-                <Korean>순서</Korean>
-                <Portuguese>Ordem</Portuguese>
-                <Chinesesimp>命令</Chinesesimp>
-                <Turkish>Düzen</Turkish>
+                <Original>命令</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_ORDERS_TEXT">
                 <Original>玩家可以向平民发出指令。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 如要向平民发出指令, 只需打开自我互动菜单并选择"命令平民", 或使用已设定的快捷键即可。快捷键可以在"设置" &gt;&gt; "控制设定" &gt;&gt; "模组设定选项" &gt;&gt; "Hearts and Minds: Mission"(下拉菜单) 中进行变更。&lt;br/&gt; 可以使用的命令如下:&lt;br/&gt; - 站住&lt;br/&gt; - 趴下&lt;br/&gt; - 走开&lt;br/&gt;&lt;br/&gt; 如果你希望只对某个单位发出指令, 与该单位进行互动即可(ACE物体互动)。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 你也可以使用 AR-2 无人机投放传单, 要求200米范围内的平民疏散至最近的宗教建筑避难(若无宗教建筑, 则前往安全区域)。</Original>
@@ -634,21 +619,7 @@
                 <Original>数据库</Original>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_DATA_DELETE">
-                <Original>Delete</Original>
-                <English>Delete</English>
-                <Czech>Smazat</Czech>
-                <German>Löschen</German>
-                <Russian>Удалить</Russian>
-                <Polish>Usuń</Polish>
-                <Italian>Elimina</Italian>
-                <Spanish>Suprimir</Spanish>
-                <French>Supprimer</French>
-                <Chinese>刪除</Chinese>
-                <Japanese>削除</Japanese>
-                <Korean>삭제</Korean>
-                <Portuguese>Excluir</Portuguese>
-                <Chinesesimp>删除</Chinesesimp>
-                <Turkish>Sil</Turkish>
+                <Original>删除</Original>
             </Key>
         </Container>
         <Container name="Action(ACE): Intel">
