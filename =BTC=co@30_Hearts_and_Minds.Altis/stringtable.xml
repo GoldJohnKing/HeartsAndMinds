@@ -121,9 +121,6 @@
             </Key>
         </Container>
         <Container name="Documentation: Orders">
-            <Key ID="STR_BTC_HAM_DOC_ORDERS_TITLE">
-                <Original>命令</Original>
-            </Key>
             <Key ID="STR_BTC_HAM_DOC_ORDERS_TEXT">
                 <Original>玩家可以向平民发出指令。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 如要向平民发出指令, 只需打开自我互动菜单并选择"命令平民", 或使用已设定的快捷键即可。快捷键可以在"设置" &gt;&gt; "控制设定" &gt;&gt; "模组设定选项" &gt;&gt; "Hearts and Minds: Mission"(下拉菜单) 中进行变更。&lt;br/&gt; 可以使用的命令如下:&lt;br/&gt; - 站住&lt;br/&gt; - 趴下&lt;br/&gt; - 走开&lt;br/&gt;&lt;br/&gt; 如果你希望只对某个单位发出指令, 与该单位进行互动即可(ACE物体互动)。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 你也可以使用 AR-2 无人机投放传单, 要求200米范围内的平民疏散至最近的宗教建筑避难(若无宗教建筑, 则前往安全区域)。</Original>
             </Key>
