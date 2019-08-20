@@ -228,6 +228,7 @@ btc_fnc_arsenal_ammoUsage = compile preprocessFileLineNumbers "core\fnc\arsenal\
 // Edited: Add Custom Functions
 custom_fnc_infFriendlyFire = compile preprocessFileLineNumbers "core\fnc\custom\inf_friendly_fire.sqf";
 custom_fnc_vehFriendlyFire = compile preprocessFileLineNumbers "core\fnc\custom\veh_friendly_fire.sqf";
+custom_fnc_vehDestroyed = compile preprocessFileLineNumbers "core\fnc\custom\veh_destroyed.sqf";
 custom_fnc_playerKilled = compile preprocessFileLineNumbers "core\fnc\custom\player_killed.sqf";
 
 /////////////////////CLIENT\\\\\\\\\\\\\\\\\\\\\

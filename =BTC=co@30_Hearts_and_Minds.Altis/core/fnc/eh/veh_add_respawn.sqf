@@ -44,3 +44,6 @@ _vehicle addMPEventHandler ["MPKilled", {if (isServer) then {[_this select 0] ca
 
 // Edited: Add vehicle friendly fire logging
 _vehicle addMPEventHandler ["MPHit", custom_fnc_vehFriendlyFire];
+
+// Edited: Add vehicle destroyed logging
+_vehicle addMPEventHandler ["MPKilled", custom_fnc_vehDestroyed];

@@ -38,3 +38,7 @@ if ((isNumber (configfile >> "CfgVehicles" >> typeOf _veh >> "ace_fastroping_ena
 
 // Edited: Add vehicle friendly fire logging
 _veh addMPEventHandler ["MPHit", custom_fnc_vehFriendlyFire];
+
+// Edited: Add vehicle destroyed logging
+_veh addMPEventHandler ["MPKilled", custom_fnc_vehDestroyed];
+
