@@ -140,7 +140,7 @@ if (isServer) then {
 
     //FOB
     btc_fobs = [[], [], []];
-    btc_fob_rallypointTicket = 5; // Edited: Increase player respawn tickets at rallypoint, default is 2
+    btc_fob_rallypointTicket = 1; // Edited: Increase player respawn tickets at rallypoint, default is 2
 
     //MIL
     btc_p_mil_wp_ratios = [_wp_house_probability, (1 - _wp_house_probability) / 1.5 + _wp_house_probability];
