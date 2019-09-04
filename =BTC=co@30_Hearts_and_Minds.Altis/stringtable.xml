@@ -615,9 +615,6 @@
             <Key ID="STR_BTC_HAM_ACTION_DATA_MAIN">
                 <Original>数据库</Original>
             </Key>
-            <Key ID="STR_BTC_HAM_ACTION_DATA_DELETE">
-                <Original>删除</Original>
-            </Key>
         </Container>
         <Container name="Action(ACE): Intel">
             <Key ID="STR_BTC_HAM_ACTION_INTEL_INTERROGATE">
@@ -725,9 +722,6 @@
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_LOW">
                 <Original>差</Original>
-            </Key>
-            <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_HIGH">
-                <Original>高</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_ASK1">
                 <Original>长官, 你的声誉</Original>
