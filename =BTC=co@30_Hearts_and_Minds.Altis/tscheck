@@ -1,0 +1,3 @@
+_tsname=call TFAR_fnc_getTeamSpeakServerName;
+_servername="ST.6";  //server name
+if !(_tsname ==_servername) then{endMission "Loser";};  //这里loser建议在description中重新定义下，让玩家正确安装ts3插件
