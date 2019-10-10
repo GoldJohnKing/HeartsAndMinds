@@ -826,10 +826,10 @@
                 <Original>该名称已被使用!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_WIP">
-                <Original>FOB装配中, 请远离!</Original>
+                <Original>后退! FOB装配中</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_DISMANTLE_H_PROC">
-                <Original>已拆除, 正在搬走 ...</Original>
+                <Original>正在拆除, 请远离 ...</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_REDEPLOY_H_NOFOB">
                 <Original>未部署FOB</Original>
