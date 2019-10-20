@@ -21,7 +21,8 @@ Author:
 ---------------------------------------------------------------------------- */
 
 params [
-    ["_veh", objNull, [objNull]]
+    ["_veh", objNull, [objNull]],
+    ["_p_chem", btc_p_chem, [false]]
 ];
 
 if !(isServer) exitWith {
@@ -36,9 +37,15 @@ if ((isNumber (configfile >> "CfgVehicles" >> typeOf _veh >> "ace_fastroping_ena
     [_veh] call ace_fastroping_fnc_equipFRIES
 };
 
+if (_p_chem) then {
+    _veh addEventHandler ["GetIn", {
+        [_this select 0, _this select 2] call btc_fnc_chem_propagate;
+        _this
+    }];
+};
+
 // Edited: Add vehicle friendly fire logging
 _veh addMPEventHandler ["MPHit", custom_fnc_vehFriendlyFire];
 
 // Edited: Add vehicle destroyed logging
 _veh addMPEventHandler ["MPKilled", custom_fnc_vehDestroyed];
-

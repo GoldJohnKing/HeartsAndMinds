@@ -146,6 +146,14 @@
                 <Original> &lt;img image='\z\ace\addons\interaction\UI\Icon_Module_Interaction_ca.paa' width='20' height='20'/&gt;使用 ACE 3 互动系统。</Original>
             </Key>
         </Container>
+        <Container name="Documentation: Chemical warfare">
+            <Key ID="STR_BTC_HAM_DOC_CHEMICALWARFARE_TITLE">
+                <Original>化学战</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT">
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;化学试剂:&lt;/marker&gt;&lt;br/&gt; 化学试剂会在战场上的武器箱等位置出现。当一个物体受到污染时, 这种化学试剂会传播它到周围的人身上(3米范围内)。这些人将持续受到伤害直至死亡, 或找到一个净化淋浴(位于在后勤点)来清理他们的身体。当这些人受到污染时, 他们会将污染传播给周围的其他人(1.5米范围内)或车辆(如果他们进入车辆的话)。记住, 尸体将保持受到污染的状态, 但尸体袋可以将其隔离。此外, 作为货物装载受污染物体将会污染集装箱或车辆。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护措施:&lt;/marker&gt;&lt;br/&gt; 使用CBRN(生化核辐)装备(服装, 面具和呼吸器背包)可以保护您免受污染影响。但是, 在取下CBRN装备之前, 不要忘记进行至少5秒的净化淋浴。请注意, 即使穿戴了CBRN装备, 您也会向人员或车辆传播化学试剂, 只有你免受污染影响。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;清除污染:&lt;/marker&gt;&lt;br/&gt; 小型淋浴器只能用来净化单兵单位。使用大型淋浴器来清洗物品、车辆和货物。要激活净化过程, 只需待在淋浴下即可。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;检测:&lt;/marker&gt;&lt;br/&gt; 你可以使用 ED-1E 无人机分析物体、车辆或人, 以测定其是否受到污染(注: 该无人机永远不会受到污染)。您也可以使用化学探测器检测您是否处于污染区域内(威胁度介于0.1至0.9之间: 附近存在受污染物体, 威胁度等于1: 您处于传播区域内(您将受到污染))。</Original>
+            </Key>
+        </Container>
     </Package>
     <Package name="Parameters">
         <Container name="Parameters: Time">
@@ -296,6 +304,9 @@
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_SEA">
                 <Original>将战区扩展至海上:</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_CHEM">
+                <Original>化学战:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM">
                 <Original>自动生成支线任务:</Original>
@@ -527,6 +538,18 @@
             <Key ID="STR_BTC_HAM_SIDE_RESC_BACK_TITLE">
                 <Original>将他带回</Original>
             </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BODYBAG_DESC">
+                <Original>%1 已经阵亡。将 %1 装进尸体袋。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BODYBAG_TITLE">
+                <Original>将该飞行员装进尸体袋</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BRING_DESC">
+                <Original>将装有 %1 的尸体袋带回后勤点。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_RESC_BRING_TITLE">
+                <Original>将尸体袋带回基地</Original>
+            </Key>
         </Container>
         <Container name="Supply">
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_TITLE">
@@ -607,6 +630,32 @@
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_BRING_DESC">
                 <Original>将 %1 的狗牌带回基地后勤点。</Original>
+            </Key>
+        </Container>
+        <Container name="Chemical Leak">
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_TITLE">
+                <Original>处理 1% 地区的化学品泄露</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
+                <Original>在 1% 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_BRING_DESC">
+                <Original>在后勤点生成集装箱并将其带到受污染区域。你将使用它来装载所有的受污染物体。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_BRING_TITLE">
+                <Original>携带一个集装箱</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_LOCATE_TITLE">
+                <Original>确定受污染物体的位置</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_LOCATE_DESC">
+                <Original>确定受污染物体的位置。ED-1E 无人机可以通过针刺活检帮助你识别受污染物体。</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_MOVE_TITLE">
+                <Original>清理受污染的物体</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_CHEM_MOVE_DESC">
+                <Original>将受污染物体装载至集装箱中。将集装箱或受污染物体移动到大型淋浴器下。注: 你可以将集装箱装载至载具, 再讲载具移动到淋浴器下。这将会净化载具、成员和货物。</Original>
             </Key>
         </Container>
     </Package>
@@ -936,6 +985,14 @@
             </Key>
             <Key ID="STR_BTC_HAM_O_EH_HDCACHE_MRK">
                 <Original>武器箱 %1 已摧毁</Original>
+            </Key>
+        </Container>
+        <Container name="Other: Chemical Warfare">
+            <Key ID="STR_BTC_HAM_O_CHEM_CONTA">
+                <Original>受到污染</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_O_CHEM_NOTCONTA">
+                <Original>未受污染</Original>
             </Key>
         </Container>
     </Package>
