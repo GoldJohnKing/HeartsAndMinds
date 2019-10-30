@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=68;
+		nextID=69;
 	};
 	class Camera
 	{
-		pos[]={12248.051,30.322674,2406.7185};
-		dir[]={0.43210045,0.084044524,0.89794081};
-		up[]={-0.036420736,0.99646521,-0.075689189};
-		aside[]={0.90112722,-2.135057e-006,-0.43363634};
+		pos[]={11954.997,104.11349,2222.1868};
+		dir[]={-0.12070036,-0.77752173,0.61729777};
+		up[]={-0.14919879,0.62886548,0.76305753};
+		aside[]={0.98149544,1.5446276e-006,0.19190678};
 	};
 };
 binarizationWanted=0;
@@ -2238,8 +2238,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11957.249,24.840895,2331.1816};
-						angles[]={0.0009765625,0.070773095,0.015038094};
+						position[]={11957.249,24.840895,2331.1821};
+						angles[]={0.00097738439,0.070773095,0.015044738};
 					};
 					side="West";
 					flags=6;
@@ -4959,6 +4959,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="None";
+			state=1;
 			class Entities
 			{
 				items=1;
@@ -4969,6 +4970,7 @@ class Mission
 					{
 						position[]={11728.346,24.706841,2235.3979};
 					};
+					name="btc_curator";
 					id=244;
 					type="ModuleCurator_F";
 					class CustomAttributes
@@ -16241,6 +16243,7 @@ class Mission
 			};
 			id=897;
 			type="DeconShower_01_F";
+			atlOffset=0.023145676;
 			class CustomAttributes
 			{
 				class Attribute0

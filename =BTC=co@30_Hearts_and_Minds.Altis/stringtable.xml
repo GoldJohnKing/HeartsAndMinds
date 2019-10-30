@@ -3,10 +3,10 @@
     <Package name="Description">
         <Container name="Description: Main">
             <Key ID="STR_BTC_HAM_DESCR_NAME">
-                <Original>心灵与智慧 Hearts and Minds [MPRI专用版]</Original>
+                <Original>心灵与智慧 Hearts and Minds [S.T6专用版]</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DESCR_MISSION">
-                <Original>军事职业资源公司 QQ群: 708118128</Original>
+                <Original>S.T6 GROUP QQ群: 708118128</Original>
             </Key>
         </Container>
     </Package>
