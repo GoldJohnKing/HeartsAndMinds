@@ -634,10 +634,10 @@
         </Container>
         <Container name="Chemical Leak">
             <Key ID="STR_BTC_HAM_SIDE_CHEM_TITLE">
-                <Original>处理 1% 地区的化学品泄露</Original>
+                <Original>处理 %1 地区的化学品泄露</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
-                <Original>在 1% 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Original>
+                <Original>在 %1 地区, 一些装有危险化学试剂的集装箱发生破损。平民报告称只有一些小物体受到污染。将这些物体移动到大型淋浴器下以消除污染。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_BRING_DESC">
                 <Original>在后勤点生成集装箱并将其带到受污染区域。你将使用它来装载所有的受污染物体。</Original>
