@@ -80,10 +80,10 @@ if (count _NearestEnemys > 0) then
 			
 			sleep (2 + RANDOM 4);
 			private _LOS = lineIntersectsSurfaces [eyePos _x, eyePos _NearestEnemy, (vehicle _NearestEnemy), _x, true, 1,"VIEW","GEOM"];
-			if ((count _LOS) < 1 && !((primaryWeapon _x) isEqualTo "")) then //Edited: Fix empty return of "primaryWeapon _x", default is "((count _LOS) < 1)"
+			if ((count _LOS) < 1) then
 			{			
 				private _FireModes = (getArray (configFile >> "CfgWeapons" >> currentWeapon _x >> "modes"));
-				if (!((primaryWeapon _x) isEqualTo "")) then {_x forceWeaponFire [ primaryWeapon _x,(selectrandom _FireModes)];}//Edited: Fix empty return of "primaryWeapon _x", default has no if
+				_x forceWeaponFire [ primaryWeapon _x,(selectrandom _FireModes)];
 				_x spawn {sleep 2;if !(unitPos _this isEqualTo "Auto") then {_this setUnitPos "Auto"};};
 				_x reveal [_NearestEnemy,4];
 				
