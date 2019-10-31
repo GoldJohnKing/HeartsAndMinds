@@ -1,4 +1,4 @@
-//Edited: This file is heavily edited by Gold John King in order to fit the needs of =MPRI=.
+//Edited: This file is heavily edited by Gold John King in order to fit the needs of =ST.6=.
 
 btc_custom_loc = [
 /*
