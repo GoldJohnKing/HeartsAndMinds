@@ -30,11 +30,15 @@ class RscTitles {
 class CfgFunctions {
     #include "core\fnc\eh\functions.hpp"
     // add your own functions below
+    //Edited: Add VCOM Functions
+    #include "vcom\cfgFunctions.hpp"
 };
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+    //Edited: Add VCOM Functions
+    VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
 };
 
 class Extended_InitPost_EventHandlers {
@@ -53,5 +57,24 @@ class Extended_InitPost_EventHandlers {
 wreckManagerMode = 0;
 corpseManagerMode = 0;
 
+unsafeCVL = 1;
+
 //Edited: Disable some chat channel:
 disableChannels[] = {0,2,4,5};
+
+//Edited: Add VCOM Functions
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+	};
+};

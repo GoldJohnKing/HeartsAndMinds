@@ -18,3 +18,6 @@ if (!isDedicated && hasInterface) then {
 if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
+
+//Edited: Add VCOM Functions
+[] execVM "Vcom\VcomInit.sqf";
