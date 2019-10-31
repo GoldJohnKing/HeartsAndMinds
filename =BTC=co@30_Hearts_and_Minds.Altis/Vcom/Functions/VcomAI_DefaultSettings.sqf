@@ -27,7 +27,7 @@ Vcm_Settings =
 	VCM_Debug = false; //Enable debug mode.
 	VCM_MINECHANCE = 75; //Chance to lay a mine
 	VCM_SIDEENABLED = [east,resistance]; //Sides that will activate Vcom AI
-	VCM_RAGDOLL = true; //Should AI ragdoll when hit
+	VCM_RAGDOLL = false; //Should AI ragdoll when hit
 	VCM_RAGDOLLCHC = 30; //CHANCE AI RAGDOLL	
 	VCM_FullSpeed = true; //Enforce full speedmode during combat (Does not reset after combat end)
 	VCM_HEARINGDISTANCE = 1500; //Distance AI hear unsuppressed gunshots.
@@ -44,10 +44,10 @@ Vcm_Settings =
 	VCM_CARGOCHNG = true; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
 	VCM_TURRETUNLOAD = true;//If true, AI will automatically disembark turret positions in vehicles, if the vehicle is badly damaged. This is to prevent AI leaving a tank, when the tracks are damaged.	
 	VCM_DISEMBARKRANGE = 200; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
-	VCM_AISNIPERS = true; //Special sniper AI
+	VCM_AISNIPERS = false; //Special sniper AI
 	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
 	Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
-	Vcm_PlayerAISkills = true; //AI in a group, that a players leads, can have their skills changed separately.
+	Vcm_PlayerAISkills = false; //AI in a group, that a players leads, can have their skills changed separately.
 		
 	//AI SKILL SETTINGS HERE!!!!!!!!!!!!
 	//LOW DIFFICULTY
