@@ -158,7 +158,7 @@ if (isServer) then {
     btc_rep_militia_called = - btc_rep_militia_call_time;
 
     //Chem
-    btc_chem_decontaminate = [btc_bigShower];
+    btc_chem_decontaminate = [btc_bigShower, btc_bigShower_1, btc_bigShower_2, btc_bigShower_3, btc_bigShower_4]; //Edited: Add more decontaminate shower
     missionNamespace setVariable ["btc_chem_contaminated", [], true];
 
     //Spect
@@ -193,7 +193,7 @@ if (isServer) then {
     btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "civtreatment", "checkpoint", "convoy", "rescue", "capture_officer", "hostage", "hack", "kill", "EMP"]; // On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"};
-    btc_side_list_use = [];
+    btc_side_list_use = ["supply", "rescue", "chemicalLeak", "vehicle", "capture_officer", "hack"]; //Edited: Specify side-mission list
     btc_type_tower = ["Land_Communication_F", "Land_TTowerBig_1_F", "Land_TTowerBig_2_F"];
     btc_type_phone = ["Land_PortableLongRangeRadio_F", "Land_MobilePhone_smart_F", "Land_MobilePhone_old_F"];
     btc_type_barrel = ["Land_GarbageBarrel_01_F", "Land_BarrelSand_grey_F", "MetalBarrel_burning_F", "Land_BarrelWater_F", "Land_MetalBarrel_F", "Land_MetalBarrel_empty_F"];
@@ -318,11 +318,11 @@ if (isServer) then {
 private _allfaction = ["AFGCIV","CIV_F","DEFAULT","CFP_C_AFG","CFP_C_AFRCHRISTIAN","CFP_C_AFRISLAMIC","CFP_C_ASIA","CFP_C_ME","CUP_C_RU","CUP_C_CHERNARUS","CUP_C_SAHRANI","CUP_C_TK","OPTRE_UEG_CIV","GM_FC_GC_CIV","GM_FC_GE_CIV","LIB_CIV","LOP_AFR_CIV","LOP_CHR_CIV","LOP_TAK_CIV","CIV_IDAP_F","RDS_RUS_CIV","UK3CB_CHC_C","UK3CB_TKC_C","UNSUNG_C"]; //All factions
 _p_civ = _allfaction select _p_civ; //Select faction selected from mission parameter
 _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from mission parameter
-private _allclasse = [[_p_civ]] call btc_fnc_civ_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ , "btc_ac","LOP_TAK_CIV"]] call btc_fnc_civ_class.
+private _allclasse = [[_p_civ, "CIV_IDAP_F"]] call btc_fnc_civ_class; //Edited: ADD IDAP as civ unit Faction - Create classes from factions, you can combine factions from the SAME side : [[_p_civ , "btc_ac","LOP_TAK_CIV"]] call btc_fnc_civ_class.
 
 //Save class name to global variable
 btc_civ_type_units = _allclasse select 0;
-_allclasse = [[_p_civ_veh]] call btc_fnc_civ_class;
+_allclasse = [[_p_civ_veh, "CIV_IDAP_F"]] call btc_fnc_civ_class; //Edited: ADD IDAP as civ vehicle Faction
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
@@ -607,7 +607,8 @@ switch (_p_en) do {
     };*/
     case "OPF_G_F" : {
         btc_type_motorized = btc_type_motorized + ["I_Truck_02_transport_F", "I_Truck_02_covered_F"];
-        btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
+        //Edited: Remove enemy Heli
+        //btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F"];
     };
     case "IND_C_F" : {
         btc_type_motorized = btc_type_motorized + ["I_G_Offroad_01_repair_F", "I_G_Offroad_01_F", "I_G_Quadbike_01_F", "I_G_Van_01_fuel_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"];
@@ -617,7 +618,7 @@ switch (_p_en) do {
 };
 
 //Chem
-btc_chem_range = 3;
+btc_chem_range = 5; //Edited: Increase propagate range
 
 //Spect
 btc_spect_range = 1000;

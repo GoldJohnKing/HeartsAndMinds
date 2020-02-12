@@ -108,8 +108,8 @@ _composition_pattern append [
     [selectRandom btc_type_spill,random 360,[-1.96582,1.60091 - _doorCenter/2,0]],
     [selectRandom btc_type_spill,random 360,[4,3.95 - _doorCenter/2,0]],
     [selectRandom btc_type_spill,random 360,[3.47607,-4.70143 - _doorCenter/2,0]],
-    [selectRandom btc_type_cargo_ruins,random 360,[6.31689,0.373489 - _doorCenter/2,0]],
-    [selectRandom btc_type_cargo_ruins,random 360,[-4,7.95 - _doorCenter/2,0]],
+    ["Land_GarbageHeap_03_F",random 360,[6.31689,0.373489 - _doorCenter/2,0]], //Edited: Use more normal stuff instead of cargo ruins
+    ["Land_WheelieBin_01_F",random 360,[-4,7.95 - _doorCenter/2,0]], //Edited: Use more normal stuff instead of cargo ruins
     [selectRandom btc_type_spill,random 360,[0,11.95 - _doorCenter/2,0]],
     [selectRandom btc_type_SCBA,random 360,[_sas + 0.510742,_doorCenter + 1.4,0]]
 ];
@@ -119,7 +119,7 @@ _composition_pattern append [
     };
 } forEach [
     [selectRandom btc_type_spill,random 360,[-4,-4.05 - _doorCenter/2,0]],
-    [selectRandom btc_type_cargo_ruins,random 360,[-5.12109,-6.19316 - _doorCenter/2,0]],
+    ["Land_GarbageContainer_open_F",random 360,[-5.12109,-6.19316 - _doorCenter/2,0]], //Edited: Use more normal stuff instead of cargo ruins
     ["TrashBagHolder_01_F",random [0, 0, 30],[_sas,_doorCenter + 2.37756,0]]
 ];
 {

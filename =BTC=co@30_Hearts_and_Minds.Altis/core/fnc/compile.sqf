@@ -184,6 +184,9 @@ if (isServer) then {
 
 /////////////////////CLIENT AND SERVER\\\\\\\\\\\\\\\\\\\\\
 
+//Edited: Add manual functions - CUSTOM
+gjk_fnc_custom_check_gear = compile preprocessFileLineNumbers "core\fnc\custom\check_gear.sqf";
+
 //CACHE
 btc_fnc_cache_hd_cache = compile preprocessFileLineNumbers "core\fnc\cache\hd_cache.sqf";
 

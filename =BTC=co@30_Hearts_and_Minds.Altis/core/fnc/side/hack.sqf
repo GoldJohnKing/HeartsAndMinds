@@ -83,19 +83,7 @@ if !(_city getVariable ["active", false]) exitWith {
     [[], [_terminal]] call btc_fnc_delete;
 };
 
-//// Launch the hacked missile \\\\
-_pos params ["_x", "_y"];
-private _altitude = 20;
-while {_altitude < 500} do {
-    _altitude = _altitude + 3;
-    (createVehicle ["DemoCharge_Remote_Ammo_Scripted", [_x, _y, _altitude], [], 0, "CAN_COLLIDE"]) setDamage 1;
-    sleep 0.1;
-};
-private _rocket = createVehicle ["ace_rearm_Missile_AGM_02_F", [_x, _y, _altitude], [], 0, "CAN_COLLIDE"];
-private _fx = createVehicle ["test_EmptyObjectForSmoke", [_x, _y, _altitude], [], 0, "CAN_COLLIDE"];
-_fx attachTo [_rocket, [0, 0, 0]];
-
-[[], [_rocket, _terminal, _fx]] call btc_fnc_delete;
+[[], [_terminal]] call btc_fnc_delete; //Edited: Remove missile and _fx
 
 80 call btc_fnc_rep_change;
 
