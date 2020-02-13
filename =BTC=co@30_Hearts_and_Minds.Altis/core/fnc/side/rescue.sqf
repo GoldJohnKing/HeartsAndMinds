@@ -47,7 +47,7 @@ _group setVariable ["no_cache", true];
 private _crew = selectRandom btc_civ_type_units; //Edited: Use civ unit instead of mil crew units
 _pos = [_pos, 1, 5, 3, 0, 60 * (pi / 180), 0] call btc_fnc_findsafepos; //Edited: Avoid unit collision with vehicle
 _crew createUnit [_pos, _group];
-_group call btc_fnc_civ_unit_create; //Edited: Call btc_fnc_civ_unit_create to add possibility for CBRN equipments and propagation
+_group call btc_fnc_civ_unit_create; //Edited: Call btc_fnc_civ_unit_create to add probability for CBRN equipments and propagation
 
 //Edited: Add map marker to rescue target
 private _rescueMarker = createMarker ["IDAP", _group];

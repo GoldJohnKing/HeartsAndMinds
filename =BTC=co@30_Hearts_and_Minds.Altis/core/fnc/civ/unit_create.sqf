@@ -53,7 +53,7 @@ params [
                 };
             };
         };
-        //Edited: Add possibility for basic propagation
+        //Edited: Add probability for basic propagation
         if (random 1 < 0.05) then {
             if ((btc_chem_contaminated pushBackUnique _x) > -1) then {
                 publicVariable "btc_chem_contaminated";

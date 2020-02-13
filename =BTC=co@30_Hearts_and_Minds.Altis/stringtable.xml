@@ -50,7 +50,7 @@
                 <Original>伤口</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_WOUNDS_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\heal_ca.paa' width='20' height='20'/&gt; 使用互动菜单处理你的伤口。&lt;br/&gt; 请谨记: 无论您是否需要进行治疗, 这些操作始终可用。始终建议您在开始治疗前先进行诊断。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\heal_ca.paa' width='20' height='20'/&gt; 使用互动菜单处理你的伤口。&lt;br/&gt; 请谨记: 无论您是否需要进行治疗，这些操作始终可用。始终建议您在开始治疗前先进行诊断。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Deafness">
@@ -58,12 +58,12 @@
                 <Original>耳鸣</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_DEAFNESS_TEXT">
-                <Original>&lt;img image='\z\ace\addons\hearing\UI\Icon_Module_Hearing_ca.paa' width='20' height='20'/&gt; 在战斗中, 使用耳塞保护自己免受听力损失。&lt;br/&gt; 你可以使用自我互动菜单佩戴耳塞(前提是你在随身装备中携带了耳塞)。&lt;br/&gt;&lt;br/&gt;</Original>
+                <Original>&lt;img image='\z\ace\addons\hearing\UI\Icon_Module_Hearing_ca.paa' width='20' height='20'/&gt; 在战斗中，使用耳塞保护自己免受听力损失。&lt;br/&gt; 你可以使用自我互动菜单佩戴耳塞(前提是你在随身装备中携带了耳塞)。&lt;br/&gt;&lt;br/&gt;</Original>
             </Key>
         </Container>
         <Container name="Documentation: Vehicles">
             <Key ID="STR_BTC_HAM_DOC_VEHICLES_TEXT">
-                <Original>&lt;marker name='blufor_base'&gt;&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\destroy_ca.paa' width='20' height='20'/&gt; 载具重生:&lt;/marker&gt;&lt;br/&gt; 当载具损毁时, 它不会自行在基地重生。你需要采用车辆牵引或直升机吊挂的方式将其残骸运回基地, 并在后勤中心对其进行维修(与后勤中心的红色箱子进行互动)。直升机的残骸只能使用吊挂的方式运输。 &lt;br/&gt; 支奴干(Chinook)是唯一的例外, 它会在损毁后30秒于基地重生。 &lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 弹药补给:&lt;/marker&gt;&lt;br/&gt; 你可以在后勤中心生成对应口径的弹药, 对载具进行弹药补给。与红色箱子互动, 选择对应的载具类型及口径, 弹药箱将会生成。将生成的弹药箱搬到载具附近, 与载具互动, 即可执行补给。注意: 如需启用此功能, 需要将任务参数中的弹药补给选项设置为 "Total Magazine" 或 "Calibre Based Number" (而非 "Entire Vehicle")。</Original>
+                <Original>&lt;marker name='blufor_base'&gt;&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\destroy_ca.paa' width='20' height='20'/&gt; 载具重生:&lt;/marker&gt;&lt;br/&gt; 当载具损毁时，它不会自行在基地重生。你需要采用车辆牵引或直升机吊挂的方式将其残骸运回基地，并在后勤中心对其进行维修(与后勤中心的红色箱子进行互动)。直升机的残骸只能使用吊挂的方式运输。 &lt;br/&gt; 支奴干(Chinook)是唯一的例外，它会在损毁后30秒于基地重生。 &lt;br/&gt;&lt;br/&gt; &lt;marker name='blufor_base'&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 弹药补给:&lt;/marker&gt;&lt;br/&gt; 你可以在后勤中心生成对应口径的弹药，对载具进行弹药补给。与红色箱子互动，选择对应的载具类型及口径，弹药箱将会生成。将生成的弹药箱搬到载具附近，与载具互动，即可执行补给。注意: 如需启用此功能，需要将任务参数中的弹药补给选项设置为 "Total Magazine" 或 "Calibre Based Number" (而非 "Entire Vehicle")。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Side Mission">
@@ -79,37 +79,37 @@
                 <Original>FOB/集合点</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_FOB_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move1_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move2_ca.paa' width='20' height='20' /&gt; &lt;marker name='blufor_base'&gt;FOB:&lt;/marker&gt;&lt;br/&gt; FOB 可作为前线复活点使用。要创建FOB, 请在后勤中心申请蓝色货运集装箱。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa' width='20' height='20'/&gt;  &lt;marker name='blufor_base'&gt;部署:&lt;/marker&gt; &lt;br/&gt; 将FOB集装箱移动至部署位置并与其互动即可建造FOB。请谨记: 只有在主基地2500米范围外的地形平坦区域才能建立FOB。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;拆除:&lt;/marker&gt; &lt;br/&gt; 你可以与指挥部(HQ)屋顶的旗杆互动, 以拆除FOB。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move1_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\run_ca.paa' width='20' height='20' /&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\move2_ca.paa' width='20' height='20' /&gt; &lt;marker name='blufor_base'&gt;FOB:&lt;/marker&gt;&lt;br/&gt; FOB 可作为前线复活点使用。要创建FOB，请在后勤中心申请蓝色货运集装箱。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\Ui_f\data\Map\Markers\NATO\b_hq.paa' width='20' height='20'/&gt;  &lt;marker name='blufor_base'&gt;部署:&lt;/marker&gt; &lt;br/&gt; 将FOB集装箱移动至部署位置并与其互动即可建造FOB。请谨记: 只有在主基地2500米范围外的地形平坦区域才能建立FOB。&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;拆除:&lt;/marker&gt; &lt;br/&gt; 你可以与指挥部(HQ)屋顶的旗杆互动，以拆除FOB。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Sling loading">
             <Key ID="STR_BTC_HAM_DOC_SLING_TEXT">
-                <Original>=BTC=吊挂功能不会覆盖原版吊挂功能, 二者都可以使用。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\container_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa' width='20' height='20'/&gt; 吊挂货物相当简单: 进入直升机飞行员座位, 于货物上方悬停, 与直升机互动并部署绳索。&lt;br/&gt; 当你处于正确位置时, 一个新的选项"安装挂钩"将会出现在鼠标滚轮的动作菜单中。你可也以打开HUD以方便操作。&lt;br/&gt; &lt;img image='\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa' width='20' height='20'/&gt; 要释放一个货物, 使用自我互动菜单并选择"断开绳索"即可。</Original>
+                <Original>=BTC=吊挂功能不会覆盖原版吊挂功能，二者都可以使用。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\container_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\air_f_beta\Heli_Transport_01\Data\UI\Map_Heli_Transport_01_base_CA.paa' width='20' height='20'/&gt; 吊挂货物相当简单: 进入直升机飞行员座位，于货物上方悬停，与直升机互动并部署绳索。&lt;br/&gt; 当你处于正确位置时，一个新的选项"安装挂钩"将会出现在鼠标滚轮的动作菜单中。你可也以打开HUD以方便操作。&lt;br/&gt; &lt;img image='\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa' width='20' height='20'/&gt; 要释放一个货物，使用自我互动菜单并选择"断开绳索"即可。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Logistic point">
             <Key ID="STR_BTC_HAM_DOC_LOGISTICP_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 后勤中心可以生成新的物件(如弹药、防御工事、用于支线任务的救援物资等), 也可以维修受损载具。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\repair_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\rearm_ca.paa' width='20' height='20'/&gt; 后勤中心可以生成新的物件(如弹药、防御工事、用于支线任务的救援物资等)，也可以维修受损载具。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Logistic">
             <Key ID="STR_BTC_HAM_DOC_LOGISTIC_TEXT">
-                <Original>&lt;img image='\z\ace\addons\cargo\UI\Icon_Module_Cargo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;货运系统:&lt;/marker&gt;&lt;br/&gt; 使用ACE3货运系统。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\attach\UI\attach_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;牵引系统:&lt;/marker&gt;&lt;br/&gt; 如需牵引一辆载具, 与其互动并选择"启用牵引"。&lt;br/&gt;然后, 将牵引车辆(前车)置于被牵引车辆(后车)前方, 并在互动菜单中选择"牵引"。&lt;br/&gt; 如果两辆车的距离过远, 或前车无法牵引这一载荷(比如汽车(Car)无法牵引卡车(Truck)或坦克(Tank)), 则该选项不可用。&lt;br/&gt; 如需取消牵引, 与两车之一互动并选择"取消牵引"。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\dragging\UI\icons\box_carry.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;物体放置:&lt;/marker&gt;&lt;br/&gt; 您可以使用该选项来移动重物, 从而建造一个小的前哨或基地。&lt;br/&gt; 选择该选项后, 移动对象所需键位的提示将会出现。</Original>
+                <Original>&lt;img image='\z\ace\addons\cargo\UI\Icon_Module_Cargo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;货运系统:&lt;/marker&gt;&lt;br/&gt; 使用ACE3货运系统。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\attach\UI\attach_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;牵引系统:&lt;/marker&gt;&lt;br/&gt; 如需牵引一辆载具，与其互动并选择"启用牵引"。&lt;br/&gt;然后，将牵引车辆(前车)置于被牵引车辆(后车)前方，并在互动菜单中选择"牵引"。&lt;br/&gt; 如果两辆车的距离过远，或前车无法牵引这一载荷(比如汽车(Car)无法牵引卡车(Truck)或坦克(Tank))，则该选项不可用。&lt;br/&gt; 如需取消牵引，与两车之一互动并选择"取消牵引"。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\dragging\UI\icons\box_carry.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;物体放置:&lt;/marker&gt;&lt;br/&gt; 您可以使用该选项来移动重物，从而建造一个小的前哨或基地。&lt;br/&gt; 选择该选项后，移动对象所需键位的提示将会出现。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Hideout">
             <Key ID="STR_BTC_HAM_DOC_HIDEOUT_TEXT">
-                <Original>藏匿点是叛军组织活动的地方。&lt;br/&gt;他们从这里派遣增援, 进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动, 那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败叛军, 你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点, 只需在靠近旗帜的弹药箱上放置一个炸药包, 然后炸掉它!</Original>
+                <Original>藏匿点是叛军组织活动的地方。&lt;br/&gt;他们从这里派遣增援，进攻附近的城市。&lt;br/&gt;如果你在某区域注意到了大量民兵活动，那么藏匿点可能就在附近。&lt;br/&gt;如果你想要打败叛军，你需要摧毁所有的藏匿点。&lt;br/&gt;这是一张藏匿点的示意图:&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\hideout.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;要摧毁藏匿点，只需在靠近旗帜的弹药箱上放置一个炸药包，然后炸掉它!</Original>
             </Key>
         </Container>
         <Container name="Documentation: IED">
             <Key ID="STR_BTC_HAM_DOC_IED_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 每个物体都可能是一个简易爆炸装置(IED), 小心地接近它(切勿在行走的同时转身, 而应当"走-停-转身-再走")。打开你的探雷器( VMH3 或 VMMH3 ), 在2米范围内寻找炸弹。&lt;br/&gt; &lt;img image='\z\ace\addons\explosives\UI\Defuse_ca.paa' width='20' height='20'/&gt; 如果你是工程师(Engineer)且携带了拆弹工具, 你就可以拆除它。&lt;br/&gt; 你也可以使用大口径子弹或炸药包来引爆它。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 每个物体都可能是一个简易爆炸装置(IED)，小心地接近它(切勿在行走的同时转身，而应当"走-停-转身-再走")。打开你的探雷器( VMH3 或 VMMH3 )，在2米范围内寻找炸弹。&lt;br/&gt; &lt;img image='\z\ace\addons\explosives\UI\Defuse_ca.paa' width='20' height='20'/&gt; 如果你是工程师(Engineer)且携带了拆弹工具，你就可以拆除它。&lt;br/&gt; 你也可以使用大口径子弹或炸药包来引爆它。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Intel">
             <Key ID="STR_BTC_HAM_DOC_INTEL_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\map_ca.paa' width='20' height='20'/&gt; 可以通过以下方式获取情报:&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa' width='13' height='13'/&gt; 搜查尸体&lt;br/&gt; - &lt;img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\instructor_ca.paa' width='13' height='13'/&gt; 审问俘虏&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='13' height='13'/&gt; 询问平民&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; 请谨记: 只有翻译员可以与平民交谈, 而且如果你的声誉低, 他们也会说谎。&lt;br/&gt;&lt;br/&gt; 当通过搜查尸体或审问俘虏得到情报时, 地图上会出现标记。记住, 俘虏所持情报的数量和价值都是随机的。&lt;br/&gt; 情报标记有两类:&lt;br/&gt; - 红色问号标记 (&lt;img image='\A3\ui_f\data\map\markers\handdrawn\unknown_CA.paa' width='13' height='13' color='#ff0000'/&gt;): 武器箱情报&lt;br/&gt; - 红色叹号标记 (&lt;img image='\A3\ui_f\data\map\markers\handdrawn\warning_CA.paa' width='13' height='13' color='#ff0000'/&gt;): 藏匿点情报&lt;br/&gt;&lt;br/&gt;&lt;br/&gt; 当你摧毁了藏匿点或武器箱时, 与之相关的所有标记将被删除。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\map_ca.paa' width='20' height='20'/&gt; 可以通过以下方式获取情报:&lt;br/&gt;&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa' width='13' height='13'/&gt; 搜查尸体&lt;br/&gt; - &lt;img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\instructor_ca.paa' width='13' height='13'/&gt; 审问俘虏&lt;br/&gt; - &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='13' height='13'/&gt; 询问平民&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; 请谨记: 只有翻译员可以与平民交谈，而且如果你的声誉低，他们也会说谎。&lt;br/&gt;&lt;br/&gt; 当通过搜查尸体或审问俘虏得到情报时，地图上会出现标记。记住，俘虏所持情报的数量和价值都是随机的。&lt;br/&gt; 情报标记有两类:&lt;br/&gt; - 红色问号标记 (&lt;img image='\A3\ui_f\data\map\markers\handdrawn\unknown_CA.paa' width='13' height='13' color='#ff0000'/&gt;): 武器箱情报&lt;br/&gt; - 红色叹号标记 (&lt;img image='\A3\ui_f\data\map\markers\handdrawn\warning_CA.paa' width='13' height='13' color='#ff0000'/&gt;): 藏匿点情报&lt;br/&gt;&lt;br/&gt;&lt;br/&gt; 当你摧毁了藏匿点或武器箱时，与之相关的所有标记将被删除。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Reputation">
@@ -117,12 +117,12 @@
                 <Original>声誉</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_REPUTATION_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; 可以向平民询问声誉状况&lt;br/&gt; 不良作风及恶劣行为会导致声誉下降。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 救助当地居民, 拆除IED并积极地与叛军作战将对声誉产生积极影响。另一方面, 攻击或击杀平民、残害平民遗体、毁坏建筑物、攻击或掠夺民用车辆、损失我方载具和玩家重生均会降低声誉。一开始, 你的声誉很低, 因此平民不会为你提供情报, 他们可能会欺骗你。&lt;br/&gt; 中止支线任务不会影响声誉。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\talk_ca.paa' width='20' height='20'/&gt; 可以向平民询问声誉状况&lt;br/&gt; 不良作风及恶劣行为会导致声誉下降。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 救助当地居民，拆除IED并积极地与叛军作战将对声誉产生积极影响。另一方面，攻击或击杀平民、残害平民遗体、毁坏建筑物、攻击或掠夺民用车辆、损失我方载具和玩家重生均会降低声誉。一开始，你的声誉很低，因此平民不会为你提供情报，他们可能会欺骗你。&lt;br/&gt; 中止支线任务不会影响声誉。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Orders">
             <Key ID="STR_BTC_HAM_DOC_ORDERS_TEXT">
-                <Original>玩家可以向平民发出指令。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 如要向平民发出指令, 只需打开自我互动菜单并选择"命令平民", 或使用已设定的快捷键即可。快捷键可以在"设置" &gt;&gt; "控制设定" &gt;&gt; "模组设定选项" &gt;&gt; "Hearts and Minds: Mission"(下拉菜单) 中进行变更。&lt;br/&gt; 可以使用的命令如下:&lt;br/&gt; - 站住&lt;br/&gt; - 趴下&lt;br/&gt; - 走开&lt;br/&gt;&lt;br/&gt; 如果你希望只对某个单位发出指令, 与该单位进行互动即可(ACE物体互动)。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 你也可以使用 AR-2 无人机投放传单, 要求200米范围内的平民疏散至最近的宗教建筑避难(若无宗教建筑, 则前往安全区域)。</Original>
+                <Original>玩家可以向平民发出指令。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa' width='20' height='20'/&gt; 如要向平民发出指令，只需打开自我互动菜单并选择"命令平民"，或使用已设定的快捷键即可。快捷键可以在"设置" &gt;&gt; "控制设定" &gt;&gt; "模组设定选项" &gt;&gt; "Hearts and Minds: Mission"(下拉菜单) 中进行变更。&lt;br/&gt; 可以使用的命令如下:&lt;br/&gt; - 站住&lt;br/&gt; - 趴下&lt;br/&gt; - 走开&lt;br/&gt;&lt;br/&gt; 如果你希望只对某个单位发出指令，与该单位进行互动即可(ACE物体互动)。&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; 你也可以使用 AR-2 无人机投放传单，要求200米范围内的平民疏散至最近的宗教建筑避难(若无宗教建筑，则前往安全区域)。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Traffic">
@@ -130,7 +130,7 @@
                 <Original>交通</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_TRAFFIC_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; 平民会在城市间开车穿梭。如果你的声誉够高, 平民会乐意载你一程(用地图指出你要去的地方)。如果你在途中遭遇了叛军巡逻队, 不要担心, 平民会尽其所能地把你藏在车里。&lt;br/&gt;</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\meet_ca.paa' width='20' height='20'/&gt; &lt;img image='\A3\soft_f_gamma\van_01\Data\UI\map_van_01_box_CA.paa' width='20' height='20'/&gt; 平民会在城市间开车穿梭。如果你的声誉够高，平民会乐意载你一程(用地图指出你要去的地方)。如果你在途中遭遇了叛军巡逻队，不要担心，平民会尽其所能地把你藏在车里。&lt;br/&gt;</Original>
             </Key>
         </Container>
         <Container name="Documentation: Gear">
@@ -138,7 +138,7 @@
                 <Original>装备(军火库)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_GEAR_TEXT">
-                <Original>&lt;img image='\A3\Ui_f\data\Logos\a_64_ca.paa' width='20' height='20'/&gt;你可以在基地内的红色箱子处选择装备, 它位于重生点附近。&lt;br/&gt;</Original>
+                <Original>&lt;img image='\A3\Ui_f\data\Logos\a_64_ca.paa' width='20' height='20'/&gt;你可以在基地内的红色箱子处选择装备，它位于重生点附近。&lt;br/&gt;</Original>
             </Key>
         </Container>
         <Container name="Documentation: Interaction">
@@ -151,7 +151,7 @@
                 <Original>疫情防控</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;病毒:&lt;/marker&gt;&lt;br/&gt; 感染了2019-nCoV新型冠状病毒的人员和物体会在战场上的随机位置出现。其中, 0号病人(R0, 初始带病人员)占总生成人数比例的不到5%。当物体受到感染时, 其上的病毒每3秒有15%的几率会传染到它5米范围内的人身上。这些人将持续受到伤害, 直至死亡或使用净化淋浴(位于在后勤中心)来清理他们的身体为止。当人受到感染时, 他们每3秒有27.5%的几率会将感染传播给10米范围内的其他人或他所乘坐的车辆。记住, 尸体将保持受感染状态, 但尸袋可以将其隔离。此外, 作为货物装载受感染物体将会感染集装箱和车辆。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护措施:&lt;/marker&gt;&lt;br/&gt; 穿着全套的CBRN(生化核辐)装备(服装, 面具和呼吸器背包)可以保护您完全免受感染影响。但是, 在取下CBRN装备之前, 不要忘记进行至少5秒的净化淋浴。请注意, 即使穿戴了CBRN装备, 您也会向人员或车辆传播病毒, 只有你自己免受感染影响。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;清除感染:&lt;/marker&gt;&lt;br/&gt; 小型淋浴器只能用来净化单兵单位。大型淋浴器可以用来清洗物品、车辆和货物。要激活净化过程, 只需待在淋浴下即可。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;检测:&lt;/marker&gt;&lt;br/&gt; 你可以使用 ED-1E 无人机分析物体、车辆或人, 以测定其是否受到感染(注: 该无人机永远不会受到感染)。您也可以使用化学探测器检测5米内是否有受感染物体。威胁度介于0.1至0.9之间意味着5-10米距离内存在受感染物体, 威胁度等于1意味0-5米距离内存在受感染物体。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;病毒的动态传染过程:&lt;/marker&gt;&lt;br/&gt; 受污染物体的病毒传染范围为5米，受感染人员的的病毒传染范围为7.5米，单次传染几率均为25%，每7.5秒进行一次传染。也就是说，处在受感染人员或物体的传染范围内的时间越长，感染几率越大。穿戴CBRN（生化核辐）防护装备会同时降低被病毒传染的可能性和将病毒传染给他人的可能性。穿戴不同的CBRN防护装备会获得的不同的防护级别，从而获得不同的传播/受感染几率减免。穿戴全套CBRN装备时将获得完整的传染几率减免，既不会传染别人，也不会被别人传染，但乘坐载具时依然会将病毒传播给载具和载具中的所有物体。任务生成的所有单位中，有约5%会成为初始传染源。无论感染与否，任务生成的人员单位均会在城镇内或城镇间游荡。未感染人员若与感染源出现密切接触，将可能会被传染。任何感染源均不会将病毒传染给物体或物件，但传染源会在进入载具或作为货物装载进集装箱时污染整个载具/集装箱和其中所有物体。尸体也会传播病毒，使用尸袋可以隔绝其传染性。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;受感染人员的惩罚机制:&lt;/marker&gt;&lt;br/&gt; 受感染者将持续受到伤害，直至死亡或使用净化淋浴来清理他们的身体为止。任务生成的AI单位（平民和敌军）的伤害每7.5秒生成一次，玩家单位的伤害每3秒生成一次。单次伤害的最小值为0，最大值为0.25。穿着全套的CBRN装备可以保护你免受感染，但已经受到感染的人员依然会受到伤害。穿着CBRN防护装备可以获得伤害生成几率减免，穿着全套CBRN装备时受到伤害的几率是完全为穿着时的1/6。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;消除感染的方法:&lt;/marker&gt;&lt;br/&gt; 小在喷淋净化装置下进行净化喷淋，即可消除感染。小型淋浴器只能用来净化单兵单位，大型淋浴器则可以用来清洗人员、物品、车辆和集装箱（包含其中所有人员和物体）。要完成净化过程，只需待在淋浴下，等待约10秒即可。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;感染的检测方法:&lt;/marker&gt;&lt;br/&gt; 你可以使用化学探测器（属于手表类装备，在默认键位设定下可以连续按两次O键打开）检测你是否处于感染区域内。威胁度介于0.1至0.9之间意味着5米以外存在传染源，威胁度等于1意味着0-5米以内存在感染源。你也可以使用ED-1E无人机的探针来分析物体、车辆或人，以测定其是否受到感染。ED-1E无人机具有后现代化的高科技纳米自洁技术，因此永远不会受到感染。</Original>
             </Key>
         </Container>
         <Container name="Documentation: Spectrum devices">
@@ -159,7 +159,7 @@
                 <Original>频谱探测仪</Original>
             </Key>
             <Key ID="STR_BTC_HAM_DOC_SPECTRUMDEVICES_TEXT">
-                <Original>&lt;img image='\A3\Data_F_Enoch\Logos\arma3_enoch_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;电磁场:&lt;/marker&gt;&lt;br/&gt; UAV和电磁脉冲装置(EMP)会产生两种不同的电磁场。为了传输信号, UAV会发出频率在390MHz到500MHz范围内的电磁场。电磁脉冲装置是一种能使载具上的电子设备失效的武器。它的频率范围在78MHz到89MHz之间, 其能量足以使电灯、引擎和航空电子设备实效。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护:&lt;/marker&gt;&lt;br/&gt; UAV产生的电磁场是安全的, 但电磁脉冲装置将会影响500米范围内引擎开启的载具。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;探测:&lt;/marker&gt;&lt;br/&gt; 你可以使用频谱探测仪来探测电磁场的源头。波形的峰值取决于发射器与天线之间的距离和角度。最大探测距离为1000米。</Original>
+                <Original>&lt;img image='\A3\Data_F_Enoch\Logos\arma3_enoch_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;电磁场:&lt;/marker&gt;&lt;br/&gt; UAV和电磁脉冲装置(EMP)会产生两种不同的电磁场。为了传输信号，UAV会发出频率在390MHz到500MHz范围内的电磁场。电磁脉冲装置是一种能使载具上的电子设备失效的武器。它的频率范围在78MHz到89MHz之间，其能量足以使电灯、引擎和航空电子设备实效。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护:&lt;/marker&gt;&lt;br/&gt; UAV产生的电磁场是安全的，但电磁脉冲装置将会影响500米范围内引擎开启的载具。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;探测:&lt;/marker&gt;&lt;br/&gt; 你可以使用频谱探测仪来探测电磁场的源头。波形的峰值取决于发射器与天线之间的距离和角度。最大探测距离为1000米。</Original>
             </Key>
         </Container>
     </Package>
@@ -266,7 +266,7 @@
                 <Original>首个武器箱情报的初始距离:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_CACHE_RATIO">
-                <Original>每次获得武器箱情报, 使其地图标记范围减小的距离:</Original>
+                <Original>每次获得武器箱情报，使其地图标记范围减小的距离:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_CACHE_DEADINFO">
                 <Original>敌军尸体携带情报的几率:</Original>
@@ -375,10 +375,10 @@
                 <Original>城市激活半径:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_SPAWNRAD_DEF">
-                <Original>300米 (默认值: Altis, Tanoa):</Original>
+                <Original>300米 (默认值: Altis，Tanoa):</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_DISABLESPAWN">
-                <Original>当飞机或直升机(&gt;190Km/h)飞掠城市上空时, 不激活城市:</Original>
+                <Original>当飞机或直升机(&gt;190Km/h)飞掠城市上空时，不激活城市:</Original>
             </Key>
             <Key ID="STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS">
                 <Original>自动检测无头客户端</Original>
@@ -394,7 +394,7 @@
     <Package name="Missions">
         <Container name="Mission: Defeat the Oplitas">
             <Key ID="STR_BTC_HAM_MISSION_OBJ_DESC">
-                <Original>Altis地区出现了小规模的2019-nCoV新型冠状病毒疫情。玩家将组成疫情控制小组, 主持Altis地区的疫情防控工作。</Original>
+                <Original>任务中，玩家将作为NATO下辖的疫情处置小组成员，对Altis地区的2019-nCoV新型冠状病毒疫情进行控制。由于医疗救援物资运输及时，并对当地居民进行了行之有效的宣传，部分平民已经购买并佩戴口罩。IDAP也及时派出了有关人员，由佩戴全套防护服及呼吸器的专业医师参与当地疫情防控工作。然而由于当地相对欠发达，缺乏有效的垃圾分类与回收机制，平民的生活习惯又难以在短期内改变，因此城镇中依然可能出现平民随意丢弃的受污染物体。当地的反政府武装组织也趁乱扩张，给当地人民的日常生活和疫情防控工作带来了极大阻力。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_OBJ_TITLE">
                 <Original>主要目标: 防控疫情</Original>
@@ -403,15 +403,15 @@
                 <Original>病毒传染模式说明</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_DESC">
-                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;病毒:&lt;/marker&gt;&lt;br/&gt; 感染了2019-nCoV新型冠状病毒的人员和物体会在战场上的随机位置出现。其中, 0号病人(R0, 初始带病人员)占总生成人数比例的不到5%。当物体受到感染时, 其上的病毒每3秒有15%的几率会传染到它5米范围内的人身上。这些人将持续受到伤害, 直至死亡或使用净化淋浴(位于在后勤中心)来清理他们的身体为止。当人受到感染时, 他们每3秒有27.5%的几率会将感染传播给10米范围内的其他人或他所乘坐的车辆。记住, 尸体将保持受感染状态, 但尸袋可以将其隔离。此外, 作为货物装载受感染物体将会感染集装箱和车辆。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护措施:&lt;/marker&gt;&lt;br/&gt; 穿着全套的CBRN(生化核辐)装备(服装, 面具和呼吸器背包)可以保护您完全免受感染影响。但是, 在取下CBRN装备之前, 不要忘记进行至少5秒的净化淋浴。请注意, 即使穿戴了CBRN装备, 您也会向人员或车辆传播病毒, 只有你自己免受感染影响。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;清除感染:&lt;/marker&gt;&lt;br/&gt; 小型淋浴器只能用来净化单兵单位。大型淋浴器可以用来清洗物品、车辆和货物。要激活净化过程, 只需待在淋浴下即可。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;检测:&lt;/marker&gt;&lt;br/&gt; 你可以使用 ED-1E 无人机分析物体、车辆或人, 以测定其是否受到感染(注: 该无人机永远不会受到感染)。您也可以使用化学探测器检测5米内是否有受感染物体。威胁度介于0.1至0.9之间意味着5-10米距离内存在受感染物体, 威胁度等于1意味0-5米距离内存在受感染物体。</Original>
+                <Original>&lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;病毒的动态传染过程:&lt;/marker&gt;&lt;br/&gt; 受污染物体的病毒传染范围为5米，受感染人员的的病毒传染范围为7.5米，单次传染几率均为25%，每7.5秒进行一次传染。也就是说，处在受感染人员或物体的传染范围内的时间越长，感染几率越大。穿戴CBRN（生化核辐）防护装备会同时降低被病毒传染的可能性和将病毒传染给他人的可能性。穿戴不同的CBRN防护装备会获得的不同的防护级别，从而获得不同的传播/受感染几率减免。穿戴全套CBRN装备时将获得完整的传染几率减免，既不会传染别人，也不会被别人传染，但乘坐载具时依然会将病毒传播给载具和载具中的所有物体。任务生成的所有单位中，有约5%会成为初始传染源。无论感染与否，任务生成的人员单位均会在城镇内或城镇间游荡。未感染人员若与感染源出现密切接触，将可能会被传染。任何感染源均不会将病毒传染给物体或物件，但传染源会在进入载具或作为货物装载进集装箱时污染整个载具/集装箱和其中所有物体。尸体也会传播病毒，使用尸袋可以隔绝其传染性。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;受感染人员的惩罚机制:&lt;/marker&gt;&lt;br/&gt; 受感染者将持续受到伤害，直至死亡或使用净化淋浴来清理他们的身体为止。任务生成的AI单位（平民和敌军）的伤害每7.5秒生成一次，玩家单位的伤害每3秒生成一次。单次伤害的最小值为0，最大值为0.25。穿着全套的CBRN装备可以保护你免受感染，但已经受到感染的人员依然会受到伤害。穿着CBRN防护装备可以获得伤害生成几率减免，穿着全套CBRN装备时受到伤害的几率是完全为穿着时的1/6。 &lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\box_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;消除感染的方法:&lt;/marker&gt;&lt;br/&gt; 小在喷淋净化装置下进行净化喷淋，即可消除感染。小型淋浴器只能用来净化单兵单位，大型淋浴器则可以用来清洗人员、物品、车辆和集装箱（包含其中所有人员和物体）。要完成净化过程，只需待在淋浴下，等待约10秒即可。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;感染的检测方法:&lt;/marker&gt;&lt;br/&gt; 你可以使用化学探测器（属于手表类装备，在默认键位设定下可以连续按两次O键打开）检测你是否处于感染区域内。威胁度介于0.1至0.9之间意味着5米以外存在传染源，威胁度等于1意味着0-5米以内存在感染源。你也可以使用ED-1E无人机的探针来分析物体、车辆或人，以测定其是否受到感染。ED-1E无人机具有后现代化的高科技纳米自洁技术，因此永远不会受到感染。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DEFEAT_WIN_TEXT">
-                <Original>叛军遭到重创, 更多国家的疫情防控小组将进驻本岛, 任务完成!</Original>
+                <Original>叛军遭到重创，更多国家的疫情防控小组将进驻本岛，任务完成!</Original>
             </Key>
         </Container>
         <Container name="Mission: Destroy all the hideouts">
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_DESC">
-                <Original>·近日, 我国爆发了名为2019-nCoV的新型冠状病毒疫情。&lt;br/&gt;·为倡导大家“多居家, 少出行”, 使大家更好地理解病毒的传播特性, 体会一线医疗人员的困难与艰辛, 特此制作本任务。&lt;br/&gt;·任务中, 玩家将作为疫情处置小组成员, 对Altis地区的疫情进行控制。&lt;br/&gt;·任务中的疫情模型设计并不精确, 现实中的情况要严酷得多。&lt;br/&gt;·任务中的敌军仅以提升娱乐性为目的添加, 任务内容纯属虚构。&lt;br/&gt;·服务器的运行需要资金支持, 预计每月200元。本人仅为在校学生, 无稳定收入来源。因此号召大家捐赠, 多余款项将全部捐赠疫情防控机构。专款专用, 绝不贪污一分钱。详细账目将在QQ群274455383内公开。&lt;br/&gt;·防控疫情 众志成城 武汉加油 中国加油</Original>
+                <Original>近日，我国爆发了名为2019-nCoV的新型冠状病毒疫情。&lt;br/&gt;为倡导大家“多居家，少出行”，使大家更好地理解病毒的传播特性，体会一线医疗人员的困难与艰辛，特此制作本任务。&lt;br/&gt;任务中，玩家将作为疫情处置小组成员，对Altis地区的疫情进行控制。&lt;br/&gt;任务中的疫情模型设计并不精确，现实中的情况要严酷得多。&lt;br/&gt;任务中的敌军仅以提升娱乐性为目的添加，任务内容纯属虚构。&lt;br/&gt;服务器的运行需要资金支持，预计每月200元。本人仅为在校学生，无稳定收入来源。因此号召大家捐赠，多余款项将全部捐赠疫情防控机构。详细账目将在QQ群274455383内公开。&lt;br/&gt;防控疫情 众志成城 武汉加油 中国加油&lt;br/&gt;&lt;br/&gt;&lt;img image='core\img\donation.jpg' width='306' height='256'/&gt;&lt;br/&gt;&lt;br/&gt;</Original>
             </Key>
             <Key ID="STR_BTC_HAM_MISSION_DESTROY_TITLE">
                 <Original>捐赠信息</Original>
@@ -429,7 +429,7 @@
                 <Original>抓捕可疑流窜人员</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_DESC">
-                <Original>接到群众举报, 有瞒报漏报旅行使和健康状况的可疑人员在城镇间流窜。地图上已经标出了他的预计行程, 请迅速前往抓捕。</Original>
+                <Original>接到群众举报，有瞒报漏报旅行使和健康状况的可疑人员在城镇间流窜。地图上已经标出了他的预计行程，请迅速前往抓捕。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CAPOFF_SURRENDER_DESC">
                 <Original>迫使可疑流窜人员投降。</Original>
@@ -463,7 +463,7 @@
                 <Original>海上紧急医疗求助</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREATBOAT_DESC">
-                <Original>一位当地居民正在 %1 地区呼叫医疗支援, 治疗并护理患者, 直至其伤势稳定。</Original>
+                <Original>一位当地居民正在 %1 地区呼叫医疗支援，治疗并护理患者，直至其伤势稳定。</Original>
             </Key>
         </Container>
         <Container name="Civ treatment">
@@ -474,7 +474,7 @@
                 <Original>调查 %1 地区的疑似病例</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CIVTREAT_DESC">
-                <Original>接到 %1 地区的群众求助, 该地区可能存在感染人员。请迅速进行医疗响应, 对疑似人员进行现场处置。(由于系统限制, 仅能通过ACE高级医疗的方式模拟现场医疗处置过程。请务必携带足量绷带及注射用品, 并迅速出诊。)</Original>
+                <Original>接到 %1 地区的群众求助，该地区可能存在感染人员。请迅速进行医疗响应，对疑似人员进行现场处置。(由于系统限制，仅能通过ACE高级医疗的方式模拟现场医疗处置过程。请务必携带足量绷带及注射用品，并迅速出诊。)</Original>
             </Key>
         </Container>
         <Container name="Convoy">
@@ -493,7 +493,7 @@
         </Container>
         <Container name="Hack">
             <Key ID="STR_BTC_HAM_SIDE_HACK_STARTHACK">
-                <Original>保护传输装置, 直到临床数据传输完成!</Original>
+                <Original>保护传输装置，直到临床数据传输完成!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_ACEACTION">
                 <Original>开始传输</Original>
@@ -502,7 +502,7 @@
                 <Original>护送临床数据到 %1 地区</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_DESC">
-                <Original>将临床数据护送到 %1 地区, 并将其传输至实验设备中。保护传输装置, 直到传输完成! (与装置进行互动即可开始传输)</Original>
+                <Original>将临床数据护送到 %1 地区，并将其传输至实验设备中。保护传输装置，直到传输完成! (与装置进行互动即可开始传输)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HACK_OPEN_DESC">
                 <Original>将临床数据传输至该设备。</Original>
@@ -519,7 +519,7 @@
                 <Original>收治 %1 地区的疑似病例</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_HOSTAGE_DESC">
-                <Original>接到群众求助, 前往收治 %1 地区的疑似病例。</Original>
+                <Original>接到群众求助，前往收治 %1 地区的疑似病例。</Original>
             </Key>
         </Container>
         <Container name="Mines">
@@ -527,7 +527,7 @@
                 <Original>清除 %1 附近的雷区</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MINES_DESC">
-                <Original>%1 附近有雷区, 把它们清除掉!</Original>
+                <Original>%1 附近有雷区，把它们清除掉!</Original>
             </Key>
         </Container>
         <Container name="Rescue">
@@ -535,10 +535,10 @@
                 <Original>收治 %1 地区的疑似病例</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_DESC">
-                <Original>接到IDAP联系, %1 地区出现疑似病例, 请尽快前往该地区对疑似病例进行收治。</Original>
+                <Original>接到IDAP联系，%1 地区出现疑似病例，请尽快前往该地区对疑似病例进行收治。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_DESC">
-                <Original>找到该疑似病例, 并将其收治于基地附近的医疗中心。该人员应当在IDAP派出的一辆急救车附近。</Original>
+                <Original>找到该疑似病例，并将其收治于基地附近的医疗中心。该人员应当在IDAP派出的一辆急救车附近。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_FIND_TITLE">
                 <Original>找到疑似病例</Original>
@@ -550,7 +550,7 @@
                 <Original>将疑似病例带回到基地医疗中心</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_BODYBAG_DESC">
-                <Original>该疑似病例已经死亡。将其装进尸体袋, 以彻底阻断病毒传播的可能, 并将其带回到基地医疗中心。</Original>
+                <Original>该疑似病例已经死亡。将其装进尸体袋，以彻底阻断病毒传播的可能，并将其带回到基地医疗中心。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_RESC_BODYBAG_TITLE">
                 <Original>将疑似病例装进尸体袋</Original>
@@ -567,10 +567,10 @@
                 <Original>向 %1 地区投放医疗救援物资</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_DESC">
-                <Original>%1 地区的医疗资源储备告急, 在后勤中心申请一箱医疗救援物资, 并运送至该区域! (与后勤中心的机械臂互动, 选择"申请补给", 医疗救援物资在"Supply"类别中。)</Original>
+                <Original>%1 地区的医疗资源储备告急，在后勤中心申请一箱医疗救援物资，并运送至该区域! (与后勤中心的机械臂互动，选择"申请补给"，医疗救援物资在"Supply"类别中。)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_MOVE_DESC">
-                <Original>在后勤中心申请医疗救援物资, 并将其运送至补给区域。</Original>
+                <Original>在后勤中心申请医疗救援物资，并将其运送至补给区域。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_SUPPLIES_MOVE_TITLE">
                 <Original>运送医疗救援物资</Original>
@@ -606,7 +606,7 @@
                 <Original>抢修 %1 地区的救援车辆</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_VEHICLE_DESC">
-                <Original>一辆救援车辆在 %1 地区出现故障, 前往该区域并修好它! (请携带足量轮胎并装备工具包, 轮胎可在后勤中心通过申请补给生成。)</Original>
+                <Original>一辆救援车辆在 %1 地区出现故障，前往该区域并修好它! (请携带足量轮胎并装备工具包，轮胎可在后勤中心通过申请补给生成。)</Original>
             </Key>
         </Container>
         <Container name="Conquer">
@@ -614,7 +614,7 @@
                 <Original>解放 %1</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CONQUER_DESC">
-                <Original>%1 已被叛军占领! 当地居民受到恐吓, 他们正在请求帮助!</Original>
+                <Original>%1 已被叛军占领! 当地居民受到恐吓，他们正在请求帮助!</Original>
             </Key>
         </Container>
         <Container name="Kill">
@@ -622,7 +622,7 @@
                 <Original>刺杀 %1</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DESC">
-                <Original>在 %2 地区刺杀 %1, 然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Original>
+                <Original>在 %2 地区刺杀 %1，然后将他的狗牌带回基地以进行身份鉴定。他是当地恐怖主义活动的主要责任人之一!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_IN_TITLE">
                 <Original>杀死 %1</Original>
@@ -648,7 +648,7 @@
                 <Original>处置 %1 地区的病毒感染</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_DESC">
-                <Original>接到上级通知, %1 地区出现了区域性感染。目前可能受到感染的物体已被隔离, 请迅速前往处置。(将受感染物体移动到大型淋浴器下, 喷淋至少5秒, 以消除感染。)</Original>
+                <Original>接到上级通知，%1 地区出现了区域性感染。目前可能受到感染的物体已被隔离，请迅速前往处置。(将受感染物体移动到大型淋浴器下，喷淋至少5秒，以消除感染。)</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_BRING_DESC">
                 <Original>在后勤中心生成集装箱并将其带到受感染区域。你需要使用它们来装载所有的受到感染的物体。</Original>
@@ -660,13 +660,13 @@
                 <Original>确定受感染物体的位置</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_LOCATE_DESC">
-                <Original>确定受感染物体的位置。ED-1E 无人机可以通过针刺活检帮助你识别受感染物体。你也可以使用化学探测器大致估测受感染物体的位置。请确保穿着生化核辐(CBRN)装备并佩戴口罩及呼吸器以保护自己免受感染, 并远离清洁人员或物体以避免交叉感染。</Original>
+                <Original>确定受感染物体的位置。ED-1E 无人机可以通过针刺活检帮助你识别受感染物体。你也可以使用化学探测器大致估测受感染物体的位置。请确保穿着生化核辐(CBRN)装备并佩戴口罩及呼吸器以保护自己免受感染，并远离清洁人员或物体以避免交叉感染。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_MOVE_TITLE">
                 <Original>净化受感染的物体</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_CHEM_MOVE_DESC">
-                <Original>将受感染物体装载至集装箱中。将集装箱或受感染物体移动到大型淋浴器下。注: 你可以将集装箱装载至载具, 再将载具移动到淋浴器下。这将会净化载具、成员和货物。</Original>
+                <Original>将受感染物体装载至集装箱中。将集装箱或受感染物体移动到大型淋浴器下。注: 你可以将集装箱装载至载具，再将载具移动到淋浴器下。这将会净化载具、成员和货物。</Original>
             </Key>
         </Container>
         <Container name="EMP">
@@ -674,7 +674,7 @@
                 <Chinesesimp>摧毁位于 %1 地区的EMP装置</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_EMP_DESC">
-                <Chinesesimp>平民报告称, 在 %1 地区附近存在载具上的电子设备失效的情况。平民请求对来源进行调查。%2</Chinesesimp>
+                <Chinesesimp>平民报告称，在 %1 地区附近存在载具上的电子设备失效的情况。平民请求对来源进行调查。%2</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_EMP_DESTROY_TITLE">
                 <Chinesesimp>找到并摧毁EMP发射器</Chinesesimp>
@@ -798,7 +798,7 @@
                 <Original>差</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_ASK1">
-                <Original>长官, 你的声誉</Original>
+                <Original>长官，你的声誉</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKREP_ASK2">
                 <Original>你好! 你的声誉</Original>
@@ -828,7 +828,7 @@
                 <Original>我会在地图上给你一些提示</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_TRUE">
-                <Original>我曾经在朝着 %1 的方向见到过大量民兵活动, 离这大概有 %2 米。那可能有一个藏匿点!</Original>
+                <Original>我曾经在朝着 %1 的方向见到过大量民兵活动，离这大概有 %2 米。那可能有一个藏匿点!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_FALSE">
                 <Original>附近没有藏匿点!</Original>
@@ -843,7 +843,7 @@
                 <Original>搜寻情报中 . . .</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_TROOPS_TRUE">
-                <Original>我在 %1 附近见到过民兵运动, 离这大约 %2 米</Original>
+                <Original>我在 %1 附近见到过民兵运动，离这大约 %2 米</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_TROOPS_FALSE">
                 <Original>我没有在这块地区见到过任何民兵运动!</Original>
@@ -857,10 +857,10 @@
                 <Original>没问题。我很乐意这么做。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK2">
-                <Original>去那应该用不了多久, 走吧。</Original>
+                <Original>去那应该用不了多久，走吧。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_TAXI_OK3">
-                <Original>你们为我们做了这么多, 能够开车送你是我的荣幸。我们走吧。</Original>
+                <Original>你们为我们做了这么多，能够开车送你是我的荣幸。我们走吧。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_ONLAND">
                 <Original>所选区域必须在陆地上。</Original>
@@ -869,7 +869,7 @@
                 <Original>我恨你! 滚出去!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_NEG2">
-                <Original>滚出我的车, 这里不欢迎你。</Original>
+                <Original>滚出我的车，这里不欢迎你。</Original>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INT_ORDERS_NEG3">
                 <Original>我又不是开出租车的!</Original>
@@ -888,7 +888,7 @@
                 <Original>与主基地距离太近!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_CAREA">
-                <Original>该区域未清空, 还有如下载具: %1</Original>
+                <Original>该区域未清空，还有如下载具: %1</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_CREATE_H_ESC">
                 <Original>请勿使用Esc键关闭对话框</Original>
@@ -903,7 +903,7 @@
                 <Original>后退! FOB装配中</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_DISMANTLE_H_PROC">
-                <Original>正在拆除, 请远离 ...</Original>
+                <Original>正在拆除，请远离 ...</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_FOB_REDEPLOY_H_NOFOB">
                 <Original>未部署FOB</Original>
@@ -938,13 +938,13 @@
                 <Original>发现了关于藏匿点的情报!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_6">
-                <Original>在上个敌军藏匿点中, 我们发现了写有叛军占领的全部城市的重要情报! 夺取最后一个敌军据点, 一举消灭他们! </Original>
+                <Original>在上个敌军藏匿点中，我们发现了写有叛军占领的全部城市的重要情报! 夺取最后一个敌军据点，一举消灭他们! </Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_7">
                 <Original>%1 已部署!</Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_8">
-                <Original>正在保存, 请稍后... </Original>
+                <Original>正在保存，请稍后... </Original>
             </Key>
             <Key ID="STR_BTC_HAM_O_COMMON_SHOWHINTS_9">
                 <Original>游戏已保存!</Original>
@@ -998,7 +998,7 @@
         </Container>
         <Container name="Other: Endmission">
             <Key ID="STR_BTC_HAM_O_COMMON_ENDMISSION">
-                <Original>所有敌军藏匿点已被摧毁, 敌军终于被打败了! 任务完成</Original>
+                <Original>所有敌军藏匿点已被摧毁，敌军终于被打败了! 任务完成</Original>
             </Key>
         </Container>
         <Container name="Other: Markers ">
@@ -1024,7 +1024,7 @@
     <Package name="Logistic">
         <Container name="Logistic: Basics ">
             <Key ID="STR_BTC_HAM_LOG_BASICS_CLEARAREA">
-                <Original>在创建新的物件前, 该区域必须清空!</Original>
+                <Original>在创建新的物件前，该区域必须清空!</Original>
             </Key>
         </Container>
         <Container name="Logistic: Hook ">

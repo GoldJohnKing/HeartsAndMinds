@@ -44,6 +44,19 @@ _wreck setPosATL [_pos select 0, _pos select 1, 0];
 _wreck setDir _dir;
 _wreck setVectorUp surfaceNormal _pos;
 
+//Edited: Add probability for basic propagation
+if (random 1 < 0.5) then {
+    private _pos = [_pos, 1, 3, 1, 0, 60 * (pi / 180), 0] call btc_fnc_findsafepos; //Edited: Avoid collision
+    private _hazmat = createVehicle [selectRandom btc_type_hazmat, _pos, [], 2, "NONE"];
+    _hazmat setDir random 360;
+    _hazmat setVectorUp [random 1, random 1, random [-1, 0, 1]];
+    [_hazmat] call btc_fnc_log_init;
+    if (random 1 < 0.1) then {
+        btc_chem_contaminated pushBack _hazmat;
+        publicVariable "btc_chem_contaminated";
+    };
+};
+
 if !(_active) exitWith {[_wreck, _type, objNull]};
 
 private _ied = createMine [selectRandom btc_type_ieds_ace, [_pos select 0, _pos select 1, btc_ied_offset], [], 2];

@@ -1,0 +1,13 @@
+public class HelloWorld {
+    public static void main(String []args) {
+		//i: Final Result of specified possibility and counting times
+		//j: Propagation possibility each calculation
+		//k: Counting number
+		//l: Total counting times
+		double i=0, j=0.25, k=0, l=5;
+		for (k=0;k<l;k++){
+			i=i+(1-i)*j;
+		}
+       System.out.println(i);
+    }
+}
