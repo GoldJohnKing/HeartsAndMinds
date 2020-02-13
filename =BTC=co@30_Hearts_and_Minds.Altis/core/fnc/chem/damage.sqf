@@ -31,11 +31,10 @@ params [
 ];
 
 private _hasProtection = [_unit, _cfgGlasses] call gjk_fnc_custom_check_gear;
-
-if !(false in _hasProtection) exitWith {_this};
+_hasProtection append [false, false];
 
 // Probability of damage increase without protection
-if (!(selectRandom _hasProtection)) then { //Edited: Add different probablity of damage according to protection level
+if (!(selectRandom _hasProtection)) then { //Edited: Add different probability of damage according to protection level
     _this set [1, false];
     [_unit, random [0, 0.01, 0.25], selectRandom _bodyParts, "stab"] call ace_medical_fnc_addDamageToUnit; //Edited: Modify dmage - ropeburn
 };

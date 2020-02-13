@@ -69,20 +69,16 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
 
     private _unitContaminate = [];
     {
-        if (_x in _units) then {
-            _range = _range * 1.5; //Edited: Units are more propagative
-        };
-        private _pos = getPosWorld _x;
-        //Edited: Add basic and different probablity for propagation according to protection level
+        //Edited: Add basic and different probability for propagation according to protection level
         if (random 1 < 0.25) then {
-            private _hasProtection = [_x, _cfgGlasses] call gjk_fnc_custom_check_gear;
+            private _hasProtection = [false];
+            if (_x in _units) then {
+                _range = _range * 1.5; //Edited: Units are more propagative
+                _hasProtection = [_x, _cfgGlasses] call gjk_fnc_custom_check_gear;
+            };
             if (!(selectRandom _hasProtection)) then {
-                {
-                    private _hasProtection = [_x, _cfgGlasses] call gjk_fnc_custom_check_gear;
-                    if (!(selectRandom _hasProtection)) then {
-                        _unitContaminate pushBackUnique _x;
-                    };
-                } forEach (_units inAreaArray [_pos, _range, _range, 0, false, 2 + (_pos select 2)])
+                private _pos = getPosWorld _x;
+                _unitContaminate append (_units inAreaArray [_pos, _range, _range, 0, false, 2 + (_pos select 2)]);
             };
         };
     } forEach _contaminated;
@@ -90,7 +86,12 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
     if (_unitContaminate isEqualTo []) exitWith {};
     private _periode = 5 / count _unitContaminate;
     {
-        private _notAlready = _contaminated pushBackUnique _x > -1;
+        //Edited: Add different probability for being propagated according to protection level
+        private _notAlready = false;
+        private _hasProtection = [_x, _cfgGlasses] call gjk_fnc_custom_check_gear;
+        if (!(selectRandom _hasProtection)) then {
+            _notAlready = _contaminated pushBackUnique _x > -1;
+        };
         if (_notAlready) then {
             publicVariable "btc_chem_contaminated";
         };
