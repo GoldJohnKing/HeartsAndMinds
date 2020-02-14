@@ -6048,6 +6048,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
+				name="btc_smallShower_1";
 			};
 			id=317;
 			type="DeconShower_01_F";
@@ -6126,6 +6128,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
+				name="btc_smallShower_2";
 			};
 			id=318;
 			type="DeconShower_01_F";
@@ -6570,6 +6574,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
+				name="btc_smallShower_3";
 			};
 			id=335;
 			type="DeconShower_01_F";
@@ -6665,6 +6671,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
+				name="btc_smallShower_4";
 			};
 			id=337;
 			type="DeconShower_01_F";
@@ -7294,7 +7302,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
-				name="btc_bigShower_4";
+				name="btc_smallShower";
 			};
 			id=372;
 			type="DeconShower_01_F";

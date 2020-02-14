@@ -158,7 +158,7 @@ if (isServer) then {
     btc_rep_militia_called = - btc_rep_militia_call_time;
 
     //Chem
-    btc_chem_decontaminate = [btc_bigShower, btc_bigShower_1, btc_bigShower_2, btc_bigShower_3, btc_bigShower_4]; //Edited: Add more decontaminate shower
+    btc_chem_decontaminate = [btc_bigShower, btc_bigShower_1, btc_bigShower_2, btc_bigShower_3, btc_smallShower, btc_smallShower_1, btc_smallShower_2, btc_smallShower_3, btc_smallShower_4]; //Edited: Add more decontaminate shower
     missionNamespace setVariable ["btc_chem_contaminated", [], true];
 
     //Spect
