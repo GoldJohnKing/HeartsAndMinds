@@ -34,7 +34,13 @@ private _handle = [{
     if !(alive _unit) exitWith {
         ["btc_chem_decontaminated", [_unit]] call CBA_fnc_localEvent;
     };
-    _this set [0, _args call btc_fnc_chem_damage];
+
+    //Edited: Add different probability for damage according to protection level
+    private _hasProtection = [_this, _cfgGlasses] call gjk_fnc_custom_check_gear;
+    _hasProtection append [false, false];
+    if (!(selectRandom _hasProtection)) then {
+        _this set [0, _args call btc_fnc_chem_damage];
+    };
 }, 3, [_unit, _notAlready, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
 
 ["btc_chem_decontaminated", {

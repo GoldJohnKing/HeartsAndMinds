@@ -90,19 +90,19 @@ private _bodyParts = ["head","body","hand_l","hand_r","leg_l","leg_r"];
         private _notAlready = false;
         private _hasProtection = [_x, _cfgGlasses] call gjk_fnc_custom_check_gear;
         if (!(selectRandom _hasProtection)) then {
-            _notAlready = _contaminated pushBackUnique _x > -1;
-        };
-        if (_notAlready) then {
-            publicVariable "btc_chem_contaminated";
-        };
-        if (local _x) then {
-            [{
-                _this call btc_fnc_chem_damage;
-            }, [_x, _notAlready, _bodyParts, _cfgGlasses], _forEachIndex * _periode] call CBA_fnc_waitAndExecute;
-        } else {
-            if (_notAlready) then {
-                [_x] remoteExecCall ["btc_fnc_chem_damageLoop", _x];
+            if (_contaminated pushBackUnique _x > -1) then {
+                publicVariable "btc_chem_contaminated";
+                _notAlready = true;
+            };
+            if (local _x) then {
+                [{
+                    _this call btc_fnc_chem_damage;
+                }, [_x, _notAlready, _bodyParts, _cfgGlasses], _forEachIndex * _periode] call CBA_fnc_waitAndExecute;
+            } else {
+                if (_notAlready) then {
+                    [_x] remoteExecCall ["btc_fnc_chem_damageLoop", _x];
+                };
             };
         };
     } forEach _unitContaminate;
-}, 7.5, [btc_chem_contaminated, btc_chem_decontaminate, btc_chem_range, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
+}, 4.5, [btc_chem_contaminated, btc_chem_decontaminate, btc_chem_range, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
