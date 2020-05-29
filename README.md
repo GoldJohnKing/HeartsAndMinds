@@ -73,8 +73,8 @@ CBRN面罩+防护服+呼吸过滤背包（全套CBRN装备）：0%（既不会�
 </p>
 
 <p align="center">
-    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.3">
-        <img src="https://img.shields.io/badge/Version-1.20.3-blue.svg?style=flat-square" alt="H&M Version">
+    <a href="https://github.com/Vdauphin/HeartsAndMinds/releases/tag/1.20.4">
+        <img src="https://img.shields.io/badge/Version-1.20.4-blue.svg?style=flat-square" alt="H&M Version">
     </a>
     <a href="http://www.somsubhra.com/github-release-stats/?username=vdauphin&repository=HeartsAndMinds">
         <img src="https://img.shields.io/github/downloads/Vdauphin/HeartsAndMinds/total.svg?style=flat-square&label=Downloads" alt="H&M Downloads">
