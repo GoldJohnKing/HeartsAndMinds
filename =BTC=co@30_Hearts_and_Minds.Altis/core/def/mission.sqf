@@ -270,8 +270,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16];
-    btc_helo = [btc_helo_1];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18];
+    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10, btc_helo_11];
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -629,6 +629,18 @@ switch (_p_en) do {
         btc_type_motorized = btc_type_motorized + ["I_G_Offroad_01_repair_F", "I_G_Offroad_01_F", "I_G_Quadbike_01_F", "I_G_Van_01_fuel_F", "I_Truck_02_transport_F", "I_Truck_02_covered_F"];
         btc_type_motorized_armed = btc_type_motorized_armed + ["I_Heli_light_03_F", "I_G_Offroad_01_F"];
         btc_type_units = btc_type_units - ["I_C_Soldier_Camo_F"];
+    };
+    // Edited: Modify RHSAFRF Faction
+    case "RHS_FACTION_VDV" : {
+        btc_type_units = btc_type_units
+            - ["rhs_vdv_crew","rhs_vdv_armoredcrew","rhs_vdv_combatcrew","rhs_vdv_crew_commander","rhs_vdv_driver","rhs_vdv_driver_armored","rhs_vdv_officer","rhs_vdv_officer_armored","rhs_vdv_rifleman_lite"]
+            - ["rhs_vdv_des_crew","rhs_vdv_des_armoredcrew","rhs_vdv_des_combatcrew","rhs_vdv_des_crew_commander","rhs_vdv_des_officer","rhs_vdv_des_officer_armored","rhs_vdv_des_rifleman_lite","rhs_vdv_des_driver","rhs_vdv_des_driver_armored"]
+            - ["rhs_vdv_flora_crew","rhs_vdv_flora_armoredcrew","rhs_vdv_flora_combatcrew","rhs_vdv_flora_crew_commander","rhs_vdv_flora_driver","rhs_vdv_flora_driver_armored","rhs_vdv_flora_officer","rhs_vdv_flora_officer_armored","rhs_vdv_flora_rifleman_lite"]
+            - ["rhs_vdv_mflora_crew","rhs_vdv_mflora_armoredcrew","rhs_vdv_mflora_combatcrew","rhs_vdv_mflora_crew_commander","rhs_vdv_mflora_driver","rhs_vdv_mflora_driver_armored","rhs_vdv_mflora_officer","rhs_vdv_mflora_officer_armored","rhs_vdv_mflora_rifleman_lite"]
+            - ["rhs_vdv_recon_officer","rhs_vdv_recon_officer_armored","rhs_vdv_recon_rifleman_l"]
+            - ["rhs_pilot","rhs_pilot_combat_heli","rhs_pilot_tan","rhs_pilot_transport_heli"];
+        btc_type_motorized = ["RHS_Ural_Zu23_VDV_01","rhs_kamaz5350_vdv","rhs_kamaz5350_open_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"];
+        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_bmp2d_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
     };
 };
 
