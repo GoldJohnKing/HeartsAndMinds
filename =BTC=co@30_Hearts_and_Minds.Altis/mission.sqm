@@ -8,7 +8,7 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=155;
+		nextID=157;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5332.21,36.747692,445.34198};
-		dir[]={0.089404106,-0.58262277,-0.80786121};
-		up[]={0.06408862,0.81273669,-0.57910222};
-		aside[]={-0.99396932,6.4750202e-007,-0.11000141};
+		pos[]={5348.0767,99.472252,410.16547};
+		dir[]={0.012691513,-0.90614188,0.42292708};
+		up[]={0.027177738,0.42300108,0.90572822};
+		aside[]={0.99960595,-4.4469198e-007,-0.029993862};
 	};
 };
 binarizationWanted=0;
@@ -284,7 +284,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=86;
+		items=85;
 		class Item0
 		{
 			dataType="Marker";
@@ -5970,89 +5970,6 @@ class Mission
 					};
 				};
 				nAttributes=1;
-			};
-		};
-		class Item85
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5330.875,25.75379,433.5};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				ammo=0;
-				fuel=0;
-				name="btc_helo_11";
-				textures="Olive";
-				disableSimulation=1;
-				aiRadarUsage=2;
-			};
-			id=154;
-			type="B_T_Truck_01_transport_F";
-			atlOffset=0.0004825592;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_cookoff_enableAmmoCookoff";
-					expression="if !(_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true];};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=3;
 			};
 		};
 	};
