@@ -27,7 +27,7 @@ params [
 if (isNil "btc_actions_veh") then {btc_actions_veh = [];};
 if ((btc_actions_veh pushBackUnique _type) isEqualTo -1) exitWith {};
 
-switch true do { // Edited: Make helis and planes towable
+switch true do {
     case (_type isKindOf "UGV_02_Base_F") : {};
     case (_type isKindOf "StaticWeapon") : {};
     case (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"}) : {
@@ -48,7 +48,7 @@ switch true do { // Edited: Make helis and planes towable
         [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
         _action = ["Cut_ropes", localize "STR_ACE_Fastroping_Interaction_cutRopes", "\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa", {[] call btc_fnc_lift_destroyRopes;}, {btc_ropes_deployed && {(driver vehicle player) isEqualTo player}}] call ace_interact_menu_fnc_createAction;
         [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-        //Edited: Add tow functions to helis
+        // Edited: Add tow actions to helis
         _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_log_vehicle_selected && {btc_log_vehicle_selected != _target} && {[_target, btc_log_vehicle_selected] call btc_fnc_tow_check}}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
         _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_hook;}, {true}] call ace_interact_menu_fnc_createAction;
