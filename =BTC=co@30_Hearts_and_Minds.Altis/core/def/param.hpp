@@ -111,7 +111,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ISFREE_PROB"]);
         values[]={0,10,20,30,40,45,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","45%","50%","60%","70%","80%","90%","100%"};
-        default = 45;
+        default = 50;
     };
     class btc_p_mil_group_ratio { // Enemy density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
@@ -255,7 +255,7 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_A3_VR_STAMINA"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 10;
+        default = 8;
     };
     class btc_p_set_skill_spotDistance { // Set skill, spotDistance
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_SPOTDIST"]);
@@ -285,7 +285,7 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_A3_CFGHINTS0"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 10;
+        default = 8;
     };
     class btc_p_gameplay_title { // << Gameplay options >>
         title = $STR_BTC_HAM_PARAM_GAMEPLAY_TITLE;
