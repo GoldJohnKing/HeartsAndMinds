@@ -225,7 +225,7 @@ class Params {
         title = __EVAL(format ["      %1?", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0"]);
         values[]={0,1};
         texts[]={$STR_DISABLED,$STR_ENABLED};
-        default = 1;
+        default = 0;
     };
     class btc_p_set_skill_general { // Set skill, general
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_3DEN_SCENARIO_TEXTSINGULAR"]);
