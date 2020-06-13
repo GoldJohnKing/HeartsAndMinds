@@ -58,7 +58,7 @@ private _bank = if (random 1 > 0.5) then {
     -1 * random 40
 };
 [_heli, _pitch, _bank] call BIS_fnc_setPitchBank;
-private _fx = createVehicle ["test_EmptyObjectForSmoke", _pos, [], 0, "CAN_COLLIDE"];
+private _fx = createVehicle ["test_EmptyObjectForFireBig", _pos, [], 0, "CAN_COLLIDE"];
 
 private _group = createGroup btc_player_side;
 _group setVariable ["no_cache", true];

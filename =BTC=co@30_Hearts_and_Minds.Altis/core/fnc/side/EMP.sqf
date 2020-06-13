@@ -100,7 +100,7 @@ for "_i" from 0 to (1 + round random 2) do {
         ) then {
             private _pos = getPos _box;
             [_destroy_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
-            private _fx = "test_EmptyObjectForSmoke" createVehicle _pos;
+            private _fx = "test_EmptyObjectForFireBig" createVehicle _pos;
             _fx setPos _pos;
             [{
                 params ["_fx"];
