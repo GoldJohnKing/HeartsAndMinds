@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=190;
+		nextID=191;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={908.46045,28.805286,2953.1279};
-		dir[]={0.76564997,-0.36640921,0.52877289};
-		up[]={0.30154863,0.9304322,0.2082541};
-		aside[]={0.56829119,-7.06641e-008,-0.82287133};
+		pos[]={871.68445,38.798187,2938.8911};
+		dir[]={0.78550255,-0.43276453,0.44246778};
+		up[]={0.37711,0.90148264,0.212422};
+		aside[]={0.49080387,-3.4691766e-008,-0.87131226};
 	};
 };
 binarizationWanted=0;
@@ -302,7 +302,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=91;
+		items=92;
 		class Item0
 		{
 			dataType="Marker";
@@ -4006,26 +4006,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_fastroping_equipFRIES";
-					expression="[_this] call ace_fastroping_fnc_equipFRIES";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
+				nAttributes=1;
 			};
 		};
 		class Item55
@@ -4378,7 +4359,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={917.375,13.16,2954.875};
+				position[]={917.875,13.16,2953.25};
 			};
 			id=99;
 			type="HZ_Module_RealWorldWeather";
@@ -4513,7 +4494,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -5369,7 +5350,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CAS Drone";
+							value="近距离空中支援(CAS)无人机";
 						};
 					};
 				};
@@ -5703,7 +5684,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="V-44X Blackfish";
+							value="V-44X 垂直起降(VTOL)运输机";
 						};
 					};
 				};
@@ -6249,7 +6230,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="UH-80 GhostHawk";
+							value="UH-80 运输直升机";
 						};
 					};
 				};
@@ -6326,7 +6307,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1027.625,13.161439,2956.55};
-						angles[]={-0,0.93431687,0};
+						angles[]={0,0.93431687,0};
 					};
 					side="West";
 					flags=6;
@@ -6342,7 +6323,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1027.625,13.161439,2956.55};
-						angles[]={-0,0.93431687,0};
+						angles[]={0,0.93431687,0};
 					};
 					side="West";
 					flags=4;
@@ -6358,7 +6339,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1027.625,13.161439,2956.55};
-						angles[]={-0,0.93431687,0};
+						angles[]={0,0.93431687,0};
 					};
 					side="West";
 					flags=4;
@@ -6374,7 +6355,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1027.625,13.161439,2956.55};
-						angles[]={-0,0.93431687,0};
+						angles[]={0,0.93431687,0};
 					};
 					side="West";
 					flags=4;
@@ -6443,6 +6424,7 @@ class Mission
 				};
 			};
 			id=184;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item90
 		{
@@ -6450,7 +6432,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1027.625,19.849579,2956.5};
-				angles[]={-0,0.93431687,0};
+				angles[]={0,0.93431687,0};
 			};
 			side="West";
 			flags=6;
@@ -6462,6 +6444,118 @@ class Mission
 			};
 			id=185;
 			type="B_T_VTOL_01_infantry_F";
+			atlOffset=-9.5367432e-007;
+		};
+		class Item91
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={910,13.16,2969};
+			};
+			name="btc_curator_1";
+			init="call{this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];}";
+			id=190;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561197996528042";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 	class Connections
