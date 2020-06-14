@@ -52,9 +52,9 @@ _city setVariable ["spawn_more", true];
 //// Officer
 private _group_officer = createGroup btc_enemy_side;
 _group_officer setVariable ["no_cache", true];
-_group_officer setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 private _officerType = selectRandom btc_type_units;
 private _officer = _group_officer createUnit [_officerType, _pos, [], 0, "CAN_COLLIDE"];
+_officer setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 [_group_officer] call btc_fnc_mil_unit_create;
 
 //// Data side mission

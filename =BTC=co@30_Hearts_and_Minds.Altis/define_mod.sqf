@@ -44,7 +44,7 @@ private _items = [
     "NVGogglesB_gry_F",
     "NVGogglesB_grn_F",
     "NVGogglesB_blk_F",
-    "ACE_bodyBag",
+    //"ACE_bodyBag",
     "ACE_Sandbag_empty",
     "TFAR_rf7800str",
     "TFAR_anprc148jem",
