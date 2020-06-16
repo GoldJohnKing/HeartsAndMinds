@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5376.4404,81.624298,402.55811};
-		dir[]={-0.068650708,-0.70236295,0.7085619};
-		up[]={-0.06773594,0.71179688,0.69911236};
-		aside[]={0.99537492,-1.428125e-007,0.096440762};
+		pos[]={942.2467,30.120241,2871.9548};
+		dir[]={0.42794961,-0.81764311,0.38513863};
+		up[]={0.60776556,0.57572109,0.54696578};
+		aside[]={0.66895372,-9.4994903e-008,-0.74331474};
 	};
 };
 binarizationWanted=0;
@@ -822,7 +822,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={951.375,13.161439,2879.3};
-						angles[]={0,2.4840934,0};
+						angles[]={0,2.4840922,0};
 					};
 					side="West";
 					flags=4;
@@ -1360,6 +1360,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="小队长(医疗兵) - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -1533,6 +1534,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="小组长(医疗兵) - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -1706,6 +1708,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -1841,6 +1844,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -1976,6 +1980,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工兵 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2161,6 +2166,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="医疗兵 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2337,6 +2343,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="机枪手 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2491,6 +2498,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="精准射手 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2645,6 +2653,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="防空兵 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2799,6 +2808,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="反坦克手 - 第一作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -2944,7 +2954,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable ['GCblackList', true]; }";
 			};
 			id=40;
 			class CustomAttributes
@@ -5209,7 +5218,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5469.8691,26.032074,467.38742};
-				angles[]={6.2817621,1.5407853,-0};
+				angles[]={6.2817621,1.5407853,0};
 			};
 			side="Empty";
 			flags=4;
@@ -5994,7 +6003,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5431.8784,25.392639,428.71759};
-				angles[]={-0,0.9753598,0};
+				angles[]={0,0.9753598,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7615,6 +7624,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="小队长(医疗兵) - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -7788,6 +7798,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="小组长(医疗兵) - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -7961,6 +7972,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8115,6 +8127,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8269,6 +8282,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工兵 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8454,6 +8468,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="医疗兵 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8630,6 +8645,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="机枪手 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8784,6 +8800,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="精准射手 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -8938,6 +8955,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="防空兵 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -9092,6 +9110,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="反坦克手 - 第二作战小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -9237,7 +9256,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable ['GCblackList', true]; }";
 			};
 			id=250;
 			class CustomAttributes
@@ -9283,6 +9301,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -9478,6 +9497,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -9673,6 +9693,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -9868,6 +9889,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -10054,7 +10076,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable ['GCblackList', true]; }";
 			};
 			id=271;
 			class CustomAttributes
@@ -10100,6 +10121,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -10304,6 +10326,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -10508,6 +10531,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -10712,6 +10736,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						reportRemoteTargets=1;
@@ -10907,7 +10932,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable ['GCblackList', true]; }";
 			};
 			id=279;
 			class CustomAttributes
@@ -10953,6 +10977,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11094,6 +11119,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11213,6 +11239,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11332,6 +11359,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11451,6 +11479,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11570,6 +11599,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11711,6 +11741,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
@@ -11852,6 +11883,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						class Inventory
