@@ -65,6 +65,7 @@ _group setVariable ["no_cache", true];
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
 private _AGC_unit = _group createUnit [_crew, _pos, [], 50, "NONE"]; // Edited: Use default syntax to make it possible to add AGC compatibility, default: _crew createUnit [_pos, _group];
 _AGC_unit setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
+_AGC_unit setVariable ["btc_dont_delete", true]; // Edited: Make pilot body persistent even if city deactivate
 
 [_taskID, 13, getPos _city, _city getVariable "name"] call btc_fnc_task_create;
 private _find_taskID = _taskID + "mv";
