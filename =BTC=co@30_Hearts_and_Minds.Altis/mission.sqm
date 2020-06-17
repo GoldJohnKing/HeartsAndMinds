@@ -8,7 +8,7 @@ class EditorData
 	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=297;
+		nextID=300;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={942.2467,30.120241,2871.9548};
-		dir[]={0.42794961,-0.81764311,0.38513863};
-		up[]={0.60776556,0.57572109,0.54696578};
-		aside[]={0.66895372,-9.4994903e-008,-0.74331474};
+		pos[]={905.76093,36.070961,2949.9658};
+		dir[]={-0.24131542,-0.80816251,0.53727031};
+		up[]={-0.33112332,0.58895248,0.7372219};
+		aside[]={0.9122209,8.8242814e-008,0.40972322};
 	};
 };
 binarizationWanted=0;
@@ -7139,7 +7139,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="F-22A 对地攻击机";
+							value="A-10D 攻击机";
 						};
 					};
 				};
@@ -7158,7 +7158,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="rhsusf_f22";
+							value="B_Plane_Fighter_01_F";
 						};
 					};
 				};
@@ -7234,7 +7234,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""Gatling_30mm_Plane_CAS_01_F"",""Rocket_04_HE_Plane_CAS_01_F"",""Rocket_04_AP_Plane_CAS_01_F"",""Missile_AGM_02_Plane_CAS_01_F""]";
+							value="[""Gatling_30mm_Plane_CAS_01_F"",""Rocket_04_HE_Plane_CAS_01_F"",""Rocket_04_AP_Plane_CAS_01_F"",""Missile_AGM_02_Plane_CAS_01_F"",""ace_hellfire_launcher""]";
 						};
 					};
 				};
