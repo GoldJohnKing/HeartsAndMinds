@@ -639,8 +639,8 @@ switch (_p_en) do {
             - ["rhs_vdv_mflora_crew","rhs_vdv_mflora_armoredcrew","rhs_vdv_mflora_combatcrew","rhs_vdv_mflora_crew_commander","rhs_vdv_mflora_driver","rhs_vdv_mflora_driver_armored","rhs_vdv_mflora_officer","rhs_vdv_mflora_officer_armored","rhs_vdv_mflora_rifleman_lite"]
             - ["rhs_vdv_recon_officer","rhs_vdv_recon_officer_armored","rhs_vdv_recon_rifleman_l"]
             - ["rhs_pilot","rhs_pilot_combat_heli","rhs_pilot_tan","rhs_pilot_transport_heli"];
-        btc_type_motorized = ["RHS_Ural_Zu23_VDV_01","rhs_kamaz5350_vdv","rhs_kamaz5350_open_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"];
-        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_bmp2d_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
+        btc_type_motorized = ["rhs_kamaz5350_vdv","RHS_Ural_VDV_01","rhs_gaz66_vdv","rhs_zil131_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"];
+        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
     };
 };
 
