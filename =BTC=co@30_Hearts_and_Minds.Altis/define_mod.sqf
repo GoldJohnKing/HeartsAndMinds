@@ -28,15 +28,17 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = [
-
-];
+private _weapons = [];
 private _magazines = [
     "Titan_AP"
 ];
 private _items = [
     //"H_HelmetO_ViperSP_hex_F",
     //"H_HelmetO_ViperSP_ghex_F",
+    "O_IR_Grenade",
+    "I_IR_Grenade",
+    "O_R_IR_Grenade",
+    "I_E_IR_Grenade",
     "I_UavTerminal",
     "O_UavTerminal",
     "C_UavTerminal",
@@ -44,7 +46,6 @@ private _items = [
     "NVGogglesB_gry_F",
     "NVGogglesB_grn_F",
     "NVGogglesB_blk_F",
-    //"ACE_bodyBag",
     "ACE_Sandbag_empty",
     "TFAR_rf7800str",
     "TFAR_anprc148jem",

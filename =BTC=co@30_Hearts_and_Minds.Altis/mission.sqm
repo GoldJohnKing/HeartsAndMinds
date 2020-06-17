@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={899.27429,29.23337,3026.7937};
-		dir[]={0.12253775,-0.37309021,-0.91968066};
-		up[]={0.049276002,0.9277938,-0.3698248};
-		aside[]={-0.99125057,-2.089655e-007,-0.13207421};
+		pos[]={958.17371,25.047043,2890.071};
+		dir[]={-0.34489197,-0.65541309,-0.67194456};
+		up[]={-0.29928395,0.7552712,-0.58308917};
+		aside[]={-0.88966441,-4.4854823e-007,0.45664072};
 	};
 };
 binarizationWanted=0;
@@ -372,6 +372,9 @@ randomSeed=10095377;
 class ScenarioData
 {
 	author="Gold John King";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -8525,7 +8528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""Gatling_30mm_Plane_CAS_01_F"",""Rocket_04_HE_Plane_CAS_01_F"",""Rocket_04_AP_Plane_CAS_01_F"",""Missile_AGM_02_Plane_CAS_01_F"",""ace_hellfire_launcher""]";
+							value="[""Gatling_30mm_Plane_CAS_01_F"",""Rocket_04_HE_Plane_CAS_01_F"",""Rocket_04_AP_Plane_CAS_01_F"",""Missile_AGM_02_Plane_CAS_01_F""]";
 						};
 					};
 				};
