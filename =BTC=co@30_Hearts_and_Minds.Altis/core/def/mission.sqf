@@ -270,7 +270,7 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21];
     btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10, btc_helo_11, btc_helo_12, btc_helo_13];
 
     // The two arrays below are prefixes of buildings and their multiplier.
