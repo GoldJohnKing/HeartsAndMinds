@@ -50,11 +50,10 @@ class Extended_InitPost_EventHandlers {
 };
 
 respawn = "BASE";
-respawnDelay = 2;
+respawnDelay = 5; // Edited: Increase respawn delay, default: 2
 respawnDialog = 0;
 respawnOnStart = 0;
-respawnTemplates[] = {"MenuPosition"};
-
+respawnTemplates[] = {"Counter"}; // Edited: Disable redeploy on respawn, default: "MenuPosition"
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
