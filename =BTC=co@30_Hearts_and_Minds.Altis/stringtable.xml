@@ -1993,7 +1993,7 @@
                 <Spanish>Can't tow!&lt;br/&gt;(Este vehículo no puede remolcar %1)</Spanish>
                 <German>Can't tow!&lt;br/&gt;(Folgende Fahrzeuge können nicht gezogen werden: %1)</German>
                 <Portuguese>Can't tow!&lt;br/&gt;(Este veículo não pode rebocar %1)</Portuguese>
-                <Chinesesimp>Can't tow!&lt;br/&gt;(当前载具(后车)无法牵引如下类型的载具: %1)</Chinesesimp>
+                <Chinesesimp>无法牵引!&lt;br/&gt;(当前载具无法牵引以下类型的载具: %1)</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_HOOK">
                 <Original>Interact with a vehicle to tow it!</Original>
@@ -2004,19 +2004,22 @@
             </Key>
             <Key ID="STR_BTC_HAM_TOW_TFAR">
                 <Original>Too far!</Original>
+                <Chinesesimp>距离太远!</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_ALREADYTOWED">
                 <Original>This vehicle is already attached to another!</Original>
                 <Spanish>Este vehículo ya está unido a otro!</Spanish>
                 <German>Dieses Fahrzeug zieht bereits ein anderes Fahrzeug!</German>
                 <Portuguese>Este veículo já está atracado a outro!</Portuguese>
-                <Chinesesimp>这辆载具已经连接一辆载具了!</Chinesesimp>
+                <Chinesesimp>该载具已经牵引一辆载具了!</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_WAIT">
                 <Original>Towing in progress, please wait...</Original>
+                <Chinesesimp>正在牵引, 请稍后...</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_TOW_DONE">
                 <Original>Towing done</Original>
+                <Chinesesimp>牵引完成</Chinesesimp>
             </Key>
         </Container>
         <Container name="Logistic: Lift deploy ropes ">
