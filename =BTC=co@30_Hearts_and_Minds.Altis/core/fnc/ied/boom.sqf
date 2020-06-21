@@ -33,11 +33,12 @@ if (btc_debug_log) then {
 private _pos = getPos _ied;
 deleteVehicle _ied;
 // Edited: Add more explosion and more damage, default: "Bo_GBU12_LGB_MI10" createVehicle _pos;
-[{"Bomb_03_F" createVehicle _pos;}, [], 1] call CBA_fnc_waitAndExecute;
-[{"Bomb_03_F" createVehicle _pos;}, [], 0.5] call CBA_fnc_waitAndExecute;
-[{"Bomb_03_F" createVehicle _pos;}, [], 0.5] call CBA_fnc_waitAndExecute;
-[{"Bomb_03_F" createVehicle _pos;}, [], 0.5] call CBA_fnc_waitAndExecute;
-[{"Bomb_03_F" createVehicle _pos;}, [], 0.5] call CBA_fnc_waitAndExecute;
+private _totalCount = ceil (random 5);
+private _currentCount = 0;
+while {_currentCount < _totalCount} do {
+    "Bomb_03_F" createVehicle _pos;
+    _currentCount = _currentCount + 1;
+};
 deleteVehicle _wreck;
 
 [_pos] call btc_fnc_deaf_earringing;
