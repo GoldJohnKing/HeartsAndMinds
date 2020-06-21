@@ -25,8 +25,9 @@ params [
 ];
 
 private _towing = _veh getVariable ["btc_towing", objNull];
+if (isNull _towing) exitWith {(localize "STR_BTC_HAM_LOG_UNHOOK_NOROPE") call CBA_fnc_notify;};
 
-private _ropes = ropes _veh;
+private _ropes = ropes _this;
 if (_ropes isEqualTo []) then {
     _ropes = ropes _towing;
 };

@@ -82,5 +82,3 @@ if (btc_p_respawn_arsenal) then {
         [btc_gear_object, _unit] call ace_arsenal_fnc_openBox;
     }] call CBA_fnc_addBISEventHandler;
 };
-
-["btc_tow_unwindDone", {(localize "STR_BTC_HAM_TOW_DONE") call CBA_fnc_notify}] call CBA_fnc_addEventHandler;
