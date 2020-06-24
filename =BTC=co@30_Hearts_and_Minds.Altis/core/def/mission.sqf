@@ -330,7 +330,7 @@ if (isServer) then {
 private _allfaction = ["AFGCIV","CIV_F","DEFAULT","CFP_C_AFG","CFP_C_AFRCHRISTIAN","CFP_C_AFRISLAMIC","CFP_C_ASIA","CFP_C_ME","CUP_C_RU","CUP_C_CHERNARUS","CUP_C_SAHRANI","CUP_C_TK","GM_FC_GC_CIV","GM_FC_GE_CIV","LIB_CIV","LOP_AFR_CIV","LOP_CHR_CIV","LOP_TAK_CIV","CIV_IDAP_F","OPTRE_UEG_CIV","RDS_RUS_CIV","UK3CB_CHC_C","UK3CB_TKC_C","UNSUNG_C"]; //All factions
 _p_civ = _allfaction select _p_civ; //Select faction selected from mission parameter
 _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from mission parameter
-private _allclasse = [[_p_civ]] call btc_fnc_civ_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_fnc_civ_class.
+private _allclasse = [[_p_civ, "CIV_IDAP_F"]] call btc_fnc_civ_class; // Edited: Add more civ factions - Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_fnc_civ_class.
 
 //Save class name to global variable
 btc_civ_type_units = _allclasse select 0;
@@ -338,11 +338,11 @@ _allclasse = [[_p_civ_veh]] call btc_fnc_civ_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
-btc_w_civs = [
-    ["srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"],
-    ["hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"]
+btc_w_civs = [ // Edited: Give more powerful weapons to armed civs
+    ["MMG_02_camo_F", "srifle_LRR_camo_F", "srifle_GM6_camo_F", "arifle_ARX_ghex_F", "arifle_MSBS65_GL_camo_F"], // Edited: default = "srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"
+    ["rhs_weap_pp2000_folded", "rhs_weap_6p53", "rhs_weap_m320"] // Edited: default = "hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"
 ];
-btc_g_civs = ["HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"];
+btc_g_civs = ["rhs_charge_sb3kg_mag", "rhs_charge_tnt_x2_mag", "rhs_grenade_sthgr24_x7bundle_mag", "rhs_mag_m67", "rhs_mag_an_m14_th3"]; // Edited: default = "HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"
 
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
