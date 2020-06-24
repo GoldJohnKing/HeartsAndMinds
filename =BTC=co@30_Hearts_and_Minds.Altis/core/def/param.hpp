@@ -15,7 +15,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_USRACT_TIME_INC"]);
         values[]={1,2,3,4,5,6,7,8,9,10,11,12};
         texts[]={"1","2","3","4","5","6","7","8","9","10","11","12"};
-        default = 6;
+        default = 4;
     };
     class btc_p_load { // Load the savegame (if available)
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_LOAD"]);
@@ -363,7 +363,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_REPSTART"]);
         values[]={0, 200, 500, 750};
         texts[]={$STR_ACE_ViewDistance_object_verylow,$STR_A3_TIME_TRIALS_MISCTT_ROF_25,$STR_3DEN_ATTRIBUTES_SPEEDMODE_NORMAL,$STR_A3_TIME_TRIALS_MISCTT_ROF_21}; //texts[]={"Very Low","Low","Normal","High"};
-        default = 200;
+        default = 750;
     };
     class btc_p_rep_notify { // Show reputation change:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_SHOWREP"]);
