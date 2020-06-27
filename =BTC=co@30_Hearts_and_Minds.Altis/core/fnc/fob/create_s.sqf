@@ -42,7 +42,7 @@ _structure setDir _direction;
 
 private _marker = createMarker [_FOB_name, _pos];
 _marker setMarkerSize [1, 1];
-if (_FOB_name isEqualTo "航空母舰") then { // Edited: Make Aircraft Carrier use naval icon
+if (_FOB_name isEqualTo "航空母舰" || _FOB_name isEqualTo "码头") then { // Edited: Custom FOB icon
     _marker setMarkerType "b_naval";
 } else {
     _marker setMarkerType "b_hq";

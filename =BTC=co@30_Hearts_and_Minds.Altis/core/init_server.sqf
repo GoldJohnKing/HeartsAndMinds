@@ -21,7 +21,8 @@ if (btc_db_load && {profileNamespace getVariable [format ["btc_hm_%1_db", worldN
     _date set [3, btc_p_time];
     setDate _date;
 
-    [[5348,429.25,48.684], 90, "航空母舰"] call btc_fnc_fob_create_s; // Edited: Spawn FOB at mission start
+    [[5348,429.25,48.70], 90, "航空母舰"] call btc_fnc_fob_create_s; // Edited: Spawn FOB at mission start
+    [[1900.75,2921.88,0], 90, "码头"] call btc_fnc_fob_create_s; // Edited: Spawn FOB at mission start
 
     {
         [{!isNull _this}, {
