@@ -33,7 +33,7 @@ if (btc_debug_log) then {
 private _pos = getPos _ied;
 deleteVehicle _ied;
 // Edited: Add more explosion and more damage, default: "Bo_GBU12_LGB_MI10" createVehicle _pos;
-private _totalCount = ceil (random 5);
+private _totalCount = round (random 5);
 private _currentCount = 0;
 while {_currentCount < _totalCount} do {
     "Bomb_03_F" createVehicle _pos;
