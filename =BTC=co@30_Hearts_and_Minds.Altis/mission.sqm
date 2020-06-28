@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5501.4521,217.36954,371.12958};
-		dir[]={-0.73362368,-0.53703725,0.41643938};
-		up[]={-0.46719298,0.84344554,0.26519987};
-		aside[]={0.49366531,5.523907e-007,0.86966938};
+		pos[]={1110.375,38.16,2827.125};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -16657,7 +16657,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1110.375,13.16,2852.125};
-			angle=0.92469287;
+			angle=0.92469281;
 			class Attributes
 			{
 				condition="call{this}";
@@ -16668,6 +16668,7 @@ class Mission
 				repeatable=1;
 				activationType="NOT PRESENT";
 				activationBy="ANYPLAYER";
+				isServerOnly=1;
 			};
 			id=636;
 			type="EmptyDetectorAreaR250";
@@ -16693,7 +16694,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={1891.25,1.0405937,2947.75};
-			angle=0.92469281;
+			angle=0.92469275;
 			class Attributes
 			{
 				condition="call{this}";
@@ -16704,6 +16705,7 @@ class Mission
 				repeatable=1;
 				activationType="NOT PRESENT";
 				activationBy="ANYPLAYER";
+				isServerOnly=1;
 			};
 			id=639;
 			type="EmptyDetectorAreaR250";
@@ -16730,8 +16732,8 @@ class Mission
 		class Item103
 		{
 			dataType="Trigger";
-			position[]={5416.375,24.115906,465.375};
-			angle=0.92469287;
+			position[]={5416.375,23.535908,465.375};
+			angle=0.92469281;
 			class Attributes
 			{
 				condition="call{this}";
@@ -16742,17 +16744,18 @@ class Mission
 				repeatable=1;
 				activationType="NOT PRESENT";
 				activationBy="ANYPLAYER";
+				isServerOnly=1;
 			};
 			id=641;
 			type="EmptyDetectorAreaR250";
-			atlOffset=0.58170891;
+			atlOffset=0.0017108917;
 		};
 		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5416.375,23.5,464.875};
+				position[]={5416.375,23.533632,464.875};
 			};
 			side="Empty";
 			class Attributes
@@ -16761,7 +16764,7 @@ class Mission
 			};
 			id=642;
 			type="Land_HelipadEmpty_F";
-			atlOffset=48.23637;
+			atlOffset=48.270004;
 		};
 	};
 	class Connections
