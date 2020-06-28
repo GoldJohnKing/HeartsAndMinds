@@ -59,7 +59,8 @@ private _items = [
     // "JAS_GPNVG18_blk_TI",
     // "JAS_GPNVG18_Tan_TI",
     "JAS_GPNVG18_Full_blk_TI",
-    "JAS_GPNVG18_Full_Tan_TI"
+    "JAS_GPNVG18_Full_Tan_TI",
+    "EOD9_HELMET_Base"
 ];
 private _backpacks = [
     "C_IDAP_UAV_01_backpack_F",
