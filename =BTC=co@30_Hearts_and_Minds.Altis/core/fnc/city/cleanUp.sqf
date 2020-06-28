@@ -25,10 +25,11 @@ params [
 ];
 
 btc_groundWeaponHolder = btc_groundWeaponHolder - [objNull];
-private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated")) select {!(_x getVariable ["no_cache", false])}) select {
+private _toRemove = ((btc_groundWeaponHolder + (entities [["WeaponHolderSimulated", "ACE_bodyBagObject"], [], false, false])) select {!(_x getVariable ["no_cache", false])}) select { // Edited: Support AGM Mod Bodybags, default = (btc_groundWeaponHolder + (entities "WeaponHolderSimulated"))
+
     private _obj = _x;
 
-    _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
+    _playableUnits inAreaArray [getPosWorld _obj, 300, 300] isEqualTo [] // Edited: Increase ground weapon holder check range, default = 150
 };
 
 _toRemove append (allDead select {

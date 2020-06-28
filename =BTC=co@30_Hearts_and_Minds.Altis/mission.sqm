@@ -8,7 +8,7 @@ class EditorData
 	toggles=525;
 	class ItemIDProvider
 	{
-		nextID=639;
+		nextID=643;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1158.0073,50.82254,2777.0054};
-		dir[]={-0.48300773,-0.4861027,0.72829545};
-		up[]={-0.26867101,0.87389976,0.40511066};
-		aside[]={0.83338213,1.9557774e-008,0.55270159};
+		pos[]={5501.4521,217.36954,371.12958};
+		dir[]={-0.73362368,-0.53703725,0.41643938};
+		up[]={-0.46719298,0.84344554,0.26519987};
+		aside[]={0.49366531,5.523907e-007,0.86966938};
 	};
 };
 binarizationWanted=0;
@@ -567,7 +567,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=101;
+		items=105;
 		class Item0
 		{
 			dataType="Marker";
@@ -16656,19 +16656,18 @@ class Mission
 		class Item99
 		{
 			dataType="Trigger";
-			position[]={1107,13.16,2847.5};
-			angle=5.6352839;
+			position[]={1110.375,13.16,2852.125};
+			angle=0.92469287;
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{if (count btc_log_obj_created > 0) then { " \n "    { " \n "        if (damage _x == 1) then { _x call CBA_fnc_deleteEntity; }; " \n "    } forEach btc_log_obj_created; " \n "    btc_log_obj_created = btc_log_obj_created - [objNull]; " \n "}; " \n "private _objs = nearestObjects [getPos base_cleanup_center, [""GroundWeaponHolder"", ""ACE_bodyBagObject""], 500];  " \n "if (count _objs > 0) then { " \n "    { " \n "        _x call CBA_fnc_deleteEntity; " \n "    } foreach _objs; " \n "}; " \n "if (btc_debug) then { " \n "    [""[!] Base cleaner activated""] remoteExec [""systemChat"", 0]; " \n "};}";
-				sizeA=300;
+				onActivation="call{[[cleanup_base]] call btc_fnc_city_cleanUp; " \n "if (btc_debug) then { " \n "    [""Base Cleanup Triggered.""] remoteExec [""systemChat"", 0]; " \n "};}";
+				sizeA=500;
 				sizeB=500;
-				sizeC=100;
+				sizeC=75;
 				repeatable=1;
 				activationType="NOT PRESENT";
 				activationBy="ANYPLAYER";
-				isRectangle=1;
 			};
 			id=636;
 			type="EmptyDetectorAreaR250";
@@ -16678,17 +16677,91 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1107.375,13.125,2845.75};
+				position[]={1110.5,13.125,2851.75};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="base_cleanup_center";
+				name="cleanup_base";
 			};
 			id=638;
 			type="Land_HelipadEmpty_F";
 			atlOffset=-0.034999847;
+		};
+		class Item101
+		{
+			dataType="Trigger";
+			position[]={1891.25,1.0405937,2947.75};
+			angle=0.92469281;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{[[cleanup_port]] call btc_fnc_city_cleanUp; " \n "if (btc_debug) then { " \n "    [""Base Cleanup Triggered.""] remoteExec [""systemChat"", 0]; " \n "};}";
+				sizeA=100;
+				sizeB=100;
+				sizeC=50;
+				repeatable=1;
+				activationType="NOT PRESENT";
+				activationBy="ANYPLAYER";
+			};
+			id=639;
+			type="EmptyDetectorAreaR250";
+			atlOffset=-1.1920929e-007;
+		};
+		class Item102
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1891.375,1,2947.375};
+				angles[]={6.2740831,0,0.018201422};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="cleanup_port";
+			};
+			id=640;
+			type="Land_HelipadEmpty_F";
+			atlOffset=-0.04255867;
+		};
+		class Item103
+		{
+			dataType="Trigger";
+			position[]={5416.375,24.115906,465.375};
+			angle=0.92469287;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{[[cleanup_air]] call btc_fnc_city_cleanUp; " \n "if (btc_debug) then { " \n "    [""Base Cleanup Triggered.""] remoteExec [""systemChat"", 0]; " \n "};}";
+				sizeA=300;
+				sizeB=300;
+				sizeC=75;
+				repeatable=1;
+				activationType="NOT PRESENT";
+				activationBy="ANYPLAYER";
+			};
+			id=641;
+			type="EmptyDetectorAreaR250";
+			atlOffset=0.58170891;
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5416.375,23.5,464.875};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cleanup_air";
+			};
+			id=642;
+			type="Land_HelipadEmpty_F";
+			atlOffset=48.23637;
 		};
 	};
 	class Connections
