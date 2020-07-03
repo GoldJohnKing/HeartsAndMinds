@@ -56,7 +56,6 @@ private _officerType = selectRandom btc_type_units;
 private _officer = _group_officer createUnit [_officerType, _pos, [], 0, "CAN_COLLIDE"];
 _officer setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 _officer setVariable ["btc_dont_delete", true]; // Edited: Make officer body persistent even if city deactivate
-[_group_officer] call btc_fnc_mil_unit_create;
 
 //// Data side mission
 private _officerName = name _officer;
@@ -81,7 +80,6 @@ private _group = [];
     [_unit] joinSilent _grp;
     _group pushBack _grp;
     _grp setVariable ["no_cache", true];
-    [_grp] call btc_fnc_mil_unit_create;
 } forEach (_buildingPos - [_pos]);
 
 _trigger = createTrigger ["EmptyDetector", _pos];
