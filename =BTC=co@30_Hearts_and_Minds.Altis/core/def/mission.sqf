@@ -78,7 +78,7 @@ private _p_rep = "btc_p_rep" call BIS_fnc_getParamValue;
 btc_p_rep_notify = ("btc_p_rep_notify" call BIS_fnc_getParamValue) isEqualTo 1;
 private _p_city_radius = ("btc_p_city_radius" call BIS_fnc_getParamValue) * 100;
 btc_p_trigger = if (("btc_p_trigger" call BIS_fnc_getParamValue) isEqualTo 1) then {
-    "this && !btc_db_is_saving && (false in (thisList apply {(_x isKindOf 'Plane') && (speed _x > 120)})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 90)}))" // Edited: Tweak heli trigger speed and allow planes trigger city activation, default = "this && !btc_db_is_saving && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
+    "this && !btc_db_is_saving && (false in (thisList apply {(_x isKindOf 'Plane') && (speed _x > 120)})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 120)}))" // Edited: Tweak heli trigger speed and allow planes trigger city activation, default = "this && !btc_db_is_saving && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
 } else {
     "this && !btc_db_is_saving"
 };
