@@ -25,11 +25,11 @@ params [
 ];
 
 btc_groundWeaponHolder = btc_groundWeaponHolder - [objNull];
-private _toRemove = ((btc_groundWeaponHolder + (entities [["WeaponHolderSimulated", "ACE_bodyBagObject"], [], false, false])) select {!(_x getVariable ["no_cache", false])}) select { // Edited: Support AGM Mod Bodybags, default = (btc_groundWeaponHolder + (entities "WeaponHolderSimulated"))
+private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated") + (entities "ACE_bodyBagObject")) select {!(_x getVariable ["no_cache", false])}) select { // Edited: Support AGM Mod Bodybags, default = (btc_groundWeaponHolder + (entities "WeaponHolderSimulated"))
 
     private _obj = _x;
 
-    _playableUnits inAreaArray [getPosWorld _obj, 300, 300] isEqualTo [] // Edited: Increase ground weapon holder check range, default = 150
+    _playableUnits inAreaArray [getPosWorld _obj, 300, 300] isEqualTo [] && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Increase ground weapon holder check range, Support AGM Mod Bodybags, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
 };
 
 _toRemove append (allDead select {
