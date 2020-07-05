@@ -25,7 +25,7 @@ params [
 ];
 
 btc_groundWeaponHolder = btc_groundWeaponHolder - [objNull];
-private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated") + (entities "ACE_bodyBagObject")) select {!(_x getVariable ["no_cache", false])}) select { // Edited: Support AGM Mod Bodybags, default = (btc_groundWeaponHolder + (entities "WeaponHolderSimulated"))
+private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated") + (entities "body") + (entities "ACE_bodyBagObject")) select {!(_x getVariable ["no_cache", false])}) select { // Edited: Support AGM Mod Bodybags, default = (btc_groundWeaponHolder + (entities "WeaponHolderSimulated"))
 
     private _obj = _x;
 

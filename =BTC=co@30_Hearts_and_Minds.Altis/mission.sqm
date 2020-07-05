@@ -8,7 +8,7 @@ class EditorData
 	toggles=525;
 	class ItemIDProvider
 	{
-		nextID=683;
+		nextID=689;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={986.76312,32.759956,2880.1411};
-		dir[]={0.035827383,-0.49253869,0.86959684};
-		up[]={0.020278176,0.87026638,0.49216112};
-		aside[]={0.9991895,-1.6367994e-007,-0.041169018};
+		pos[]={1894.8676,26.693079,2908.7419};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -684,7 +684,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item4
@@ -783,7 +802,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item6
@@ -3405,7 +3443,6 @@ class Mission
 			};
 			id=68;
 			type="DeconShower_02_F";
-			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3474,7 +3511,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={914.875,13.16,3070};
-				angles[]={0,2.5239761,0};
+				angles[]={0,2.523973,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3488,6 +3525,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ace_isRepairFacility";
 					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
@@ -3506,7 +3562,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
@@ -3525,7 +3581,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				nAttributes=3;
 			};
 		};
 		class Item13
@@ -3565,7 +3621,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item14
@@ -4486,7 +4561,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={870.875,13.25,3002.75};
-			name="marker_4";
+			name="marker_1";
 			text="车库";
 			type="b_mech_inf";
 			id=119;
@@ -5486,12 +5561,11 @@ class Mission
 		class Item34
 		{
 			dataType="Marker";
-			position[]={953.5,13.159912,3036.875};
-			name="marker_6";
+			position[]={953.5,13.16,3036.875};
+			name="marker_2";
 			text="消杀喷淋装置";
 			type="b_installation";
 			id=194;
-			atlOffset=-8.7738037e-005;
 		};
 		class Item35
 		{
@@ -15507,7 +15581,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item81
@@ -15547,7 +15640,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item82
@@ -15781,7 +15893,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item87
@@ -16590,7 +16721,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={986.875,17.744331,2914.125};
-				angles[]={0,2.5461664,0};
+				angles[]={0,2.5461736,0};
 			};
 			side="Empty";
 			flags=1;
@@ -16599,7 +16730,7 @@ class Mission
 			};
 			id=660;
 			type="Land_Medevac_HQ_V1_F";
-			atlOffset=0.7149992;
+			atlOffset=0.71500015;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16628,7 +16759,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={989.32202,13.16,2916.063};
-			name="marker_12";
+			name="marker_3";
 			text="医疗中心";
 			type="b_med";
 			id=661;
@@ -16651,33 +16782,6 @@ class Mission
 		};
 		class Item96
 		{
-			dataType="Marker";
-			position[]={1103.625,13.159912,2855.375};
-			name="cleanup_base";
-			type="Empty";
-			id=663;
-			atlOffset=-8.7738037e-005;
-		};
-		class Item97
-		{
-			dataType="Marker";
-			position[]={1892,1.034,2945};
-			name="cleanup_port";
-			type="Empty";
-			id=664;
-			atlOffset=0.0016782284;
-		};
-		class Item98
-		{
-			dataType="Marker";
-			position[]={5367.875,-24.625,466.375};
-			name="cleanup_air";
-			type="Empty";
-			id=665;
-			atlOffset=-0.012382507;
-		};
-		class Item99
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -16689,7 +16793,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5522.625,19.376438,432.04999};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="West";
 					flags=2;
@@ -16729,13 +16833,13 @@ class Mission
 			id=666;
 			atlOffset=44.908699;
 		};
-		class Item100
+		class Item97
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={5522.625,21.131474,432};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			side="West";
 			flags=2;
@@ -16773,7 +16877,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item101
+		class Item98
 		{
 			dataType="Group";
 			side="West";
@@ -16786,7 +16890,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5527.125,17.626438,431.67499};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="West";
 					flags=2;
@@ -16826,13 +16930,13 @@ class Mission
 			id=669;
 			atlOffset=43.052807;
 		};
-		class Item102
+		class Item99
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={5527.125,20.130756,431.625};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			side="West";
 			flags=2;
@@ -16870,7 +16974,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item103
+		class Item100
 		{
 			dataType="Group";
 			side="West";
@@ -16922,7 +17026,7 @@ class Mission
 			id=672;
 			atlOffset=0.014789581;
 		};
-		class Item104
+		class Item101
 		{
 			dataType="Object";
 			class PositionInfo
@@ -16965,7 +17069,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item105
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17390,7 +17494,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item106
+		class Item103
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17813,6 +17917,122 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1109.25,13.16,2852.625};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cleanup_base";
+			};
+			id=686;
+			type="Land_HelipadEmpty_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5363.25,23.5,477};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cleanup_air";
+			};
+			id=687;
+			type="Land_HelipadEmpty_F";
+			atlOffset=47.881264;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item106
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1892.125,1.0355972,2945};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="cleanup_port";
+			};
+			id=688;
+			type="Land_HelipadEmpty_F";
+			atlOffset=0.0010000467;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
