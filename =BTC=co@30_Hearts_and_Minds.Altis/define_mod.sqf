@@ -4,6 +4,9 @@ btc_custom_loc = [
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
+    [getMarkerPos "cleanup_base", "NameMarine", "NATO Base", 300, false],
+    [getMarkerPos "cleanup_port", "NameMarine", "NATO Port", 100, false],
+    [getMarkerPos "cleanup_air", "NameMarine", "NATO Air", 150, false]
 ];
 
 /*

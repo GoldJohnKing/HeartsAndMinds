@@ -29,7 +29,7 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 
     private _obj = _x;
 
-    _playableUnits inAreaArray [getPosWorld _obj, 300, 300] isEqualTo [] && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Increase ground weapon holder check range, Support AGM Mod Bodybags, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
+    _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo [] && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Support AGM Mod Bodybags, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
 };
 
 _toRemove append (allDead select {
