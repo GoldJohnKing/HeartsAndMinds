@@ -203,7 +203,7 @@ if !(_city getVariable ["has_suicider", false]) then {
         private _trigger = createTrigger ["EmptyDetector", getPos _city];
         _trigger setTriggerArea [_radius, _radius, 0, false];
         _trigger setTriggerActivation [str btc_enemy_side, "NOT PRESENT", false];
-        _trigger setTriggerStatements ["count thisList < 10", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
+        _trigger setTriggerStatements ["count thisList < 5", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
         _city setVariable ["trigger", _trigger];
     };
 
