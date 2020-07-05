@@ -111,7 +111,7 @@ if !(_data_units isEqualTo []) then {
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;};
+        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _spawningRadius, 1 + round random [5, 6, 8], random 1] call btc_fnc_mil_create_group;}; // Edited: Spawn more enemy in each group, default = 1 + round random [0, 1, 2]
     };
 
     //Spawn civilians
