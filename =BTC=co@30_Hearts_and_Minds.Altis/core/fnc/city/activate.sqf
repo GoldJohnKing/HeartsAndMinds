@@ -99,19 +99,19 @@ if !(_data_units isEqualTo []) then {
     } forEach _data_units;
 } else {
     // Maximum number of enemy group
-    private _max_number_group = (switch _type do {
-        case "Hill" : {1};
-        case "NameLocal" : {2};
-        case "NameVillage" : {3};
+    private _max_number_group = (switch _type do { // Edited: Spawn more basic amount of enemies groups, default = 1,2,3,7,15,15,1,0
+        case "Hill" : {3};
+        case "NameLocal" : {5};
+        case "NameVillage" : {5};
         case "NameCity" : {7};
         case "NameCityCapital" : {15};
         case "Airport" : {15};
-        case "NameMarine" : {1};
+        case "NameMarine" : {3};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _spawningRadius, 1 + round random [5, 6, 8], random 1] call btc_fnc_mil_create_group;}; // Edited: Spawn more enemy in each group, default = 1 + round random [0, 1, 2]
+        for "_i" from 1 to (_max_number_group) do {[_city, _spawningRadius, 1 + round random [3, 4, 6], random 1] call btc_fnc_mil_create_group;}; // Edited: Spawn more basic amount of enemies groups, default = for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;};
     };
 
     //Spawn civilians
