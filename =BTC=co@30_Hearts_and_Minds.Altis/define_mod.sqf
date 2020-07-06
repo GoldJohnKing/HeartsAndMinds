@@ -35,9 +35,9 @@ private _magazines = [
 private _items = [
     "H_HelmetO_ViperSP_hex_F",
     "H_HelmetO_ViperSP_ghex_F",
-    "NVGogglesB_gry_F",
-    "NVGogglesB_grn_F",
-    "NVGogglesB_blk_F",
+    // "NVGogglesB_gry_F",
+    // "NVGogglesB_grn_F",
+    // "NVGogglesB_blk_F",
     "O_IR_Grenade",
     "I_IR_Grenade",
     "O_R_IR_Grenade",
