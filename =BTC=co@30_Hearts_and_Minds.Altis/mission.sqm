@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={938.89423,36.8172,2923.1592};
-		dir[]={0.4632684,-0.59780109,-0.65427977};
-		up[]={0.3454608,0.80162954,-0.48789957};
-		aside[]={-0.81615394,9.3562994e-007,-0.57788289};
+		pos[]={936.05682,37.485218,2924.3635};
+		dir[]={-0.40760484,-0.6397832,0.65161544};
+		up[]={-0.33929926,0.76854056,0.54242057};
+		aside[]={0.84782207,9.2689879e-007,0.53033572};
 	};
 };
 binarizationWanted=0;
@@ -19626,7 +19626,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5298.8154,25.921421,497.33185};
-				angles[]={-0,1.5745838,0};
+				angles[]={0,1.5745838,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19678,7 +19678,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5459,23.540037,437.92499};
-						angles[]={0,1.475257,-0};
+						angles[]={0,1.475257,0};
 					};
 					side="West";
 					flags=6;
@@ -19721,7 +19721,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5459.0034,25.392576,437.84259};
-				angles[]={0,1.475257,-0};
+				angles[]={0,1.475257,0};
 			};
 			side="West";
 			flags=6;
@@ -19739,25 +19739,6 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="MQ81_Foldwing_A_ID";
-					expression="_this setVariable [""FIR_MQ81_Foldwing_C"",_value]; [_this, _value] execVM 'FIR_MQ81\sqs\init\wing_fold.sqf';";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -19805,6 +19786,25 @@ class Mission
 						};
 					};
 				};
+				class Attribute1
+				{
+					property="MQ81_Foldwing_A_ID";
+					expression="_this setVariable [""FIR_MQ81_Foldwing_C"",_value]; [_this, _value] execVM 'FIR_MQ81\sqs\init\wing_fold.sqf';";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
 				nAttributes=2;
 			};
 		};
@@ -19814,7 +19814,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5459.9932,25.701397,466.80533};
-				angles[]={6.2817621,1.5407766,-0};
+				angles[]={6.2817621,1.5407766,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19959,7 +19959,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5432.8833,25.541483,429.03558};
-				angles[]={-0,1.0523987,0};
+				angles[]={0,1.0523987,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20228,7 +20228,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="FIR_FA18F";
+							value="FIR_F18C_Scar";
 						};
 					};
 				};
