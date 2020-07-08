@@ -1,0 +1,4 @@
+["Gatling_30mm_Plane_CAS_01_F","Bomb_04_Plane_CAS_01_F","BombCluster_01_F"]
+["Gatling_30mm_Plane_CAS_01_F","Rocket_04_HE_Plane_CAS_01_F","Rocket_04_AP_Plane_CAS_01_F","Missile_AGM_02_Plane_CAS_01_F"]
+["FIR_GAU8","FIR_AGM65","FIR_CBU87","FIR_CBU97"]
+["FIR_GBU12","FIR_GBU16","FIR_GBU10","FIR_GBU24"]
