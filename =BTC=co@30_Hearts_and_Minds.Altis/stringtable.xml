@@ -1396,7 +1396,7 @@
         <Container name="Action(ACE): Re-deploy">
             <Key ID="STR_BTC_HAM_ACTION_BIRESPAWN">
                 <Original>BI respawn</Original>
-                <Chinesesimp>重新部署地图</Chinesesimp>
+                <Chinesesimp>BI重生</Chinesesimp>
             </Key>
             <Key ID="STR_BTC_HAM_ACTION_REDEPLOYBASE">
                 <Original>Re-deploy base</Original>
