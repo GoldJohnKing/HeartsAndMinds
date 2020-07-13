@@ -57,7 +57,7 @@ for "_id" from 0 to (count _locations - 1) do {
         };
         private _name = getText(_current >> "name");
         private _radius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _radius = (_radius max 160) min 800;
+        _radius = (_radius max 500) min 800; // Edited: Increase minimal city radius, default = (_radius max 160) min 800
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
@@ -66,13 +66,11 @@ for "_id" from 0 to (count _locations - 1) do {
         if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 500, 500, 0, false]) exitWith {};
         */
         if ( // Edited: Add safezones
-            ((getMarkerPos "btc_base") inArea [_position, 500, 500, 0, false]) || 
-            ((getMarkerPos "safe_pos_1") inArea [_position, 100, 100, 0, false]) || 
-            ((getMarkerPos "safe_pos_2") inArea [_position, 100, 100, 0, false]) || 
-            ((getMarkerPos "safe_pos_3") inArea [_position, 100, 100, 0, false]) ||
-            ((getMarkerPos "safe_pos_4") inArea [_position, 100, 100, 0, false]) ||
-            ((getMarkerPos "safe_pos_5") inArea [_position, 100, 100, 0, false]) ||
-            ((getMarkerPos "safe_pos_6") inArea [_position, 100, 100, 0, false])
+            (getMarkerPos "btc_base" inArea [_position, 500, 500, 0, false]) ||
+            (getMarkerPos "safepos_1" inArea [_position, 100, 100, 0, false]) ||
+            (getMarkerPos "safepos_2" inArea [_position, 100, 100, 0, false]) ||
+            (getMarkerPos "safepos_3" inArea [_position, 100, 100, 0, false]) ||
+            (getMarkerPos "safepos_4" inArea [_position, 100, 100, 0, false])
         ) exitWith {};
 
         [_position, _type, _name, _radius, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
