@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11891.853,46.475025,2347.0649};
-		dir[]={0.7585125,-0.33056608,-0.56179368};
-		up[]={0.26580212,0.94371951,-0.19686547};
-		aside[]={-0.59524357,-8.8941306e-008,-0.80367064};
+		pos[]={11967.494,33.089146,2292.8145};
+		dir[]={0.043358047,-0.32773402,-0.94389826};
+		up[]={0.015049412,0.94470626,-0.32759404};
+		aside[]={-0.99904424,-1.9153231e-007,-0.045888379};
 	};
 };
 binarizationWanted=0;
@@ -43,8 +43,6 @@ addons[]=
 	"A3_Characters_F",
 	"ace_nouniformrestrictions",
 	"A3_Weapons_F",
-	"A3_Weapons_F_Mark",
-	"ace_laser",
 	"ace_nightvision",
 	"A3_Characters_F_Exp",
 	"A3_Air_F_Exp_VTOL_02",
@@ -86,7 +84,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=47;
+		items=45;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -187,227 +185,213 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
-		};
-		class Item15
-		{
-			className="ace_laser";
-			name="ACE3 - Laser";
-			author="ACE-制作团队";
-			url="http://ace3mod.com/";
-		};
-		class Item16
-		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item17
+		class Item15
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item16
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item17
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item18
 		{
 			className="A3_Air_F_Heli";
 			name="Arma 3 Helicopters - Aircraft";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item19
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item22
+		class Item20
 		{
 			className="A3_Soft_F_EPC";
 			name="Arma 3 Win Episode - Unarmored Land Vehicles";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item21
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item22
 		{
 			className="ace_refuel";
 			name="ACE3 - Refuel";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item25
+		class Item23
 		{
 			className="ace_repair";
 			name="ACE3 - Repair";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item26
+		class Item24
 		{
 			className="ace_rearm";
 			name="ACE3 - Rearm";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item27
+		class Item25
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item28
+		class Item26
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item27
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item28
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item31
+		class Item29
 		{
 			className="rhs_c_air";
 			name="AFRF Planes";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item32
+		class Item30
 		{
 			className="FIR_AirWeaponSystem_US";
 			name="FIR_AirWeaponSystem_US";
 		};
-		class Item33
+		class Item31
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item32
 		{
 			className="rhs_c_mig29";
 			name="RHS Mig-29 Jets";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item35
+		class Item33
 		{
 			className="rhs_c_a2port_air";
 			name="A2 ported air";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item36
+		class Item34
 		{
 			className="ace_fastroping";
 			name="ACE3 - Fastroping";
 			author="ACE-制作团队";
 			url="http://ace3mod.com/";
 		};
-		class Item37
+		class Item35
 		{
 			className="rhs_c_mi28";
 			name="Mi-28";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item38
+		class Item36
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item39
+		class Item37
 		{
 			className="rhs_c_cars";
 			name="Tigr vehicles";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item40
+		class Item38
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item41
+		class Item39
 		{
 			className="rhs_c_t72";
 			name="T-72 Series Tanks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item42
+		class Item40
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item43
+		class Item41
 		{
 			className="rhs_c_btr";
 			name="BTR-70 & 80";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item44
+		class Item42
 		{
 			className="rhs_c_bmp";
 			name="BMP-1 & 2 IFV";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item45
+		class Item43
 		{
 			className="rhs_c_sprut";
 			name="BMD-4 & Sprut-SD";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item46
+		class Item44
 		{
 			className="rhs_c_bmd";
 			name="BMD-1 & 2 IFV";
@@ -432,7 +416,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -3522,15 +3506,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -3621,15 +3596,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -3720,15 +3686,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -3819,15 +3776,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5321,15 +5269,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5420,15 +5359,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5519,15 +5449,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5618,15 +5539,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5717,15 +5629,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5816,15 +5719,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -5915,15 +5809,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6013,15 +5898,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6111,15 +5987,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6209,15 +6076,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6551,15 +6409,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6649,15 +6498,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6748,15 +6588,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6847,15 +6678,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -6946,15 +6768,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7045,15 +6858,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7143,15 +6947,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7241,15 +7036,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7339,15 +7125,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7438,15 +7215,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7674,15 +7442,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7791,15 +7550,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -7909,15 +7659,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8027,15 +7768,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8181,15 +7913,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8298,15 +8021,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8415,15 +8129,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8533,15 +8238,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_CombatUniform_ocamo";
@@ -8687,15 +8383,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -8805,15 +8492,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -8923,15 +8601,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -9041,15 +8710,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -9159,15 +8819,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -9271,15 +8922,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -9383,15 +9025,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
@@ -9495,15 +9128,6 @@ class Mission
 						reportOwnPosition=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Laserdesignator";
-								class primaryMuzzleMag
-								{
-									name="Laserbatteries";
-									ammoLeft=1;
-								};
-							};
 							class uniform
 							{
 								typeName="U_O_PilotCoveralls";
