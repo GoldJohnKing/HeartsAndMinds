@@ -42,12 +42,12 @@ private _items = [
     // "NVGogglesB_gry_F",
     // "NVGogglesB_grn_F",
     // "NVGogglesB_blk_F",
-    "O_IR_Grenade",
+    "B_IR_Grenade",
     "I_IR_Grenade",
     "O_R_IR_Grenade",
     "I_E_IR_Grenade",
     "I_UavTerminal",
-    "O_UavTerminal",
+    "B_UavTerminal",
     "C_UavTerminal",
     "I_E_UavTerminal",
     "TFAR_rf7800str",
@@ -64,7 +64,10 @@ private _items = [
     // "JAS_GPNVG18_Tan_TI",
     "JAS_GPNVG18_Full_blk_TI",
     "JAS_GPNVG18_Full_Tan_TI",
-    "EOD9_HELMET_Base"
+    "EOD9_HELMET_Base",
+    "LargeBomb_Cluster",
+    "Bomb_Cluster",
+    "FIR_PDU"
 ];
 private _backpacks = [
     "C_IDAP_UAV_01_backpack_F",
@@ -124,24 +127,26 @@ private _backpacks = [
     "I_UAV_06_medical_backpack_F",
     "I_UGV_02_Demining_backpack_F",
     "I_UGV_02_Science_backpack_F",
-    "O_AA_01_weapon_F",
-    "O_AT_01_weapon_F",
-    "O_GMG_01_A_weapon_F",
-    "O_GMG_01_high_weapon_F",
-    "O_GMG_01_weapon_F",
-    "O_HMG_01_A_weapon_F",
-    "O_HMG_01_high_weapon_F",
-    "O_HMG_01_support_F",
-    "O_HMG_01_support_high_F",
-    "O_HMG_01_weapon_F",
-    "O_Mortar_01_support_F",
-    "O_Mortar_01_weapon_F",
-    "O_UAV_01_backpack_F",
-    "O_UAV_06_backpack_F",
-    "O_UAV_06_medical_backpack_F",
-    "O_UGV_02_Demining_backpack_F",
-    "O_UGV_02_Science_backpack_F",
-    "O_Static_Designator_02_weapon_F",
+    "B_AA_01_weapon_F",
+    "B_AT_01_weapon_F",
+    "B_GMG_01_A_weapon_F",
+    "B_GMG_01_high_weapon_F",
+    "B_GMG_01_weapon_F",
+    "B_HMG_01_A_weapon_F",
+    "B_HMG_01_high_weapon_F",
+    "B_HMG_01_support_F",
+    "B_HMG_01_support_high_F",
+    "B_HMG_01_weapon_F",
+    "B_Mortar_01_support_F",
+    "B_Mortar_01_weapon_F",
+    "B_UAV_01_backpack_F",
+    "B_UAV_06_backpack_F",
+    "B_UAV_06_medical_backpack_F",
+    "B_UGV_02_Demining_backpack_F",
+    "B_UGV_02_Science_backpack_F",
+    "B_Static_Designator_02_weapon_F",
+    "B_W_Static_Designator_01_weapon_F",
+    "B_Static_Designator_01_weapon_F",
     "TFAR_anprc155",
     "TFAR_anprc155_coyote",
     "TFAR_anarc164",
@@ -178,8 +183,8 @@ private _weapons_machineGunner = ["arifle_MX_SW_F", "arifle_MX_SW_khk_F", "arifl
 private _weapons_sniper = ["arifle_MXM_F", "arifle_MXM_khk_F", "arifle_MXM_Black_F", "arifle_MXM_Black_F"];
 private _bipods = ["bipod_01_F_snd", "bipod_01_F_khk", "bipod_01_F_blk", "bipod_01_F_blk"];
 private _pistols = ["hgun_P07_F", "hgun_P07_khk_F", "hgun_P07_F", "hgun_P07_khk_F"];
-private _launcher_AT = ["launch_B_Titan_short_F", "launch_B_Titan_short_tna_F", "launch_O_Titan_short_F", "launch_B_Titan_short_tna_F"];
-private _launcher_AA = ["launch_B_Titan_F", "launch_B_Titan_tna_F", "launch_O_Titan_F", "launch_B_Titan_tna_F"];
+private _launcher_AT = ["launch_B_Titan_short_F", "launch_B_Titan_short_tna_F", "launch_B_Titan_short_F", "launch_B_Titan_short_tna_F"];
+private _launcher_AA = ["launch_B_Titan_F", "launch_B_Titan_tna_F", "launch_B_Titan_F", "launch_B_Titan_tna_F"];
 private _backpacks = ["B_AssaultPack_Kerry", "B_AssaultPack_eaf_F", "B_AssaultPack_blk", "B_AssaultPack_wdl_F"];
 private _backpacks_big = ["B_Kitbag_mcamo", "B_Kitbag_rgr", "B_Kitbag_rgr", "B_Kitbag_rgr"];
 private _backpackCBRN = "B_CombinationUnitRespirator_01_F";

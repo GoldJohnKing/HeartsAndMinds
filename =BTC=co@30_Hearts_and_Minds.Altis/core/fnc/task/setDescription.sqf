@@ -28,7 +28,7 @@ Author:
 
 params [
     ["_task_ids", [], ["", []]],
-    ["_side", west, [west]],
+    ["_side", east, [east]], // Edited: Change player side
     ["_description", 0, [0]],
     ["_destination", [], [objNull, []]],
     ["_priority", 2, [0]],
