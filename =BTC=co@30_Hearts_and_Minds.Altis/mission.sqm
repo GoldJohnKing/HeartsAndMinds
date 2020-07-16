@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11967.494,33.089146,2292.8145};
-		dir[]={0.043358047,-0.32773402,-0.94389826};
-		up[]={0.015049412,0.94470626,-0.32759404};
-		aside[]={-0.99904424,-1.9153231e-007,-0.045888379};
+		pos[]={11996.722,55.049423,1607.6647};
+		dir[]={-0.38714203,-0.23448758,0.89175409};
+		up[]={-0.093395919,0.9721157,0.21512994};
+		aside[]={0.91732758,4.3865293e-007,0.39824665};
 	};
 };
 binarizationWanted=0;
@@ -416,7 +416,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -777,22 +777,22 @@ class Mission
 		class Item5
 		{
 			dataType="Marker";
-			position[]={12033.5,25.566406,2302.875};
+			position[]={12033.5,25.566,2302.875};
 			name="btc_log_point";
 			text="后勤中心";
-			type="b_maint";
+			type="o_maint";
 			id=118;
-			atlOffset=-0.19667053;
+			atlOffset=-0.1970768;
 		};
 		class Item6
 		{
 			dataType="Marker";
-			position[]={12039.5,26.238495,2217.5};
+			position[]={12039.5,26.238001,2217.5};
 			name="marker_1";
 			text="车库";
-			type="b_mech_inf";
+			type="o_mech_inf";
 			id=119;
-			atlOffset=-0.00031280518;
+			atlOffset=-0.00080680847;
 		};
 		class Item7
 		{
@@ -1392,12 +1392,12 @@ class Mission
 		class Item12
 		{
 			dataType="Marker";
-			position[]={12035.25,24.620361,2385.625};
+			position[]={12035.25,24.620001,2385.625};
 			name="marker_2";
 			text="消杀喷淋装置";
-			type="b_installation";
+			type="o_installation";
 			id=194;
-			atlOffset=-0.51543808;
+			atlOffset=-0.51579857;
 		};
 		class Item13
 		{
@@ -1828,11 +1828,12 @@ class Mission
 		class Item18
 		{
 			dataType="Marker";
-			position[]={11871.447,25.207047,2250.563};
+			position[]={11871.447,25.207001,2250.563};
 			name="marker_3";
 			text="医疗中心";
-			type="b_med";
+			type="o_med";
 			id=661;
+			atlOffset=-4.5776367e-005;
 		};
 		class Item19
 		{
@@ -2872,22 +2873,22 @@ class Mission
 		class Item25
 		{
 			dataType="Marker";
-			position[]={11812.875,24.683105,2316};
+			position[]={11812.875,24.683001,2316};
 			name="marker_19";
 			text="直升机停机坪";
-			type="b_air";
+			type="o_air";
 			id=993;
-			atlOffset=-0.0033855438;
+			atlOffset=-0.003490448;
 		};
 		class Item26
 		{
 			dataType="Marker";
-			position[]={11975.139,31.468994,1790.9863};
+			position[]={11975.139,31.469,1790.986};
 			name="marker_20";
 			text="机库";
-			type="b_plane";
+			type="o_plane";
 			id=994;
-			atlOffset=-0.086488724;
+			atlOffset=-0.086492538;
 		};
 		class Item27
 		{
@@ -2951,12 +2952,12 @@ class Mission
 		class Item28
 		{
 			dataType="Marker";
-			position[]={11860.75,24.462891,2375.5};
+			position[]={11860.75,24.462999,2375.5};
 			name="marker_21";
 			text="战场输送支援";
-			type="b_support";
+			type="o_support";
 			id=996;
-			atlOffset=-0.0019073486;
+			atlOffset=-0.0017986298;
 		};
 		class Item29
 		{
@@ -3063,7 +3064,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -3103,7 +3104,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -3142,7 +3143,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -3182,7 +3183,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
