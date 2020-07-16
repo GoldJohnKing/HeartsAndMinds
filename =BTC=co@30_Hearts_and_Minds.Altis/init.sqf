@@ -17,3 +17,5 @@ if (!isDedicated && hasInterface) then {
 if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
+
+[] spawn VCM_fnc_VcomInit; // Edited: Add VCOM Support
