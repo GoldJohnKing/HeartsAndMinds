@@ -65,8 +65,6 @@ private _items = [
     "JAS_GPNVG18_Full_blk_TI",
     "JAS_GPNVG18_Full_Tan_TI",
     "EOD9_HELMET_Base",
-    "LargeBomb_Cluster",
-    "Bomb_Cluster",
     "FIR_PDU"
 ];
 private _backpacks = [
