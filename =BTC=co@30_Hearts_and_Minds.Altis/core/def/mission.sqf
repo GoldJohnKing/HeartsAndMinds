@@ -205,7 +205,7 @@ if (isServer) then {
     btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "hack", "kill", "EMP", "removeRubbish"]; // Edited: Exclude "capture_officer", "convoy", "civtreatment" - On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["underwater_generator"]}; // Edited: exclude "civtreatment_boat" - On sea
     if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"};
-    btc_side_list_use = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "hack", "kill", "EMP", "removeRubbish", "underwater_generator", "chemicalLeak"]; // Edited: Define side mission list, default = []
+    btc_side_list_use = [];
     btc_type_tower = ["Land_Communication_F", "Land_TTowerBig_1_F", "Land_TTowerBig_2_F"];
     btc_type_phone = ["Land_PortableLongRangeRadio_F", "Land_MobilePhone_smart_F", "Land_MobilePhone_old_F"];
     btc_type_barrel = ["Land_GarbageBarrel_01_F", "Land_BarrelSand_grey_F", "MetalBarrel_burning_F", "Land_BarrelWater_F", "Land_MetalBarrel_F", "Land_MetalBarrel_empty_F"];
