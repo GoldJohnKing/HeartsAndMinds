@@ -44,7 +44,7 @@ waitUntil {!(isNil "VCM_AIMagLimit")};
 //ACE CHECK
 if (!(isNil "ACE_Medical_enableFor") && {ACE_Medical_enableFor isEqualTo 1}) then {VCM_MEDICALACTIVE = false;} else {VCM_MEDICALACTIVE = true;};
 //CBA CHECK
-if (isClass(configFile >> "CfgPatches" >> "cba_main")) then {CBAACT = true;} else {CBAACT = false;};
+CBAACT = false; // Edited: Disable CBA support, default = if (isClass(configFile >> "CfgPatches" >> "cba_main")) then {CBAACT = true;} else {CBAACT = false;};
 
 //Global actions compiles
 Vcm_PMN = compileFinal "(_this select 0) playMoveNow (_this select 1);";

@@ -147,9 +147,9 @@ Vcm_Settings =
 	
 	diag_log "VCOM: Loaded Default Settings";
 
-if (VCM_USECBASETTINGS) then {
-    [] call VCM_fnc_CBASettings;
-};
+// if (VCM_USECBASETTINGS) then { // Edited: Disable CBA support
+//     [] call VCM_fnc_CBASettings;
+// };
 
 
 };

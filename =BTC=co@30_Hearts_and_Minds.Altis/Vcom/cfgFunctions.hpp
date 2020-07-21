@@ -166,7 +166,7 @@ class VCOM
 		class isFlatEmpty {};	
 
 		//[] call VCM_fnc_CBASettings;
-		class CBASettings {};
+		// class CBASettings {}; // Edited: Disable CBA support
 		
 		//[] call VCM_fnc_SniperList
 		class SniperList {};
