@@ -1,7 +1,7 @@
 ["Rocket_04_HE_Plane_CAS_01_F","Rocket_04_AP_Plane_CAS_01_F","Missile_AGM_02_Plane_CAS_01_F","Bomb_04_Plane_CAS_01_F","BombCluster_01_F"]
 
-["USAF_M61A2","USAF_AGM65E_Launcher","USAF_AGM114P_Launcher","USAF_AGM154C_Launcher","USAF_AGM158_Launcher"]
+["USAF_M61A2","USAF_AGM65E_Launcher","USAF_AGM84_Launcher","USAF_AGM114P_Launcher","USAF_CBU103_Launcher"]
 
-["USAF_GBU12_Launcher","USAF_GBU24_Launcher","USAF_GBU28_Launcher","USAF_GBU31_Launcher","USAF_CBU103_Launcher","USAF_CBU105_Launcher"]
+["USAF_GBU12_Launcher","USAF_GBU24_Launcher","USAF_GBU28_Launcher","USAF_GBU32_Launcher","USAF_GBU38_Launcher","USAF_GBU39_Launcher"]
 
-["USAF_MOAB_Launcher","USAF_B61_Launcher"]
+["USAF_GBU57_Launcher","USAF_MOAB_Launcher","USAF_B61_Launcher"]
