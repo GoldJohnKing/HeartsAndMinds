@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1186;
+		nextID=1187;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11891.712,51.797947,15087.718};
-		dir[]={0.93218571,-0.34810048,-0.099846497};
-		up[]={0.34616187,0.9374364,-0.037078187};
-		aside[]={-0.10650719,5.2939868e-008,-0.99436069};
+		pos[]={12032.506,33.719063,15085.219};
+		dir[]={-0.72648925,-0.32034749,0.60799515};
+		up[]={-0.24584,0.94722325,0.20574237};
+		aside[]={0.64181542,-4.558824e-007,0.76690102};
 	};
 };
 binarizationWanted=0;
@@ -602,7 +602,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11899.915,23.125973,15106.16};
+				position[]={11913.212,23.125973,15106.691};
 			};
 			side="Empty";
 			flags=4;
@@ -725,6 +725,7 @@ class Mission
 						description="指挥官 - 指挥/情报小组";
 						isPlayer=1;
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -905,6 +906,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="警卫员(医疗兵) - 指挥/情报小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1047,6 +1049,7 @@ class Mission
 						init="call{this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
 						description="翻译官 - 指挥/情报小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1170,6 +1173,7 @@ class Mission
 						init="call{this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
 						description="翻译官 - 指挥/情报小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1441,6 +1445,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="小队长(医疗兵) - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1616,6 +1621,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="小组长(医疗兵) - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1790,6 +1796,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -1926,6 +1933,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2053,7 +2061,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12037.088,20.761389,15068.634};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.111402,0};
 					};
 					side="West";
 					flags=4;
@@ -2062,6 +2070,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工兵 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2248,6 +2257,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="医疗兵 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2425,6 +2435,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="机枪手 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2581,6 +2592,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="精准射手 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2736,6 +2748,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="防空兵 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -2891,6 +2904,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="反坦克手 - 第一作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -3284,8 +3298,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11840.492,22.947157,15105.214};
-				angles[]={-0,6.2610235,0};
+				position[]={11856.207,22.947157,15106.417};
+				angles[]={0,6.2610197,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3785,7 +3799,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12049.658,20.770092,15096.529};
-				angles[]={-0,4.0444689,0};
+				angles[]={0,4.0444689,0};
 			};
 			id=140;
 			type="SSS_module_AddTransport";
@@ -4104,7 +4118,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12016.443,20.760006,15098.084};
-				angles[]={-0,0.018221239,0};
+				angles[]={0,0.018221239,0};
 			};
 			id=183;
 			type="SSS_module_AddTransport";
@@ -4641,7 +4655,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""USAF_GBU12_Launcher"",""USAF_GBU24_Launcher"",""USAF_GBU28_Launcher"",""USAF_GBU31_Launcher"",""USAF_CBU103_Launcher"",""USAF_CBU105_Launcher""]";
+							value="[""USAF_GBU12_Launcher"",""USAF_GBU24_Launcher"",""USAF_GBU28_Launcher"",""USAF_GBU32_Launcher"",""USAF_GBU38_Launcher"",""USAF_GBU39_Launcher""]";
 						};
 					};
 				};
@@ -4691,7 +4705,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11812.056,22.708891,15104.355};
+				position[]={11832.218,22.708891,15106.019};
 				angles[]={-0,6.2610197,0};
 			};
 			side="Empty";
@@ -5035,6 +5049,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="小队长(医疗兵) - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -5210,6 +5225,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="小组长(医疗兵) - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -5384,6 +5400,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -5539,6 +5556,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -5685,7 +5703,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12037.085,20.761412,15069.71};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.111402,0};
 					};
 					side="West";
 					flags=4;
@@ -5694,6 +5712,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工兵 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -5880,6 +5899,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="医疗兵 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6057,6 +6077,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="机枪手 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6212,6 +6233,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="精准射手 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6367,6 +6389,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="防空兵 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6523,6 +6546,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="反坦克手 - 第二作战小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6716,6 +6740,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -6912,6 +6937,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -7108,6 +7134,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -7304,6 +7331,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -7527,7 +7555,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12041.214,20.761438,15070.751};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.1113985,0};
 					};
 					side="West";
 					flags=6;
@@ -7536,6 +7564,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -7732,7 +7761,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12040.274,20.761438,15070.769};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.111402,0};
 					};
 					side="West";
 					flags=4;
@@ -7741,6 +7770,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -7937,7 +7967,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12039.255,20.761438,15070.676};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.111402,0};
 					};
 					side="West";
 					flags=4;
@@ -7946,6 +7976,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8142,7 +8173,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12037.979,20.761438,15070.774};
-						angles[]={-0,3.111402,0};
+						angles[]={0,3.111402,0};
 					};
 					side="West";
 					flags=4;
@@ -8151,6 +8182,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8392,6 +8424,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8537,6 +8570,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8682,6 +8716,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8827,6 +8862,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -8972,6 +9008,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -9095,6 +9132,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -9218,6 +9256,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -9341,6 +9380,7 @@ class Mission
 						init="call{this setVariable ['GCblackList', true]; }";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
+						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -9490,7 +9530,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11783.414,20.761438,15105.113};
+						position[]={11806.718,20.761438,15106.495};
 					};
 					side="West";
 					flags=6;
@@ -9505,7 +9545,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11783.414,20.761438,15105.113};
+						position[]={11806.718,20.761438,15106.495};
 					};
 					side="West";
 					flags=4;
@@ -9558,9 +9598,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11984.219,25.368109,15107.319};
+				position[]={11986.593,24.488283,15105.69};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -9572,7 +9613,6 @@ class Mission
 			};
 			id=3;
 			type="RHS_CH_47F_10";
-			atlOffset=0.87982559;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9957,7 +9997,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11927.909,23.479416,15105.81};
+				position[]={11936.564,23.479416,15105.728};
 			};
 			side="Empty";
 			flags=4;
@@ -10183,7 +10223,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11955.798,23.475807,15105.661};
+				position[]={11960.103,23.475809,15105.932};
 			};
 			side="Empty";
 			flags=4;
@@ -10200,6 +10240,7 @@ class Mission
 			};
 			id=635;
 			type="RHS_UH60M";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11213,7 +11254,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11757.371,23.153269,15105.041};
+				position[]={11781.55,23.153269,15106.32};
 			};
 			side="Empty";
 			flags=4;
@@ -11358,7 +11399,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11927.92,20.76,15106.228};
+				position[]={11936.575,20.76,15106.146};
 			};
 			side="Empty";
 			flags=4;
@@ -11416,7 +11457,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11870.843,25.527254,15104.203};
+				position[]={11884.861,25.527254,15103.646};
 			};
 			side="Empty";
 			flags=4;
@@ -11631,7 +11672,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -11643,7 +11684,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11870.494,20.76,15106.11};
+				position[]={11884.864,20.76,15106.938};
 			};
 			side="Empty";
 			flags=4;
@@ -12057,7 +12098,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11984.362,20.76,15105.567};
+				position[]={11986.644,20.76,15105.869};
 			};
 			side="Empty";
 			flags=4;
@@ -12072,7 +12113,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11955.866,20.76,15105.865};
+				position[]={11960.171,20.760002,15106.136};
 			};
 			side="Empty";
 			flags=4;
@@ -12081,13 +12122,14 @@ class Mission
 			};
 			id=1090;
 			type="Land_HelipadSquare_F";
+			atlOffset=1.9073486e-006;
 		};
 		class Item56
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11900.069,20.76,15106.081};
+				position[]={11913.366,20.76,15106.612};
 			};
 			side="Empty";
 			flags=4;
@@ -12102,7 +12144,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11840.595,20.76,15105.784};
+				position[]={11856.31,20.760002,15106.987};
 				angles[]={-0,6.2610235,0};
 			};
 			side="Empty";
@@ -12112,13 +12154,14 @@ class Mission
 			};
 			id=1092;
 			type="Land_HelipadSquare_F";
+			atlOffset=1.9073486e-006;
 		};
 		class Item58
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11812.038,20.76,15104.859};
+				position[]={11832.2,20.76,15106.522};
 				angles[]={-0,6.2610235,0};
 			};
 			side="Empty";
@@ -12150,7 +12193,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11594.821,20.76,15109.921};
-				angles[]={-0,0.68449616,0};
+				angles[]={0,0.68449616,0};
 			};
 			side="Empty";
 			flags=4;
@@ -12165,7 +12208,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11757.373,20.76,15105.029};
+				position[]={11781.552,20.76,15106.309};
 			};
 			side="Empty";
 			flags=4;
@@ -12180,7 +12223,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11733.598,20.76,15105.232};
+				position[]={11758.068,20.76,15106.336};
 			};
 			side="Empty";
 			flags=4;
@@ -12195,7 +12238,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11709.311,20.76,15104.231};
+				position[]={11733.629,20.760002,15106.498};
 			};
 			side="Empty";
 			flags=4;
@@ -12204,13 +12247,14 @@ class Mission
 			};
 			id=1098;
 			type="Land_HelipadSquare_F";
+			atlOffset=1.9073486e-006;
 		};
 		class Item64
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11686.148,20.76,15104.331};
+				position[]={11710.389,20.76,15106.593};
 			};
 			side="Empty";
 			flags=4;
@@ -12225,7 +12269,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11783.449,20.76,15104.979};
+				position[]={11806.753,20.76,15106.36};
 			};
 			side="Empty";
 			flags=4;
@@ -12507,7 +12551,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""USAF_M61A2"",""USAF_AGM65E_Launcher"",""USAF_AGM114P_Launcher"",""USAF_AGM154C_Launcher"",""USAF_AGM158_Launcher""]";
+							value="[""USAF_M61A2"",""USAF_AGM65E_Launcher"",""USAF_AGM84_Launcher"",""USAF_AGM114P_Launcher"",""USAF_CBU103_Launcher""]";
 						};
 					};
 				};
@@ -12693,7 +12737,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""USAF_MOAB_Launcher"",""USAF_B61_Launcher""]";
+							value="[""USAF_MOAB_Launcher"",""USAF_GBU57_Launcher"",""USAF_B61_Launcher""]";
 						};
 					};
 				};
@@ -12743,7 +12787,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11733.636,22.854677,15104.975};
+				position[]={11758.106,22.854675,15106.078};
 			};
 			side="Empty";
 			flags=4;
@@ -12759,6 +12803,7 @@ class Mission
 			};
 			id=1116;
 			type="USAF_A10";
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12788,7 +12833,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11686.577,23.000973,15104.804};
+				position[]={11710.817,23.000973,15107.065};
 			};
 			side="Empty";
 			flags=4;
@@ -12882,7 +12927,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11594.588,24.117853,15109.264};
-				angles[]={0,0.69792223,0};
+				angles[]={-0,0.69792223,0};
 			};
 			side="Empty";
 			flags=4;
@@ -12925,7 +12970,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11783.414,22.545618,15104.801};
+				position[]={11806.718,22.545618,15106.183};
 			};
 			side="West";
 			flags=6;
@@ -12947,7 +12992,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12110.851,22.674702,15113.596};
-				angles[]={-0,6.263288,0};
+				angles[]={0,6.263288,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13041,7 +13086,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11709.314,23.239683,15103.488};
+				position[]={11733.633,23.239685,15105.755};
 			};
 			side="Empty";
 			flags=4;
@@ -13057,6 +13102,7 @@ class Mission
 			};
 			id=1136;
 			type="USAF_F22_EWP_AG";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13393,7 +13439,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12095.996,22.685587,15112.961};
-				angles[]={-0,6.2793455,0};
+				angles[]={0,6.2793455,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13632,7 +13678,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12100.816,22.676004,15112.943};
-				angles[]={-0,6.2793455,0};
+				angles[]={0,6.2793455,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14238,7 +14284,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11971.599,22.27626,15074.081};
-				angles[]={6.2823396,0,-0};
+				angles[]={6.2823396,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14477,7 +14523,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11965.847,22.087929,15073.963};
-				angles[]={6.2816415,0,-0};
+				angles[]={6.2816415,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17045,7 +17091,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12012.78,22.338322,15075.439};
+				position[]={12012.78,22.338324,15075.439};
 			};
 			side="Empty";
 			flags=4;
@@ -17060,7 +17106,6 @@ class Mission
 			};
 			id=1172;
 			type="rhsusf_mrzr4_d";
-			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17109,7 +17154,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12008.927,22.338329,15075.483};
+				position[]={12008.927,22.338331,15075.483};
 			};
 			side="Empty";
 			flags=4;
@@ -17124,7 +17169,6 @@ class Mission
 			};
 			id=1173;
 			type="rhsusf_mrzr4_d";
-			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17179,7 +17223,6 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				textures="Sand";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
