@@ -23,14 +23,14 @@ Vcm_Settings =
 	VCM_ARTYWT = -(VCM_ARTYDELAY);
 	VCM_ARTYET = -(VCM_ARTYDELAY);
 	VCM_ARTYRT = -(VCM_ARTYDELAY);
-	VCM_ARTYSIDES = [west,east,resistance];  //Sides that will use VCOM artillery
+	VCM_ARTYSIDES = [east,resistance];  //Sides that will use VCOM artillery
 	VCM_AIMagLimit = 3; //Number of mags remaining before AI looks for ammo.
 	VCM_Debug = false; //Enable debug mode.
 	VCM_MINECHANCE = 50; //Chance to lay a mine every 30 seconds or so
-	VCM_SIDEENABLED = [west,east,resistance]; //Sides that will activate Vcom AI
+	VCM_SIDEENABLED = [east,resistance]; //Sides that will activate Vcom AI
 	VCM_RAGDOLL = false; //Should AI have a chance to ragdoll when hit
-	VCM_RAGDOLLCHC = 100; //CHANCE AI RAGDOLL	
-	VCM_FullSpeed = true; //Enforce full speedmode during combat (Does not reset after combat end)
+	VCM_RAGDOLLCHC = 100; //CHANCE AI RAGDOLL
+	VCM_FullSpeed = false; //Enforce full speedmode during combat (Does not reset after combat end)
 	VCM_HEARINGDISTANCE = 1000; //Distance AI hear unsuppressed gunshots.
 	VCM_WARNDIST = 3000; //How far AI can request help from other groups.
 	VCM_WARNDELAY = 30; //How long the AI have to survive before they can call in for support. This activates once the AI enter combat.
@@ -48,9 +48,9 @@ Vcm_Settings =
 	VCM_AISNIPERS = true; //Special sniper AI
 	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
 	Vcm_DrivingActivated = true; //AI will use experimental driving improvements.
-	Vcm_PlayerAISkills = true; //AI in a group, that a players leads, can have their skills changed separately.
-	Vcm_GrenadeChance = 20; //Chance the AI will throw a grenade.
-	Vcm_SmokeChance = 20; //Chance the AI will throw a smoke grenade.
+	Vcm_PlayerAISkills = false; //AI in a group, that a players leads, can have their skills changed separately.
+	Vcm_GrenadeChance = 30; //Chance the AI will throw a grenade.
+	Vcm_SmokeChance = 25; //Chance the AI will throw a smoke grenade.
 	
 	//AI SKILL SETTINGS HERE!!!!!!!!!!!!
 	//LOW DIFFICULTY
