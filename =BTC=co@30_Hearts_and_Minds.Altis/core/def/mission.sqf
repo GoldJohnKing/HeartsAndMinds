@@ -78,7 +78,7 @@ private _p_rep = "btc_p_rep" call BIS_fnc_getParamValue;
 btc_p_rep_notify = ("btc_p_rep_notify" call BIS_fnc_getParamValue) isEqualTo 1;
 private _p_city_radius = ("btc_p_city_radius" call BIS_fnc_getParamValue) * 100;
 btc_p_trigger = if (("btc_p_trigger" call BIS_fnc_getParamValue) isEqualTo 1) then {
-    "this && !btc_db_is_saving && (false in (thisList apply {((_x isKindOf 'Helicopter') || (_x isKindOf 'Plane')) && ((speed _x > 90) || ((getPosATL _x select 2) > 75))}))" // Edited: Allow planes trigger city activation & Tweak trigger speed and height, default = "this && !btc_db_is_saving && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
+    "this && !btc_db_is_saving && (false in (thisList apply {((_x isKindOf 'Helicopter') || (_x isKindOf 'Plane')) && ((speed _x > 120) || ((getPosATL _x select 2) > 100))}))" // Edited: Allow planes trigger city activation & Tweak trigger speed and height, default = "this && !btc_db_is_saving && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
 } else {
     "this && !btc_db_is_saving"
 };
@@ -658,13 +658,13 @@ btc_rep_bonus_cache = 100;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 15;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
+btc_rep_bonus_mil_killed = 0.5; // Edited: Increase reputation gain every enemy killed, default = 0.25
 btc_rep_bonus_IEDCleanUp = 10;
 
 btc_rep_malus_civ_hd = - 10;
 btc_rep_malus_civ_killed = - 10;
 btc_rep_malus_civ_firenear = - 5;
-btc_rep_malus_player_respawn = - 10;
+btc_rep_malus_player_respawn = 0; // Edited: Player respawn does not affect reputation anymore, default = -10
 btc_rep_malus_veh_killed = - 25;
 btc_rep_malus_building_damaged = - 2.5;
 btc_rep_malus_building_destroyed = - 5;

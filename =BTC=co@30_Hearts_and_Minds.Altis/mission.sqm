@@ -3851,7 +3851,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="180";
+							value="90";
 						};
 					};
 				};
@@ -4182,7 +4182,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="180";
+							value="90";
 						};
 					};
 				};

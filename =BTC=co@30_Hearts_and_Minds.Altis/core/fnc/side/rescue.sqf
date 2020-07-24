@@ -63,7 +63,7 @@ private _fx = createVehicle ["test_EmptyObjectForFireBig", _pos, [], 0, "CAN_COL
 private _group = createGroup btc_player_side;
 _group setVariable ["no_cache", true];
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
-private _AGC_unit = _group createUnit [_crew, _pos, [], 50, "NONE"]; // Edited: Use default syntax to make it possible to add AGC compatibility, default: _crew createUnit [_pos, _group];
+private _AGC_unit = _group createUnit [_crew, _pos, [], 5, "NONE"]; // Edited: Change syntax to make it possible to add AGC compatibility, default: _crew createUnit [_pos, _group];
 _AGC_unit setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 _AGC_unit setVariable ["btc_dont_delete", true]; // Edited: Make pilot body persistent even if city deactivate
 
@@ -84,9 +84,9 @@ private _triggers = [];
     //// Create trigger \\\\
     private _trigger = createTrigger ["EmptyDetector", getPos _city];
     _trigger setVariable ["unit", _x];
-    _trigger setTriggerArea [50, 50, 0, false];
+    _trigger setTriggerArea [5, 5, 0, false]; // Edited: Make player find pilot in a more precise area by narrowing trigger area, default = [50, 50, 0, false]
     _trigger setTriggerActivation [str btc_player_side, "PRESENT", false];
-    _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;", _find_taskID, _back_taskID, _taskID], ""]; // Edited: Prevent pilot from running around, default = "_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;"
+    _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;", _find_taskID, _back_taskID, _taskID], ""]; // Edited: Prevent pilot from joining player group and running around, default = "_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;"
     _trigger attachTo [_x, [0, 0, 0]];
     _triggers pushBack _trigger;
 } forEach units _group;
