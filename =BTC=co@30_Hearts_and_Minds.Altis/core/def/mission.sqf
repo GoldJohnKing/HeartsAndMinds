@@ -55,6 +55,7 @@ private _p_skill = [
 btc_p_is_free_prob = ("btc_p_is_free_prob" call BIS_fnc_getParamValue)/100;
 btc_p_mil_group_ratio = ("btc_p_mil_group_ratio" call BIS_fnc_getParamValue)/100;
 btc_p_civ_group_ratio = ("btc_p_civ_group_ratio" call BIS_fnc_getParamValue)/100;
+btc_p_animals_group_ratio = ("btc_p_animals_group_ratio" call BIS_fnc_getParamValue)/100;
 private _wp_house_probability = ("btc_p_wp_house_probability" call BIS_fnc_getParamValue)/100;
 btc_p_veh_armed_ho = ("btc_p_veh_armed_ho" call BIS_fnc_getParamValue) isEqualTo 1;
 btc_p_veh_armed_spawn_more = ("btc_p_veh_armed_spawn_more" call BIS_fnc_getParamValue) isEqualTo 1;
@@ -343,6 +344,9 @@ btc_w_civs = [ // Edited: Give more powerful weapons to armed civs
     ["rhs_weap_pp2000_folded", "rhs_weap_6p53", "rhs_weap_m320"] // Edited: default = "hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"
 ];
 btc_g_civs = ["rhs_charge_sb3kg_mag", "rhs_charge_tnt_x2_mag", "rhs_grenade_sthgr24_x7bundle_mag", "rhs_mag_m67", "rhs_mag_an_m14_th3"]; // Edited: default = "HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"
+
+// ANIMALS
+btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_Random_F", "Goat_random_F", "Sheep_random_F"];
 
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
@@ -661,8 +665,10 @@ btc_rep_bonus_hideout = 200;
 btc_rep_bonus_mil_killed = 0.5; // Edited: Increase reputation gain every enemy killed, default = 0.25
 btc_rep_bonus_IEDCleanUp = 10;
 
-btc_rep_malus_civ_hd = - 10;
+btc_rep_malus_civ_hd = - 2;
+btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 10;
+btc_rep_malus_animal_killed = - 5;
 btc_rep_malus_civ_firenear = - 5;
 btc_rep_malus_player_respawn = 0; // Edited: Player respawn does not affect reputation anymore, default = -10
 btc_rep_malus_veh_killed = - 25;
