@@ -138,13 +138,13 @@ if (btc_p_animals_group_ratio > 0) then {
         } forEach _data_animals;
     } else {
         // Spawn animals
-        private _max_number_animalsGroup = (switch _type do {
-            case "Hill" : {3};
-            case "NameLocal" : {3};
-            case "NameVillage" : {2};
-            case "NameCity" : {1};
-            case "NameCityCapital" : {0};
-            case "Airport" : {0};
+        private _max_number_animalsGroup = (switch _type do { // Edited: Spawn more basic amount of animals, default = 3,3,2,1,0,0,0,0
+            case "Hill" : {5};
+            case "NameLocal" : {5};
+            case "NameVillage" : {5};
+            case "NameCity" : {5};
+            case "NameCityCapital" : {5};
+            case "Airport" : {3};
             case "NameMarine" : {0};
             default {0};
         });
