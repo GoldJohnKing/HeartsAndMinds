@@ -31,7 +31,6 @@ addons[]=
 {
 	"A3_Ui_F",
 	"RHS_US_A2_AirImport",
-	"AH64SFX",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Characters_F",
 	"A3_Weapons_F",
@@ -50,12 +49,10 @@ addons[]=
 	"A3_Props_F_Enoch_Military_Decontamination",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Air_F_Exp_VTOL_01",
-	"V44",
 	"SSS_module",
 	"A3_Structures_F_Civ_Lamps",
 	"ace_nouniformrestrictions",
 	"A3_Characters_F_Exp",
-	"AH1ZSFX",
 	"A3_Armor_F_Tank_AFV_Wheeled_01",
 	"ace_hearing",
 	"ace_gforces",
@@ -68,7 +65,6 @@ addons[]=
 	"ace_cargo",
 	"A3_Soft_F_Enoch_Truck_01",
 	"ace_compat_rhs_usf3",
-	"UH60SFX",
 	"Kimi_HMDs_RHS",
 	"ace_medical_treatment",
 	"ffaa_ar_harrier",
@@ -80,12 +76,8 @@ addons[]=
 	"A3_Structures_F_Orange_Humanitarian_Camps",
 	"A3_Modules_F",
 	"USAF_A10_C",
-	"USAFMG8",
-	"USA10SFX",
 	"USAF_F35A_C",
-	"USF35SFX",
 	"USAF_C17_C",
-	"USC17SFX",
 	"USAF_MQ9",
 	"USAF_F22_C",
 	"A3_Structures_F_Tank_Military_RepairDepot",
@@ -102,7 +94,6 @@ addons[]=
 	"rhsusf_vehicles",
 	"rhsusf_c_mrzr",
 	"A3_Air_F_Beta_Heli_Transport_01",
-	"UH80SFX",
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Static_F_Sams_Radar_System_01",
 	"A3_Structures_F_Enoch_Infrastructure_Railways",
@@ -114,7 +105,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=69;
+		items=60;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -131,8 +122,10 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="AH64SFX";
-			name="AH64SFX";
+			className="A3_Structures_F_Exp_Industrial";
+			name="Arma 3 Apex - Industrial Structures";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
@@ -231,9 +224,8 @@ class AddonsMetaData
 		};
 		class Item17
 		{
-			className="V44";
-			name="V44";
-			author="Aaren ";
+			className="CUP_Editor_A2_Roads_Config";
+			name="CUP_Editor_A2_Roads_Config";
 		};
 		class Item18
 		{
@@ -265,8 +257,10 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="AH1ZSFX";
-			name="AH1ZSFX";
+			className="A3_Static_F_Sams";
+			name="Arma 3 Sams - Turrets";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
 		};
 		class Item23
 		{
@@ -340,8 +334,10 @@ class AddonsMetaData
 		};
 		class Item33
 		{
-			className="UH60SFX";
-			name="UH60SFX";
+			className="A3_Static_F_Destroyer";
+			name="CFGPATCHES_A3_Static_F_Destroyer";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
 		};
 		class Item34
 		{
@@ -404,15 +400,17 @@ class AddonsMetaData
 		};
 		class Item43
 		{
-			className="USAFMG8";
-			name="USAFMG8";
-			author="Aaren ";
+			className="A3_Air_F_Beta";
+			name="Arma 3 Beta - Aircraft";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
 		};
 		class Item44
 		{
-			className="USA10SFX";
-			name="USA-10SFX";
-			author="Aaren";
+			className="rhsusf_c_mrzr";
+			name="MRZR";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item45
 		{
@@ -423,9 +421,8 @@ class AddonsMetaData
 		};
 		class Item46
 		{
-			className="USF35SFX";
-			name="USF-35SFX";
-			author="Aaren";
+			className="rhsusf_vehicles";
+			name="rhsusf_vehicles";
 		};
 		class Item47
 		{
@@ -435,9 +432,10 @@ class AddonsMetaData
 		};
 		class Item48
 		{
-			className="USC17SFX";
-			name="USC-17SFX";
-			author="Aaren";
+			className="rhsusf_c_RG33";
+			name="SOCOM 4X4 MRAP";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item49
 		{
@@ -511,64 +509,6 @@ class AddonsMetaData
 			name="M1A2 Tanks";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
-		};
-		class Item60
-		{
-			className="rhsusf_c_RG33";
-			name="SOCOM 4X4 MRAP";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item61
-		{
-			className="rhsusf_vehicles";
-			name="rhsusf_vehicles";
-		};
-		class Item62
-		{
-			className="rhsusf_c_mrzr";
-			name="MRZR";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item63
-		{
-			className="A3_Air_F_Beta";
-			name="Arma 3 Beta - Aircraft";
-			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
-		};
-		class Item64
-		{
-			className="UH80SFX";
-			name="UH80SFX";
-			author="Aaren";
-		};
-		class Item65
-		{
-			className="A3_Static_F_Destroyer";
-			name="CFGPATCHES_A3_Static_F_Destroyer";
-			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
-		};
-		class Item66
-		{
-			className="A3_Static_F_Sams";
-			name="Arma 3 Sams - Turrets";
-			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
-		};
-		class Item67
-		{
-			className="CUP_Editor_A2_Roads_Config";
-			name="CUP_Editor_A2_Roads_Config";
-		};
-		class Item68
-		{
-			className="A3_Structures_F_Exp_Industrial";
-			name="Arma 3 Apex - Industrial Structures";
-			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
 		};
 	};
 };
