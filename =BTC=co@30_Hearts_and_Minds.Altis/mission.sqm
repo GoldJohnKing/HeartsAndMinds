@@ -16483,7 +16483,11 @@ class Mission
 					class PositionInfo
 					{
 						position[]={11303.042,20.833048,15131.241};
+<<<<<<< HEAD
 						angles[]={0,4.712389,0};
+=======
+						angles[]={-0,4.712389,0};
+>>>>>>> Golden-Kujari-VCOM-master_daily
 					};
 					side="West";
 					flags=6;
@@ -16521,7 +16525,11 @@ class Mission
 				};
 			};
 			id=1197;
+<<<<<<< HEAD
 			atlOffset=0.0022239685;
+=======
+			atlOffset=0.0012969971;
+>>>>>>> Golden-Kujari-VCOM-master_daily
 		};
 		class Item83
 		{
@@ -16529,7 +16537,11 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11303.053,23.760481,15131.204};
+<<<<<<< HEAD
 				angles[]={0,4.712389,0};
+=======
+				angles[]={-0,4.712389,0};
+>>>>>>> Golden-Kujari-VCOM-master_daily
 			};
 			side="West";
 			flags=6;
@@ -16542,7 +16554,11 @@ class Mission
 			};
 			id=1198;
 			type="B_Radar_System_01_F";
+<<<<<<< HEAD
 			atlOffset=0.0022239685;
+=======
+			atlOffset=0.0012969971;
+>>>>>>> Golden-Kujari-VCOM-master_daily
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16621,7 +16637,11 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12753.436,20.843607,15133.32};
+<<<<<<< HEAD
 						angles[]={0,1.5707964,0};
+=======
+						angles[]={-0,1.5707964,0};
+>>>>>>> Golden-Kujari-VCOM-master_daily
 					};
 					side="West";
 					flags=6;
@@ -16659,7 +16679,11 @@ class Mission
 				};
 			};
 			id=1232;
+<<<<<<< HEAD
 			atlOffset=0.10413742;
+=======
+			atlOffset=0.10434341;
+>>>>>>> Golden-Kujari-VCOM-master_daily
 		};
 		class Item86
 		{
@@ -16667,7 +16691,11 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12753.436,23.771088,15133.271};
+<<<<<<< HEAD
 				angles[]={0,1.5707964,0};
+=======
+				angles[]={-0,1.5707964,0};
+>>>>>>> Golden-Kujari-VCOM-master_daily
 			};
 			side="West";
 			flags=6;
@@ -16680,7 +16708,11 @@ class Mission
 			};
 			id=1234;
 			type="B_Radar_System_01_F";
+<<<<<<< HEAD
 			atlOffset=0.10413742;
+=======
+			atlOffset=0.10434341;
+>>>>>>> Golden-Kujari-VCOM-master_daily
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19744,6 +19776,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+<<<<<<< HEAD
 				disableSimulation=1;
 			};
 			id=1376;
@@ -19771,6 +19804,11 @@ class Mission
 				};
 				nAttributes=1;
 			};
+=======
+			};
+			id=1376;
+			type="Land_ConcretePanels_02_four_F";
+>>>>>>> Golden-Kujari-VCOM-master_daily
 		};
 		class Item116
 		{
@@ -19784,6 +19822,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+<<<<<<< HEAD
 				disableSimulation=1;
 			};
 			id=1377;
@@ -19811,6 +19850,11 @@ class Mission
 				};
 				nAttributes=1;
 			};
+=======
+			};
+			id=1377;
+			type="Land_ConcretePanels_02_four_F";
+>>>>>>> Golden-Kujari-VCOM-master_daily
 		};
 	};
 	class Connections
