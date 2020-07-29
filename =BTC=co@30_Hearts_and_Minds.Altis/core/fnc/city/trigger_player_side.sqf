@@ -37,8 +37,8 @@ params [
 ];
 
 private _trigger = createTrigger ["EmptyDetector", _position];
-_trigger setTriggerArea [_radius + btc_city_radius, _radius + btc_city_radius, 0, false];
-_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
+_trigger setTriggerArea [_radius + btc_city_radius, _radius + btc_city_radius, 0, false]; // Edited: Set city activation height to avoid AI activate all city he passed by, default = [_radius + btc_city_radius, _radius + btc_city_radius, 0, false]
+_trigger setTriggerActivation ["WEST", "PRESENT", true]; // Edited: Allow all WEST units activate city, default = ["ANYPLAYER", "PRESENT", true]
 _trigger setTriggerStatements [btc_p_trigger, format ["[%1] call btc_fnc_city_activate", _id], format ["[%1] call btc_fnc_city_de_activate", _id]];
 _city setVariable ["trigger_player_side", _trigger];
 
@@ -47,18 +47,6 @@ private _trigger = createTrigger ["EmptyDetector", getPos cleanup_base];
 _trigger setTriggerArea [500, 500, 0, false];
 _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 _trigger setTriggerStatements ["this && !btc_db_is_saving && !(count thisList > 1)", "if (btc_debug) then {['Cleanup Base Armed.'] remoteExec ['systemChat', 0];};", "[] call btc_fnc_city_cleanUp; if (btc_debug) then {['Cleanup Base Triggered.'] remoteExec ['systemChat', 0];}"];
-
-// // Edited: Add cleanup Air trigger
-// private _trigger = createTrigger ["EmptyDetector", getPos cleanup_air];
-// _trigger setTriggerArea [100, 100, 0, false];
-// _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-// _trigger setTriggerStatements ["this && !btc_db_is_saving && !(count thisList > 1)", "if (btc_debug) then {['Cleanup Air Armed.'] remoteExec ['systemChat', 0];};", "[] call btc_fnc_city_cleanUp; if (btc_debug) then {['Cleanup Air Triggered.'] remoteExec ['systemChat', 0];}"];
-
-// // Edited: Add cleanup Air trigger
-// private _trigger = createTrigger ["EmptyDetector", getPos cleanup_port];
-// _trigger setTriggerArea [75, 75, 0, false];
-// _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-// _trigger setTriggerStatements ["this && !btc_db_is_saving && !(count thisList > 1)", "if (btc_debug) then {['Cleanup Port Armed.'] remoteExec ['systemChat', 0];};", "[] call btc_fnc_city_cleanUp; if (btc_debug) then {['Cleanup Port Triggered.'] remoteExec ['systemChat', 0];}"];
 
 if (btc_debug) then {
     private _marker = createMarker [format ["loc_%1", _id], _position];
