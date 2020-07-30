@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1419;
+		nextID=1421;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={12059.381,42.660576,15144.559};
-		dir[]={-0.44620904,-0.35755,-0.82047909};
-		up[]={-0.1708509,0.93387574,-0.31415567};
-		aside[]={-0.87854683,-5.2747782e-007,0.47778904};
+		pos[]={12047.049,23.364511,15070.57};
+		dir[]={-0.91390699,-0.37275121,-0.16116062};
+		up[]={-0.36715049,0.92791116,-0.064744189};
+		aside[]={-0.1736744,-4.6961941e-007,0.98487365};
 	};
 };
 binarizationWanted=0;
@@ -546,7 +546,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -933,17 +933,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12034.65,20.760307,15067.327};
-						angles[]={6.2820935,3.0863914,0};
+						position[]={12037.863,20.760933,15067.473};
+						angles[]={6.2824869,3.1013801,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
-						init="call{this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
-						description="翻译官 - 指挥/情报小组";
+						rank="MAJOR";
+						init="call{this setVariable [""side_mission"",true];this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
+						description="副指挥官 - 指挥/情报小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
@@ -970,8 +970,8 @@ class Mission
 							headgear="H_MilCap_mcamo";
 						};
 					};
-					id=212;
-					type="B_Soldier_F";
+					id=1418;
+					type="B_officer_F";
 					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
@@ -1047,7 +1047,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male12ENG";
+									value="Male02ENG";
 								};
 							};
 						};
@@ -1066,7 +1066,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.04;
+									value=0.99000001;
 								};
 							};
 						};
@@ -1261,17 +1261,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12037.863,20.760933,15067.473};
-						angles[]={6.2824869,3.1013801,0};
+						position[]={12034.65,20.760307,15067.327};
+						angles[]={6.2820935,3.0863914,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="MAJOR";
-						init="call{this setVariable [""side_mission"",true];this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
-						description="副指挥官 - 指挥/情报小组";
+						rank="CAPTAIN";
+						init="call{this setVariable [""interpreter"",true];this setVariable ['GCblackList', true]; }";
+						description="翻译官 - 指挥/情报小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
@@ -1298,8 +1298,8 @@ class Mission
 							headgear="H_MilCap_mcamo";
 						};
 					};
-					id=1418;
-					type="B_officer_F";
+					id=212;
+					type="B_Soldier_F";
 					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
@@ -1375,7 +1375,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02ENG";
+									value="Male12ENG";
 								};
 							};
 						};
@@ -1394,7 +1394,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.99000001;
+									value=1.04;
 								};
 							};
 						};
