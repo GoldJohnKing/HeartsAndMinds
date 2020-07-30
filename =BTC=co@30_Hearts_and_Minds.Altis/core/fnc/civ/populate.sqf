@@ -41,6 +41,7 @@ for "_i" from 1 to _n do {
     private _pos = _house buildingPos 0;
     private _group = createGroup civilian;
     _group setVariable ["btc_data_inhouse", [_pos]];
+    _group setVariable ["Vcm_Disable", true]; // Edited: Add VCOM Support, civilians do not execute as VCOM AI
     [_group, _pos] call btc_fnc_civ_addWP;
     [_group, selectRandom btc_civ_type_units, _pos] call btc_fnc_delay_createUnit;
 

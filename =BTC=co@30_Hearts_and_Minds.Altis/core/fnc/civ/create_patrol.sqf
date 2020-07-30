@@ -60,6 +60,7 @@ if (_roads isEqualTo []) then {
 };
 
 _group setVariable ["btc_patrol_id", btc_civilian_id, btc_debug];
+_group setVariable ["Vcm_Disable", true]; // Edited: Add VCOM Support, civilians do not execute as VCOM AI
 btc_civilian_id = btc_civilian_id - 1;
 
 private _delay = [_group, _veh_type, [selectRandom btc_civ_type_units], _safe_pos] call btc_fnc_delay_createVehicle;
