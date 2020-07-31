@@ -33,7 +33,7 @@ params [
 if (isNil "btc_military_id") then {btc_military_id = 1;};
 
 if (_random isEqualTo 0) then {
-    _random = selectRandom [1, 2];
+    _random = 2; // Edited: Disable AI patrol infantry, default = selectRandom [1, 2]
 };
 
 if (btc_debug_log) then {

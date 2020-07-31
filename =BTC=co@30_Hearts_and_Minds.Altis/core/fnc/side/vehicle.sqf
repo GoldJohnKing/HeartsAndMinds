@@ -32,7 +32,7 @@ private _pos = [getPos _city, 100] call btc_fnc_randomize_pos;
 private _roads = _pos nearRoads 300;
 if !(_roads isEqualTo []) then {_pos = getPos (selectRandom _roads);};
 
-private _veh_type = selectRandom [selectRandom btc_civ_type_veh, typeOf selectRandom (btc_vehicles + btc_vehicles + btc_helo)]; // Edited: Change vehicle type to player side vehicles, default = selectRandom btc_civ_type_veh
+private _veh_type = selectRandom [selectRandom btc_civ_type_veh, typeOf selectRandom (btc_helo - ["USAF_C130J", "USAF_MQ9", "B_T_VTOL_01_vehicle_F"] + btc_vehicles + ["B_MBT_01_TUSK_F","B_MBT_01_mlrs_F","B_Heli_Attack_01_dynamicLoadout_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","rhsusf_m1a1aim_tuski_d","rhsusf_M1117_D","rhsusf_m109d_usarmy","rhsusf_M142_usarmy_D","RHS_M6","RHS_M2A2_BUSKI","rhsusf_stryker_m1126_m2_d","rhsusf_stryker_m1126_mk19_d","rhsusf_m113d_usarmy_M240","rhsusf_m113d_usarmy_MK19","rhsusf_m113d_usarmy","B_APC_Tracked_01_rcws_F","B_Heli_Light_01_dynamicLoadout_F","RHS_MELB_AH6M","rhsusf_CGRCAT1A2_M2_usmc_d","rhsusf_CGRCAT1A2_Mk19_usmc_d","rhsusf_M1238A1_M2_socom_d","rhsusf_M1238A1_Mk19_socom_d","B_Heli_Transport_01_F","B_Heli_Transport_03_F"])]; // Edited: Change vehicle type to player side vehicles, default = selectRandom btc_civ_type_veh
 private _veh = createVehicle [_veh_type, _pos, [], 0, "NONE"];
 _veh setDir (random 360);
 _veh setDamage 0.87; // Edited: Increase default damage value, default = 0.7
