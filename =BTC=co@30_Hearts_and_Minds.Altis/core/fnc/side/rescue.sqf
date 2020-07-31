@@ -64,7 +64,7 @@ private _group = createGroup btc_player_side;
 _group setVariable ["no_cache", true];
 _group setVariable ["Vcm_Disable", true]; // Edited: Add VCOM Support, civilians do not execute as VCOM AI
 private _crew = getText (configfile >> "CfgVehicles" >> _heli_type >> "crew");
-private _AGC_unit = _group createUnit [_crew, _pos, [], 5, "NONE"]; // Edited: Change syntax to make it possible to add AGC compatibility, default: _crew createUnit [_pos, _group];
+private _AGC_unit = _group createUnit [_crew, _pos, [], 15, "NONE"]; // Edited: Change syntax to make it possible to add AGC compatibility, default: _crew createUnit [_pos, _group];
 _AGC_unit setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 _AGC_unit setVariable ["btc_dont_delete", true]; // Edited: Make pilot body persistent even if city deactivate
 
