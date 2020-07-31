@@ -39,7 +39,7 @@ if (_rpos isEqualTo []) then {
     _rpos = [position _city, _area] call btc_fnc_randomize_pos;
 };
 if (_type_units isEqualTo "") then {
-    _type_units = selectRandom (btc_civ_type_units + btc_animals_type); // Edited: Add IED support for animals
+    _type_units = selectRandom btc_civ_type_units;
 };
 
 private _group = createGroup [civilian, true];

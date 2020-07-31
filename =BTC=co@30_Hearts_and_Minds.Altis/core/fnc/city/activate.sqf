@@ -140,11 +140,11 @@ if (btc_p_animals_group_ratio > 0) then {
         // Spawn animals
         private _max_number_animalsGroup = (switch _type do { // Edited: Spawn more basic amount of animals, default = 3,3,2,1,0,0,0,0
             case "Hill" : {5};
-            case "NameLocal" : {5};
+            case "NameLocal" : {10};
             case "NameVillage" : {5};
-            case "NameCity" : {5};
-            case "NameCityCapital" : {5};
-            case "Airport" : {3};
+            case "NameCity" : {10};
+            case "NameCityCapital" : {10};
+            case "Airport" : {10};
             case "NameMarine" : {0};
             default {0};
         });
