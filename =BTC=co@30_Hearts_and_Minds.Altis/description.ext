@@ -63,6 +63,9 @@ corpseManagerMode = 0;
 // Edited: Force disable AI
 disabledAI = 1;
 
+// Edited: Disable unused channel
+disableChannels[] = {0, 2, 4, 5};
+
 // Edited: Add VCOM Support
 allowFunctionsRecompile = 1;
 class CfgRemoteExec
