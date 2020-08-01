@@ -327,7 +327,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM"]);
         values[] = {0,1,2,3,4};
         texts[] = {$STR_DISABLED,1,2,3,4};
-        default = 2;
+        default = 3;
     };
     class btc_p_arsenal_title { // << Arsenal options >>
         title = $STR_BTC_HAM_PARAM_ARSENAL_TITLE;
