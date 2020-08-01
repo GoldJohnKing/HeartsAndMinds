@@ -117,8 +117,8 @@ _action = ["side_mission", localize "STR_BTC_HAM_DOC_SIDEMISSION_TITLE", "\A3\ui
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 _action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT", "\A3\ui_f\data\igui\cfg\simpleTasks\types\exit_ca.paa", {[player call BIS_fnc_taskCurrent] call btc_fnc_task_abort}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
-// _action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_fnc_side_create", 2]}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction; // Edited: Prevent player spawn side missions
-[player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject;
+// _action = ["side_mission_request", localize "STR_BTC_HAM_ACTION_SIDEMISSION_REQ", "\A3\ui_f\data\igui\cfg\simpleTasks\types\default_ca.paa", {[] remoteExec ["btc_fnc_side_create", 2]}, {player getVariable ["side_mission", false]}] call ace_interact_menu_fnc_createAction; // Edited: Prevent players from requesting side missions
+// [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject; // Edited: Prevent players from requesting side missions
 
 //Debug
 if (btc_debug) then {
