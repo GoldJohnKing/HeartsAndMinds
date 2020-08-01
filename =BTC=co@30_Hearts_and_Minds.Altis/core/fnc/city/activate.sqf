@@ -253,7 +253,7 @@ if (_number_patrol_active < _p_patrol_max) then {
         private _group = createGroup btc_enemy_side;
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
-        [[_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec;
+        [[_group, 2, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Disable AI patrol infantry, only spawn vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
     };
 
     if (btc_debug_log) then {

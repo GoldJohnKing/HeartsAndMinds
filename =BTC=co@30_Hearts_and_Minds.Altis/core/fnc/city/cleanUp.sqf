@@ -29,7 +29,7 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 
     private _obj = _x;
 
-    _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo [] && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Support AGM Mod Bodybags, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
+    _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo [] && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
 };
 
 _toRemove append (allDead select {
