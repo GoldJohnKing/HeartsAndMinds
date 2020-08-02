@@ -11528,7 +11528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[""USAF_MOAB_Launcher"",""USAF_GBU57_Launcher"",""USAF_B61_Launcher""]";
+							value="[""USAF_MOAB_Launcher"",""USAF_GBU57_Launcher""]";
 						};
 					};
 				};

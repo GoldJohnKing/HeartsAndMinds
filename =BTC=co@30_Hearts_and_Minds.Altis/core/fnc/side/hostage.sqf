@@ -51,7 +51,6 @@ _city setVariable ["spawn_more", true];
 //// Hostage
 private _group_civ = createGroup civilian;
 _group_civ setVariable ["no_cache", true];
-_group_civ setVariable ["Vcm_Disable", true]; // Edited: Add VCOM Support, civilians do not execute as VCOM AI
 private _civType = selectRandom btc_civ_type_units;
 private _captive = _group_civ createUnit [_civType, _pos, [], 0, "CAN_COLLIDE"];
 waitUntil {local _captive};
