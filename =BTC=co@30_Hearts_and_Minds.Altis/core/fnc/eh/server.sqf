@@ -66,3 +66,9 @@ if (btc_p_set_skill) then {
         btc_tags pushBack [_tag, _texture, _object];
     };
 }] call CBA_fnc_addEventHandler;
+
+// Edited: Disconnect UAV from dead players
+addMissionEventHandler ["entityRespawned", {
+  params ["_entity", "_corpse"];
+  _corpse connectTerminalToUAV objNull;
+}];
