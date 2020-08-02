@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1442;
+		nextID=1459;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={12053.888,49.414093,15137.329};
-		dir[]={-0.49368337,-0.37345949,-0.7855348};
-		up[]={-0.19879298,0.92760777,-0.31631142};
-		aside[]={-0.84675819,-8.8068191e-007,0.53216463};
+		pos[]={12035.593,69.842194,15124.072};
+		dir[]={0.67993224,-0.59702671,-0.42589033};
+		up[]={0.50597149,0.80221105,-0.31692523};
+		aside[]={-0.53086227,-5.3504482e-007,-0.84752291};
 	};
 };
 binarizationWanted=0;
@@ -103,15 +103,17 @@ addons[]=
 	"A3_Armor_F_Beta_APC_Wheeled_01",
 	"rhsusf_c_melb",
 	"ace_medical_treatment",
-	"A3_Static_F_Jets_AAA_System_01",
 	"A3_Structures_F_Bootcamp_Training",
-	"A3_Structures_F_Training"
+	"A3_Structures_F_Training",
+	"A3_Structures_F_Exp_Infrastructure_Airports",
+	"A3_Structures_F_Exp_Industrial_Fields",
+	"A3_Static_F_Jets_AAA_System_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=64;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -525,15 +527,22 @@ class AddonsMetaData
 		};
 		class Item61
 		{
-			className="A3_Static_F_Jets";
-			name="Arma 3 Jets - Turrets";
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
 		class Item62
 		{
-			className="A3_Structures_F_Bootcamp";
-			name="Arma 3 Bootcamp Update - Buildings and Structures";
+			className="A3_Structures_F_Exp_Infrastructure";
+			name="Arma 3 Apex - Infrastructure Objects";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
+		};
+		class Item63
+		{
+			className="A3_Static_F_Jets";
+			name="Arma 3 Jets - Turrets";
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
@@ -546,6 +555,7 @@ class DynamicSimulation
 randomSeed=10095377;
 class ScenarioData
 {
+	aIKills=1;
 	disabledAI=1;
 	class Header
 	{
@@ -3331,6 +3341,7 @@ class Mission
 			{
 				skill=0.60000002;
 				name="btc_create_object_point";
+				disableSimulation=1;
 			};
 			id=79;
 			type="Land_JumpTarget_F";
@@ -11005,7 +11016,7 @@ class Mission
 			};
 			id=1051;
 			type="WaterSpill_01_Large_Foam_F";
-			atlOffset=0.00026893616;
+			atlOffset=0.00023078918;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11046,7 +11057,7 @@ class Mission
 			};
 			id=1071;
 			type="Land_SurveyMarker_01_rod_F";
-			atlOffset=0.00026893616;
+			atlOffset=0.00023078918;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11083,6 +11094,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1102;
 			type="Land_MedicalTent_01_MTP_closed_F";
@@ -11134,17 +11146,40 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12025.519,20.728123,15066.102};
-				angles[]={6.2641797,1.5659857,0.0079261353};
+				position[]={12025.519,20.728115,15066.102};
+				angles[]={6.2641788,1.5659792,0.0079237949};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1104;
 			type="Land_MedicalTent_01_floor_dark_F";
-			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item48
 		{
@@ -15624,6 +15659,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1250;
 			type="B_Slingload_01_Fuel_F";
@@ -15702,6 +15738,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1251;
 			type="B_Slingload_01_Ammo_F";
@@ -19621,7 +19658,6 @@ class Mission
 				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="call{this setVariable ['GCblackList', true]; }";
@@ -19629,6 +19665,7 @@ class Mission
 			};
 			id=1407;
 			type="RHS_MELB_MH6M";
+			atlOffset=2.9661636;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19927,201 +19964,6 @@ class Mission
 		};
 		class Item119
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12153.551,22.080692,15209.116};
-						angles[]={0,3.1415927,0};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-					};
-					id=1412;
-					type="B_UAV_AI";
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=1412;
-						item1=1411;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=1410;
-			atlOffset=1.4205971;
-		};
-		class Item120
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12153.555,24.581326,15209.202};
-				angles[]={0,3.1415927,0};
-			};
-			side="West";
-			flags=2;
-			class Attributes
-			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true];}";
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-				aiRadarUsage=1;
-			};
-			id=1411;
-			type="B_AAA_System_01_F";
-			atlOffset=1.4205971;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item121
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12128.173,22.078665,15209.116};
-						angles[]={0,3.1415927,0};
-					};
-					side="West";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=1415;
-					type="B_UAV_AI";
-					atlOffset=1.3220005;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=1415;
-						item1=1414;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=1413;
-			atlOffset=1.32201;
-		};
-		class Item122
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12128.183,24.582943,15209.077};
-				angles[]={0,3.1415927,0};
-			};
-			side="West";
-			flags=2;
-			class Attributes
-			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true];}";
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-				aiRadarUsage=1;
-			};
-			id=1414;
-			type="B_AAA_System_01_F";
-			atlOffset=1.32201;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item123
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -20132,17 +19974,18 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=1429;
 			type="TargetBootcampHuman_F";
 		};
-		class Item124
+		class Item120
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={12155,20.780203,15199.5};
-				angles[]={0,1.5707964,-0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20177,13 +20020,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item125
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={12155,20.78021,15196};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20217,78 +20060,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item126
+		class Item122
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={12455,21.618,15204};
-				angles[]={-0,1.5707964,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1433;
-			type="TargetBootcampHuman_F";
-			atlOffset=1.9073486e-006;
-		};
-		class Item127
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12555,21.618069,15202};
-				angles[]={-0,1.5707964,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1434;
-			type="TargetBootcampHuman_F";
-		};
-		class Item128
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12755,21.549911,15198};
 				angles[]={0,1.5707964,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1435;
-			type="TargetBootcampHuman_F";
-			atlOffset=0.24699974;
-		};
-		class Item129
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12655,21.618073,15200};
-				angles[]={-0,1.5707964,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1436;
-			type="TargetBootcampHuman_F";
-		};
-		class Item130
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12755.018,21.582977,15198};
 			};
 			side="Empty";
 			flags=4;
@@ -20296,34 +20074,62 @@ class Mission
 			{
 				disableSimulation=1;
 			};
-			id=1437;
-			type="Land_Shoot_House_Tunnel_Prone_F";
-			atlOffset=-0.45000076;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
+			id=1433;
+			type="TargetBootcampHuman_F";
+			atlOffset=1.9073486e-006;
 		};
-		class Item131
+		class Item123
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12555,21.618069,15202};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1434;
+			type="TargetBootcampHuman_F";
+		};
+		class Item124
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12755,21.56534,15198};
+				angles[]={0.0021836606,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1435;
+			type="TargetBootcampHuman_F";
+		};
+		class Item125
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12655,21.618073,15200};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1436;
+			type="TargetBootcampHuman_F";
+		};
+		class Item126
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -20514,6 +20320,223 @@ class Mission
 					};
 				};
 				nAttributes=7;
+			};
+		};
+		class Item127
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12147,31.718117,15087};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1442;
+			type="Land_Airport_01_controlTower_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item128
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12755,20.954803,15198};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1454;
+			type="Land_ConcreteWell_01_F";
+			atlOffset=-0.35000038;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item129
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12147.75,40.790123,15087.9};
+			};
+			side="Empty";
+			class Attributes
+			{
+				ammo=0.28717121;
+				disableSimulation=1;
+			};
+			id=1455;
+			type="B_Slingload_01_Ammo_F";
+			atlOffset=3.2510529;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item130
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12147.781,42.011272,15087.538};
+						angles[]={0,3.1415927,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=1458;
+					type="B_UAV_AI";
+					atlOffset=2.3781624;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1458;
+						item1=1457;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1456;
+			atlOffset=2.3781624;
+		};
+		class Item131
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12147.781,44.515591,15087.488};
+				angles[]={0,3.1415927,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				init="call{(group this) setVariable [""Vcm_Disable"",true];}";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=1457;
+			type="B_AAA_System_01_F";
+			atlOffset=2.3781624;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
