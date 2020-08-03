@@ -36,21 +36,21 @@ if (isNil "GLX_Feature") then
         // ==============================================================
         // Choose chance of how A.I. should be able to search for cover.
         // 0 - 100, default is 35% (default is 50% actually)
-            30,
+            50,
 
         // --------------------------------------------------------------
         // G.L.X A.I. Take Cover: ( Distance )
         // --------------------------------------------------------------
         // Choose distance within A.I. should be able to search for cover.
         // 10 - 100, default is 15 meters
-            15,
+            30,
 
         // ==============================================================
         // G.L.X A.I. House Search: ( Chance )
         // ==============================================================
         // Choose chance of how A.I. should be able to do house search.
         // 0 - 100, default is 50%
-            30,
+            15,
 
         // ==============================================================
         // G.L.X A.I. Weapon Fire:

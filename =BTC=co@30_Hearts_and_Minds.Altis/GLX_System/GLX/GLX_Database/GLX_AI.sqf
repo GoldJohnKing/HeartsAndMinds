@@ -16,7 +16,7 @@ if (isNil "GLX_AI") then
         // Choose knowledge A.I. group(s) need to have about their enemy(s) to requesting reinforcement(s).
         // Note: If this value was set to 4 A.I. group(s) are not able to request reinforcement(s).
         // 0 - 4.00, default is > 1
-            1,
+            0.5,
 
         // ==============================================================
         // G.L.X A.I. Reinforcement Request Courage: ( Rating )

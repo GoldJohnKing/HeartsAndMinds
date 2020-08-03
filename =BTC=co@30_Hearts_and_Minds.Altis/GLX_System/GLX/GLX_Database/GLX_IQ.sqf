@@ -17,7 +17,7 @@ if (isNil "GLX_IQ") then
         // Note: 0 = Very fast / 7 = Very slow
         // Description: If this value was set to 0 A.I. without line of sight to their enemy(s) will almost instantly loose all their enemy(s) knowledge and enemy(s) position accuracy.
         // 0 - 7, default is 3
-            3
+            5
     ];
 
     if (isFilePatchingEnabled) then
