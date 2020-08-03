@@ -45,7 +45,7 @@ if (btc_p_db_autoRestart > 0) then {
 
 {
     _x setVariable ["btc_EDENinventory", [getWeaponCargo _x, getMagazineCargo _x, getItemCargo _x]];
-    [_x, 30] call btc_fnc_eh_veh_add_respawn;
+    [_x, 90] call btc_fnc_eh_veh_add_respawn; // Edited: Increase awaiting time before btc_helo respawn, default = 30
 } forEach btc_helo;
 
 if (btc_p_side_mission_cycle > 0) then {
@@ -53,3 +53,7 @@ if (btc_p_side_mission_cycle > 0) then {
         [true] spawn btc_fnc_side_create;
     };
 };
+
+{
+    ["btc_tag_remover" + _x, "STR_BTC_HAM_ACTION_REMOVETAG", _x, ["#(rgb,8,8,3)color(0,0,0,0)"], "\A3\UI_F\Data\Map\Markers\nato\b_unknown.paa"] call ace_tagging_fnc_addCustomTag;
+} forEach ["ACE_SpraypaintBlack", "ACE_SpraypaintRed", "ACE_SpraypaintGreen", "ACE_SpraypaintBlue"];

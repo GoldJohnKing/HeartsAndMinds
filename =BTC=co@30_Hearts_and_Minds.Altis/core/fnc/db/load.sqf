@@ -30,7 +30,9 @@ setDate (profileNamespace getVariable [format ["btc_hm_%1_date", _name], date]);
 private _cities_status = profileNamespace getVariable [format ["btc_hm_%1_cities", _name], []];
 
 {
-    _x params ["_id", "_initialized", "_spawn_more", "_occupied", "_data_units", "_has_ho", "_ho_units_spawned", "_ieds", "_has_suicider"];
+    _x params ["_id", "_initialized", "_spawn_more", "_occupied", "_data_units", "_has_ho", "_ho_units_spawned", "_ieds", "_has_suicider",
+        ["_data_animals", [], [[]]]
+    ];
 
     private _city = btc_city_all select _id;
 
@@ -42,6 +44,7 @@ private _cities_status = profileNamespace getVariable [format ["btc_hm_%1_cities
     _city setVariable ["ho_units_spawned", _ho_units_spawned];
     _city setVariable ["ieds", _ieds];
     _city setVariable ["has_suicider", _has_suicider];
+    _city setVariable ["data_animals", _data_animals];
 
     if (btc_debug) then {
         private _marker = _city getVariable ["marker", ""];
@@ -169,6 +172,22 @@ private _objs = profileNamespace getVariable [format ["btc_hm_%1_objs", _name], 
 {
     [_x] call btc_fnc_db_loadObjectStatus;
 } forEach _objs;
+
+//Player Tags
+private _tags_properties = profileNamespace getVariable [format ["btc_hm_%1_tags", _name], []];
+private _id = ["ace_tagCreated", {
+    params ["_tag", "_texture", "_object"];
+    btc_tags pushBack [_tag, _texture, _object];
+}] call CBA_fnc_addEventHandler;
+{
+    _x params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_typeObject", "_tagModel"];
+    private _object = objNull;
+    if !(_typeObject isEqualTo "") then {
+        _object = nearestObject [ASLToATL _tagPosASL, _typeObject];
+    };
+    [_tagPosASL, _vectorDirAndUp, _texture, _object, objNull, "",_tagModel] call ace_tagging_fnc_createTag;
+} forEach _tags_properties;
+["ace_tagCreated", _id] call CBA_fnc_removeEventHandler;
 
 //Player Markers
 private _markers_properties = profileNamespace getVariable [format ["btc_hm_%1_markers", _name], []];

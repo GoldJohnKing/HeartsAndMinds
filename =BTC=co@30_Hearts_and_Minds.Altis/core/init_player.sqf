@@ -48,3 +48,9 @@ if (btc_debug) then {
     waitUntil {!isNull (findDisplay 12)};
     private _eh = ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", btc_fnc_debug_marker];
 };
+
+// Edited: Disable unused channel for JIP players, this would be unnecessary since Arma 3 v1.99 will fix the bug
+0 enableChannel false;
+2 enableChannel false;
+4 enableChannel false;
+5 enableChannel false;

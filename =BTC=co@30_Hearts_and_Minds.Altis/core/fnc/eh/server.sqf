@@ -22,6 +22,13 @@ Author:
 addMissionEventHandler ["BuildingChanged", btc_fnc_rep_buildingchanged];
 ["ace_explosives_defuse", btc_fnc_rep_explosives_defuse] call CBA_fnc_addEventHandler;
 ["ace_killed", btc_fnc_rep_killed] call CBA_fnc_addEventHandler;
+["Animal", "InitPost", {
+    [(_this select 0), "killed", {
+        params ["_unit", "_killer", "_instigator"];
+        [_unit, "", _killer, _instigator] call btc_fnc_rep_killed;
+    }] call CBA_fnc_addBISEventHandler;
+    [(_this select 0), "HandleDamage", "btc_fnc_rep_hd"] call btc_fnc_eh_persistOnLocalityChange;
+}] call CBA_fnc_addClassEventHandler;
 {
     [_x, "InitPost", {
         [(_this select 0), "FiredNear", btc_fnc_rep_firednear] call CBA_fnc_addBISEventHandler;
@@ -46,3 +53,22 @@ if (btc_p_set_skill) then {
     ["CAManBase", "InitPost", btc_fnc_mil_set_skill] call CBA_fnc_addClassEventHandler;
 };
 ["btc_delay_vehicleInit", btc_fnc_patrol_addEH] call CBA_fnc_addEventHandler;
+["ace_tagCreated", {
+    params ["_tag", "_texture", "_object"];
+    if (_texture isEqualTo "#(rgb,8,8,3)color(0,0,0,0)") then {
+        private _distance = btc_tags apply {[_tag distance (_x select 0), _x select 0]};
+        _distance sort true;
+        if (_distance select 0 select 0 < 5) then {
+            deleteVehicle (_distance select 0 select 1);
+        };
+        deleteVehicle _tag;
+    } else {
+        btc_tags pushBack [_tag, _texture, _object];
+    };
+}] call CBA_fnc_addEventHandler;
+
+// Edited: Disconnect UAV from dead players
+addMissionEventHandler ["entityRespawned", {
+  params ["_entity", "_corpse"];
+  _corpse connectTerminalToUAV objNull;
+}];

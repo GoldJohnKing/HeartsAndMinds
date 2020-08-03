@@ -31,19 +31,20 @@ params [
 _player addEventHandler ["Killed", {
     if (ace_map_mapIllumination) then {ace_map_mapIllumination = false;};
     if (isObjectHidden player) exitWith {};
-    // [btc_rep_malus_player_respawn, player] remoteExecCall ["btc_fnc_rep_change", 2]; // Edited: Player respawn does not affect reputation anymore
+    // [btc_rep_malus_player_respawn, player] remoteExecCall ["btc_fnc_rep_change", 2]; // Edited: Player respawn does not show reputation notification anymore
 }];
 _player addEventHandler ["CuratorObjectPlaced", btc_fnc_eh_CuratorObjectPlaced];
 ["ace_treatmentSucceded", btc_fnc_rep_treatment] call CBA_fnc_addEventHandler;
 _player addEventHandler ["WeaponAssembled", btc_fnc_civ_add_leaflets];
 [_player, "WeaponAssembled", {[_thisType, _this] call btc_fnc_fob_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
 [_player, "WeaponDisassembled", {[_thisType, _this] call btc_fnc_fob_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
-_player addEventHandler ["GetInMan", {_this call btc_fnc_ied_deleteLoop}];
+_player addEventHandler ["GetInMan", {_this call btc_fnc_ied_deleteLoop; 4 enableChannel true;}]; // Edited: Add radio channel handle on player get in vehicles, default = ["GetInMan", {_this call btc_fnc_ied_deleteLoop}]
 _player addEventHandler ["GetOutMan", {
     if (btc_ied_deleteOn > -1) then {
         [btc_ied_deleteOn] call CBA_fnc_removePerFrameHandler;
         btc_ied_deleteOn = -1;
     };
+    4 enableChannel false; // Edited: Add radio channel handle on player get out vehicles
 }];
 _player addEventHandler ["WeaponAssembled", {
     params ["_player", "_static"];
