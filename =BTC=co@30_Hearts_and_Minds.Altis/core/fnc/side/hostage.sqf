@@ -66,7 +66,6 @@ private _group = [];
     [_unit] joinSilent _grp;
     _group pushBack _grp;
     _grp setVariable ["no_cache", true];
-    _grp setVariable ["Vcm_Disable", true]; // Edited: Add VCOM Support, civilians do not execute as VCOM AI
 } forEach (_buildingPos - [_pos]);
 
 _trigger = createTrigger ["EmptyDetector", _pos];

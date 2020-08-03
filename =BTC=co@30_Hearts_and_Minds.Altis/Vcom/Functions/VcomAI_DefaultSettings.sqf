@@ -11,12 +11,12 @@ Vcm_Settings =
 		
 	*/	
 
-	Vcm_ActivateAI = true; //Set this to false to disable VcomAI. It can be set to true at any time to re-enable Vcom AI
+	Vcm_ActivateAI = false; //Set this to false to disable VcomAI. It can be set to true at any time to re-enable Vcom AI
 	VcmAI_ActiveList = []; //Leave this alone.
 	Vcm_ArtilleryArray = []; //Leave this alone
 	
 	//VCOM ARTILLERY. Only one kind of advanced artillery can be used at a time.
-	VCM_ARTYENABLE = true; //Enable improved artillery handling from Vcom.
+	VCM_ARTYENABLE = false; //Enable improved artillery handling from Vcom.
 	VCM_ARTYLST = []; //List of all AI inside of artillery pieces, leave this alone.
 	VCM_ARTYDELAY = 30; //Delay between squads requesting artillery
 	VCM_MEDICALACTIVE = false; // AI will heal themselves, and medics will heal others in their squad.

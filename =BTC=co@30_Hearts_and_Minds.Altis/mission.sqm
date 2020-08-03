@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=20;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={12021.308,36.798492,15125.551};
-		dir[]={0.45565677,-0.31800845,-0.83151644};
-		up[]={0.15284237,0.94807237,-0.27891642};
-		aside[]={-0.87702453,3.8160942e-007,-0.48059648};
+		pos[]={12055.333,44.526802,15117.114};
+		dir[]={-0.33152363,-0.35636798,-0.87365472};
+		up[]={-0.12644604,0.93433064,-0.33322164};
+		aside[]={-0.93502116,4.0640589e-007,0.3548086};
 	};
 };
 binarizationWanted=0;
@@ -3934,7 +3934,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="(group this) setVariable [""Vcm_Disable"",true];";
+							value="";
 						};
 					};
 				};
@@ -4094,7 +4094,6 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="call{(group this) setVariable [""Vcm_Disable"",true];}";
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -4204,7 +4203,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""Vcm_Disable"",true];}";
 			};
 			class CrewLinks
 			{
@@ -4312,7 +4310,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="(group this) setVariable [""Vcm_Disable"",true];";
+							value="";
 						};
 					};
 				};
@@ -4433,7 +4431,6 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="call{(group this) setVariable [""Vcm_Disable"",true];}";
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
@@ -4543,7 +4540,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""Vcm_Disable"",true];}";
 			};
 			class CrewLinks
 			{
@@ -10320,7 +10316,6 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true];}";
 				textures="Olive";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -11761,7 +11756,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true]; this setVariable ['GCblackList', true]; }";
+				init="call{this setVariable ['GCblackList', true];}";
 				name="btc_helo_8";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -15223,7 +15218,6 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -15339,7 +15333,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true]; this setBehaviourStrong ""CARELESS""; this setCombatMode ""BLUE""; }";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -15437,7 +15431,6 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true]; this setBehaviourStrong ""CARELESS""; this setCombatMode ""BLUE""; }";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -15576,7 +15569,6 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true]; this setBehaviourStrong ""CARELESS""; this setCombatMode ""BLUE""; }";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -20491,7 +20483,6 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="call{(group this) setVariable [""Vcm_Disable"",true]; this setBehaviourStrong ""CARELESS""; this setCombatMode ""BLUE""; }";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
