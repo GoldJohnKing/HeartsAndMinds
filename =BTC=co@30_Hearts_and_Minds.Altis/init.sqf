@@ -19,3 +19,7 @@ if (!isDedicated && !hasInterface) then {
 };
 
 [] spawn VCM_fnc_VcomInit; // Edited: Add VCOM Support
+
+// Edited: Add GLX Support
+GLX_Path = "GLX_System\";
+execVM (GLX_Path + "GLX_Initialize.sqf");
