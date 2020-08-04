@@ -52,6 +52,7 @@ _veh setHitPointDamage ["hitvrotor", 1];
 _veh setHitPointDamage ["hitavionics", 1];
 _veh setHitPointDamage ["hitgun", 1];
 _veh setHitPointDamage ["hitturret", 1];
+_veh setFuel 0;
 
 [_taskID, 5, _veh, [_city getVariable "name", _veh_type]] call btc_fnc_task_create;
 
