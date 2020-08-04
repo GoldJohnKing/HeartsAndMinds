@@ -42,12 +42,6 @@ _trigger setTriggerActivation ["WEST", "PRESENT", true]; // Edited: Allow all WE
 _trigger setTriggerStatements [btc_p_trigger, format ["[%1] call btc_fnc_city_activate", _id], format ["[%1] call btc_fnc_city_de_activate", _id]];
 _city setVariable ["trigger_player_side", _trigger];
 
-// Edited: Add cleanup trigger to base
-private _trigger = createTrigger ["EmptyDetector", getPos btc_gear_object];
-_trigger setTriggerArea [250, 250, 0, false];
-_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-_trigger setTriggerStatements ["this && !btc_db_is_saving && !(count thisList > 1)", "[] call btc_fnc_city_cleanUp;['调试信息：有玩家接近基地，垃圾回收触发。'] remoteExec ['systemChat', 0];", "调试信息：有玩家远离基地。"];
-
 if (btc_debug) then {
     private _marker = createMarker [format ["loc_%1", _id], _position];
     _marker setMarkerShape "ELLIPSE";
