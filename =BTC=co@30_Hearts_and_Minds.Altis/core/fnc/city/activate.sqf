@@ -101,20 +101,20 @@ if !(_data_units isEqualTo []) then {
     } forEach _data_units;
 } else {
     // Maximum number of enemy group
-    private _max_number_group = (switch _type do { // Edited: Spawn more basic amount of enemies groups, default = 1,2,3,7,15,15,1,0
-        case "Hill" : {3};
-        case "NameLocal" : {5};
-        case "NameVillage" : {5};
-        case "NameCity" : {7};
-        case "NameCityCapital" : {15};
-        case "Airport" : {15};
-        case "NameMarine" : {3};
+    private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
+        case "Hill" : {2};
+        case "NameLocal" : {3};
+        case "NameVillage" : {3};
+        case "NameCity" : {6};
+        case "NameCityCapital" : {8};
+        case "Airport" : {8};
+        case "NameMarine" : {2};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (_max_number_group) do { // Edited: Spawn more basic amount of enemies groups, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
-            [_city, _spawningRadius, 2 + round random [2, 3, 4], random 1] call btc_fnc_mil_create_group; // Edited: Spawn more basic amount of enemies groups, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
+        for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random _max_number_group))) do { // Edited: Spawn more basic amount of enemy groups, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
+            [_city, _spawningRadius, 4 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group; // Edited: Spawn more basic amount of enemy groups, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
 
@@ -138,13 +138,13 @@ if (btc_p_animals_group_ratio > 0) then {
         } forEach _data_animals;
     } else {
         // Spawn animals
-        private _max_number_animalsGroup = (switch _type do { // Edited: Spawn more basic amount of animals, default = 3,3,2,1,0,0,0,0
-            case "Hill" : {5};
-            case "NameLocal" : {10};
-            case "NameVillage" : {5};
-            case "NameCity" : {10};
-            case "NameCityCapital" : {10};
-            case "Airport" : {10};
+        private _max_number_animalsGroup = (switch _type do {
+            case "Hill" : {3};
+            case "NameLocal" : {3};
+            case "NameVillage" : {2};
+            case "NameCity" : {1};
+            case "NameCityCapital" : {0};
+            case "Airport" : {0};
             case "NameMarine" : {0};
             default {0};
         });
@@ -232,7 +232,7 @@ if !(_city getVariable ["has_suicider", false]) then {
         private _trigger = createTrigger ["EmptyDetector", getPos _city];
         _trigger setTriggerArea [_radius, _radius, 0, false];
         _trigger setTriggerActivation [str btc_enemy_side, "NOT PRESENT", false];
-        _trigger setTriggerStatements ["count thisList < 5", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
+        _trigger setTriggerStatements ["count thisList < 3", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
         _city setVariable ["trigger", _trigger];
     };
 
@@ -254,7 +254,7 @@ if (_numberOfPatrol < _p_patrol_max) then {
         private _group = createGroup btc_enemy_side;
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
-        [[_group, 2, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Disable AI patrol infantry, only spawn vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
+        [[_group, 1 + round random [0, 0.3, 1], _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
     };
 };
 //Traffic
