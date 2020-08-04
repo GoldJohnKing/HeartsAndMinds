@@ -29,7 +29,7 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 
     private _obj = _x;
 
-    (!(btc_gear_object inAreaArray [getPosWorld _obj, 500, 500] isEqualTo []) || _playableUnits inAreaArray [getPosWorld _obj, 75, 75] isEqualTo []) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases & Decrease minimal clean range for dead units, add support for clean base garbages, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
+    (!(btc_gear_object inArea [getPosWorld _obj, 500, 500, 0, false]) || (_playableUnits inAreaArray [getPosWorld _obj, 75, 75] isEqualTo [])) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases & Decrease minimal clean range for dead units, add support for clean base garbages, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
 };
 
 _toRemove append (allDead select {
