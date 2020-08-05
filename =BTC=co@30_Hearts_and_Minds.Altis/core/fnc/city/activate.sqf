@@ -254,7 +254,7 @@ if (_numberOfPatrol < _p_patrol_max) then {
         private _group = createGroup btc_enemy_side;
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
-        [[_group, 1 + round random [0, 0.75, 1.49], _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
+        [[_group, 1 + round random [0, 0.75, 1.5], _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
     };
 };
 //Traffic

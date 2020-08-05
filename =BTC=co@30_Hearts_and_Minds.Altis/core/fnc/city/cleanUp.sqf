@@ -35,7 +35,7 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 _toRemove append (allDead select {
     private _dead = _x;
 
-    (_playableUnits inAreaArray [getPosWorld _dead, 250, 250]) isEqualTo [] && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Decrease minimal clean range for dead units, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
+    (!(btc_gear_object inArea [getPosWorld _obj, 30, 30, 0, false]) || (_playableUnits inAreaArray [getPosWorld _dead, 250, 250] isEqualTo [])) && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Force delete dead units near player spawn point & Decrease minimal clean range for dead units, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
 });
 
 if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
