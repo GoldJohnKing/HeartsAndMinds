@@ -47,11 +47,11 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
     if (isServer) then {
         [_unit] call btc_fnc_eh_veh_respawn;
     };
-    // if (side _instigator isEqualTo btc_player_side) then { // Edited: Temporarily useless
-    //     {
-    //         _x addRating (9999 - rating _x);
-    //     } forEach units group _instigator;
-    // };
+    if (side _instigator == btc_player_side) then { // Edited: Temporarily useless
+        {
+            _x addRating (9999 - rating _x);
+        } forEach units group _instigator;
+    };
     if (isPlayer _instigator) then {
         // private _killerName = [[name _instigator], [" "]] select (isNull _instigator);
         private _killerName = name _instigator;
