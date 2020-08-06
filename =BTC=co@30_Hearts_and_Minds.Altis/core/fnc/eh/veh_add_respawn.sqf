@@ -43,9 +43,8 @@ _vehicle setVariable ["data_respawn", [_type, _pos, _dir, _time, _vector] + _veh
 
 if ((isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled")) && !(typeOf _vehicle isEqualTo "RHS_UH1Y_d")) then {[_vehicle] call ace_fastroping_fnc_equipFRIES};
 _vehicle addMPEventHandler ["MPKilled", { // Edited: Add ratings to players once friendly vehicles are killed to prevent VCOM AI target players as enemy, default = ["MPKilled", {if (isServer) then {[_this select 0] call btc_fnc_eh_veh_respawn};}]
-    params ["_unit", "_killer", "_instigator", "_useEffects"];
     if (isServer) then {
-        [_this select 0] call btc_fnc_eh_veh_respawn
+        [_this select 0] call btc_fnc_eh_veh_respawn;
     };
     (_this select 1) addRating (9999 - rating (_this select 1));
 }];
