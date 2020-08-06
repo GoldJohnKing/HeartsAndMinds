@@ -53,7 +53,7 @@ if ([_active_city, _group, _area] call btc_fnc_patrol_playersInAreaCityGroup) ex
 };
 
 //Sometimes the waypoint is completed but too far due to obstacle (water for island etc)
-if ((leader _group) distance _last_wp_pos > 100) then {
+if ((leader _group) distance _last_wp_pos > 150) then { // Edited: Increase waypoint complete range, default = ((leader _group) distance _last_wp_pos > 100)
     if (btc_debug || btc_debug_log) then {
         [format ["Patrol ID: %1, %2 inaccessible (end city ID: %3)", _group getVariable ["btc_patrol_id", "Missing patrol ID"], _end_city getVariable ["name", "no name"], _end_city getVariable ["id", 0]], __FILE__, [btc_debug, btc_debug_log]] call btc_fnc_debug_message;
     };

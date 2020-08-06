@@ -162,7 +162,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 1500; // Edited: Decrease patrol range, default = 2500
 
     //Rep
     btc_global_reputation = _p_rep;
