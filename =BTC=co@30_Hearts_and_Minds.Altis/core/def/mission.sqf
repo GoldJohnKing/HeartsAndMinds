@@ -653,15 +653,16 @@ switch (_p_en) do {
     };
     // Edited: Modify RHSAFRF Faction
     case "RHS_FACTION_VDV" : {
-        btc_type_units = btc_type_units
+        btc_type_units = btc_type_units // Edited: Remove units with handgun only
             - ["rhs_vdv_crew","rhs_vdv_armoredcrew","rhs_vdv_combatcrew","rhs_vdv_crew_commander","rhs_vdv_driver","rhs_vdv_driver_armored","rhs_vdv_officer","rhs_vdv_officer_armored","rhs_vdv_rifleman_lite"]
             - ["rhs_vdv_des_crew","rhs_vdv_des_armoredcrew","rhs_vdv_des_combatcrew","rhs_vdv_des_crew_commander","rhs_vdv_des_officer","rhs_vdv_des_officer_armored","rhs_vdv_des_rifleman_lite","rhs_vdv_des_driver","rhs_vdv_des_driver_armored"]
             - ["rhs_vdv_flora_crew","rhs_vdv_flora_armoredcrew","rhs_vdv_flora_combatcrew","rhs_vdv_flora_crew_commander","rhs_vdv_flora_driver","rhs_vdv_flora_driver_armored","rhs_vdv_flora_officer","rhs_vdv_flora_officer_armored","rhs_vdv_flora_rifleman_lite"]
             - ["rhs_vdv_mflora_crew","rhs_vdv_mflora_armoredcrew","rhs_vdv_mflora_combatcrew","rhs_vdv_mflora_crew_commander","rhs_vdv_mflora_driver","rhs_vdv_mflora_driver_armored","rhs_vdv_mflora_officer","rhs_vdv_mflora_officer_armored","rhs_vdv_mflora_rifleman_lite"]
             - ["rhs_vdv_recon_officer","rhs_vdv_recon_officer_armored","rhs_vdv_recon_rifleman_l"]
-            - ["rhs_pilot","rhs_pilot_combat_heli","rhs_pilot_tan","rhs_pilot_transport_heli"];
-        btc_type_motorized = ["rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"] + ["rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv"]; // Edited: Append part of btc_type_motorized_armed to btc_type_motorized
-        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
+            - ["rhs_pilot","rhs_pilot_combat_heli","rhs_pilot_tan","rhs_pilot_transport_heli"]
+            + ["O_R_Soldier_TL_F","O_R_medic_F","O_R_Soldier_GL_F","O_R_Soldier_LAT_F","O_R_soldier_exp_F","O_R_soldier_M_F","O_R_JTAC_F","O_R_Soldier_AR_F","O_R_Patrol_Soldier_TL_F","O_R_Patrol_Soldier_Engineer_F","O_R_Patrol_Soldier_A_F","O_R_Patrol_Soldier_Medic","O_R_Patrol_Soldier_GL_F","O_R_Patrol_Soldier_LAT_F","O_R_Patrol_Soldier_M_F","O_R_Patrol_Soldier_M2_F","O_R_Patrol_Soldier_AR_F","O_R_Patrol_Soldier_AR2_F","O_R_recon_LAT_F","O_R_recon_TL_F","O_R_recon_medic_F","O_R_recon_GL_F","O_R_recon_exp_F","O_R_recon_M_F","O_R_recon_JTAC_F","O_R_recon_AR_F"]; // Edited: Add vanilla Russian faction
+        btc_type_motorized = ["rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"] + ["rhs_sprut_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv"]; // Edited: Append part of btc_type_motorized_armed to btc_type_motorized
+        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_sprut_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
     };
 };
 
