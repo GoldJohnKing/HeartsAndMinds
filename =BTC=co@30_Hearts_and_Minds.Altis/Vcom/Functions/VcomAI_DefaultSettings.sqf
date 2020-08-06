@@ -47,13 +47,13 @@ Vcm_Settings =
 	VCM_DISEMBARKRANGE = 150; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
 	VCM_AISNIPERS = true; //Special sniper AI
 	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
-	Vcm_DrivingActivated = true; //AI will use experimental driving improvements.
+	Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
 	Vcm_PlayerAISkills = false; //AI in a group, that a players leads, can have their skills changed separately.
 	Vcm_GrenadeChance = 50; //Chance the AI will throw a grenade.
 	Vcm_SmokeChance = 30; //Chance the AI will throw a smoke grenade.
 	Vcm_AI_EM = true; //Will the AI use enhanced movement to navigate around.
-	Vcm_AI_EM_CHN = 25; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
-	VCM_AI_EM_CLDWN = 5; //Time in seconds before a group will consider jumping over obstacles;
+	Vcm_AI_EM_CHN = 75; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
+	VCM_AI_EM_CLDWN = 3; //Time in seconds before a group will consider jumping over obstacles;
 	
 	//AI SKILL SETTINGS HERE!!!!!!!!!!!!
 	//LOW DIFFICULTY
