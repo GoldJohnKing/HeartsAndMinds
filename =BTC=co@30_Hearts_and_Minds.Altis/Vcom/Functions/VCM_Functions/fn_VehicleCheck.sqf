@@ -40,15 +40,16 @@ if (count _VehArr > 0) then
 			if (local _x) then
 			{
 				private _NE = _leader call VCM_fnc_ClstEmy;
-				if (_NE distance2D _leader <= VCM_DISEMBARKRANGE && isTouchingGround _x) then // Edited: AI should not unload from helicopter if it does not land
+				if (_NE distance2D _leader <= VCM_DISEMBARKRANGE) then
 				{
 					_x setUnloadInCombat [true, VCM_TURRETUNLOAD];
 					if (VCM_Debug) then {diag_log format ["VEHICLECHECK: Group can unload! %1",_group];};
 				}
 				else
 				{
-					if (damage _x > 0.2 && isTouchingGround _x) then // Edited: AI should not unload from helicopter if it does not land
+					if (damage _x > 0.2) then
 					{
+						if (_x isKindOf "Helicopter") then {_x land "LAND";}; // Edited: AI should not unload from helicopter if it does not land, so we force it
 						_x setUnloadInCombat [true, VCM_TURRETUNLOAD];
 						if (VCM_Debug) then {diag_log format ["VEHICLECHECK: Group can unload! Damaged vehicle! %1",_group];};
 					}
