@@ -24,7 +24,9 @@ waituntil
 						{
 							if !(((units _Grp) findIf {alive _x}) isEqualTo -1) then
 							{
-								_x call VCM_fnc_SquadExc;
+								if !(typeOf _x isEqualTo "B_UAV_AI") then {
+									_x call VCM_fnc_SquadExc;
+								};
 							};
 						};
 				};
