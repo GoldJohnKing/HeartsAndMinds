@@ -69,6 +69,6 @@ if (btc_p_set_skill) then {
 
 // Edited: Disconnect UAV from dead players
 addMissionEventHandler ["entityRespawned", {
-  params ["_entity", "_corpse"];
-  _corpse connectTerminalToUAV objNull;
+    params ["_entity", "_corpse"];
+    _corpse connectTerminalToUAV objNull;
 }];
