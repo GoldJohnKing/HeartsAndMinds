@@ -47,20 +47,13 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
     if (isServer) then {
         [_unit] call btc_fnc_eh_veh_respawn;
     };
-    if (side _instigator isEqualTo btc_player_side) then {
+    if (side _instigator == btc_player_side) then { // Edited: Temporarily useless
         {
             _x addRating (9999 - rating _x);
         } forEach units group _instigator;
     };
-    if (_instigator isPlayer) then {
-        private _killerName = [[name _instigator], [" "]] select (isNull _instigator);
-        private _vehicleName = _getText (configFile >> "cfgVehicles" >> typeOf (_this select 0) >> "displayName");
-        private _hintContent = [
-            format ["玩家 %1", _killerName],
-            ["摧毁了"],
-            format ["友方载具 %1", _vehicleName]
-        ];
-        format ["玩家 %1 摧毁了友方载具 %2", _killerName, _vehicleName] call CBA_fnc_notify;
+    if (isPlayer _instigator) then {
+        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf (_this select 0) >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
     };
 }];
 if (btc_p_respawn_location > 0) then {
