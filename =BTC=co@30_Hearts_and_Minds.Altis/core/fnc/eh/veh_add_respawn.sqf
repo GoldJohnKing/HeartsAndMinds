@@ -46,10 +46,10 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
     params ["_unit", "_killer", "_instigator"];
     private _driver = driver _unit;
     if (isPlayer _instigator) then {
-        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["攻击并摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
+        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["攻击并摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] remoteExecCall ["CBA_fnc_notify", 0];
     } else {
         if (isPlayer _driver) then { // && (_unit isEqualTo _killer)
-            [["玩家"], [name _driver, 1.25, [1, 0, 0, 1]], [" "], ["撞毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
+            [["玩家"], [name _driver, 1.25, [1, 0, 0, 1]], [" "], ["撞毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] remoteExecCall ["CBA_fnc_notify", 0];
         };
     };
     if (side _instigator == btc_player_side) then { // Edited: Temporarily useless
