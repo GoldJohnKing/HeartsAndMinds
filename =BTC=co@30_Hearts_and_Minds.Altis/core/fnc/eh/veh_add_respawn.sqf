@@ -44,16 +44,21 @@ _vehicle setVariable ["data_respawn", [_type, _pos, _dir, _time, _vector] + _veh
 if ((isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled")) && !(typeOf _vehicle isEqualTo "RHS_UH1Y_d")) then {[_vehicle] call ace_fastroping_fnc_equipFRIES};
 _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when friendly vehicles are killed by friendly units & Add ratings to players once friendly vehicles are killed to prevent VCOM AI target players as enemy, default = ["MPKilled", {if (isServer) then {[_this select 0] call btc_fnc_eh_veh_respawn};}]
     params ["_unit", "_killer", "_instigator"];
-    if (isServer) then {
-        [_unit] call btc_fnc_eh_veh_respawn;
+    private _driver = driver _unit;
+    if (isPlayer _instigator) then {
+        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["攻击并摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
+    } else {
+        if (isPlayer _driver) then { // && (_unit isEqualTo _killer)
+            [["玩家"], [name _driver, 1.25, [1, 0, 0, 1]], [" "], ["撞毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
+        };
     };
     if (side _instigator == btc_player_side) then { // Edited: Temporarily useless
         {
             _x addRating (9999 - rating _x);
         } forEach units group _instigator;
     };
-    if (isPlayer _instigator) then {
-        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf (_this select 0) >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
+    if (isServer) then {
+        [_unit] call btc_fnc_eh_veh_respawn;
     };
 }];
 if (btc_p_respawn_location > 0) then {
