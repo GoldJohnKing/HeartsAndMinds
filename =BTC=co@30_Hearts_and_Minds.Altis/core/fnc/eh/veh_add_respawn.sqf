@@ -53,11 +53,7 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
         } forEach units group _instigator;
     };
     if (isPlayer _instigator) then {
-        // private _killerName = [[name _instigator], [" "]] select (isNull _instigator);
-        private _killerName = name _instigator;
-        private _vehicleName = getText (configFile >> "cfgVehicles" >> typeOf (_this select 0) >> "displayName");
-        [["玩家"], [_killerName, 1.5, [1, 0, 0, 1]], ["摧毁了友方载具"], [_vehicleName, 1.5, [1, 0, 0, 1]]] call CBA_fnc_notify;
-        // format ["玩家 %1 摧毁了友方载具 %2", _killerName, _vehicleName] call CBA_fnc_notify;
+        [["玩家"], [name _instigator, 1.25, [1, 0, 0, 1]], [" "], ["摧毁了友方载具"], [getText (configFile >> "cfgVehicles" >> typeOf (_this select 0) >> "displayName"), 1.25, [1, 0, 0, 1]]] call CBA_fnc_notify;
     };
 }];
 if (btc_p_respawn_location > 0) then {
