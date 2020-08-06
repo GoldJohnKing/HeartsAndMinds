@@ -22,7 +22,7 @@ waituntil
 					private _Grp = _x;
 						if !(_Grp in VcmAI_ActiveList) then //{!(VCM_SIDEENABLED findIf {_x isEqualTo (side _Grp)} isEqualTo -1)}
 						{
-							if !((((units _Grp) findIf {alive _x}) isEqualTo -1) || (side _Grp == btc_player_side)) then // Edited: 
+							if !((((units _Grp) findIf {alive _x}) isEqualTo -1) || (side _Grp == btc_player_side)) then // Edited: Force WEST units do not run as VCOM AI
 							{
 								_x call VCM_fnc_SquadExc;
 							};
