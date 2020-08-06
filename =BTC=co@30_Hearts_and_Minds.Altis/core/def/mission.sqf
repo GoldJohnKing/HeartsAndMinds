@@ -162,7 +162,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 1500; // Edited: Decrease patrol range, default = 2500
 
     //Rep
     btc_global_reputation = _p_rep;
@@ -282,8 +282,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29];
-    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10];
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28];
+    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10, btc_helo_11, btc_helo_12];
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
@@ -566,7 +566,7 @@ btc_fnc_log_get_nottowable = {
         case (_tower isKindOf "Truck") : {[];};
         case (_tower isKindOf "Ship") : {[];};
         //The tower is a car so it can't tow: truck, tank, plane and helicopter
-        case (_tower isKindOf "Car") : {["Truck", "Truck_F", "Tank", "Plane", "Helicopter"];};
+        case (_tower isKindOf "Car") : {["Tank", "Plane", "Helicopter"];};
         default {["Car", "Truck", "Truck_F", "Tank", "Plane", "Helicopter", "Ship"];};
     };
 };
@@ -660,8 +660,8 @@ switch (_p_en) do {
             - ["rhs_vdv_mflora_crew","rhs_vdv_mflora_armoredcrew","rhs_vdv_mflora_combatcrew","rhs_vdv_mflora_crew_commander","rhs_vdv_mflora_driver","rhs_vdv_mflora_driver_armored","rhs_vdv_mflora_officer","rhs_vdv_mflora_officer_armored","rhs_vdv_mflora_rifleman_lite"]
             - ["rhs_vdv_recon_officer","rhs_vdv_recon_officer_armored","rhs_vdv_recon_rifleman_l"]
             - ["rhs_pilot","rhs_pilot_combat_heli","rhs_pilot_tan","rhs_pilot_transport_heli"];
-        btc_type_motorized = ["rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"] + ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"]; // Edited: Combine btc_type_motorized & btc_type_motorized_armed
-        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"] + ["rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"]; // Edited: Combine btc_type_motorized & btc_type_motorized_armed
+        btc_type_motorized = ["rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"] + ["rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv"]; // Edited: Append part of btc_type_motorized_armed to btc_type_motorized
+        btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
     };
 };
 
@@ -697,4 +697,4 @@ btc_AI_skill = _p_skill;
 btc_units_owners = [];
 
 // Edited: Add vehicle type list for vehicle side mission to use
-side_vehicle_types = ["RHS_MELB_MH6M","RHS_UH60M","RHS_UH60M_MEV","RHS_CH_47F_10","RHS_AH64D","RHS_UH1Y_FFAR","RHS_AH1Z","USAF_A10","USAF_F22_EWP_AG","USAF_F35A","ffaa_ar_harrier_legacy","B_T_VTOL_01_armed_F","B_Truck_01_mover_F","B_Truck_01_flatbed_F","B_Truck_01_medical_F","B_Truck_01_ammo_F","B_Truck_01_fuel_F","B_Truck_01_Repair_F","B_T_LSV_01_armed_F","B_APC_Tracked_01_AA_F","B_AFV_Wheeled_01_up_cannon_F","B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_CRV_F","rhsusf_m1043_d_s_m2","rhsusf_m1043_d_s_mk19","rhsusf_M1230a1_usarmy_d","rhsusf_M1237_M2_usarmy_d","rhsusf_M1237_MK19_usarmy_d","rhsusf_m1245_m2crows_socom_d","rhsusf_m1245_mk19crows_socom_d","rhsusf_m1a2sep1tuskiid_usarmy","RHS_M2A3_BUSKIII","rhsusf_m966_d","rhsusf_mrzr4_d","rhsusf_mrzr4_d","B_MBT_01_TUSK_F","B_MBT_01_mlrs_F","B_Heli_Attack_01_dynamicLoadout_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","rhsusf_m1a1aim_tuski_d","rhsusf_M1117_D","rhsusf_m109d_usarmy","rhsusf_M142_usarmy_D","RHS_M6","RHS_M2A2_BUSKI","rhsusf_stryker_m1126_m2_d","rhsusf_stryker_m1126_mk19_d","rhsusf_m113d_usarmy_M240","rhsusf_m113d_usarmy_MK19","rhsusf_m113d_usarmy","B_APC_Tracked_01_rcws_F","B_Heli_Light_01_dynamicLoadout_F","RHS_MELB_AH6M","rhsusf_CGRCAT1A2_M2_usmc_d","rhsusf_CGRCAT1A2_Mk19_usmc_d","rhsusf_M1238A1_M2_socom_d","rhsusf_M1238A1_Mk19_socom_d","B_Heli_Transport_01_F","B_Heli_Transport_03_F"];
+side_vehicle_types = ["RHS_MELB_MH6M","RHS_UH60M","RHS_UH60M_MEV","RHS_CH_47F_10","RHS_AH64D","RHS_UH1Y_FFAR","RHS_AH1Z","USAF_A10","USAF_F22_EWP_AG","USAF_F35A","B_T_VTOL_01_armed_F","B_Truck_01_mover_F","B_Truck_01_flatbed_F","B_Truck_01_medical_F","B_Truck_01_ammo_F","B_Truck_01_fuel_F","B_Truck_01_Repair_F","B_T_LSV_01_armed_F","B_APC_Tracked_01_AA_F","B_AFV_Wheeled_01_up_cannon_F","B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_CRV_F","rhsusf_m1043_d_s_m2","rhsusf_m1043_d_s_mk19","rhsusf_M1230a1_usarmy_d","rhsusf_M1237_M2_usarmy_d","rhsusf_M1237_MK19_usarmy_d","rhsusf_m1245_m2crows_socom_d","rhsusf_m1245_mk19crows_socom_d","rhsusf_m1a2sep1tuskiid_usarmy","RHS_M2A3_BUSKIII","rhsusf_m966_d","rhsusf_mrzr4_d","rhsusf_mrzr4_d","B_MBT_01_TUSK_F","B_MBT_01_mlrs_F","B_Heli_Attack_01_dynamicLoadout_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","rhsusf_m1a1aim_tuski_d","rhsusf_M1117_D","rhsusf_m109d_usarmy","rhsusf_M142_usarmy_D","RHS_M6","RHS_M2A2_BUSKI","rhsusf_stryker_m1126_m2_d","rhsusf_stryker_m1126_mk19_d","rhsusf_m113d_usarmy_M240","rhsusf_m113d_usarmy_MK19","rhsusf_m113d_usarmy","B_APC_Tracked_01_rcws_F","B_Heli_Light_01_dynamicLoadout_F","RHS_MELB_AH6M","rhsusf_CGRCAT1A2_M2_usmc_d","rhsusf_CGRCAT1A2_Mk19_usmc_d","rhsusf_M1238A1_M2_socom_d","rhsusf_M1238A1_Mk19_socom_d","B_Heli_Transport_01_F","B_Heli_Transport_03_F"]; // Remove "ffaa_ar_harrier_legacy" due to lack of preview image

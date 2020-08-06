@@ -33,13 +33,13 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_ARESTART"]);
         values[]={0,1,2,3,4};
         texts[]={$STR_DISABLED,$STR_DISP_MP_DS_RESTART,$STR_BTC_HAM_PARAM_DB_SHUTDOWN,$STR_BTC_HAM_PARAM_DB_SAVERESTART, $STR_BTC_HAM_PARAM_DB_SAVESHUTDOWN}; // texts[]={"Off","Restart", "Shutdown","Save and restart", "Save and shutdown"};
-        default = 4;
+        default = 3;
     };
     class btc_p_db_autoRestartTime { // Time before auto restart/shutdown server
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_DB_ARESTARTTIME"]);
         values[]={1,2,3,4,5,6,7,8,9,10,11,12,24,48,72};
         texts[]={"1h","2h","3h","4h","5h","6h","7h","8h","9h","10h","11h","12h","24h","48h","72h"};
-        default = 23;
+        default = 11;
     };
     class btc_p_respawn_title { // << Respawn options >>
         title = $STR_BTC_HAM_RESP_TITLE;
@@ -141,7 +141,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_MIL_INHOUSE_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 50;
+        default = 0;
     };
     class btc_p_veh_armed_ho { // Add armed vehicles in Hideout:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPAWN_ARMEDHIDEOUT"]);
@@ -327,7 +327,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_GAMEPLAY_SIDEM"]);
         values[] = {0,1,2,3,4};
         texts[] = {$STR_DISABLED,1,2,3,4};
-        default = 3;
+        default = 2;
     };
     class btc_p_arsenal_title { // << Arsenal options >>
         title = $STR_BTC_HAM_PARAM_ARSENAL_TITLE;
