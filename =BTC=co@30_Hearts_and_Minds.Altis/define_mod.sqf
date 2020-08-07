@@ -28,11 +28,13 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = [];
+private _weapons = []; // Edited: Remove imbanlance, useless or buggy equipments
 private _magazines = [
     "Titan_AP"
 ];
 private _items = [
+    "ACE_optic_Arco_PIP",
+    "ACE_optic_Hamr_PIP",
     "H_HelmetO_ViperSP_hex_F",
     "H_HelmetO_ViperSP_ghex_F",
     // "NVGogglesB_gry_F",
@@ -59,8 +61,7 @@ private _items = [
     // "JAS_GPNVG18_blk_TI",
     // "JAS_GPNVG18_Tan_TI",
     "JAS_GPNVG18_Full_blk_TI",
-    "JAS_GPNVG18_Full_Tan_TI",
-    "EOD9_HELMET_Base"
+    "JAS_GPNVG18_Full_Tan_TI"
 ];
 private _backpacks = [
     "C_IDAP_UAV_01_backpack_F",
