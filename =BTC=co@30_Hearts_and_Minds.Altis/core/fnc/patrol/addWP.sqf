@@ -44,7 +44,7 @@ if (_vehicle isKindOf "Air") then {
 
 } else {
     [_group, _pos, -1, "MOVE", "UNCHANGED", "RED", "LIMITED", "STAG COLUMN", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
-    for "_i" from 0 to (1 + round random [1, 2, 3]) do { // Edited: Decrease waypoint amount, default = (2 + (floor (random 3)))
+    for "_i" from 0 to (round random [0.5, 1, 3]) do { // Edited: Decrease waypoint amount, default = (2 + (floor (random 3)))
         private _newPos = [_pos, 150] call CBA_fnc_randPos;
         [_group, _newPos, -1, "MOVE", "UNCHANGED", "RED", "UNCHANGED", "NO CHANGE", "", [0, 0, 0], 20] call CBA_fnc_addWaypoint;
     };
