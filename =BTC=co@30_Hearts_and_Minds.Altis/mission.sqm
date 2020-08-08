@@ -8,22 +8,22 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1555;
+		nextID=1559;
 	};
 	class MarkerIDProvider
 	{
-		nextID=26;
+		nextID=29;
 	};
 	class LayerIndexProvider
 	{
-		nextID=29;
+		nextID=31;
 	};
 	class Camera
 	{
-		pos[]={12037.742,41.588081,15142.235};
-		dir[]={0.070357926,-0.46514663,0.88247192};
-		up[]={0.036976393,0.88518029,0.46377742};
-		aside[]={0.99686676,6.9948146e-007,-0.079477772};
+		pos[]={876.29797,168.57834,2788.0476};
+		dir[]={0.0057510003,-0.99994999,0.0081805615};
+		up[]={0.57508391,0.00999978,0.81803328};
+		aside[]={0.81807417,0,-0.5751127};
 	};
 };
 binarizationWanted=0;
@@ -610,8 +610,6 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=1;
 		forecastLightnings=0.1;
-		wavesForced=1;
-		windForced=1;
 		year=2020;
 		day=26;
 		hour=12;
@@ -621,7 +619,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=130;
+		items=131;
 		class Item0
 		{
 			dataType="Marker";
@@ -20028,6 +20026,44 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item130
+		{
+			dataType="Layer";
+			name="Custom Location";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={11961.961,0.0040000002,8475.9971};
+					name="btc_loc_1";
+					type="Empty";
+					id=1555;
+					atlOffset=2.1249275;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={865.69299,0.0080000004,2785.3999};
+					name="btc_loc_2";
+					type="Empty";
+					id=1557;
+					atlOffset=2.182302;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={2823.7451,17.368,2562.4221};
+					name="btc_loc_3";
+					type="Empty";
+					id=1556;
+					atlOffset=0.00034332275;
+				};
+			};
+			id=1558;
+			atlOffset=-10.696798;
 		};
 	};
 	class Connections
