@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=31;
+		nextID=33;
 	};
 	class Camera
 	{
-		pos[]={876.29797,168.57834,2788.0476};
-		dir[]={0.0057510003,-0.99994999,0.0081805615};
-		up[]={0.57508391,0.00999978,0.81803328};
-		aside[]={0.81807417,0,-0.5751127};
+		pos[]={12054.793,41.682579,15072.642};
+		dir[]={-0.68344384,-0.72980505,0.017242404};
+		up[]={-0.72957581,0.68365347,0.018406387};
+		aside[]={0.025220554,-3.4262484e-008,0.99968553};
 	};
 };
 binarizationWanted=0;
@@ -763,7 +763,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="COLONEL";
-						init="call{this setVariable [""side_mission"",true]; this setVariable [""interpreter"",true]; this setVariable ['GCblackList', true];}";
+						init="call{this setVariable [""side_mission"",true]; this setVariable [""interpreter"",true];}";
 						description="指挥官 - 指挥/情报小组";
 						isPlayer=1;
 						isPlayable=1;
@@ -947,7 +947,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="MAJOR";
-						init="call{this setVariable [""side_mission"",true]; this setVariable [""interpreter"",true]; this setVariable ['GCblackList', true];}";
+						init="call{this setVariable [""side_mission"",true]; this setVariable [""interpreter"",true];}";
 						description="副指挥官 - 指挥/情报小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -1111,7 +1111,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="call{this setVariable [""interpreter"",true]; this setVariable ['GCblackList', true];}";
+						init="call{this setVariable [""interpreter"",true];}";
 						description="翻译官 - 指挥/情报小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -1274,7 +1274,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="call{this setVariable [""interpreter"",true]; this setVariable ['GCblackList', true];}";
+						init="call{this setVariable [""interpreter"",true];}";
 						description="翻译官 - 指挥/情报小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -1585,7 +1585,6 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="小队长(医疗兵) - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -1762,7 +1761,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="小组长(医疗兵) - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -1937,7 +1935,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2074,7 +2071,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="步枪手 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2211,7 +2207,6 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工兵 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2398,7 +2393,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="医疗兵 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2576,7 +2570,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="机枪手 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2733,7 +2726,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="精准射手 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -2889,7 +2881,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="防空兵 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -3045,7 +3036,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="反坦克手 - 第一作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -5156,7 +5146,6 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="小队长(医疗兵) - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -5332,7 +5321,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="小组长(医疗兵) - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -5507,7 +5495,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -5663,7 +5650,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="步枪手 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -5819,7 +5805,6 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工兵 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6006,7 +5991,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="医疗兵 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6184,7 +6168,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="机枪手 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6340,7 +6323,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="精准射手 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6496,7 +6478,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="防空兵 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6653,7 +6634,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setVariable ['GCblackList', true];}";
 						description="反坦克手 - 第二作战小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -6847,7 +6827,6 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -7045,7 +7024,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -7243,7 +7221,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -7441,7 +7418,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="军医 - 战场急救小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -7675,7 +7651,6 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -7882,7 +7857,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8089,7 +8063,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8296,7 +8269,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="工程师 - 工程/后勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8539,7 +8511,6 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8686,7 +8657,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8833,7 +8803,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -8980,7 +8949,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="直升机飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -9127,7 +9095,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -9252,7 +9219,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -9377,7 +9343,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
@@ -9502,7 +9467,6 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="call{this setVariable ['GCblackList', true];}";
 						description="固定翼飞行员 - 空勤小组";
 						isPlayable=1;
 						ignoreByDynSimulGrid=1;
