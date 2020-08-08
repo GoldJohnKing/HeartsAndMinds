@@ -56,6 +56,8 @@ private _officerType = selectRandom btc_type_units;
 private _officer = _group_officer createUnit [_officerType, _pos, [], 0, "CAN_COLLIDE"];
 _officer setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 _officer setVariable ["btc_dont_delete", true]; // Edited: Make officer body persistent even if city deactivate
+(group _officer) setVariable ["VCM_NOFLANK", true]; // Edited: Disable VCOM Flank on officer to prevent him running around
+(group _officer) setVariable ["Vcm_Disable", true]; // Edited: Disable VCOM on officer to prevent him running around
 
 //// Data side mission
 private _officerName = name _officer;
