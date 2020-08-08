@@ -11,13 +11,13 @@ RydFFE_ArtyShells = 1;
 RydFFE_Interval = 10;
 RydFFE_Debug = false;
 RydFFE_FO = [];
-RydFFE_2PhWithoutFO = false;
+RydFFE_2PhWithoutFO = true;
 RydFFE_OnePhase = false;
 
-RydFFE_Amount = 6;
-RydFFE_Acc = 2;
-RydFFE_Safe = 100;
-RydFFE_Monogamy = true;
+RydFFE_Amount = 12;
+RydFFE_Acc = 1;
+RydFFE_Safe = 75;
+RydFFE_Monogamy = false;
 RydFFE_ShellView = false;
 RydFFE_FOAccGain = 1;
 RydFFE_FOClass = [
@@ -48,8 +48,8 @@ RydFFE_FOClass = [
 ];
 
 RydFFE_Add_SPMortar = [];
-RydFFE_Add_Mortar = ["rhs_2s3_tv"];
-RydFFE_Add_Rocket = ["RHS_BM21_VDV_01"];
+RydFFE_Add_Mortar = [];
+RydFFE_Add_Rocket = [];
 RydFFE_Add_Other = [];
 RydFFE_IowaMode = false;
 
