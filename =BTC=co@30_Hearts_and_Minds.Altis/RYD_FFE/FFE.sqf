@@ -15,8 +15,8 @@ RydFFE_2PhWithoutFO = true;
 RydFFE_OnePhase = false;
 
 RydFFE_Amount = 12;
-RydFFE_Acc = 1;
-RydFFE_Safe = 75;
+RydFFE_Acc = 2;
+RydFFE_Safe = 100;
 RydFFE_Monogamy = false;
 RydFFE_ShellView = false;
 RydFFE_FOAccGain = 1;
