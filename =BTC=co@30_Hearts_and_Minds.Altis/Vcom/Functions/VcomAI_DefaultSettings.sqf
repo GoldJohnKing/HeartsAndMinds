@@ -38,13 +38,13 @@ Vcm_Settings =
 	VCM_StealVeh = false; //Will the AI steal vehicles.
 	VCM_ClassSteal = false; //If true, crewmen are required to steal tracked vehicles. Pilots are required to steal aircraft. false = anyone can steal any vehicle.
 	VCM_AIDISTANCEVEHPATH = 30; //Distance AI check from the squad leader to steal vehicles
-	VCM_ADVANCEDMOVEMENT = false; //True means AI will actively generate waypoints if no other waypoints are generated for the AI group (2 or more). False disables this advanced movements.
+	VCM_ADVANCEDMOVEMENT = true; //True means AI will actively generate waypoints if no other waypoints are generated for the AI group (2 or more). False disables this advanced movements.
 	VCM_FRMCHANGE = true; //AI GROUPS WILL CHANGE FORMATIONS TO THEIR BEST GUESS.
 	VCM_SKILLCHANGE = false; //AI Groups will have their skills changed by Vcom.
 	VCM_USECBASETTINGS = false;//If CBA is enabled on the host, use the CBA default settings. If false, use the filepatching settings instead.
 	VCM_CARGOCHNG = true; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
 	VCM_TURRETUNLOAD = true;//If true = Prevents AI vehicle turret positions from leaving a vehicle just beecause it is slightly damaged. Example: leaving a tank when just the tracks are damaged.	
-	VCM_DISEMBARKRANGE = 150; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
+	VCM_DISEMBARKRANGE = 250; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
 	VCM_AISNIPERS = true; //Special sniper AI
 	VCM_AISUPPRESS = true; //AI will attack from further away with primary weapons to suppress enemies
 	Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
@@ -52,8 +52,8 @@ Vcm_Settings =
 	Vcm_GrenadeChance = 50; //Chance the AI will throw a grenade.
 	Vcm_SmokeChance = 30; //Chance the AI will throw a smoke grenade.
 	Vcm_AI_EM = true; //Will the AI use enhanced movement to navigate around.
-	Vcm_AI_EM_CHN = 75; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
-	VCM_AI_EM_CLDWN = 3; //Time in seconds before a group will consider jumping over obstacles;
+	Vcm_AI_EM_CHN = 100; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
+	VCM_AI_EM_CLDWN = 0; //Time in seconds before a group will consider jumping over obstacles;
 	
 	//AI SKILL SETTINGS HERE!!!!!!!!!!!!
 	//LOW DIFFICULTY
