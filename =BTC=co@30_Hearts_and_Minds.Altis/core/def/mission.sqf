@@ -664,7 +664,7 @@ switch (_p_en) do {
         btc_type_motorized = ["rhs_tigr_sts_vdv","rhs_kamaz5350_vdv","rhs_bmp2_vdv","rhs_bmp2e_vdv","rhs_bmp2d_vdv","RHS_Mi24P_vvs","RHS_Mi8AMTSh_vvs","RHS_Mi8MTV3_heavy_vvs"] + ["rhs_sprut_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv"] + ["rhsgref_BRDM2_vmf","rhsgref_BRDM2_ATGM_vmf"]; // Edited: Append part of btc_type_motorized_armed to btc_type_motorized & Add RHSGREF MRAP
         btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_2s1_vmf","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_sprut_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
         btc_type_mg = ["rhs_KORD_VDV","rhs_KORD_high_VDV","RHS_NSV_TriPod_VDV","RHS_AGS30_TriPod_VDV"] + ["O_G_HMG_02_F","O_G_HMG_02_high_F","O_HMG_01_A_F","O_GMG_01_A_F"]; // Edited: Add vanilla static weapons
-        btc_type_gl = ["rhs_Metis_9k115_2_vdv","rhs_Kornet_9M133_2_vdv","rhs_Igla_AA_pod_vdv","rhs_SPG9M_VDV","rhs_2b14_82mm_vdv","RHS_ZU23_VDV"] + ["O_G_Mortar_01_F"] + btc_type_mg; // Edited: Append btc_type_mg to btc_type_gl
+        btc_type_gl = ["rhs_Metis_9k115_2_vdv","rhs_Kornet_9M133_2_vdv","rhs_Igla_AA_pod_vdv","rhs_SPG9M_VDV","rhs_2b14_82mm_vdv","rhs_D30_vmf","RHS_ZU23_VDV"] + ["O_G_Mortar_01_F"] + btc_type_mg; // Edited: Add vanilla static weapons & Append btc_type_mg to btc_type_gl
     };
 };
 

@@ -168,6 +168,7 @@ if (_city getVariable ["spawn_more", false]) then {
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
+    [[_city, _spawningRadius/2] call CBA_fnc_randPos, ["O_G_Mortar_01_F", "rhs_2b14_82mm_vdv", "rhs_D30_vmf", "RHS_ZU23_VDV"], random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every city
 };
 
 if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unitsSpawned", false])}) then {
