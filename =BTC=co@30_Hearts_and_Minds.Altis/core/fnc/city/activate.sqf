@@ -168,7 +168,7 @@ if (_city getVariable ["spawn_more", false]) then {
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
-    [[_city, _spawningRadius/2] call CBA_fnc_randPos, ["O_G_Mortar_01_F", "rhs_2b14_82mm_vdv", "rhs_D30_vmf", "RHS_ZU23_VDV"], random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every city
+    [[_city, _spawningRadius/2] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "spawn_more" city
 };
 
 if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unitsSpawned", false])}) then {
@@ -183,6 +183,7 @@ if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unit
                 [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
             };
         };
+        [[_city, _spawningRadius/2] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "cache" city
     };
 };
 
@@ -207,10 +208,11 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     };
     if (btc_p_veh_armed_ho) then {
         _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (2 + round random 3) do {
+        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random [0, 2, 4]))) do { // Edited: Tweak enemy armed vehicle amount in cache cities when "btc_p_veh_armed_ho" is enabled, default = (2 + round random 3)
             [{_this call btc_fnc_mil_send}, [_closest, _pos, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
+    [[_city, _spawningRadius/2] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "hideout" city
 };
 
 //Suicider
