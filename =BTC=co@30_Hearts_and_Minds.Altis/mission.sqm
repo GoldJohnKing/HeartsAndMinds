@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1565;
+		nextID=1576;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=37;
+		nextID=40;
 	};
 	class Camera
 	{
-		pos[]={12070.62,51.955555,15128.169};
-		dir[]={-0.48548198,-0.41969672,-0.76693588};
-		up[]={-0.2245077,0.90764087,-0.35466367};
-		aside[]={-0.84495276,8.4983185e-009,0.53486866};
+		pos[]={12037.021,22.367901,15065.264};
+		dir[]={0.87438452,-0.26121476,0.40897527};
+		up[]={0.23671256,0.96524638,0.11071752};
+		aside[]={0.42368335,-6.7381188e-007,-0.90582752};
 	};
 };
 binarizationWanted=0;
@@ -104,13 +104,14 @@ addons[]=
 	"Kimi_HMDs_RHS",
 	"A3_Armor_F_Tank_AFV_Wheeled_01",
 	"A3_Armor_F_Gamma_MBT_01",
-	"A3_Drones_F_Air_F_Gamma_UAV_02"
+	"A3_Drones_F_Air_F_Gamma_UAV_02",
+	"ace_spectator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=64;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -535,6 +536,13 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
+		class Item63
+		{
+			className="ace_spectator";
+			name="ACE3 - Spectator";
+			author="ACE-制作团队";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 class DynamicSimulation
@@ -620,7 +628,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=131;
+		items=132;
 		class Item0
 		{
 			dataType="Marker";
@@ -19933,6 +19941,59 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item131
+		{
+			dataType="Layer";
+			name="Spectator";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12038.589,21.758175,15065.75};
+						angles[]={0,3.1415927,0};
+					};
+					isPlayable=1;
+					description="特约观察员";
+					id=1573;
+					type="ace_spectator_virtual";
+					atlOffset=1.0000019;
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12038.589,21.757975,15065.5};
+						angles[]={0,3.1415927,0};
+					};
+					isPlayable=1;
+					description="特约观察员";
+					id=1574;
+					type="ace_spectator_virtual";
+					atlOffset=1.0000019;
+				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12038.589,21.757725,15065.25};
+						angles[]={0,3.1415927,0};
+					};
+					isPlayable=1;
+					description="特约观察员";
+					id=1575;
+					type="ace_spectator_virtual";
+					atlOffset=1;
+				};
+			};
+			id=1569;
+			atlOffset=0.99997711;
 		};
 	};
 	class Connections
