@@ -162,7 +162,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 1500; // Edited: Decrease patrol range, default = 2500
+    btc_patrol_area = 2500;
 
     //Rep
     btc_global_reputation = _p_rep;
@@ -665,7 +665,7 @@ switch (_p_en) do {
         btc_type_motorized_armed = ["RHS_BM21_VDV_01","rhs_2s3_tv","rhs_2s1_vmf","rhs_zsu234_aa","RHS_Ural_Zu23_VDV_01","rhs_btr80a_vdv","rhs_bmd1r","rhs_bmd2m","rhs_bmd4m_vdv","rhs_bmd4ma_vdv","rhs_brm1k_vdv","rhs_sprut_vdv","rhs_t72be_tv","rhs_t80um","rhs_t90sm_tv","RHS_Ka52_vvs","rhs_mi28n_vvs","RHS_Su25SM_vvs","rhs_mig29sm_vvs","RHS_T50_vvs_generic_ext"];
         btc_type_mg = ["rhs_KORD_VDV","rhs_KORD_high_VDV","RHS_NSV_TriPod_VDV","RHS_AGS30_TriPod_VDV"] + ["O_G_HMG_02_F","O_G_HMG_02_high_F","O_HMG_01_A_F","O_GMG_01_A_F"]; // Edited: Add vanilla static weapons
         btc_type_gl = ["rhs_Metis_9k115_2_vdv","rhs_Kornet_9M133_2_vdv","rhs_SPG9M_VDV"]; // Edited: Add vanilla static weapons & Append btc_type_mg to btc_type_gl
-        btc_type_motar = ["O_G_Mortar_01_F", "rhs_2b14_82mm_vdv", "rhs_D30_vmf", "RHS_ZU23_VDV","rhs_Igla_AA_pod_vdv"]; // Edited: Add a new type for enemy mortar and static AA
+        btc_type_motar = ["O_G_Mortar_01_F","rhs_2b14_82mm_vdv","rhs_D30_vmf","RHS_ZU23_VDV","rhs_Igla_AA_pod_vdv"]; // Edited: Add a new type for enemy mortar and static AA
     };
 };
 

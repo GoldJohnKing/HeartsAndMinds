@@ -161,6 +161,7 @@ if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
     for "_i" from 1 to (round (_p_mil_group_ratio * (4 + random [0, 2, 4]))) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
         [_city, _spawningRadius, 4 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group;  // Edited: Tweak enemy amount each group of "spawn_more" (side mission) cities, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+        [[_city, _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;// Edited: Spawn many enemy static weapons every "spawn_more" city
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
