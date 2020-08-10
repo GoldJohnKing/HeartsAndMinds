@@ -115,6 +115,26 @@ private _text = switch (_type) do {
             [" "]
         ];
     };
+    case 22 : { // Edited: Add hint to show player vehicle killed
+        _custom params ["_playerName", "_vehName"];
+        [
+            ["玩家"],
+            [_playerName, 1.25, [1, 0, 0, 1]],
+            [" ", 0.5],
+            ["摧毁了友方载具"],
+            [_vehName, 1.25, [1, 0, 0, 1]]
+        ]
+    };
+    case 23 : { // Edited: Add hint to show player vehicle killed
+        _custom params ["_playerName", "_vehName"];
+        [
+            ["玩家"],
+            [_playerName, 1.25, [1, 0, 0, 1]],
+            [" ", 0.5],
+            ["损失了友方载具"],
+            [_vehName, 1.25, [1, 0, 0, 1]]
+        ]
+    };
 };
 
 _text call CBA_fnc_notify;

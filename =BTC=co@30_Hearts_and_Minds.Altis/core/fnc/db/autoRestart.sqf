@@ -39,14 +39,14 @@ if (_p_autoRestart > 2) then {
         btc_db_is_saving = true;
         [] spawn btc_fnc_db_save;
     };
-//     [{!btc_db_is_saving}, { // Edited: Disable server auto restart
-//         params ["_serverCommandPassword", "_serverCommand"];
-//         if !(_serverCommandPassword serverCommand _serverCommand) then {
-//             ["Invalid password", __FILE__, [true, true, true]] call btc_fnc_debug_message;
-//         };
-//     }, [_serverCommandPassword, _serverCommand]] call CBA_fnc_waitUntilAndExecute;
-// } else {
-//     if !(_serverCommandPassword serverCommand _serverCommand) then {
-//         ["Invalid password", __FILE__, [true, true, true]] call btc_fnc_debug_message;
-//     };
+    [{!btc_db_is_saving}, {
+        params ["_serverCommandPassword", "_serverCommand"];
+        if !(_serverCommandPassword serverCommand _serverCommand) then {
+            ["Invalid password", __FILE__, [true, true, true]] call btc_fnc_debug_message;
+        };
+    }, [_serverCommandPassword, _serverCommand]] call CBA_fnc_waitUntilAndExecute;
+} else {
+    if !(_serverCommandPassword serverCommand _serverCommand) then {
+        ["Invalid password", __FILE__, [true, true, true]] call btc_fnc_debug_message;
+    };
 };
