@@ -48,10 +48,10 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
         [_unit] call btc_fnc_eh_veh_respawn;
         private _driver = driver _unit;
         if (isPlayer _instigator) then {
-            [22, [[name _instigator], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName")]]] remoteExecCall ["btc_fnc_show_hint", 0];
+            [22, [name _instigator, getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName")]] remoteExecCall ["btc_fnc_show_hint", 0];
         } else {
             if (isPlayer _driver) then { // Edited: Temporarily useless: && (_unit isEqualTo _killer)
-                [23, [[name _driver], [getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName")]]] remoteExecCall ["btc_fnc_show_hint", 0];
+                [23, [name _driver, getText (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName")]] remoteExecCall ["btc_fnc_show_hint", 0];
             };
         };
     };
