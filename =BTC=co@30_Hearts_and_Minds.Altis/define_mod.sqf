@@ -31,7 +31,9 @@ btc_custom_loc = [ // Edited: Add custom locations
             "G_Shades_Green"
         ];
 */
-private _weapons = []; // Edited: Remove imbanlance, useless or buggy equipments
+private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
+    "SMA_ACRREMAFGblk_N"
+];
 private _magazines = [
     "Titan_AP"
 ];
