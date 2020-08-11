@@ -57,6 +57,7 @@ _veh setVariable ["btc_dont_delete", true];
 
 if (getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "isUav") isEqualTo 1) then {
     createVehicleCrew _veh;
+    (group (driver _veh)) setVariable ['Vcm_Disable',true]; // Edited: Add support for VCOM
 };
 
 _veh call btc_fnc_db_add_veh;
