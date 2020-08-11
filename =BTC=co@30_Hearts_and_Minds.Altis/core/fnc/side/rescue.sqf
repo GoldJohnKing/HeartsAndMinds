@@ -76,12 +76,11 @@ private _back_taskID = _taskID + "bk";
 private _units = [];
 private _triggers = [];
 {
-    _x setCaptive true;
+    [_x, true] call ACE_captives_fnc_setSurrendered; // Edited: Use ACE_captives_fnc_setSurrendered on pilot instead of setCaptive to force him not moving around, default = _x setCaptive true;
     removeAllWeapons _x;
     _x setBehaviour "CARELESS";
     _x setDir (random 360);
     _x setUnitPos "DOWN";
-    [_x, true, 86400, false] call ace_medical_fnc_setUnconscious; // Edited: Prevent pilot from running around by force him unconscious
     _units pushBack _x;
     //// Create trigger \\\\
     private _trigger = createTrigger ["EmptyDetector", getPos _city];
