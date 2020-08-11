@@ -9443,6 +9443,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=1563;
 					type="B_UAV_AI";
@@ -9458,6 +9459,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=1564;
 					type="B_UAV_AI";
@@ -9994,6 +9996,7 @@ class Mission
 					flags=2;
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=717;
 					type="B_UAV_AI";
@@ -10010,6 +10013,7 @@ class Mission
 					side="West";
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=719;
 					type="B_UAV_AI";
@@ -14335,6 +14339,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=1196;
 					type="B_UAV_AI";
@@ -18142,6 +18147,7 @@ class Mission
 					flags=2;
 					class Attributes
 					{
+						init="call{(group this) setVariable ['Vcm_Disable',true];}";
 					};
 					id=1487;
 					type="B_UAV_AI";

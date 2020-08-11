@@ -48,6 +48,7 @@ if (_isContaminated) then {
 if !(_magClass isEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
 if (getNumber(configFile >> "CfgVehicles" >> _type >> "isUav") isEqualTo 1) then {
     createVehicleCrew _obj;
+    (group (driver _obj)) setVariable ['Vcm_Disable',true]; // Edited: Add support for VCOM
 };
 
 [_obj] call btc_fnc_log_init;
