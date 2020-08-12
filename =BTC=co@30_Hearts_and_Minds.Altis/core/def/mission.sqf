@@ -424,15 +424,15 @@ if (isServer) then {
 
     btc_construction_array =
     [
-        [
-            "Fortifications",
-            "Static",
-            "Ammobox",
-            "Containers",
-            "Supplies",
+        [ // Add: Translation for logistics menu, default = "Fortifications", "Static", "Ammobox", "Containers", "Supplies", "FOB", "Decontamination", "Vehicle Logistic"
+            "防御工事",
+            "固定式武器",
+            "弹药箱",
+            "集装箱",
+            "人道主义救援物资",
             "FOB",
-            "Decontamination",
-            "Vehicle Logistic"
+            "消杀喷淋装置",
+            "后勤补给"
         ] + (_rearming_vehicles apply {getText (_cfgVehicles >> _x >> "displayName")}),
         [
             [
@@ -488,7 +488,10 @@ if (isServer) then {
             ],
             [
                 //"Vehicle logistic"
-                "B_Slingload_01_Ammo_F", // Edited: Add ammo cargo box
+                "B_Slingload_01_Ammo_F", // Edited: Add cargo box for ammo
+                "B_Slingload_01_Repair_F", // Edited: Add cargo box for repair
+                "B_Slingload_01_Fuel_F", // Edited: Add cargo box for refuel
+                "B_Slingload_01_Medevac_F", // Edited: Add cargo box for medevac
                 "ACE_Wheel",
                 "ACE_Track"
             ]
