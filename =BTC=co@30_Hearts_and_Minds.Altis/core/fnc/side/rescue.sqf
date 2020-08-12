@@ -76,7 +76,7 @@ private _back_taskID = _taskID + "bk";
 private _units = [];
 private _triggers = [];
 {
-    [_x, true] call ACE_captives_fnc_setSurrendered; // Edited: Use ACE_captives_fnc_setSurrendered on pilot instead of setCaptive to force him not moving around, default = _x setCaptive true;
+    [_x, true] call ACE_captives_fnc_setHandcuffed; // Edited: Use ACE_captives_fnc_setHandcuffed on pilot instead of setCaptive to force him not moving around, default = _x setCaptive true;
     removeAllWeapons _x;
     _x setBehaviour "CARELESS";
     _x setDir (random 360);
