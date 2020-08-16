@@ -102,8 +102,8 @@ if !(_data_units isEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
-        case "Hill" : {1};
-        case "NameLocal" : {2}; // Edited: There are so many NameLocal inside NameVillage in Fapovo Island, so we greatly decrease the enemy amount of them
+        case "Hill" : {3};
+        case "NameLocal" : {3};
         case "NameVillage" : {3};
         case "NameCity" : {5};
         case "NameCityCapital" : {8};
