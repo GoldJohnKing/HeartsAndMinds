@@ -104,8 +104,8 @@ if !(_data_units isEqualTo []) then {
     private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
         case "Hill" : {3};
         case "NameLocal" : {3};
-        case "NameVillage" : {4};
-        case "NameCity" : {6};
+        case "NameVillage" : {3};
+        case "NameCity" : {5};
         case "NameCityCapital" : {8};
         case "Airport" : {8};
         case "NameMarine" : {3};
