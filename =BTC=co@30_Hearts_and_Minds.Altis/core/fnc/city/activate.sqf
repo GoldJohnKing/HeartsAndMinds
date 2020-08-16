@@ -102,13 +102,13 @@ if !(_data_units isEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
-        case "Hill" : {2};
+        case "Hill" : {3};
         case "NameLocal" : {3};
-        case "NameVillage" : {4}; // Edited: Note that all cities except two airports (one occupied by player) in Kujari are "NameVillage"
+        case "NameVillage" : {4};
         case "NameCity" : {6};
         case "NameCityCapital" : {8};
         case "Airport" : {8};
-        case "NameMarine" : {2};
+        case "NameMarine" : {3};
         default {0};
     });
 

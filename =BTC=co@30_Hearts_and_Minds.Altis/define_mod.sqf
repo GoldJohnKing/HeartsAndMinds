@@ -1,12 +1,9 @@
-btc_custom_loc = [ // Edited: Add custom locations
+btc_custom_loc = [
 /*
     DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
-    [getMarkerPos "btc_loc_1","NameVillage","The Big Swamp",500,true],
-    [getMarkerPos "btc_loc_2","NameVillage","The Little Swamp",500,true],
-    [getMarkerPos "btc_loc_3","NameVillage","The Great Desert",500,true]
 ];
 
 /*
