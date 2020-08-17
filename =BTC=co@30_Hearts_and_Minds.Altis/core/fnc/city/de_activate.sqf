@@ -40,7 +40,7 @@ if !(_city getVariable ["active", false]) exitWith {};
     };
 
     //Save all and delete
-    private _radius = (_city getVariable ["radius", 0]) max 300; // Edited: Force set city radius, default = _city getVariable ["radius", 0]
+    private _radius = _city getVariable ["radius", 0];
     private _has_en = _city getVariable ["occupied", false];
 
     if (_has_en) then {
