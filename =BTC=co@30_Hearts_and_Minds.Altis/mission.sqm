@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=84;
+		nextID=85;
 	};
 	class Camera
 	{
@@ -14291,7 +14291,6 @@ class Mission
 				position[]={702.73767,25.45248,5096.3877};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -14305,6 +14304,7 @@ class Mission
 			};
 			id=1629;
 			type="B_Truck_01_ammo_F";
+			atlOffset=67.076889;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14529,7 +14529,6 @@ class Mission
 				position[]={698.56628,25.441391,5096.4941};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -14543,6 +14542,7 @@ class Mission
 			};
 			id=1630;
 			type="B_Truck_01_fuel_F";
+			atlOffset=67.044098;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14702,7 +14702,6 @@ class Mission
 				position[]={707.26489,25.840427,5096.3159};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -14716,6 +14715,7 @@ class Mission
 			};
 			id=1631;
 			type="B_Truck_01_Repair_F";
+			atlOffset=67.082199;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15169,7 +15169,6 @@ class Mission
 				position[]={693.85767,25.440807,5097.0708};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -15183,6 +15182,7 @@ class Mission
 			};
 			id=1634;
 			type="B_Truck_01_mover_F";
+			atlOffset=66.996979;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18996,7 +18996,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={450.33676,21.670362,4589.2095};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19004,6 +19004,7 @@ class Mission
 			{
 				init="call{this setVariable ['GCblackList', true];}";
 				name="btc_helo_19";
+				textures="Standard";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -19042,7 +19043,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={450.32718,19.77,4589.1416};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
