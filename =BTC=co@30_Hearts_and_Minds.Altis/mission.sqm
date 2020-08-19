@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1740;
+		nextID=1745;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=83;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={694.53125,113.94469,4817.1221};
-		dir[]={-0.48824748,-0.54209799,-0.68408746};
-		up[]={-0.31495699,0.84028345,-0.44128811};
-		aside[]={-0.81403613,-1.2867386e-006,0.58099496};
+		pos[]={416.43835,76.986481,4588.314};
+		dir[]={0.45716387,-0.88921881,0.023494998};
+		up[]={0.88801074,0.45756936,0.045637507};
+		aside[]={0.051327296,2.1707092e-007,-0.99878955};
 	};
 };
 binarizationWanted=0;
@@ -110,13 +110,14 @@ addons[]=
 	"FIR_F35B_Armaverse_F",
 	"A3_Armor_F_EPC_MBT_01",
 	"A3_Armor_F_Gamma_MBT_01",
-	"A3_Armor_F_Beta_APC_Tracked_01"
+	"A3_Armor_F_Beta_APC_Tracked_01",
+	"RHSGREF_c_A29"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=71;
+		items=72;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -591,6 +592,13 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
+		class Item71
+		{
+			className="RHSGREF_c_A29";
+			name="GREF Super Tucano";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 class DynamicSimulation
@@ -676,7 +684,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=117;
+		items=119;
 		class Item0
 		{
 			dataType="Marker";
@@ -9458,7 +9466,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={840.93341,23.530884,5093.9136};
+						position[]={840.99603,23.533413,5093.8384};
 					};
 					side="West";
 					flags=6;
@@ -9468,13 +9476,14 @@ class Mission
 					};
 					id=1563;
 					type="B_UAV_AI";
+					atlOffset=0.0025253296;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={840.93341,23.530884,5093.9136};
+						position[]={840.99603,23.533413,5093.8384};
 					};
 					side="West";
 					flags=4;
@@ -9484,6 +9493,7 @@ class Mission
 					};
 					id=1564;
 					type="B_UAV_AI";
+					atlOffset=0.0025253296;
 				};
 			};
 			class Attributes
@@ -14278,7 +14288,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={649.7395,25.454033,5101.4106};
+				position[]={702.73767,25.45248,5096.3877};
 			};
 			side="Empty";
 			flags=4;
@@ -14295,7 +14305,6 @@ class Mission
 			};
 			id=1629;
 			type="B_Truck_01_ammo_F";
-			atlOffset=0.0015525818;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14517,7 +14526,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={645.56812,25.444111,5101.5171};
+				position[]={698.56628,25.441391,5096.4941};
 			};
 			side="Empty";
 			flags=4;
@@ -14534,7 +14543,6 @@ class Mission
 			};
 			id=1630;
 			type="B_Truck_01_fuel_F";
-			atlOffset=0.0027198792;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14691,7 +14699,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={654.26672,25.841904,5101.3389};
+				position[]={707.26489,25.840427,5096.3159};
 			};
 			side="Empty";
 			flags=4;
@@ -14708,7 +14716,6 @@ class Mission
 			};
 			id=1631;
 			type="B_Truck_01_Repair_F";
-			atlOffset=0.0014762878;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15159,7 +15166,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={640.8595,25.443008,5102.0938};
+				position[]={693.85767,25.440807,5097.0708};
 			};
 			side="Empty";
 			flags=4;
@@ -15176,7 +15183,6 @@ class Mission
 			};
 			id=1634;
 			type="B_Truck_01_mover_F";
-			atlOffset=0.0022010803;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18035,7 +18041,7 @@ class Mission
 			};
 			id=1727;
 			type="FIR_F35B_Blank2";
-			atlOffset=0.00029182434;
+			atlOffset=0.00031089783;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18982,6 +18988,92 @@ class Mission
 					};
 				};
 				nAttributes=5;
+			};
+		};
+		class Item117
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={450.33676,21.670362,4589.2095};
+				angles[]={-0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this setVariable ['GCblackList', true];}";
+				name="btc_helo_19";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				pylons=";;;;;rhsusf_ANALE40_CMFlare_Chaff_Magazine_x2;";
+				aiRadarUsage=1;
+			};
+			id=1741;
+			type="RHSGREF_A29B_HIDF";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""SatchelCharge_Remote_Mag""],[1]],[[""ACE_DefusalKit"",""ACE_M26_Clacker"",""ToolKit""],[1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item118
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={450.32718,19.77,4589.1416};
+				angles[]={-0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1744;
+			type="Land_HelipadSquare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
