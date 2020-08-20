@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1763;
+		nextID=1764;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=87;
+		nextID=88;
 	};
 	class Camera
 	{
-		pos[]={540.08722,53.939358,4633.0547};
-		dir[]={-0.47970253,-0.25920698,-0.83842611};
-		up[]={-0.12878558,0.96580052,-0.22509269};
-		aside[]={-0.8680672,-2.0945445e-006,0.49666515};
+		pos[]={557.44592,45.669849,4530.3882};
+		dir[]={-0.96799451,-0.21667594,-0.12705666};
+		up[]={-0.21486451,0.97624046,-0.028202901};
+		aside[]={-0.13014716,-1.6961712e-007,0.99154532};
 	};
 };
 binarizationWanted=0;
@@ -663,13 +663,16 @@ class Mission
 	{
 		resistanceWest=0;
 		resistanceEast=1;
-		startWeather=0;
+		startWeather=0.30000001;
+		startFog=0.5;
 		startWind=0.1;
 		startWaves=1;
-		forecastWeather=0;
+		forecastWeather=0.30000001;
+		forecastFog=0.5;
 		forecastWind=0.1;
 		forecastWaves=1;
 		forecastLightnings=0.1;
+		wavesForced=1;
 		year=2020;
 		day=26;
 		hour=12;
@@ -679,7 +682,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=119;
+		items=120;
 		class Item0
 		{
 			dataType="Marker";
@@ -9461,7 +9464,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={840.99603,23.533413,5093.8384};
+						position[]={936.01996,19.781439,4615.2827};
+						angles[]={-0,3.1415927,0};
 					};
 					side="West";
 					flags=6;
@@ -9471,14 +9475,14 @@ class Mission
 					};
 					id=1563;
 					type="B_UAV_AI";
-					atlOffset=0.0025253296;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={840.99603,23.533413,5093.8384};
+						position[]={936.01996,19.781439,4615.2827};
+						angles[]={-0,3.1415927,0};
 					};
 					side="West";
 					flags=4;
@@ -9488,7 +9492,6 @@ class Mission
 					};
 					id=1564;
 					type="B_UAV_AI";
-					atlOffset=0.0025253296;
 				};
 			};
 			class Attributes
@@ -9527,7 +9530,6 @@ class Mission
 				};
 			};
 			id=304;
-			atlOffset=0.0025253296;
 		};
 		class Item26
 		{
@@ -12941,7 +12943,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={840.93341,25.097786,5093.8525};
+				position[]={935.95734,21.345812,4615.2969};
+				angles[]={-0,3.1415927,0};
 			};
 			side="West";
 			flags=6;
@@ -12957,7 +12960,6 @@ class Mission
 			};
 			id=1562;
 			type="B_UAV_02_dynamicLoadout_F";
-			atlOffset=0.0025253296;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18887,7 +18889,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={449.72348,21.670362,4588.9692};
-				angles[]={0,1.5707964,0};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19047,6 +19049,46 @@ class Mission
 								};
 							};
 							value="[[[[],[]],[[""SatchelCharge_Remote_Mag""],[1]],[[""ACE_M26_Clacker"",""ACE_DefusalKit"",""ToolKit""],[1,1,1]],[[""B_Parachute""],[10]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item119
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={935.95166,19.780001,4616.1616};
+				angles[]={-0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=1763;
+			type="Land_HelipadSquare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
 						};
 					};
 				};
