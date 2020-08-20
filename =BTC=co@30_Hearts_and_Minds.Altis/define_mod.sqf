@@ -66,7 +66,11 @@ private _items = [
     "JAS_GPNVG18_Full_Tan_TI",
     "EOD9_HELMET_Base",
     "NVGogglesC_SSU_blk",
-    "NVGogglesC_SSU_grn"
+    "NVGogglesC_SSU_grn",
+    // "NVGogglesB_SSU_blk",
+    // "NVGogglesB_SSU_gry",
+    // "NVGogglesB_SSU_grn",
+    "HLC_Charm_base"
 ];
 private _backpacks = [
     "C_IDAP_UAV_01_backpack_F",
