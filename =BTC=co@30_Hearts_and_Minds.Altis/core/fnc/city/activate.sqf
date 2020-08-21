@@ -159,8 +159,8 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (4 + round random [0, 2, 4]) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
-        [_city, _spawningRadius, 4 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group;  // Edited: Tweak enemy amount each group of "spawn_more" (side mission) cities, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+    for "_i" from 1 to (6 + round random [0, 2, 4]) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
+        [_city, _spawningRadius, 6 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group;  // Edited: Tweak enemy amount each group of "spawn_more" (side mission) cities, default = [_city, _spawningRadius, 4 + round random 3, random 1]
     };
     for "_i" from 1 to (round (7.5 + random 7.5)) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
             [[_city, random [0, _spawningRadius/2, _spawningRadius]] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
