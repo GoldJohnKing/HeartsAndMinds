@@ -460,7 +460,7 @@ if (isServer) then {
                 "Land_Pod_Heli_Transport_04_medevac_black_F",
                 "B_Slingload_01_Fuel_F"
             ],
-            _rearming_static + _magazines_static,
+            _rearming_static - ["RHS_M252_WD","RHS_M252_USMC_D","RHS_M252_USMC_WD","rhsgref_cdf_b_reg_M252","rhsgref_cdf_reg_M252","rhssaf_army_m252","rhssaf_army_o_m252"] + ["ace_dragon_staticAssembled","RHS_Stinger_AA_pod_D","rhs_Igla_AA_pod_vdv","RHS_ZU23_VDV","RHS_M119_D","rhs_D30_vdv","rhs_D30_at_vdv","B_AAA_System_01_F","B_Radar_System_01_F","B_SAM_System_03_F","B_SAM_System_02_F","B_Ship_MRLS_01_F","B_Ship_Gun_01_F","B_SAM_System_01_F"] + _magazines_static, // Edited: Delete duplicates & Add more static weapons, default = _rearming_static + _magazines_static
             [
                 //"Ammobox"
                 "Land_WoodenBox_F"
