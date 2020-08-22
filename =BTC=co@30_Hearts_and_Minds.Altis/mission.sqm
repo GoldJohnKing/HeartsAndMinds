@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=88;
+		nextID=89;
 	};
 	class Camera
 	{
-		pos[]={557.44592,45.669849,4530.3882};
-		dir[]={-0.96799451,-0.21667594,-0.12705666};
-		up[]={-0.21486451,0.97624046,-0.028202901};
-		aside[]={-0.13014716,-1.6961712e-007,0.99154532};
+		pos[]={444.24936,30.158922,4530.5635};
+		dir[]={-0.49237338,-0.86928976,0.04484937};
+		up[]={-0.86568493,0.49434745,0.078853652};
+		aside[]={0.090717949,4.5468914e-007,0.9959299};
 	};
 };
 binarizationWanted=0;
@@ -9465,7 +9465,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={936.01996,19.781439,4615.2827};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="West";
 					flags=6;
@@ -9482,7 +9482,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={936.01996,19.781439,4615.2827};
-						angles[]={-0,3.1415927,0};
+						angles[]={0,3.1415927,0};
 					};
 					side="West";
 					flags=4;
@@ -9530,6 +9530,7 @@ class Mission
 				};
 			};
 			id=304;
+			atlOffset=-0.0025272369;
 		};
 		class Item26
 		{
@@ -12944,7 +12945,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={935.95734,21.345812,4615.2969};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			side="West";
 			flags=6;
@@ -12960,6 +12961,7 @@ class Mission
 			};
 			id=1562;
 			type="B_UAV_02_dynamicLoadout_F";
+			atlOffset=-0.0025272369;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16153,6 +16155,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				init="call{private _action = [""AI"", ""招募友军单位"", """", { " \n "    (group player) createUnit [""rhsusf_army_ocp_machinegunner"", position player, [], 0, ""NONE""] " \n "}, {count units group player < 3}] call ace_interact_menu_fnc_createAction; " \n " " \n "[this, 0, [""ACE_MainActions""], _action] call ace_interact_menu_fnc_addActionToObject;}";
 			};
 			id=1688;
 			type="Flag_NATO_F";
@@ -18889,7 +18892,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={449.72348,21.670362,4588.9692};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19061,7 +19064,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={935.95166,19.780001,4616.1616};
-				angles[]={-0,3.1415927,0};
+				angles[]={0,3.1415927,0};
 			};
 			side="Empty";
 			flags=4;
