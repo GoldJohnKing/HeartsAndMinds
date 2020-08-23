@@ -108,12 +108,12 @@ if !(_data_units isEqualTo []) then {
         case "NameCity" : {6}; // Edited: Most city are "NameCity" or "NameCityCapital", only few "NameLocal"
         case "NameCityCapital" : {6};
         case "Airport" : {6};
-        case "NameMarine" : {1};
+        case "NameMarine" : {3};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random [0, _max_number_group / 2, _max_number_group]))) do { // Edited: Tweak basic amount of enemy groups, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
+        for "_i" from 1 to (1 + round (_p_mil_group_ratio * (random [0, _max_number_group / 2, _max_number_group]))) do { // Edited: Tweak basic amount of enemy groups, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
             [_city, _spawningRadius, 4 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
@@ -238,7 +238,7 @@ if !(_city getVariable ["has_suicider", false]) then {
         private _trigger = createTrigger ["EmptyDetector", getPos _city];
         _trigger setTriggerArea [_radius, _radius, 0, false];
         _trigger setTriggerActivation [str btc_enemy_side, "NOT PRESENT", false];
-        _trigger setTriggerStatements ["count thisList < 3", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
+        _trigger setTriggerStatements ["count thisList < 2", format ["[%1] call btc_fnc_city_set_clear", _id], ""]; // Edited: Make cities easier to be free, default = _trigger setTriggerStatements ["this", format ["[%1] call btc_fnc_city_set_clear", _id], ""];
         _city setVariable ["trigger", _trigger];
     };
 
