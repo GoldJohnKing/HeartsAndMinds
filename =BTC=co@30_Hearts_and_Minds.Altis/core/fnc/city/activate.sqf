@@ -105,9 +105,9 @@ if !(_data_units isEqualTo []) then {
         case "Hill" : {3};
         case "NameLocal" : {5};
         case "NameVillage" : {5};
-        case "NameCity" : {6}; // Edited: Most city are "NameCity" or "NameCityCapital", only few "NameLocal"
-        case "NameCityCapital" : {6};
-        case "Airport" : {6};
+        case "NameCity" : {5}; // Edited: Most city are "NameCity" or "NameCityCapital", only few "NameLocal"
+        case "NameCityCapital" : {5};
+        case "Airport" : {5};
         case "NameMarine" : {3};
         default {0};
     });
@@ -159,7 +159,7 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (6 + round random [0, 2, 4]) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
+    for "_i" from 1 to (4 + round random [0, 2, 4]) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
         [_city, _spawningRadius, 4 + round random [0, 2, 4], random 1] call btc_fnc_mil_create_group;  // Edited: Tweak enemy amount each group of "spawn_more" (side mission) cities, default = [_city, _spawningRadius, 4 + round random 3, random 1]
     };
     for "_i" from 1 to (round (7.5 + random 7.5)) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
@@ -167,7 +167,7 @@ if (_city getVariable ["spawn_more", false]) then {
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = _city; // Edited: Spawn the armed vehicle inside the city instead of closet city, default = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity
-        for "_i" from 1 to (2 + round random [0, 2, 4]) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
+        for "_i" from 1 to (3 + round random [0, 2, 4]) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
