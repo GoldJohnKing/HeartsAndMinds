@@ -106,8 +106,8 @@ if !(_data_units isEqualTo []) then {
         case "NameLocal" : {5};
         case "NameVillage" : {5};
         case "NameCity" : {6}; // Edited: Most city are "NameCity" or "NameCityCapital", only few "NameLocal"
-        case "NameCityCapital" : {8};
-        case "Airport" : {8};
+        case "NameCityCapital" : {6};
+        case "Airport" : {6};
         case "NameMarine" : {1};
         default {0};
     });
