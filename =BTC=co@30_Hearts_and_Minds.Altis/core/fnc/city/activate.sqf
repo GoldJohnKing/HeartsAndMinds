@@ -166,8 +166,8 @@ if (_city getVariable ["spawn_more", false]) then {
             [[_city, random [0, _spawningRadius/2, _spawningRadius]] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
     };
     if (btc_p_veh_armed_spawn_more) then {
-        private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random [0, 2, 4]))) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
+        private _closest = _city; // Edited: Spawn the armed vehicle inside the city instead of closet city, default = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity
+        for "_i" from 1 to (2 + round random [0, 2, 4]) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
