@@ -210,7 +210,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "kill", "EMP", "removeRubbish"]; // Edited: Exclude "capture_officer", "convoy", "civtreatment", "hack" - On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "kill", "EMP", "removeRubbish", "hack"]; // Edited: Exclude "capture_officer", "convoy", "civtreatment", "hack" - On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
     if (btc_p_sea) then {btc_side_list append ["underwater_generator"]}; // Edited: Exclude "civtreatment_boat" - On sea
     // if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"}; // Edited: Exclude "chemicalLeak" due to performance issue
     btc_side_list_use = [];
@@ -282,8 +282,8 @@ if (isServer) then {
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
 
     //BTC Vehicles in missions.sqm
-    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24, btc_veh_25, btc_veh_26, btc_veh_27, btc_veh_28, btc_veh_29, btc_veh_30, btc_veh_31]; // Edited: Modified according to player vehicles
-    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10, btc_helo_11, btc_helo_12, btc_helo_13, btc_helo_14, btc_helo_15, btc_helo_16, btc_helo_17, btc_helo_18, btc_helo_19, btc_helo_20]; // Edited: Modified according to player vehicles
+    btc_vehicles = [btc_veh_1, btc_veh_2, btc_veh_3, btc_veh_4, btc_veh_5, btc_veh_6, btc_veh_7, btc_veh_8, btc_veh_9, btc_veh_10, btc_veh_11, btc_veh_12, btc_veh_13, btc_veh_14, btc_veh_15, btc_veh_16, btc_veh_17, btc_veh_18, btc_veh_19, btc_veh_20, btc_veh_21, btc_veh_22, btc_veh_23, btc_veh_24]; // Edited: Modified according to player vehicles
+    btc_helo = [btc_helo_1, btc_helo_2, btc_helo_3, btc_helo_4, btc_helo_5, btc_helo_6, btc_helo_7, btc_helo_8, btc_helo_9, btc_helo_10, btc_helo_11, btc_helo_12, btc_helo_13, btc_helo_14, btc_helo_15, btc_helo_16, btc_helo_17, btc_helo_18, btc_helo_19, btc_helo_21, btc_helo_22, btc_helo_23, btc_helo_24, btc_helo_25, btc_helo_26, btc_helo_27]; // Edited: Modified according to player vehicles
 
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
