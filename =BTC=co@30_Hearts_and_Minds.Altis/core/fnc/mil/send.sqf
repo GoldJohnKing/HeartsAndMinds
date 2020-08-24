@@ -51,7 +51,9 @@ switch (_typeOf_patrol) do {
 
         if (_veh_type isEqualTo "") then {_veh_type = selectRandom btc_type_motorized};
 
-        private _return_pos = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos;
+        private _roads = _pos nearRoads 300; // Edited: Make patrol always spawn on road
+        if !(_roads isEqualTo []) then {_pos = getPos (selectRandom _roads);} else {[_pos, 10, 500, 13, false] call btc_fnc_findsafepos;}; // Edited: Make patrol always spawn on road
+        private _return_pos = _pos; // Edited: Make patrol always spawn on road, default = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos
 
         _delay = [_group, _return_pos, _veh_type] call btc_fnc_mil_createVehicle;
 
