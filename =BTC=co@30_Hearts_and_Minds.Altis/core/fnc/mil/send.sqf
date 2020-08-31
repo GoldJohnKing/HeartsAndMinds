@@ -42,32 +42,39 @@ switch (_typeOf_patrol) do {
         _group = ([_pos, 150, 3 + round random 6, 1] call btc_fnc_mil_create_group) select 0;
         _group setVariable ["no_cache", true];
         [_group] call CBA_fnc_clearWaypoints;
-
-        [_group, _dest, -1, "MOVE", "AWARE", "RED", "FULL", _infFormation, "(group this) call btc_fnc_data_add_group;", nil, 60] call CBA_fnc_addWaypoint;
     };
     case 1 : {
         _group = createGroup btc_enemy_side;
         _group setVariable ["no_cache", true];
+        [_group] call CBA_fnc_clearWaypoints;
 
         if (_veh_type isEqualTo "") then {_veh_type = selectRandom btc_type_motorized};
-
-        private _roads = _pos nearRoads 300; // Edited: Make patrol always spawn on road
-        if !(_roads isEqualTo []) then {_pos = getPos (selectRandom _roads);} else {[_pos, 10, 500, 13, false] call btc_fnc_findsafepos;}; // Edited: Make patrol always spawn on road
-        private _return_pos = _pos; // Edited: Make patrol always spawn on road, default = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos
+        // private _return_pos = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos; // Edited: Refactor vehicle spawn position, make it always spawn on road
+        private _roads = _pos nearRoads 300; // Edited: Refactor vehicle spawn position, make it always spawn on road
+        if !(_roads isEqualTo []) then {_pos = getPos (selectRandom _roads);} else {[_pos, 10, 500, 13, false] call btc_fnc_findsafepos;}; // Edited: Refactor vehicle spawn position, make it always spawn on road
+        private _return_pos = _pos; // Edited: Refactor vehicle spawn position, make it always spawn on road
 
         _delay = [_group, _return_pos, _veh_type] call btc_fnc_mil_createVehicle;
-
-        [_group] call CBA_fnc_clearWaypoints;
-        [_group, _dest, -1, "MOVE", "AWARE", "RED", "NORMAL", "NO CHANGE", "(group this) call btc_fnc_data_add_group;", nil, 60] call CBA_fnc_addWaypoint;
-        [_group, _dest, -1, "GETOUT", nil, nil, nil, nil, nil, nil, 60] call CBA_fnc_addWaypoint;
-        [_group, _dest, -1, "SENTRY", nil, nil, nil, nil, nil, nil, 60] call CBA_fnc_addWaypoint;
-
     };
 };
 
 [{
-    _this call btc_fnc_set_groupsOwner;
-    (_this select 0 select 0) deleteGroupWhenEmpty true;
-}, [[_group]], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
+    params ["_group", "_typeOf_patrol", "_dest", "_infFormation"];
+
+    switch (_typeOf_patrol) do {
+        case 0 : {
+            [_group, _dest, -1, "MOVE", "AWARE", "RED", "FULL", _infFormation, "(group this) call btc_fnc_data_add_group;", nil, 60] call CBA_fnc_addWaypoint;
+        };
+        case 1 : {
+            [_group, _dest, -1, "MOVE", "AWARE", "RED", "NORMAL", "NO CHANGE", "(group this) call btc_fnc_data_add_group;", nil, 60] call CBA_fnc_addWaypoint;
+            [_group, _dest, -1, "GETOUT", nil, nil, nil, nil, nil, nil, 60] call CBA_fnc_addWaypoint;
+            [_group, _dest, -1, "SENTRY", nil, nil, nil, nil, nil, nil, 60] call CBA_fnc_addWaypoint;
+        };
+    };
+
+    [[_group]] call btc_fnc_set_groupsOwner;
+
+    _group deleteGroupWhenEmpty true;
+}, [_group, _typeOf_patrol, _dest, _infFormation], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
 
 _group
