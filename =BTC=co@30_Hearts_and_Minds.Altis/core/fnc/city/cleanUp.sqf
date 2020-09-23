@@ -38,17 +38,17 @@ _toRemove append (allDead select {
     ((btc_gear_object inArea [getPosWorld _dead, 50, 50, 0, false]) || (_playableUnits inAreaArray [getPosWorld _dead, 100, 100] isEqualTo [])) && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Force delete dead units near player spawn point & Decrease minimal clean range for dead units, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
 });
 
+_toRemove call CBA_fnc_deleteEntity;
+
 if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
-    _toRemove append (allGroups select {
-        units _x select {alive _x} isEqualTo [] &&
+    (allGroups select {
+        units _x isEqualTo [] &&
         !(
             _x in btc_patrol_active ||
             _x in btc_civ_veh_active
         )
-    });
+    }) call CBA_fnc_deleteEntity;
 };
-
-_toRemove call CBA_fnc_deleteEntity;
 
 while {objNull in btc_chem_contaminated} do {
     btc_chem_contaminated deleteAt (
