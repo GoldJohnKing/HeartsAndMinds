@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=102;
+		nextID=103;
 	};
 	class Camera
 	{
-		pos[]={8391.9736,188.82625,7008.5635};
-		dir[]={-0.24775514,-0.2717106,-0.93006247};
-		up[]={-0.069982953,0.9623363,-0.26271603};
-		aside[]={-0.96640176,-1.3387762e-007,0.257438};
+		pos[]={8414.8711,155.84712,6935.8208};
+		dir[]={0.01593416,-0.42627785,0.90448552};
+		up[]={0.0075104451,0.9045524,0.4262982};
+		aside[]={0.9998709,-2.3073299e-006,-0.017616795};
 	};
 };
 binarizationWanted=0;
@@ -631,6 +631,7 @@ class Mission
 		forecastWaves=1;
 		forecastLightnings=0.1;
 		wavesForced=1;
+		windForced=1;
 		year=2020;
 		month=9;
 		day=25;
@@ -11118,10 +11119,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8553.2734,118.67258,6582.04};
-				angles[]={0,1.5707964,0};
+				position[]={8542.7373,118.22958,6844.7373};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{this setVariable ['GCblackList', true];}";
@@ -11134,7 +11136,6 @@ class Mission
 			};
 			id=1386;
 			type="B_T_VTOL_01_vehicle_F";
-			atlOffset=0.44300079;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13582,10 +13583,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8553.5439,118.62728,6699.3052};
-				angles[]={0,1.5707964,0};
+				position[]={8469.6582,118.22958,6790.7832};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{this setVariable ['GCblackList', true];}";
@@ -13598,7 +13600,6 @@ class Mission
 			};
 			id=1636;
 			type="B_T_VTOL_01_armed_F";
-			atlOffset=0.39769745;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18986,7 +18987,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8313.6719,111.54,7039.1621};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -19304,7 +19305,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8307.7715,111.54,7036.0571};
+				position[]={8307.7656,111.54,7036.0571};
 			};
 			areaSize[]={1,-1,1};
 			id=1839;
