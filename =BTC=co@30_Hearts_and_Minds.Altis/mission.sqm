@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1841;
+		nextID=1843;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=103;
+		nextID=104;
 	};
 	class Camera
 	{
-		pos[]={8414.8711,155.84712,6935.8208};
-		dir[]={0.01593416,-0.42627785,0.90448552};
-		up[]={0.0075104451,0.9045524,0.4262982};
-		aside[]={0.9998709,-2.3073299e-006,-0.017616795};
+		pos[]={8454.6494,167.93875,6833.3135};
+		dir[]={0.10986666,-0.51158971,-0.85223991};
+		up[]={0.065422006,0.85917765,-0.5074814};
+		aside[]={-0.99183881,-6.1650644e-007,-0.12786309};
 	};
 };
 binarizationWanted=0;
@@ -106,13 +106,14 @@ addons[]=
 	"A3_Air_F_Heli_Light_01",
 	"Kimi_HMDs_Helos",
 	"A3_Air_F_Beta_Heli_Transport_01",
-	"A3_Modules_F"
+	"A3_Modules_F",
+	"CUP_CAMisc_E_WF"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=66;
+		items=67;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -552,6 +553,11 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
+		class Item66
+		{
+			className="CUP_CAMisc_E_WF";
+			name="CUP_CAMisc_E_WF";
+		};
 	};
 };
 class DynamicSimulation
@@ -642,7 +648,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=117;
+		items=118;
 		class Item0
 		{
 			dataType="Marker";
@@ -11120,7 +11126,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8542.7373,118.22958,6844.7373};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13094,7 +13100,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8559.2842,113.43513,6771.1572};
+				position[]={8559.2842,113.43559,6771.1572};
 				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
@@ -13111,7 +13117,7 @@ class Mission
 			};
 			id=1629;
 			type="B_Truck_01_ammo_F";
-			atlOffset=-0.030456543;
+			atlOffset=-0.029998779;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13584,7 +13590,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8469.6582,118.22958,6790.7832};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14723,7 +14729,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8377.4746,113.30995,6843.8262};
+				position[]={8376.5664,113.36374,6844.1226};
 				angles[]={0,4.712389,0};
 			};
 			side="Empty";
@@ -14735,7 +14741,7 @@ class Mission
 			};
 			id=1701;
 			type="Land_MultiScreenComputer_01_olive_F";
-			atlOffset=1.1529312;
+			atlOffset=1.5736542;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18975,7 +18981,7 @@ class Mission
 		class Item113
 		{
 			dataType="Marker";
-			position[]={8307.835,111.54,7035.9414};
+			position[]={8307.7725,111.54,7036.0391};
 			name="marker_36";
 			text="医疗中心";
 			type="b_med";
@@ -18986,8 +18992,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8313.6719,111.54,7039.1621};
-				angles[]={0,1.5707964,0};
+				position[]={8312.5244,111.631,7035.2271};
+				angles[]={6.2822776,4.712389,0.0028274334};
 			};
 			side="Empty";
 			flags=4;
@@ -18996,6 +19002,7 @@ class Mission
 			};
 			id=1834;
 			type="ACE_medicalSupplyCrate_advanced";
+			atlOffset=0.091003418;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19384,7 +19391,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=5;
 						};
 					};
 				};
@@ -19491,6 +19498,44 @@ class Mission
 					};
 				};
 				nAttributes=7;
+			};
+		};
+		class Item117
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8307.792,110.48468,7036.0962};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1841;
+			type="US_WarfareBFieldhHospital_Base_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
