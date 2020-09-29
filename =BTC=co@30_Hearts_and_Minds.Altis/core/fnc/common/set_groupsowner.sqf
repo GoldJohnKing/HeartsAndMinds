@@ -29,7 +29,7 @@ params [
     ["_groups", btc_patrol_active + btc_civ_veh_active, [[]]]
 ];
 
-private _HC = owner (_HCs select 0);
+private _HC = owner (selectRandom _HCs);
 _groups apply {
     _x setGroupOwner _HC;
 };
