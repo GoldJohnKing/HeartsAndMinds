@@ -172,7 +172,7 @@ if (_city getVariable ["spawn_more", false]) then {
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
-    [[_city, 150] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "spawn_more" city
+    [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "spawn_more" city
 };
 
 if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unitsSpawned", false])}) then {
@@ -187,7 +187,7 @@ if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unit
                 [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
             };
         };
-        [[_city, 150] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "cache" city
+        [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "cache" city
     };
 };
 
@@ -216,7 +216,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
             [{_this call btc_fnc_mil_send}, [_closest, _pos, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
-    [[_city, 150] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "hideout" city
+    [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "hideout" city
 };
 
 //Suicider
