@@ -29,7 +29,7 @@ params [
     ["_groups", btc_patrol_active + btc_civ_veh_active, [[]]]
 ];
 
-private _HC = owner (selectRandom _HCs);
+// private _HC = owner (_HCs select 0); // Edited: Add support for multiple headless clients
 _groups apply {
-    _x setGroupOwner _HC;
+    _x setGroupOwner (owner (selectRandom _HCs)); // Edited: Add support for multiple headless clients, default = _x setGroupOwner _HC
 };
