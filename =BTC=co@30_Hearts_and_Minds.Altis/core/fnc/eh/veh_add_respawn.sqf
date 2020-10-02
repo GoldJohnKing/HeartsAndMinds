@@ -64,6 +64,6 @@ _vehicle addMPEventHandler ["MPKilled", { // Edited: Add notification when frien
 }];
 if (btc_p_respawn_location > 0) then {
     if !(fullCrew [_vehicle, "cargo", true] isEqualTo []) then {
-        [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition;
+        [_vehicle, "Deleted", {_thisArgs call BIS_fnc_removeRespawnPosition}, [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition] call CBA_fnc_addBISEventHandler;
     };
 };
