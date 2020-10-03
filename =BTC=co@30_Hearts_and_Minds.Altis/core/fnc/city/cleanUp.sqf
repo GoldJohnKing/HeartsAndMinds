@@ -38,6 +38,12 @@ _toRemove append (allDead select {
     ((btc_gear_object inArea [getPosWorld _dead, 50, 50, 0, false]) || (_playableUnits inAreaArray [getPosWorld _dead, 100, 100] isEqualTo [])) && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Force delete dead units near player spawn point & Decrease minimal clean range for dead units, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
 });
 
+// Edited: Also remove enemy infantries and land vehicles far from players
+_toRemove append (entities [btc_type_units + btc_type_motorized_armed, [], true, true]) select {
+    private _obj = _x;
+    (_playableUnits inAreaArray [getPosWorld _obj, 1500, 1500] isEqualTo []) && (side _obj == east) && !(_obj getVariable ["btc_dont_delete", false])
+};
+
 _toRemove call CBA_fnc_deleteEntity;
 
 if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
