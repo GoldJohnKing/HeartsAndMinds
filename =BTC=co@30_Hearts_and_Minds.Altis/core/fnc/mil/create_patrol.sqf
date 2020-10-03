@@ -85,7 +85,7 @@ private _delay = switch (_random) do {
         if (_pos_isWater) then {
             _veh_type = selectRandom btc_type_boats;
         } else {
-            _veh_type = selectRandom btc_type_motorized; // Edited: Make all enemy patrols spawn inside enemy type vehicles, default = selectRandom (btc_type_motorized + [selectRandom btc_civ_type_veh])
+            _veh_type = selectRandom btc_type_motorized; // Edited: Prevent enemy spawning in civilian vehicles, default = selectRandom (btc_type_motorized + [selectRandom btc_civ_type_veh])
             //Tweak position of spawn
             private _roads = _pos nearRoads 150;
             _roads = _roads select {isOnRoad _x};
