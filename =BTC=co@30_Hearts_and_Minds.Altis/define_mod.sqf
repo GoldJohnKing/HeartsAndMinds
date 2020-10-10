@@ -73,7 +73,9 @@ private _items = [
     // "NVGogglesB_SSU_blk",
     // "NVGogglesB_SSU_gry",
     // "NVGogglesB_SSU_grn",
-    "HLC_Charm_base"
+    "HLC_Charm_base",
+    "FIR_PDU",
+    "min_rf_UavTerminal"
 ];
 private _backpacks = [
     "C_IDAP_UAV_01_backpack_F",
