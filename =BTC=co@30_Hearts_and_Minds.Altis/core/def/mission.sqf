@@ -689,7 +689,7 @@ btc_rep_bonus_cache = 100;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 15;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.5; // Edited: Increase reputation gain every enemy killed, default = 0.25
+btc_rep_bonus_mil_killed = 1; // Edited: Increase reputation gain every enemy killed, default = 0.25
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
 
@@ -698,8 +698,8 @@ btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 10;
 btc_rep_malus_animal_killed = - 5;
 btc_rep_malus_civ_firenear = - 5;
-btc_rep_malus_player_respawn = 0; // Edited: Player respawn does not affect reputation anymore, default = -10
-btc_rep_malus_veh_killed = - 25;
+btc_rep_malus_player_respawn = 0; // Edited: Player respawn does not affect reputation anymore, default = - 10
+btc_rep_malus_veh_killed = 0; // Edited: Player vehicle killed does not affect reputation anymore, default = - 25
 btc_rep_malus_building_damaged = - 2.5;
 btc_rep_malus_building_destroyed = - 5;
 
