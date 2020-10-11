@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1921;
+		nextID=1922;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=108;
+		nextID=109;
 	};
 	class Camera
 	{
-		pos[]={8459.4004,148.98087,6958.4565};
-		dir[]={-0.97561347,-0.21872923,0.01992533};
-		up[]={-0.21877784,0.9757641,0.0044686291};
-		aside[]={0.020420656,-9.4459392e-007,0.99981606};
+		pos[]={8496.2539,189.39165,6524.7852};
+		dir[]={-0.75717121,-0.60238999,0.25286466};
+		up[]={-0.57144397,0.79814744,0.19083989};
+		aside[]={0.31678274,1.1216616e-007,0.94855738};
 	};
 };
 binarizationWanted=0;
@@ -628,8 +628,6 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=1;
 		forecastLightnings=0.1;
-		wavesForced=1;
-		windForced=1;
 		year=2020;
 		month=9;
 		day=25;
@@ -3189,7 +3187,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8411.8545,115.025,6805.2617};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9592,7 +9590,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8411.7832,111.54495,6805.3076};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10608,8 +10606,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8461.6426,111.54144,6524.2656};
-						angles[]={-0,3.1415927,0};
+						position[]={8461.6426,111.54144,6524.271};
+						angles[]={0,3.1415927,0};
 					};
 					side="West";
 					flags=6;
@@ -10619,7 +10617,6 @@ class Mission
 					};
 					id=1196;
 					type="B_UAV_AI";
-					atlOffset=-7.6293945e-006;
 				};
 			};
 			class Attributes
@@ -10654,14 +10651,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8461.6426,112.91351,6524.2168};
-				angles[]={-0,3.1415927,0};
+				position[]={8461.6426,112.91351,6524.2173};
+				angles[]={0,3.1415927,0};
 			};
 			side="West";
 			flags=6;
 			class Attributes
 			{
-				lock="LOCKEDPLAYER";
+				lock="UNLOCKED";
 				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -11153,7 +11150,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8390.9355,132.58867,6781.9736};
+						position[]={8390.9355,132.58844,6781.9736};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -11164,7 +11161,7 @@ class Mission
 					};
 					id=1487;
 					type="B_UAV_AI";
-					atlOffset=2.6846466;
+					atlOffset=2.6844177;
 				};
 			};
 			class Attributes
@@ -11193,7 +11190,7 @@ class Mission
 				};
 			};
 			id=1456;
-			atlOffset=2.6846466;
+			atlOffset=2.6844177;
 		};
 		class Item47
 		{
@@ -11413,14 +11410,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8390.9355,134.3437,6781.9238};
+				position[]={8390.9355,134.34348,6781.9238};
 				angles[]={0,3.1415927,0};
 			};
 			side="West";
 			flags=2;
 			class Attributes
 			{
-				lock="LOCKEDPLAYER";
+				lock="UNLOCKED";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -11428,7 +11425,7 @@ class Mission
 			};
 			id=1486;
 			type="B_SAM_System_01_F";
-			atlOffset=2.6846466;
+			atlOffset=2.6844177;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18392,7 +18389,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8307.7656,111.54,7036.0571};
+				position[]={8307.7627,111.54,7036.0571};
 			};
 			areaSize[]={1,-1,1};
 			id=1839;
@@ -18804,7 +18801,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8393.2119,113.10616,6953.2974};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -18820,6 +18817,7 @@ class Mission
 			};
 			id=1892;
 			type="rhsusf_m1a2sep1tuskiid_usarmy";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19608,7 +19606,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8393.4922,114.26861,6946.7642};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
