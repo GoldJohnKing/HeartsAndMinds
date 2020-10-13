@@ -42,8 +42,8 @@ _vehicle setVariable ["data_respawn", [_type, _pos, _dir, _time, _vector] + _veh
 
 if ((isNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "ace_fastroping_enabled")) && !(typeOf _vehicle isEqualTo "RHS_UH1Y_d")) then {[_vehicle] call ace_fastroping_fnc_equipFRIES};
 _vehicle addMPEventHandler ["MPKilled", {if (isServer) then {_this call btc_fnc_eh_veh_respawn};}];
-if (btc_p_respawn_location > 0) then {
-    if !(fullCrew [_vehicle, "cargo", true] isEqualTo []) then {
-        [_vehicle, "Deleted", {_thisArgs call BIS_fnc_removeRespawnPosition}, [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition] call CBA_fnc_addBISEventHandler;
-    };
-};
+// if (btc_p_respawn_location > 0) then { // Edited: Disable vehicles assaigned as respawn points
+//     if !(fullCrew [_vehicle, "cargo", true] isEqualTo []) then {
+//         [_vehicle, "Deleted", {_thisArgs call BIS_fnc_removeRespawnPosition}, [btc_player_side, _vehicle] call BIS_fnc_addRespawnPosition] call CBA_fnc_addBISEventHandler;
+//     };
+// };
