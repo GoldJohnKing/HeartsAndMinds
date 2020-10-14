@@ -94,8 +94,9 @@ for "_i" from 0 to (1 + round random 2) do {
 
         private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
         if (
-            // _explosive && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
-            {_damage > 0.6} &&
+            //  _explosive && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
+            // {_damage > 0.6} && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
+            !(alive _box) && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
             {!(_destroy_taskID call BIS_fnc_taskState isEqualTo "CANCELED")}
         ) then {
             private _pos = getPos _box;
