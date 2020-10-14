@@ -39,7 +39,7 @@ private _radius = _city getVariable ["radius", 0];
 
 private _boxes = [];
 private _composition = [];
-for "_i" from 1 to (1 + round random 2) do {
+for "_i" from 1 to (3 + round random 2) do { // Edited: Increase checkpoint amounts, default = (1 + round random 2)
     //// Choose a road \\\\
     private _pos = [getPos _city, _radius/4] call btc_fnc_randomize_pos;
     private _roads = _pos nearRoads 200;
