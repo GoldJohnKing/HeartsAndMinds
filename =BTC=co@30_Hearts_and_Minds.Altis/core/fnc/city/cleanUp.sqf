@@ -41,7 +41,7 @@ _toRemove append (allDead select {
 // Edited: Also remove enemy infantries and land vehicles far from players
 _toRemove append ((entities [[], [], true, true] select {!(_x getVariable ["no_cache", false])}) select {
     private _obj = _x;
-    (_playableUnits inAreaArray [getPosWorld _obj, 2750, 2750] isEqualTo []) && (side _obj == east) && !(_obj getVariable ["btc_dont_delete", false])
+    ((allUnits select {side _x isEqualTo btc_player_side}) inAreaArray [getPosWorld _obj, 2750, 2750] isEqualTo []) && (side _obj isEqualTo east) && !(_obj getVariable ["btc_dont_delete", false])
 });
 
 _toRemove call CBA_fnc_deleteEntity;
