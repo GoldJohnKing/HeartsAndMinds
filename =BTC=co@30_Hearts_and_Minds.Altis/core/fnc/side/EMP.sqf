@@ -36,7 +36,7 @@ private _radius = _city getVariable ["radius", 0];
 private _composition = [];
 private _tasksID = [];
 
-for "_i" from 0 to (1 + round random 2) do {
+for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, default = (1 + round random 2)
     private _pos = [getPos _city, _radius] call btc_fnc_randomize_pos;
     _pos = [_pos, 0, 300, 15, false] call btc_fnc_findsafepos;
 
