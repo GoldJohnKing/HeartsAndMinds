@@ -24,7 +24,7 @@ params [
     ["_chopper", vehicle player, [objNull]]
 ];
 
-if (!(_chopper isKindOf "Helicopter" || (_chopper isKindOf "Ship")) || !isNull ((_chopper) getVariable ["cargo", objNull])) exitWith {false};
+if (!(_chopper isKindOf "Air" || (_chopper isKindOf "Ship")) || !isNull ((_chopper) getVariable ["cargo", objNull])) exitWith {false}; // Edited: Make all air vehicles able to lift cargo, default = (!(_chopper isKindOf "Helicopter" || (_chopper isKindOf "Ship")) || !isNull ((_chopper) getVariable ["cargo", objNull]))
 
 private _array = [_chopper] call btc_fnc_lift_getLiftable;
 if (_array isEqualTo []) exitWith {false};
