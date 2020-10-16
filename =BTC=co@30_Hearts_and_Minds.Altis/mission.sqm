@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=114;
+		nextID=115;
 	};
 	class Camera
 	{
-		pos[]={8353.6621,155.23148,6939.7769};
-		dir[]={-0.18928248,-0.93888342,0.2877343};
-		up[]={-0.51599908,0.34421054,0.78438807};
-		aside[]={0.83548814,-6.9383532e-007,0.54961634};
+		pos[]={8169.3872,313.19617,8815.8643};
+		dir[]={0.76350302,-0.6438508,0.051550012};
+		up[]={0.6425131,0.76504493,0.043380246};
+		aside[]={0.067369536,-4.2529427e-007,-0.99779314};
 	};
 };
 binarizationWanted=0;
@@ -16996,6 +16996,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -17068,6 +17069,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17112,6 +17114,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17357,6 +17360,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -17430,6 +17434,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17532,6 +17537,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17634,6 +17640,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17736,6 +17743,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17845,6 +17853,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
+						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -17927,6 +17936,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
+						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -17999,6 +18009,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -18072,6 +18083,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18097,7 +18109,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ToolKit""],[5]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -18136,6 +18148,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18161,7 +18174,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ToolKit""],[5]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -18199,6 +18212,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18281,7 +18295,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ToolKit""],[5]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -18358,6 +18372,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18384,7 +18399,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ToolKit""],[5]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -18582,6 +18597,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -18662,6 +18678,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
+						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -18745,6 +18762,7 @@ class Mission
 					class Attributes
 					{
 						skill=1;
+						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -18818,6 +18836,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -19054,6 +19073,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -19206,6 +19226,7 @@ class Mission
 			};
 			class Attributes
 			{
+				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -20088,6 +20109,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -20113,7 +20135,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[""ToolKit""],[5]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
