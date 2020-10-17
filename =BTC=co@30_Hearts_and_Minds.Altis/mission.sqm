@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1953;
+		nextID=1960;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=115;
+		nextID=116;
 	};
 	class Camera
 	{
-		pos[]={8169.3872,313.19617,8815.8643};
-		dir[]={0.76350302,-0.6438508,0.051550012};
-		up[]={0.6425131,0.76504493,0.043380246};
-		aside[]={0.067369536,-4.2529427e-007,-0.99779314};
+		pos[]={8420.9082,135.59198,6896.5073};
+		dir[]={0.16965525,-0.38311893,-0.90804356};
+		up[]={0.070393115,0.92362678,-0.37676343};
+		aside[]={-0.98303139,-9.5018186e-007,-0.18366507};
 	};
 };
 binarizationWanted=0;
@@ -108,16 +108,15 @@ addons[]=
 	"Leopard2",
 	"rhsusf_c_stryker",
 	"rhsusf_c_m11xx",
-	"A3_Air_F_Heli_Heli_Transport_04",
-	"ace_fastroping",
 	"A3_Air_F_Beta_Heli_Attack_01",
-	"A3_Air_F_Exp_VTOL_02"
+	"A3_Air_F_Exp_VTOL_02",
+	"A3_Air_F_Heli_Heli_Transport_04"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=70;
+		items=69;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -578,13 +577,6 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item69
-		{
-			className="ace_fastroping";
-			name="ACE3 - Fastroping";
-			author="ACE-制作团队";
-			url="http://ace3mod.com/";
-		};
 	};
 };
 class DynamicSimulation
@@ -675,7 +667,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=134;
+		items=137;
 		class Item0
 		{
 			dataType="Marker";
@@ -9842,6 +9834,7 @@ class Mission
 				};
 			};
 			id=1194;
+			atlOffset=7.6293945e-006;
 		};
 		class Item32
 		{
@@ -9863,6 +9856,7 @@ class Mission
 			};
 			id=1195;
 			type="B_Ship_MRLS_01_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9911,8 +9905,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8377.4961,111.54922,7031.5913};
-				angles[]={0,1.5707964,0};
+				position[]={8377.4961,111.54,7031.5913};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9922,7 +9916,6 @@ class Mission
 			};
 			id=1339;
 			type="Land_HelipadCivil_F";
-			atlOffset=0.0092163086;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9971,8 +9964,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8347.0195,111.60198,7031.5166};
-				angles[]={0,1.5707964,0};
+				position[]={8347.0195,111.54,7031.5166};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9982,7 +9975,6 @@ class Mission
 			};
 			id=1340;
 			type="Land_HelipadCivil_F";
-			atlOffset=0.061981201;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10032,7 +10024,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8405.8154,111.54,7055.2554};
-				angles[]={0,1.5707964,0};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10071,10 +10063,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8405.5537,117.24596,7007.5747};
-				angles[]={0,1.5707964,0};
+				position[]={8405.5537,111.54,7007.5747};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -10082,7 +10075,6 @@ class Mission
 			};
 			id=1344;
 			type="Land_HelipadSquare_F";
-			atlOffset=5.7059555;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12553,7 +12545,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this setVariable [""btc_dont_delete"",true]; this setVariable ['GCblackList', true];}";
-				name="btc_veh_21";
+				name="btc_veh_16";
 				textures="Sand";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -13934,7 +13926,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8308.2021,111.54,7056.4058};
-				angles[]={0,4.712389,0};
+				angles[]={-0,4.712389,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14503,7 +14495,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8405.7568,111.54,7032.1206};
-				angles[]={0,1.5707964,0};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23183,147 +23175,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8418.7861,114.13242,6808.4463};
-				angles[]={0,4.712389,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="btc_helo_17";
-				textures="Black";
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-				aiRadarUsage=1;
-			};
-			id=1944;
-			type="O_Heli_Transport_04_covered_F";
-			atlOffset=7.6293945e-006;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_refuel_fuelCargo";
-					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=-10;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[""SatchelCharge_Remote_Mag""],[1]],[[""ToolKit"",""ACE_DefusalKit"",""ACE_M26_Clacker""],[1,1,1]],[[],[]]],false]";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_isMedicalVehicle";
-					expression="_this setVariable [""ace_medical_isMedicalVehicle"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ace_isRepairVehicle";
-					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairVehicle', _value, true]}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ace_cargo_space";
-					expression="[_this,_value] call ace_cargo_fnc_setSpace;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=20;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ace_rearm_rearmCargo";
-					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=10000;
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item129
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={8359.3223,113.46194,6904.8594};
 				angles[]={0,4.712389,0};
 			};
@@ -23385,7 +23236,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item130
+		class Item129
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23399,7 +23250,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="call{this setVariable [""btc_dont_delete"",true]; this setVariable ['GCblackList', true];}";
-				name="btc_veh_16";
+				name="btc_helo_18";
 				textures="Grey";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -23409,7 +23260,6 @@ class Mission
 			};
 			id=1947;
 			type="O_T_VTOL_02_infantry_dynamicLoadout_F";
-			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23529,7 +23379,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item131
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23646,7 +23496,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item132
+		class Item131
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23782,7 +23632,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item133
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23897,6 +23747,320 @@ class Mission
 					};
 				};
 				nAttributes=5;
+			};
+		};
+		class Item133
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8418.7861,114.36842,6808.4453};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="btc_helo_17";
+				textures="Black";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=1955;
+			type="O_Heli_Transport_04_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_refuel_fuelCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-10;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""SatchelCharge_Remote_Mag""],[1]],[[""ToolKit"",""ACE_DefusalKit"",""ACE_M26_Clacker""],[1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_isMedicalVehicle";
+					expression="_this setVariable [""ace_medical_isMedicalVehicle"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_isRepairVehicle";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairVehicle', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cargo_space";
+					expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=20;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10000;
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item134
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8356.8994,111.54,6925.2471};
+			};
+			areaSize[]={5,-1,5};
+			flags=1;
+			id=1956;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item135
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8419.2031,111.54,6808.562};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				disableSimulation=1;
+			};
+			id=1958;
+			type="Land_HelipadSquare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item136
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8358.4316,111.54,6925.1851};
+				angles[]={-0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				disableSimulation=1;
+			};
+			id=1959;
+			type="Land_HelipadSquare_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
