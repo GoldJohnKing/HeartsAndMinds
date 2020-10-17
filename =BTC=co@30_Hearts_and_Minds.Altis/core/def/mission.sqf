@@ -422,8 +422,8 @@ if (isServer) then {
         }
     });
     ([_rearming_static] call btc_fnc_find_veh_with_turret) params ["_rearming_static", "_magazines_static"];
-    
-    _rearming_static = ["rhsusf_mrzr4_d","B_LSV_01_armed_F","B_LSV_01_AT_F","rhsusf_m1151_m2_v2_usarmy_d","rhsusf_m1151_m2_lras3_v1_usarmy_d","rhsusf_m1151_m2crows_usarmy_d","rhsusf_m1151_mk19crows_usarmy_d","rhsusf_m1045_d_s","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_G_Offroad_01_armed_F","B_G_Offroad_01_AT_F","I_C_Offroad_02_LMG_F","I_C_Offroad_02_AT_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F","B_Heli_Light_01_F","RHS_MELB_MH6M","B_GEN_Offroad_01_gen_F","B_GEN_Van_02_transport_F","C_IDAP_Van_02_medevac_F","C_Hatchback_01_sport_F","B_AAA_System_01_F","B_Radar_System_01_F","B_SAM_System_03_F","B_SAM_System_02_F","B_Ship_MRLS_01_F","B_Ship_Gun_01_F","B_SAM_System_01_F"] + _rearming_static - ["RHS_M252_WD","RHS_M252_USMC_D","RHS_M252_USMC_WD","rhsgref_cdf_b_reg_M252","rhsgref_cdf_reg_M252","rhssaf_army_m252","rhssaf_army_o_m252"] + ["ace_dragon_staticAssembled","RHS_Stinger_AA_pod_D","rhs_Igla_AA_pod_vdv","RHS_ZU23_VDV","RHS_M119_D","rhs_D30_vdv","rhs_D30_at_vdv"]; // Edited: Exclude duplicates items & Add light vehicles and more static weapons
+    _rearming_static = ["rhsusf_mrzr4_d","B_LSV_01_armed_F","B_LSV_01_AT_F","rhsusf_m1151_m2_v2_usarmy_d","rhsusf_m1151_m2_lras3_v1_usarmy_d","rhsusf_m1151_m2crows_usarmy_d","rhsusf_m1151_mk19crows_usarmy_d","rhsusf_m1045_d_s","rhsusf_m1245_m2crows_socom_d","rhsusf_m1245_mk19crows_socom_d","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_G_Offroad_01_armed_F","B_G_Offroad_01_AT_F","I_C_Offroad_02_LMG_F","I_C_Offroad_02_AT_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F","B_Heli_Light_01_F","RHS_MELB_MH6M","B_GEN_Offroad_01_gen_F","B_GEN_Van_02_transport_F","C_IDAP_Van_02_medevac_F","C_Hatchback_01_sport_F","B_AAA_System_01_F","B_Radar_System_01_F","B_SAM_System_03_F","B_SAM_System_02_F","B_Ship_MRLS_01_F","B_Ship_Gun_01_F","B_SAM_System_01_F"] + _rearming_static - ["RHS_M252_WD","RHS_M252_USMC_D","RHS_M252_USMC_WD","rhsgref_cdf_b_reg_M252","rhsgref_cdf_reg_M252","rhssaf_army_m252","rhssaf_army_o_m252"] + ["ace_dragon_staticAssembled","RHS_Stinger_AA_pod_D","rhs_Igla_AA_pod_vdv","RHS_ZU23_VDV","RHS_M119_D","rhs_D30_vdv","rhs_D30_at_vdv"]; // Edited: Exclude duplicates items & Add light vehicles and more static weapons
+
     ([btc_vehicles + btc_helo] call btc_fnc_log_getRearmMagazines) params ["_rearming_vehicles", "_rearming_magazines"];
 
     btc_construction_array =
@@ -437,8 +437,8 @@ if (isServer) then {
             "FOB",
             "消杀喷淋装置",
             "后勤补给"
-        ] + (_rearming_vehicles apply {getText (_cfgVehicles >> _x >> "displayName")}),
-        [
+        ], // + (_rearming_vehicles apply {getText (_cfgVehicles >> _x >> "displayName")}), // Edited: Remove vehicle ammo categories
+        [ // Edited: Modify the construction list
             [
                 //"Fortifications"
                 "Land_BagBunker_Small_F",
@@ -460,9 +460,9 @@ if (isServer) then {
                 "Land_Mil_ConcreteWall_F",
                 "Land_Mil_WallBig_4m_F",
                 "Land_Mil_WallBig_Corner_F",
-                "Land_PortableLight_double_F",
-                "Land_Pod_Heli_Transport_04_medevac_black_F",
-                "B_Slingload_01_Fuel_F"
+                "Land_PortableLight_double_F"
+                // "Land_Pod_Heli_Transport_04_medevac_black_F", // Edited: Remove duplicate items
+                // "B_Slingload_01_Fuel_F" // Edited: Remove duplicate items
             ],
             _rearming_static,  // Edited: Remove magazines from the list, default = _rearming_static + _magazines_static
             [
@@ -496,13 +496,14 @@ if (isServer) then {
                 "B_Slingload_01_Repair_F", // Edited: Add cargo box for repair
                 "B_Slingload_01_Fuel_F", // Edited: Add cargo box for refuel
                 "B_Slingload_01_Medevac_F", // Edited: Add cargo box for medevac
-                "Land_Pod_Heli_Transport_04_ammo_F", // Edited: Add cargo box for ammo
-                "Land_Pod_Heli_Transport_04_repair_F", // Edited: Add cargo box for repair
-                "Land_Pod_Heli_Transport_04_fuel_F", // Edited: Add cargo box for refuel
+                "Land_Pod_Heli_Transport_04_ammo_black_F", // Edited: Add cargo box for ammo
+                "Land_Pod_Heli_Transport_04_repair_black_F", // Edited: Add cargo box for repair
+                "Land_Pod_Heli_Transport_04_fuel_black_F", // Edited: Add cargo box for refuel
+                "Land_Pod_Heli_Transport_04_medevac_black_F", // Edited: Add cargo box for medevac
                 "ACE_Wheel",
                 "ACE_Track"
             ]
-        ] + _rearming_magazines
+        ] // + _rearming_magazines // Edited: Remove vehicle ammo boxes
     ];
     publicVariable "btc_construction_array";
 };
