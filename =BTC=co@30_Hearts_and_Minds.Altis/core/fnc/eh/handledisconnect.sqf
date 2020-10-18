@@ -24,7 +24,7 @@ params [
     ["_headless", objNull, [objNull]]
 ];
 
-if (_headless in (entities "HeadlessClient_F")) then {
+if (_headless in ((entities "HeadlessClient_F") + playableUnits)) then { // Edited: Use players' machines to offload AI calculation, this is experimental, default = _headless in (entities "HeadlessClient_F")
     //Remove HC player when disconnect
     deleteVehicle _headless;
 };

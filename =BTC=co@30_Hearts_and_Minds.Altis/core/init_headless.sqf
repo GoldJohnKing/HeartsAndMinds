@@ -1,2 +1,2 @@
 //Move btc_patrol_active group to HC
-[] remoteExecCall ["btc_fnc_set_groupsOwner", 2];
+// [] remoteExecCall ["btc_fnc_set_groupsOwner", 2]; // Edited: Support multiple headless clients

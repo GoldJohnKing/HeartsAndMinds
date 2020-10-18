@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1960;
+		nextID=1974;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=116;
+		nextID=118;
 	};
 	class Camera
 	{
-		pos[]={8420.9082,135.59198,6896.5073};
-		dir[]={0.16965525,-0.38311893,-0.90804356};
-		up[]={0.070393115,0.92362678,-0.37676343};
-		aside[]={-0.98303139,-9.5018186e-007,-0.18366507};
+		pos[]={8436.8457,154.67053,6899.5547};
+		dir[]={-0.5699864,-0.37196797,0.73269117};
+		up[]={-0.22846152,0.92820597,0.29367805};
+		aside[]={0.78932256,7.3097181e-007,0.61404288};
 	};
 };
 binarizationWanted=0;
@@ -110,13 +110,14 @@ addons[]=
 	"rhsusf_c_m11xx",
 	"A3_Air_F_Beta_Heli_Attack_01",
 	"A3_Air_F_Exp_VTOL_02",
-	"A3_Air_F_Heli_Heli_Transport_04"
+	"A3_Air_F_Heli_Heli_Transport_04",
+	"remnant"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=69;
+		items=70;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -577,6 +578,12 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
+		class Item69
+		{
+			className="remnant";
+			name="remnant";
+			author="Haleks";
+		};
 	};
 };
 class DynamicSimulation
@@ -667,7 +674,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=137;
+		items=138;
 		class Item0
 		{
 			dataType="Marker";
@@ -9906,7 +9913,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8377.4961,111.54,7031.5913};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9965,7 +9972,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8347.0195,111.54,7031.5166};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10024,7 +10031,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8405.8154,111.54,7055.2554};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10064,7 +10071,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8405.5537,111.54,7007.5747};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13926,7 +13933,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8308.2021,111.54,7056.4058};
-				angles[]={-0,4.712389,0};
+				angles[]={0,4.712389,0};
 			};
 			side="Empty";
 			flags=4;
@@ -14495,7 +14502,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8405.7568,111.54,7032.1206};
-				angles[]={-0,1.5707964,0};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16988,7 +16995,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -17061,7 +17067,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17106,7 +17111,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17352,7 +17356,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -17426,7 +17429,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17529,7 +17531,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17632,7 +17633,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17735,7 +17735,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17845,7 +17844,6 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -17928,7 +17926,6 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -18001,7 +17998,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -18075,7 +18071,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18140,7 +18135,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18204,7 +18198,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18364,7 +18357,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -18589,7 +18581,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -18670,7 +18661,6 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -18754,7 +18744,6 @@ class Mission
 					class Attributes
 					{
 						skill=1;
-						init="call{this setCombatMode ""BLUE"";}";
 						ignoreByDynSimulGrid=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
@@ -18828,7 +18817,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -19065,7 +19053,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -19218,7 +19205,6 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE"";}";
 			};
 			class CrewLinks
 			{
@@ -20101,7 +20087,6 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
-				init="call{this setCombatMode ""BLUE"";}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -23260,6 +23245,7 @@ class Mission
 			};
 			id=1947;
 			type="O_T_VTOL_02_infantry_dynamicLoadout_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23770,6 +23756,7 @@ class Mission
 			};
 			id=1955;
 			type="O_Heli_Transport_04_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24009,7 +23996,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8358.4316,111.54,6925.1851};
-				angles[]={-0,4.712389,0};
+				angles[]={0,4.712389,0};
 			};
 			side="Empty";
 			flags=4;
@@ -24061,6 +24048,172 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item137
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8298.3633,111.54,7016.3721};
+			};
+			id=1960;
+			type="myst_pht_settings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="myst_pht_set_detector";
+					expression="_this setVariable ['detector',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="myst_pht_set_damage";
+					expression="_this setVariable ['damage',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="myst_pht_set_refraction";
+					expression="_this setVariable ['refraction',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="myst_pht_set_movement";
+					expression="_this setVariable ['movement',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="myst_pht_set_sensitivity";
+					expression="_this setVariable ['sensitivity',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1.2;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="myst_pht_set_ammo";
+					expression="_this setVariable ['ammo',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TRUE";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="myst_pht_set_output";
+					expression="_this setVariable ['output',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.25;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="myst_pht_set_visibility";
+					expression="_this setVariable ['visibility',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=8;
 			};
 		};
 	};

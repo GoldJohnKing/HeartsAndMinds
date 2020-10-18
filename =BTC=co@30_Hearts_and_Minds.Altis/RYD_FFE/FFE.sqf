@@ -71,7 +71,7 @@ Shellview = compile preprocessFile "RYD_FFE\Shellview.sqf";
 _allArty = [_allArty] call RydFFE_AutoConfig;
 
 _civF = ["civ_f","civ","civ_ru","bis_tk_civ","bis_civ_special"];
-_sides = [west,east,resistance];
+_sides = [east,resistance]; // Edited: Exclude west side artillery units
 
 _enemies = [];
 _friends = [];
