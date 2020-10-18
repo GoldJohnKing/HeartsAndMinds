@@ -90,6 +90,8 @@ switch (btc_p_debug) do {
     case 0 : {
         btc_debug_log = false;
         btc_debug = false;
+        btc_debug_graph = false; // Edited: Allow btc_debug_graph for everyone
+        btc_debug_frames = 0; // Edited: Allow btc_debug_graph for everyone
     };
     case 1 : {
         btc_debug_log = true;
