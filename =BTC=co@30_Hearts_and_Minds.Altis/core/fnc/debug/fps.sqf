@@ -34,7 +34,7 @@ if (isNull _display || !btc_debug_graph) exitWith {
 
 [11, objNull, "btc_debug_frames"] remoteExecCall ["btc_fnc_int_ask_var", 2];
 private _frames = btc_debug_frames;
-_TXTfps ctrlSetText format ["SERVER FPS: %1", _frames];
+_TXTfps ctrlSetText format ["FPS:%1", _frames]; // Edited: Translate and shorten the phrases to support wider fonts, default = "SERVER FPS: %1"
 
 private _newBar = _display ctrlCreate ["RscVProgress", -1, _GRPframes];
 private _arraysize = count _barArray -1;
