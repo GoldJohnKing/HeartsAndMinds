@@ -37,6 +37,7 @@ class CfgFunctions {
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
     // VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf"; // Edited: Add VCOM Support
+    UVO_Faction = call compile preprocessFileLineNumbers "Custom\UVO_Faction.sqf"; // Edited: Support Unit Voice-overs
 };
 
 class Extended_InitPost_EventHandlers {
