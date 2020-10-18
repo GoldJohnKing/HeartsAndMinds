@@ -39,4 +39,4 @@ if (isNull _display || !btc_debug_graph) exitWith {
 private _count_units = {(_x select 0) isKindOf "man"} count btc_units_owners;
 private _count_units_own = {((_x select 1) isEqualTo 2) && ((_x select 0) isKindOf "man")} count btc_units_owners;
 
-_TXTunits ctrlSetText format ["等待:%1s 单位:%2 :%3 小队:%4 巡逻:%5 交通:%6", [btc_delay_createUnitDebug, 0] select (btc_delay_createUnitDebug < 0.001), _count_units, _count_units - _count_units_own, count allGroups, count btc_patrol_active, count btc_civ_veh_active]; // Edited: Translate and shorten the phrases to support wider fonts, default = "DELAY:%1s UNITS:%2 NOT-ON-SERVER:%3 | GROUPS:%4 | Patrol:%5 Traffic:%6"
+_TXTunits ctrlSetText format ["等待:%1s 单位:%2 分摊:%3 小队:%4 巡逻:%5 交通:%6", [btc_delay_createUnitDebug, 0] select (btc_delay_createUnitDebug < 0.001), _count_units, _count_units - _count_units_own, count allGroups, count btc_patrol_active, count btc_civ_veh_active]; // Edited: Translate and shorten the phrases to support wider fonts, default = "DELAY:%1s UNITS:%2 NOT-ON-SERVER:%3 | GROUPS:%4 | Patrol:%5 Traffic:%6"
