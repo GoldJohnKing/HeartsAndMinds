@@ -145,7 +145,7 @@ _action = ["side_mission_abort", localize "STR_BTC_HAM_ACTION_SIDEMISSION_ABORT"
 // [player, 1, ["ACE_SelfActions", "side_mission"], _action] call ace_interact_menu_fnc_addActionToObject; // Edited: Prevent players from requesting side missions
 
 //Debug
-if (btc_debug) then {
+if (true) then { // Edited: Allow btc_debug_graph for everyone, default = btc_debug
     _action = ["Debug_graph", "关闭性能图表", "\a3\Ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", {btc_debug_graph = !btc_debug_graph}, {btc_debug_graph}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject; // Edited: Add translate for debug graph, default = "Disable debug graph"
     _action = ["Debug_graph", "打开性能图表", "\a3\Ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", {btc_debug_graph = true; 73001 cutRsc ["TER_fpscounter", "PLAIN"];}, {!btc_debug_graph}] call ace_interact_menu_fnc_createAction; // Edited: Add translate for debug graph, default = "Enable debug graph"
