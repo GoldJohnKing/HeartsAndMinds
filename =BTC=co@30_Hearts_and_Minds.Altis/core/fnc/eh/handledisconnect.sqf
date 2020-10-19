@@ -27,4 +27,5 @@ params [
 if (_headless in ((entities "HeadlessClient_F") + playableUnits)) then { // Edited: Use players' machines to offload AI calculation, this is experimental, default = _headless in (entities "HeadlessClient_F")
     //Remove HC player when disconnect
     deleteVehicle _headless;
+    [(btc_patrol_active + btc_civ_veh_active) select {local _x}] call btc_fnc_set_groupsOwner; // Edited: Re-assign units on server to other clients on client disconnects
 };
