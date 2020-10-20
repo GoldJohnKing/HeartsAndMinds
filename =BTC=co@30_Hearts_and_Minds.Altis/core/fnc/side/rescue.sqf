@@ -86,7 +86,7 @@ private _triggers = [];
     private _trigger = createTrigger ["EmptyDetector", getPos _city];
     _trigger setVariable ["unit", _x];
     _trigger setTriggerArea [5, 5, 0, false, 10]; // Edited: Make player find pilot in a more precise area by narrowing trigger area, default = [50, 50, 0, false, 10]
-    _trigger setTriggerActivation [str btc_player_side, "PRESENT", false];
+    _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false]; // Edited: Only player can trigger sub-mission complete, default = [str btc_player_side, "PRESENT", false]
     _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; _unit setCaptive true; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;", _find_taskID, _back_taskID, _taskID], ""]; // Edited: Prevent pilot from running around by prevent him from joining player group and set him captive, default = "_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;"
     _trigger attachTo [_x, [0, 0, 0]];
     _triggers pushBack _trigger;
