@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1974;
+		nextID=1975;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=119;
+		nextID=120;
 	};
 	class Camera
 	{
@@ -110,14 +110,13 @@ addons[]=
 	"rhsusf_c_m11xx",
 	"A3_Air_F_Beta_Heli_Attack_01",
 	"A3_Air_F_Exp_VTOL_02",
-	"A3_Air_F_Heli_Heli_Transport_04",
-	"remnant"
+	"A3_Air_F_Heli_Heli_Transport_04"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=70;
+		items=69;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -578,12 +577,6 @@ class AddonsMetaData
 			author="波希米亚互动工作室";
 			url="https://www.arma3.com";
 		};
-		class Item69
-		{
-			className="remnant";
-			name="remnant";
-			author="Haleks";
-		};
 	};
 };
 class DynamicSimulation
@@ -674,7 +667,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=137;
+		items=136;
 		class Item0
 		{
 			dataType="Marker";
@@ -1157,7 +1150,7 @@ class Mission
 						};
 					};
 					id=12;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1320,7 +1313,7 @@ class Mission
 						};
 					};
 					id=212;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1474,8 +1467,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8315.5156,111.54,7015.7197};
-				angles[]={-0,3.7883914,0};
+				position[]={8315.5156,111.54,7015.7202};
+				angles[]={0,3.7883942,0};
 			};
 			name="btc_curator";
 			init="this addEventHandler ['CuratorObjectPlaced',{_this call btc_fnc_eh_CuratorObjectPlaced}];";
@@ -1662,7 +1655,7 @@ class Mission
 						};
 					};
 					id=41;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1837,7 +1830,7 @@ class Mission
 						};
 					};
 					id=43;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2011,7 +2004,7 @@ class Mission
 						};
 					};
 					id=45;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2147,7 +2140,7 @@ class Mission
 						};
 					};
 					id=47;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2646,7 +2639,7 @@ class Mission
 						};
 					};
 					id=243;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2801,7 +2794,7 @@ class Mission
 						};
 					};
 					id=245;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2956,7 +2949,7 @@ class Mission
 						};
 					};
 					id=247;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3111,7 +3104,7 @@ class Mission
 						};
 					};
 					id=249;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4656,7 +4649,7 @@ class Mission
 						};
 					};
 					id=251;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4831,7 +4824,7 @@ class Mission
 						};
 					};
 					id=252;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5005,7 +4998,7 @@ class Mission
 						};
 					};
 					id=253;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5160,7 +5153,7 @@ class Mission
 						};
 					};
 					id=254;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5678,7 +5671,7 @@ class Mission
 						};
 					};
 					id=257;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5833,7 +5826,7 @@ class Mission
 						};
 					};
 					id=258;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5988,7 +5981,7 @@ class Mission
 						};
 					};
 					id=259;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6143,7 +6136,7 @@ class Mission
 						};
 					};
 					id=260;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16698,7 +16691,7 @@ class Mission
 						reportOwnPosition=1;
 					};
 					id=1847;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16780,7 +16773,7 @@ class Mission
 						reportOwnPosition=1;
 					};
 					id=1850;
-					type="B_Soldier_F";
+					type="B_soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23937,172 +23930,6 @@ class Mission
 					};
 				};
 				nAttributes=2;
-			};
-		};
-		class Item136
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={8298.3633,111.54,7016.3721};
-			};
-			id=1960;
-			type="myst_pht_settings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="myst_pht_set_detector";
-					expression="_this setVariable ['detector',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="myst_pht_set_damage";
-					expression="_this setVariable ['damage',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="myst_pht_set_refraction";
-					expression="_this setVariable ['refraction',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="myst_pht_set_movement";
-					expression="_this setVariable ['movement',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="myst_pht_set_sensitivity";
-					expression="_this setVariable ['sensitivity',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1.2;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="myst_pht_set_ammo";
-					expression="_this setVariable ['ammo',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="TRUE";
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="myst_pht_set_output";
-					expression="_this setVariable ['output',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.25;
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="myst_pht_set_visibility";
-					expression="_this setVariable ['visibility',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=8;
 			};
 		};
 	};
