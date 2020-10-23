@@ -3,7 +3,7 @@
 Function: btc_fnc_city_cleanUp
 
 Description:
-    Delete all ground weapon holder (in range of 150 m), dead bodies (in range of 500 m) and empty group.
+    Delete all ground weapon holder (in range of 500 m), dead bodies (in range of 500 m) and empty group.
 
 Parameters:
     _playableUnits - Players connected. [Array]
@@ -29,7 +29,7 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 
     private _obj = _x;
 
-    ((btc_gear_object inArea [getPosWorld _obj, 300, 300, 0, false]) || (_playableUnits inAreaArray [getPosWorld _obj, 250, 250] isEqualTo [])) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases & Decrease minimal clean range for dead units & Add support for base cleanup, default = _playableUnits inAreaArray [getPosWorld _obj, 150, 150] isEqualTo []
+    ((btc_gear_object inArea [getPosWorld _obj, 300, 300, 0, false]) || (_playableUnits inAreaArray [getPosWorld _obj, 250, 250] isEqualTo [])) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases & Decrease minimal clean range for dead units & Add support for base cleanup, default = _playableUnits inAreaArray [getPosWorld _obj, 500, 500] isEqualTo []
 };
 
 _toRemove append (allDead select {
