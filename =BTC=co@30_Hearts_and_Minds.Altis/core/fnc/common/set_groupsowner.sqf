@@ -22,7 +22,7 @@ Author:
 ---------------------------------------------------------------------------- */
 
 if !(btc_p_auto_headless) exitWith {};
-private _HCs = (entities "HeadlessClient_F") + playableUnits; // Edited: Use players' machines to offload AI calculation, this is experimental, default = entities "HeadlessClient_F"
+private _HCs = (entities "HeadlessClient_F") + playableUnits; // Edited: Use player's clients as headless clients, this is experimental, default = entities "HeadlessClient_F"
 if (_HCs isEqualTo []) exitWith {[]};
 
 params [
