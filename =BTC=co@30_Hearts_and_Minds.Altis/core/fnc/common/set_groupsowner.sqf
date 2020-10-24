@@ -26,7 +26,7 @@ private _HCs = (entities "HeadlessClient_F") + playableUnits; // Edited: Use pla
 if (_HCs isEqualTo []) exitWith {[]};
 
 params [
-    ["_groups", btc_patrol_active + btc_civ_veh_active, [[]]]
+    ["_groups", (btc_patrol_active + btc_civ_veh_active) select {local _x}, [[]]] // Edited: If no param is passed, only re-assign units which are local to server, default = ["_groups", btc_patrol_active + btc_civ_veh_active, [[]]]
 ];
 
 // private _HC = owner (_HCs select 0); // Edited: Support multiple headless clients
