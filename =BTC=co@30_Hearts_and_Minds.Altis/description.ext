@@ -84,3 +84,11 @@ class CfgRemoteExec
 		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };	
 	};
 };
+
+// Edited: Add ACE kill statistics tracker provided by ACEX
+class CfgDebriefingSections {
+    class acex_killTracker {
+        title = "击杀统计";
+        variable = "acex_killTracker_outputText";
+    };
+};
