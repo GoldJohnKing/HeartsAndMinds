@@ -46,8 +46,7 @@ addMissionEventHandler ["HandleDisconnect", {
     params ["_headless"];
     if (_headless in (entities "HeadlessClient_F")) then {
         deleteVehicle _headless;
-    } else { // Edited: Re-assign units on server to headless clients on clients disconnect
-        [(btc_patrol_active + btc_civ_veh_active) select {local _x}] call btc_fnc_set_groupsOwner; 
+        [] call btc_fnc_set_groupsOwner; // Edited: Re-assign group owner on headless clients disconnect
     };
 }];
 if (btc_p_auto_db) then {
