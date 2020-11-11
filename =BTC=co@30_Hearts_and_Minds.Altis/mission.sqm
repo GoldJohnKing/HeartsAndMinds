@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1982;
+		nextID=1990;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=122;
+		nextID=123;
 	};
 	class Camera
 	{
-		pos[]={8444.5752,189.69345,7053.6782};
-		dir[]={-0.78449273,-0.5783428,-0.22411783};
-		up[]={-0.55629671,0.81563741,-0.15892445};
-		aside[]={-0.27471003,-5.2386895e-007,0.96159011};
+		pos[]={8395.8486,150.21242,6997.1787};
+		dir[]={0.62134939,-0.24076363,-0.74578452};
+		up[]={0.15435524,0.9704802,-0.18526943};
+		aside[]={-0.76837724,-1.1196826e-006,-0.64017582};
 	};
 };
 binarizationWanted=0;
@@ -115,13 +115,14 @@ addons[]=
 	"A3_Air_F_Beta_Heli_Attack_01",
 	"A3_Air_F_Exp_VTOL_02",
 	"A3_Air_F_Heli_Heli_Transport_04",
-	"USAF_AC130U_C"
+	"USAF_AC130U_C",
+	"A3_Armor_F_Tank_AFV_Wheeled_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=73;
+		items=74;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -604,6 +605,13 @@ class AddonsMetaData
 			className="USAF_AC130U_C";
 			name="USAF_AC130U_C";
 		};
+		class Item73
+		{
+			className="A3_Armor_F_Tank";
+			name="Arma 3 Tank - Armored Land Vehicles";
+			author="波希米亚互动工作室";
+			url="https://www.arma3.com";
+		};
 	};
 };
 class DynamicSimulation
@@ -694,7 +702,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=142;
+		items=143;
 		class Item0
 		{
 			dataType="Marker";
@@ -9553,8 +9561,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8305.2695,114.62511,7119.1753};
-				angles[]={0,1.5707964,0};
+				position[]={8305.043,114.62511,7109.4858};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9570,7 +9578,6 @@ class Mission
 			};
 			id=1141;
 			type="rhsusf_M1230a1_usarmy_d";
-			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20086,8 +20093,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8304.6279,113.61529,7114.5693};
-				angles[]={0,1.5707964,0};
+				position[]={8304.543,113.6153,7119.9907};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20104,6 +20111,7 @@ class Mission
 			};
 			id=1932;
 			type="rhsusf_stryker_m1127_m2_d";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20764,8 +20772,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8304.6152,113.61529,7109.4634};
-				angles[]={0,1.5707964,0};
+				position[]={8304.5303,113.6153,7114.8848};
+				angles[]={-0,1.5707964,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20782,6 +20790,7 @@ class Mission
 			};
 			id=1933;
 			type="rhsusf_stryker_m1126_mk19_d";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24025,6 +24034,188 @@ class Mission
 			isPlayable=1;
 			id=1981;
 			type="HeadlessClient_F";
+		};
+		class Item142
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8305.752,113.80395,7124.6201};
+				angles[]={-0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this setVariable [""btc_dont_delete"",true]; this setVariable ['GCblackList', true];}";
+				name="btc_veh_21";
+				textures="Sand";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=1984;
+			type="B_AFV_Wheeled_01_up_cannon_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""SatchelCharge_Remote_Mag""],[1]],[[""ToolKit"",""ACE_DefusalKit"",""ACE_M26_Clacker""],[1,1,1]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=6;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="showCamonetHull";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="showCamonetTurret";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="showSLATHull";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
