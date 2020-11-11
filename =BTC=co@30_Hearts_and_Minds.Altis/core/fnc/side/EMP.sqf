@@ -110,8 +110,8 @@ for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, de
             }, [_fx], 120] call CBA_fnc_waitAndExecute;
             btc_spect_emp deleteAt (btc_spect_emp find _box);
             publicVariable "btc_spect_emp";
-        } else {
-            0
+        // } else { // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
+        //     0 // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
         };
     }, [_destroy_taskID]] call CBA_fnc_addBISEventHandler;
 };
