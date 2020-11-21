@@ -59,7 +59,7 @@ private _items = [
     "TFAR_fadak",
     "TFAR_pnr1000a",
     "TFAR_microdagr",
-    "ACE_SpraypaintRed",
+    // "ACE_SpraypaintRed",
     "ACE_SpraypaintGreen",
     "ACE_SpraypaintBlue",
     "ACE_SpraypaintBlack",
