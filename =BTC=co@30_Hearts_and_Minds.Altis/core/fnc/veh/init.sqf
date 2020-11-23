@@ -30,8 +30,8 @@ if ((btc_actions_veh pushBackUnique _type) isEqualTo -1) exitWith {};
 switch true do {
     case (_type isKindOf "UGV_02_Base_F") : {};
     // case (_type isKindOf "StaticWeapon") : {}; // Edited: Make StaticWeapon towable and liftable
-    case (_type isKindOf "LandVehicle" || {_type isKindOf "StaticWeapon"}) : { // Edited: Make StaticWeapon and Ship towable and liftable, default = (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"})
-        private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {true}] call ace_interact_menu_fnc_createAction;
+    case (_type isKindOf "LandVehicle" || {_type isKindOf "Ship" || {_type isKindOf "StaticWeapon"}}) : { // Edited: Make StaticWeapon towable and liftable, default = (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"})
+        private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
         _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
