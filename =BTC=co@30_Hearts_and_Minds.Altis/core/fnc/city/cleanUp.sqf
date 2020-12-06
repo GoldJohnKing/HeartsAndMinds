@@ -29,19 +29,13 @@ private _toRemove = ((btc_groundWeaponHolder + (entities "WeaponHolderSimulated"
 
     private _obj = _x;
 
-    ((btc_gear_object inArea [getPosWorld _obj, 300, 300, 0, false]) || (_playableUnits inAreaArray [getPosWorld _obj, 250, 250] isEqualTo [])) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removable in all cases & Decrease minimal clean range for dead units & Add support for base cleanup, default = _playableUnits inAreaArray [getPosWorld _obj, 500, 500] isEqualTo []
+    ((btc_gear_object inArea [getPosWorld _obj, 500, 500, 0, false]) || (_playableUnits inAreaArray [getPosWorld _obj, 500, 500] isEqualTo [])) && !(_obj getVariable ["btc_dont_delete", false]) // Edited: Force "btc_dont_delete" objects not removed in all cases & Add support for base cleanup, default = _playableUnits inAreaArray [getPosWorld _obj, 500, 500] isEqualTo []
 };
 
 _toRemove append (allDead select {
     private _dead = _x;
 
-    ((btc_gear_object inArea [getPosWorld _dead, 300, 300, 0, false]) || (_playableUnits inAreaArray [getPosWorld _dead, 300, 300] isEqualTo [])) && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Force delete dead units near player spawn point & Decrease minimal clean range for dead units, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
-});
-
-// Edited: Also remove enemy infantries and land vehicles far from players
-_toRemove append ((entities [[], [], true, true] select {!(_x getVariable ["no_cache", false])}) select {
-    private _obj = _x;
-    ((allUnits select {side _x isEqualTo btc_player_side}) inAreaArray [getPosWorld _obj, 2750, 2750] isEqualTo []) && (side _obj isEqualTo east) && !(_obj getVariable ["btc_dont_delete", false])
+    ((btc_gear_object inArea [getPosWorld _dead, 500, 500, 0, false]) || (_playableUnits inAreaArray [getPosWorld _dead, 500, 500] isEqualTo [])) && !(_dead getVariable ["btc_dont_delete", false]) // Edited: Force delete dead units near player spawn point, default = _playableUnits inAreaArray [getPosWorld _dead, 500, 500]
 });
 
 _toRemove call CBA_fnc_deleteEntity;
