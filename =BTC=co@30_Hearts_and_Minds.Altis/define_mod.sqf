@@ -28,7 +28,12 @@ btc_custom_loc = [
             "G_Shades_Green"
         ];
 */
-private _weapons = [];
+private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
+    "SMA_ACRREMAFGblk_N",
+    "SMA_Mk16_EGLM",
+    "SMA_MK16_EGLM_black",
+    "SMA_MK16_EGLM_Green"
+];
 private _magazines = [
     "Titan_AP"
 ];
@@ -62,6 +67,7 @@ private _items = [
     // "JAS_GPNVG18_Tan_TI",
     // "JAS_GPNVG18_Full_blk_TI",
     // "JAS_GPNVG18_Full_Tan_TI",
+    "EOD9_HELMET_Base",
     // "NVGogglesC_SSU_blk",
     // "NVGogglesC_SSU_grn",
     // "NVGogglesB_SSU_blk",
@@ -158,7 +164,8 @@ private _backpacks = [
     "TFAR_mr6000l",
     "TFAR_bussole",
     "B_rhsusf_B_BACKPACK",
-    "ACE_NonSteerableParachute"
+    "ACE_NonSteerableParachute",
+    "EOD_Bag"
 ];
 
 btc_custom_arsenal = [_weapons, _magazines, _items, _backpacks];
