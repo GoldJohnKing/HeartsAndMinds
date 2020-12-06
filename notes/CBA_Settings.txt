@@ -133,7 +133,7 @@ force force ace_medical_statemachine_fatalInjuriesPlayer = 1;
 force force ace_medical_treatment_advancedBandages = 2;
 force force ace_medical_treatment_advancedDiagnose = true;
 force force ace_medical_treatment_advancedMedication = true;
-force force ace_medical_treatment_allowBodyBagUnconscious = true;
+force force ace_medical_treatment_allowBodyBagUnconscious = false;
 force force ace_medical_treatment_allowLitterCreation = true;
 force force ace_medical_treatment_allowSelfIV = 1;
 force force ace_medical_treatment_allowSelfPAK = 1;
@@ -285,7 +285,7 @@ force force ace_frag_enabled = true;
 force force ace_frag_maxTrack = 10;
 force force ace_frag_maxTrackPerFrame = 10;
 force force ace_frag_reflectionsEnabled = true;
-force force ace_frag_spallEnabled = true;
+force force ace_frag_spallEnabled = false;
 
 // ACE 武器按键
 force force ace_common_persistentLaserEnabled = true;
@@ -297,8 +297,8 @@ force force ace_weaponselect_displayText = true;
 // ACE 殉爆效果
 force force ace_cookoff_ammoCookoffDuration = 1;
 force force ace_cookoff_enable = 2;
-force force ace_cookoff_enableAmmobox = true;
-force force ace_cookoff_enableAmmoCookoff = true;
+force force ace_cookoff_enableAmmobox = false;
+force force ace_cookoff_enableAmmoCookoff = false;
 force force ace_cookoff_probabilityCoef = 1;
 
 // ACE 火炮
@@ -684,6 +684,13 @@ force force grad_trenches_functions_shortEnvelopeDigTime = 10;
 force force grad_trenches_functions_smallEnvelopeDigTime = 15;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
+
+// Helicopter Turbulence
+TURBULENCE_ENABLE_MASTER = true;
+TURBULENCE_ENABLE_PLANES = false;
+TURBULENCE_ENABLE_WEATHEREFFECT = true;
+TURBULENCE_MAX_TURBULENCE = 15;
+TURBULENCE_MIN_TURBULENCE = 3;
 
 // Laxemann Align
 force force L_Align_enabled = true;
