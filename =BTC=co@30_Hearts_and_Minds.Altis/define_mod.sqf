@@ -38,6 +38,7 @@ private _magazines = [
     "Titan_AP"
 ];
 private _items = [
+    "USP_CRYE_G3C_CUT_DCU_MC",
     // "ACE_optic_Arco_PIP",
     // "ACE_optic_Hamr_PIP",
     // "H_HelmetO_ViperSP_hex_F",
@@ -67,7 +68,6 @@ private _items = [
     // "JAS_GPNVG18_Tan_TI",
     // "JAS_GPNVG18_Full_blk_TI",
     // "JAS_GPNVG18_Full_Tan_TI",
-    "EOD9_HELMET_Base",
     // "NVGogglesC_SSU_blk",
     // "NVGogglesC_SSU_grn",
     // "NVGogglesB_SSU_blk",
@@ -75,6 +75,7 @@ private _items = [
     // "NVGogglesB_SSU_grn",
     "HLC_Charm_base",
     "FIR_PDU",
+    "EOD9_HELMET_Base",
     "min_rf_UavTerminal"
 ];
 private _backpacks = [
