@@ -32,7 +32,10 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "SMA_ACRREMAFGblk_N",
     "SMA_Mk16_EGLM",
     "SMA_MK16_EGLM_black",
-    "SMA_MK16_EGLM_Green"
+    "SMA_MK16_EGLM_Green",
+    "LMG_min_rf_6p69",
+    "LMG_min_rf_6p69_camo",
+    "LMG_min_rf_6p69_desert"
 ];
 private _magazines = [
     "Titan_AP"
