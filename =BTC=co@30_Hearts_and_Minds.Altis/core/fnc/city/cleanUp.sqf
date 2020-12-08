@@ -41,6 +41,18 @@ _toRemove append (allDead select {
 _toRemove call CBA_fnc_deleteEntity;
 
 if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
+    // Edited: Also delete AI groups that are far from players
+    private _patrolsToRemove = [];
+    private _patrolGroupsToRemove = ((btc_patrol_active + btc_civ_veh_active) select { // 
+        (_playableUnits inAreaArray [getPosWorld (leader _x), 3000, 3000] isEqualTo [])
+    });
+    {
+        {
+            _patrolsToRemove pushBackUnique (vehicle _x);
+        } forEach units _x;
+    } forEach _patrolGroupsToRemove;
+    _patrolsToRemove call CBA_fnc_deleteEntity;
+
     (allGroups select {
         units _x isEqualTo [] &&
         !(
