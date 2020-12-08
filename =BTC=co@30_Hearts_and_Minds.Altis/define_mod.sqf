@@ -29,11 +29,11 @@ btc_custom_loc = [
         ];
 */
 private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
-    "SMA_ACRREMAFGblk_N",
+    "SMA_ACRREMAFGblk_N", // These weapons do not have valid textures
     "SMA_Mk16_EGLM",
     "SMA_MK16_EGLM_black",
     "SMA_MK16_EGLM_Green",
-    "LMG_min_rf_6p69",
+    "LMG_min_rf_6p69", // These weapons do not have corresponding magazines in arsenal
     "LMG_min_rf_6p69_camo",
     "LMG_min_rf_6p69_desert"
 ];
@@ -41,9 +41,9 @@ private _magazines = [
     "Titan_AP"
 ];
 private _items = [
-    "USP_CRYE_G3C_CUT_DCU_MC",
-    // "ACE_optic_Arco_PIP",
-    // "ACE_optic_Hamr_PIP",
+    "USP_CRYE_G3C_CUT_DCU_MC", // This uniform does not have valid textures
+    "ACE_optic_Arco_PIP", // These PIP optics will cause significant fps drop on players who are next to the optic user
+    "ACE_optic_Hamr_PIP",
     // "H_HelmetO_ViperSP_hex_F",
     // "H_HelmetO_ViperSP_ghex_F",
     // "NVGogglesB_gry_F",
