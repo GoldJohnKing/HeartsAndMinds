@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=125;
+		nextID=126;
 	};
 	class Camera
 	{
-		pos[]={8428.2109,135.12091,6933.8848};
-		dir[]={-0.7318176,-0.47720143,0.48680237};
-		up[]={-0.39758953,0.87857735,0.26447999};
-		aside[]={0.55390471,-2.213681e-006,0.83270317};
+		pos[]={8358.874,124.07917,6868.4805};
+		dir[]={-0.66750497,-0.69186693,-0.27570301};
+		up[]={-0.63966799,0.72176957,-0.26420075};
+		aside[]={-0.38179654,-3.3485703e-006,0.92435789};
 	};
 };
 binarizationWanted=0;
@@ -3282,7 +3282,6 @@ class Mission
 			{
 				init="call{this setVariable ['bin_deconshower_disableAction',true];}";
 				name="btc_bigShower";
-				disableSimulation=1;
 			};
 			id=68;
 			type="DeconShower_02_F";
@@ -16229,7 +16228,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8307.7656,111.54,7036.0571};
+				position[]={8307.7646,111.54,7036.0571};
 			};
 			areaSize[]={1,-1,1};
 			id=1839;
