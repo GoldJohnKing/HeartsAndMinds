@@ -43,8 +43,14 @@ _toRemove call CBA_fnc_deleteEntity;
 if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
     // Edited: Also delete AI groups that are far from players
     private _patrolsToRemove = [];
-    private _patrolGroupsToRemove = ((btc_patrol_active + btc_civ_veh_active) select { // 
-        (_playableUnits inAreaArray [getPosWorld (leader _x), 3000, 3000] isEqualTo [])
+    private _patrolGroupsToRemove = ((btc_patrol_active + btc_civ_veh_active) select {
+        private _leader = leader _x;
+        private _vehicle = vehicle _leader;
+        private _leaderPos = getPosWorld _leader;
+        ((_vehicle == _leader) && {_playableUnits inAreaArray [_leaderPos, 1500, 1500] isEqualTo []}) ||
+        {((_vehicle isKindOf "LandVehicle") && {_playableUnits inAreaArray [_leaderPos, 2500, 2500] isEqualTo []}) ||
+        {((_vehicle isKindOf "Helicopter") && {_playableUnits inAreaArray [_leaderPos, 5000, 5000] isEqualTo []}) ||
+        {((_vehicle isKindOf "Plane") && {_playableUnits inAreaArray [_leaderPos, 7500, 7500] isEqualTo []})}}}
     });
     {
         {
