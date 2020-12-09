@@ -28,7 +28,7 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-btc_delay_createUnit = btc_delay_createUnit + 0.3;
+btc_delay_createUnit = btc_delay_createUnit + 2.5; // Edited: Increase vehicle spawn duration, default = 0.3
 
 [{
     params [
@@ -83,7 +83,7 @@ btc_delay_createUnit = btc_delay_createUnit + 0.3;
     };
 
     ["btc_delay_vehicleInit", [_veh, _group]] call CBA_fnc_localEvent;
-    btc_delay_createUnit = btc_delay_createUnit - 0.3;
+    btc_delay_createUnit = btc_delay_createUnit - 2.5; // Edited: Increase vehicle spawn duration, default = 0.3
 }, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;
 
-count (_this select 2) * 0.3
+count (_this select 2) * 0.8; // Edited: Increase units inside vehicle spawn duration, default = 0.3
