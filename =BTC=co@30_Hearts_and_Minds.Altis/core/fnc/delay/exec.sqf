@@ -21,7 +21,7 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-btc_delay_createUnit = btc_delay_createUnit + 3; // Edited: Increase function execute duration, default = 0.2
+btc_delay_createUnit = btc_delay_createUnit + 1; // Edited: Increase function execute duration, default = 0.2
 
 [{
     params [
@@ -31,5 +31,5 @@ btc_delay_createUnit = btc_delay_createUnit + 3; // Edited: Increase function ex
 
     _parameters call _code;
 
-    btc_delay_createUnit = btc_delay_createUnit - 3; // Edited: Increase function execute duration, default = 0.2
+    btc_delay_createUnit = btc_delay_createUnit - 1; // Edited: Increase function execute duration, default = 0.2
 }, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;

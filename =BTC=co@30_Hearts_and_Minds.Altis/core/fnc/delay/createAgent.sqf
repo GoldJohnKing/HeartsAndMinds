@@ -22,7 +22,7 @@ Author:
 
 ---------------------------------------------------------------------------- */
 
-btc_delay_createUnit = btc_delay_createUnit + 0.1;
+btc_delay_createUnit = btc_delay_createUnit + 0.3; // Edited: Increase agent spawn duration, default = 0.1
 
 [{
     params [
@@ -33,5 +33,5 @@ btc_delay_createUnit = btc_delay_createUnit + 0.1;
 
     createAgent [_agentType, _pos, [], 0, _special];
 
-    btc_delay_createUnit = btc_delay_createUnit - 0.1;
+    btc_delay_createUnit = btc_delay_createUnit - 0.3; // Edited: Increase agent spawn duration, default = 0.1
 }, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;
