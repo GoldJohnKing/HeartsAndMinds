@@ -116,8 +116,8 @@ if !(_data_units isEqualTo []) then {
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (2 + round (_p_mil_group_ratio * random _max_number_group)) do { // Edited: Tweak basic amount of enemy groups, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
-            [_city, _spawningRadius, round random [4, 6, 8], random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
+        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
+            [_city, _spawningRadius, 2 + round random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
 
@@ -176,15 +176,15 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 2))) do { // Edited: Tweak enemy group amount of "spawn_more" (side mission) cities, default = round (_p_mil_group_ratio * (2 + random 3))
-        [_city, _spawningRadius, round random [4, 6, 8], random 1] call btc_fnc_mil_create_group;  // Edited: Tweak enemy amount each group of "spawn_more" (side mission) cities, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 3))) do {
+        [_city, _spawningRadius, 4 + round random 3, random 1] call btc_fnc_mil_create_group;
     };
-    for "_i" from 1 to (round (7.5 + random 2.5)) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
-            [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
+    for "_i" from 1 to (5 + round random 5) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
+        [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (2 + round random [0, 1.5, 3]) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
+        for "_i" from 1 to (1 + round random 3) do { // Edited: Tweak enemy armed vehicle amount in cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 2
             [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
@@ -195,11 +195,11 @@ if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unit
     if (_city inArea [btc_cache_pos, _radius, _radius, 0, false]) then {
         btc_cache_obj setVariable ["btc_cache_unitsSpawned", true];
 
-        [btc_cache_pos, 8, round (_p_mil_group_ratio * random [2, 4, 6]), _wp_house] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount of guard group in cache cities, default = [btc_cache_pos, 8, 3, _wp_house]
-        [btc_cache_pos, 60, round (_p_mil_group_ratio * random [2, 4, 6]), _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount of patrol group cache cities, default = [btc_cache_pos, 60, 4, _wp_sentry]
+        [btc_cache_pos, 15, 2 + round random 3, _wp_house] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount of guard group in cache cities, default = [btc_cache_pos, 8, 3, _wp_house]
+        [btc_cache_pos, 75, 2 + round random 3, _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount of patrol group cache cities, default = [btc_cache_pos, 60, 4, _wp_sentry]
         if (btc_p_veh_armed_spawn_more) then {
             private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-            for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random [0, 2, 4]))) do { // Edited: Tweak enemy armed vehicle amount in cache cities when "btc_p_veh_armed_spawn_more" is enabled, default = 1 + round random 3
+            for "_i" from 1 to (1 + round random 3) do {
                 [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
             };
         };
@@ -210,9 +210,9 @@ if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unit
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
     private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 50, round random [4, 6, 8], 1.1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1]
-    [_pos, 100, round random [4, 6, 8], _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of patrol group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
-    [_pos, 150, round random [4, 6, 8], _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
+    [_pos, 75, 2 + round random 4, 1.1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1]
+    [_pos, 150, 2 + round random 2, _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of patrol group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
+    [_pos, 250, 2 + round random 2, _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
     private _random = random 1;
     switch (true) do {
         case (_random <= 0.3) : {};
@@ -228,7 +228,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     };
     if (btc_p_veh_armed_ho) then {
         _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (2 + round random 2) do { // Edited: Tweak enemy armed vehicle amount in cache cities when "btc_p_veh_armed_ho" is enabled, default = (2 + round random 3)
+        for "_i" from 1 to (2 + round random 3) do {
             [{_this call btc_fnc_mil_send}, [_closest, _pos, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
         };
     };
@@ -279,7 +279,7 @@ if (_numberOfPatrol < _p_patrol_max) then {
         private _group = createGroup btc_enemy_side;
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
-        [[_group, 2, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
+        [[_group, 1 + round random 1.5, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
     };
 };
 //Traffic

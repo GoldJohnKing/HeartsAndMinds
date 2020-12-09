@@ -74,7 +74,7 @@ btc_military_id = btc_military_id + 1;
 
 private _delay = switch (_random) do {
     case 1 : {
-        private _n_units = 4 + (round random [0, 2, 4]); // Edited: Decrease enemy patrol infantry amount, default = 5 + (round random 8)
+        private _n_units = 4 + (round random 8); // Edited: Decrease enemy patrol infantry amount, default = 5 + (round random 8)
         _pos = [_pos, 0, 50, 10, false] call btc_fnc_findsafepos;
 
         [_group, _pos, _n_units] call btc_fnc_mil_createUnits;
@@ -85,7 +85,7 @@ private _delay = switch (_random) do {
         if (_pos_isWater) then {
             _veh_type = selectRandom btc_type_boats;
         } else {
-            _veh_type = selectRandom btc_type_motorized; // Edited: Prevent enemy spawning in civilian vehicles, default = selectRandom (btc_type_motorized + [selectRandom btc_civ_type_veh])
+            _veh_type = selectRandom (btc_type_motorized + btc_type_motorized_armed); // Edited: Prevent enemies spawning in civilian vehicles & combine btc_type_motorized and btc_type_motorized_armed, default = selectRandom (btc_type_motorized + [selectRandom btc_civ_type_veh])
             //Tweak position of spawn
             private _roads = _pos nearRoads 150;
             _roads = _roads select {isOnRoad _x};
