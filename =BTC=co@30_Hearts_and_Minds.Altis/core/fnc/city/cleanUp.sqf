@@ -47,10 +47,10 @@ if (btc_delay_createUnit < 0.001) then { // Don't remove group during units crea
         private _leader = leader _x;
         private _vehicle = vehicle _leader;
         private _leaderPos = getPosWorld _leader;
-        ((_vehicle isKindOf "Men") && {_playableUnits inAreaArray [_leaderPos, 1500, 1500] isEqualTo []}) ||
-        {((_vehicle isKindOf "LandVehicle") && {_playableUnits inAreaArray [_leaderPos, 2500, 2500] isEqualTo []}) ||
-        {((_vehicle isKindOf "Helicopter") && {_playableUnits inAreaArray [_leaderPos, 5000, 5000] isEqualTo []}) ||
-        {((_vehicle isKindOf "Plane") && {_playableUnits inAreaArray [_leaderPos, 7500, 7500] isEqualTo []})}}}
+        ((_vehicle isKindOf "Men") && {_playableUnits inAreaArray [_leaderPos, 1000, 1000] isEqualTo []}) ||
+        {((_vehicle isKindOf "LandVehicle") && {_playableUnits inAreaArray [_leaderPos, 1500, 1500] isEqualTo []}) ||
+        {((_vehicle isKindOf "Helicopter") && {_playableUnits inAreaArray [_leaderPos, 3000, 3000] isEqualTo []}) ||
+        {((_vehicle isKindOf "Plane") && {_playableUnits inAreaArray [_leaderPos, 5000, 5000] isEqualTo []})}}}
     });
     {
         {
