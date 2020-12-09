@@ -33,11 +33,11 @@ switch true do {
     case (_type isKindOf "LandVehicle" || {_type isKindOf "Ship" || {_type isKindOf "StaticWeapon"}}) : { // Edited: Make StaticWeapon towable and liftable, default = (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"})
         private _action = ["Logistic", localize "STR_BTC_HAM_ACTION_LOC_MAIN", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\L_ca.paa", {}, {isNull isVehicleCargo attachedto _target && isNull isVehicleCargo _target}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_log_vehicle_selected && {btc_log_vehicle_selected != _target} && {[_target, btc_log_vehicle_selected] call btc_fnc_tow_check}}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_hook;}, {true}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_fnc_tow_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_fnc_tow_unhook;}, {true}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
     };
     case (_type isKindOf "Helicopter" || {(_type isKindOf "Plane") || {_type isKindOf "Ship"}}) : { // Edited: Make Ship towable and liftable so it can lift underwater vehicles, default = (_type isKindOf "Helicopter" || {_type isKindOf "Plane"})
@@ -49,11 +49,11 @@ switch true do {
         _action = ["Cut_ropes", localize "STR_ACE_Fastroping_Interaction_cutRopes", "\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa", {[] call btc_fnc_lift_destroyRopes;}, {btc_ropes_deployed && {(driver vehicle player) isEqualTo player}}] call ace_interact_menu_fnc_createAction;
         [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
         // Edited: Make helis & planes towable
-        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_log_vehicle_selected && {btc_log_vehicle_selected != _target} && {[_target, btc_log_vehicle_selected] call btc_fnc_tow_check}}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_hook;}, {true}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_fnc_tow_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_fnc_tow_unhook;}, {true}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
     };
 };
