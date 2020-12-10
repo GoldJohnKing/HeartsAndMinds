@@ -78,6 +78,4 @@ if (btc_debug_log) then {
     [format ["_this = %1 ; POS %2 UNITS N %3 _wp_ratios %4", _this, _rpos, _n, _wp_ratios], __FILE__, [false]] call btc_fnc_debug_message;
 };
 
-[_groups] call btc_fnc_set_groupsOwner; // Edited: Add headless client support for all enemy groups
-
 _groups

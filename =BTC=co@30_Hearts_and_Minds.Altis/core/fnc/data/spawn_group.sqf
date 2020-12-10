@@ -107,9 +107,6 @@ if (_type isEqualTo 1) then {
         [_group, _array_veh select 0] call btc_fnc_civ_addWP;
         _group setVariable ["btc_data_inhouse", _array_veh];
     };
-
-    [[_group]] call btc_fnc_set_groupsOwner; // Edited: Add headless client support for all civilian groups
-
 }, [_data_unit, _group], btc_delay_createUnit + _delay] call CBA_fnc_waitAndExecute;
 
 _delay

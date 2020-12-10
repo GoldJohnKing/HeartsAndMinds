@@ -37,6 +37,4 @@ for "_i" from 1 to _n do {
     _group setVariable ["btc_data_inhouse", [_pos]];
     [_group, _pos] call btc_fnc_civ_addWP;
     [_group, selectRandom btc_civ_type_units, _pos] call btc_fnc_delay_createUnit;
-
-    [[_group]] call btc_fnc_set_groupsOwner; // Edited: Add headless client support for all civilian groups
 };

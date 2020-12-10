@@ -46,7 +46,6 @@ addMissionEventHandler ["HandleDisconnect", {
     params ["_headless"];
     if (_headless in (entities "HeadlessClient_F")) then {
         deleteVehicle _headless;
-        [] call btc_fnc_set_groupsOwner; // Edited: Re-assign group owner on headless clients disconnect
     };
 }];
 if (btc_p_auto_db) then {
