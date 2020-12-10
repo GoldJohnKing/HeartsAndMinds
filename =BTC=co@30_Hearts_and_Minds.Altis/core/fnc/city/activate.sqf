@@ -116,8 +116,8 @@ if !(_data_units isEqualTo []) then {
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
-            [_city, _spawningRadius, ceil random 3, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
+        for "_i" from 1 to (ceil (_p_mil_group_ratio * random _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
+            [_city, _spawningRadius, ceil random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
 
@@ -176,10 +176,10 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 3))) do {
-        [_city, _spawningRadius, 4 + round random 3, random 1] call btc_fnc_mil_create_group;
+    for "_i" from 1 to (ceil (_p_mil_group_ratio * random 4)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (2 + random 3)))
+        [_city, _spawningRadius, ceil random 6, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
     };
-    for "_i" from 1 to (5 + round random 5) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
+    for "_i" from 1 to (ceil random 8) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
         [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
     };
     if (btc_p_veh_armed_spawn_more) then {
@@ -210,7 +210,7 @@ if !(btc_cache_pos isEqualTo [] && {!(btc_cache_obj getVariable ["btc_cache_unit
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
     private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 20, ceil random 12, 1.1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1]
+    [_pos, 20, ceil random 8, 1.1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1]
     [_pos, 120, ceil random 4, _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
     [_pos, 120, ceil random 4, _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
     private _random = random 1;
