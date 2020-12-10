@@ -57,7 +57,7 @@ for "_id" from 0 to (count _locations - 1) do {
         };
         private _name = getText(_current >> "name");
         private _radius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _radius = (_radius max 300) min 800; // Edited: Increase city radius, default = (_radius max 160) min 800
+        _radius = (_radius max 250) min 500; // Edited: Increase city radius, default = (_radius max 160) min 800
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
