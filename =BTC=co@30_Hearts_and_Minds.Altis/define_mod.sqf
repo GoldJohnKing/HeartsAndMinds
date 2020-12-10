@@ -29,6 +29,7 @@ btc_custom_loc = [
         ];
 */
 private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
+    "hlc_rifle_mk18mod0", // This weapon has no fire sound
     "SMA_ACRREMAFGblk_N", // These weapons do not have valid textures
     "SMA_Mk16_EGLM",
     "SMA_MK16_EGLM_black",
