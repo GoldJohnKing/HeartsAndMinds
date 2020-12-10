@@ -212,9 +212,9 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "kill", "EMP", "removeRubbish", "hack"]; // Edited: Exclude "capture_officer", "convoy", "civtreatment", "hack" - On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
-    if (btc_p_sea) then {btc_side_list append ["underwater_generator"]}; // Edited: Exclude "civtreatment_boat" - On sea
-    // if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"}; // Edited: Exclude "chemicalLeak" due to performance issue
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower", "checkpoint", "rescue", "hostage", "kill", "EMP", "removeRubbish", "hack"]; // Edited: Exclude "capture_officer", "convoy", "civtreatment" - On ground (Side "convoy" and "capture_officer" are not design for map with different islands. Start and end city can be on different islands.)
+    if (btc_p_sea) then {btc_side_list append ["underwater_generator", "civtreatment_boat"]}; //On sea
+    if (btc_p_chem) then {btc_side_list pushBack "chemicalLeak"};
     btc_side_list_use = [];
     btc_type_tower = ["Land_Communication_F", "Land_TTowerBig_1_F", "Land_TTowerBig_2_F"];
     btc_type_phone = ["Land_PortableLongRangeRadio_F", "Land_MobilePhone_smart_F", "Land_MobilePhone_old_F"];
@@ -369,7 +369,7 @@ btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;
 
 btc_w_civs = [ // Edited: Give more powerful weapons to armed civs
-    ["arifle_ARX_blk_F","arifle_AK12_GL_F","srifle_GM6_F","MMG_01_tan_F","sgun_HunterShotgun_01_F","rhs_weap_mg42","rhs_weap_pkp","rhs_weap_M107","rhs_weap_m32","HLC_wp_M134Painless","LMG_min_rf_6p69"], // Edited: default = "srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"
+    ["arifle_ARX_blk_F","arifle_AK12_GL_F","srifle_GM6_F","MMG_01_tan_F","sgun_HunterShotgun_01_F","rhs_weap_mg42","rhs_weap_pkp","rhs_weap_M107","rhs_weap_m32","HLC_wp_M134Painless"], // Edited: default = "srifle_DMR_06_hunter_F", "sgun_HunterShotgun_01_F", "srifle_DMR_06_hunter_khs_F", "sgun_HunterShotgun_01_Sawedoff_F", "Hgun_PDW2000_F", "arifle_AKM_F", "arifle_AKS_F"
     ["hlc_smg_mp5k","rhs_weap_savz61_folded","rhs_weap_pp2000_folded","rhs_weap_m320"] // Edited: default = "hgun_Pistol_heavy_02_F", "hgun_Rook40_F", "hgun_Pistol_01_F"
 ];
 btc_g_civs = ["HandGrenade","ACE_M84","ACE_M14","rhs_mag_m67","rhs_charge_tnt_x2_mag","rhs_charge_sb3kg_mag","rhs_grenade_sthgr24_x7bundle_mag","ClusterGrenade_FragGrenade","ClusterGrenade_Motar82","WNZ_EMPGrenade","ACE_DemoCharge_Remote_Mag_Throwable","ACE_SatchelCharge_Remote_Mag_Throwable"]; // Edited: default = "HandGrenade", "MiniGrenade", "ACE_M84", "ACE_M84"

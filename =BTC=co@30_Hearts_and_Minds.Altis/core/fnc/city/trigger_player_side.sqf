@@ -37,7 +37,7 @@ params [
 ];
 
 private _trigger = createTrigger ["EmptyDetector", _position];
-_trigger setTriggerArea [_radius + btc_city_radius, _radius + btc_city_radius, 0, false]; // Edited: Set city activation height to avoid AI activate all city he passed by, default = [_radius + btc_city_radius, _radius + btc_city_radius, 0, false]
+_trigger setTriggerArea [_radius + btc_city_radius, _radius + btc_city_radius, 0, false];
 _trigger setTriggerActivation ["WEST", "PRESENT", true]; // Edited: Allow all WEST units activate city, default = ["ANYPLAYER", "PRESENT", true]
 _trigger setTriggerStatements [btc_p_trigger, format ["[%1] call btc_fnc_city_activate", _id], format ["[%1] call btc_fnc_city_de_activate", _id]];
 _city setVariable ["trigger_player_side", _trigger];
