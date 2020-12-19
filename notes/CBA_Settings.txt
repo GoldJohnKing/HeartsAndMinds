@@ -102,13 +102,13 @@ force force ace_switchunits_switchToIndependent = false;
 force force ace_switchunits_switchToWest = false;
 
 // ACE 医疗系统
-force force ace_medical_ai_enabledFor = 1;
+force force ace_medical_ai_enabledFor = 2;
 force force ace_medical_AIDamageThreshold = 0.1;
 force force ace_medical_bleedingCoefficient = 0.5;
 force force ace_medical_blood_bloodLifetime = 180;
 force force ace_medical_blood_enabledFor = 0;
 force force ace_medical_blood_maxBloodObjects = 50;
-force force ace_medical_fatalDamageSource = 0;
+force force ace_medical_fatalDamageSource = 2;
 force force ace_medical_feedback_bloodVolumeEffectType = 2;
 force force ace_medical_feedback_painEffectType = 2;
 force force ace_medical_fractureChance = 0.5;
@@ -153,7 +153,7 @@ force force ace_medical_treatment_locationSurgicalKit = 0;
 force force ace_medical_treatment_maxLitterObjects = 50;
 force force ace_medical_treatment_medicEpinephrine = 0;
 force force ace_medical_treatment_medicIV = 0;
-force force ace_medical_treatment_medicPAK = 1;
+force force ace_medical_treatment_medicPAK = 2;
 force force ace_medical_treatment_medicSurgicalKit = 1;
 force force ace_medical_treatment_timeCoefficientPAK = 1;
 force force ace_medical_treatment_treatmentTimeAutoinjector = 3;
@@ -237,7 +237,7 @@ force force ace_weather_windSimulation = true;
 
 // ACE 宙斯
 force force ace_zeus_autoAddObjects = false;
-force force ace_zeus_canCreateZeus = -1;
+force force ace_zeus_canCreateZeus = 0;
 force force ace_zeus_radioOrdnance = false;
 force force ace_zeus_remoteWind = false;
 force force ace_zeus_revealMines = 0;
@@ -285,7 +285,7 @@ force force ace_frag_enabled = true;
 force force ace_frag_maxTrack = 10;
 force force ace_frag_maxTrackPerFrame = 10;
 force force ace_frag_reflectionsEnabled = true;
-force force ace_frag_spallEnabled = false;
+force force ace_frag_spallEnabled = true;
 
 // ACE 武器按键
 force force ace_common_persistentLaserEnabled = true;
@@ -295,11 +295,11 @@ force force ace_reload_showCheckAmmoSelf = true;
 force force ace_weaponselect_displayText = true;
 
 // ACE 殉爆效果
-force force ace_cookoff_ammoCookoffDuration = 1;
+force force ace_cookoff_ammoCookoffDuration = 0.5;
 force force ace_cookoff_enable = 2;
 force force ace_cookoff_enableAmmobox = false;
-force force ace_cookoff_enableAmmoCookoff = false;
-force force ace_cookoff_probabilityCoef = 1;
+force force ace_cookoff_enableAmmoCookoff = true;
+force force ace_cookoff_probabilityCoef = 0.5;
 
 // ACE 火炮
 force force ace_artillerytables_advancedCorrections = true;
@@ -349,11 +349,11 @@ force force ace_scopes_zeroReferenceTemperature = 15;
 
 // ACE 视野距离限制器
 force force ace_viewdistance_enabled = true;
-force force ace_viewdistance_limitViewDistance = 8000;
-force force ace_viewdistance_objectViewDistanceCoeff = 6;
-force force ace_viewdistance_viewDistanceAirVehicle = 12;
-force force ace_viewdistance_viewDistanceLandVehicle = 5;
-force force ace_viewdistance_viewDistanceOnFoot = 4;
+force ace_viewdistance_limitViewDistance = 8000;
+force ace_viewdistance_objectViewDistanceCoeff = 6;
+force ace_viewdistance_viewDistanceAirVehicle = 12;
+force ace_viewdistance_viewDistanceLandVehicle = 5;
+force ace_viewdistance_viewDistanceOnFoot = 4;
 
 // ACE 载具上锁
 force force ace_vehiclelock_defaultLockpickStrength = 10;
@@ -473,7 +473,7 @@ force force AGC_GCenabled = true;
 force force AGC_GCmaxBodyTime = 180;
 force force AGC_GCmaxDistance = 150;
 force force AGC_GCmaxTime = 150;
-force force AGC_GCminDistance = 100;
+force force AGC_GCminDistance = 75;
 force force AGC_GCminTime = 75;
 force force AGC_GCrefreshInterval = 0;
 force force AGC_GCvehicleCleanupDistance = 0;
@@ -656,7 +656,8 @@ force force emr_main_whitelistStr = "";
 
 // F/A-18
 force force js_jc_fa18_advancedStart = false;
-force force js_jc_fa18_canopyLoss = false;
+force force js_jc_fa18_atflirRequire = false;
+force force js_jc_fa18_canopyLoss = true;
 force force js_jc_fa18_cursorSensitivity = 2.5;
 force force js_jc_fa18_interactCursor = false;
 force force js_jc_fa18_interactionRadiusMod = 1;
@@ -686,11 +687,11 @@ force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
 
 // Helicopter Turbulence
-TURBULENCE_ENABLE_MASTER = true;
-TURBULENCE_ENABLE_PLANES = false;
-TURBULENCE_ENABLE_WEATHEREFFECT = true;
-TURBULENCE_MAX_TURBULENCE = 15;
-TURBULENCE_MIN_TURBULENCE = 3;
+force force TURBULENCE_ENABLE_MASTER = true;
+force force TURBULENCE_ENABLE_PLANES = false;
+force force TURBULENCE_ENABLE_WEATHEREFFECT = true;
+force force TURBULENCE_MAX_TURBULENCE = 30;
+force force TURBULENCE_MIN_TURBULENCE = 5;
 
 // Laxemann Align
 force force L_Align_enabled = true;
@@ -734,7 +735,18 @@ force force T1AM_ExcludedArtyClasses = "";
 force force T1AM_ExcludedArtyVariables = "";
 force force T1AM_ModEnabled = true;
 force force T1AM_PrepTimes = 0;
-force force T1AM_ShowOtherRadioMessages = true;
+force force T1AM_ShowOtherRadioMessages = 0;
+
+// Turret Enhanced
+force force Fat_Lurch_Grid = false;
+force force Fat_Lurch_GridNum = 6;
+force force Fat_Lurch_MapSlew = false;
+force force Fat_Lurch_Markers = true;
+force force Fat_Lurch_Measure = true;
+force force Fat_Lurch_ShowAz = true;
+force force Fat_Lurch_ShowEl = true;
+force force Fat_Lurch_ShowNorth = true;
+force force Fat_Lurch_ShowTarget = true;
 
 // Unit Ambient SFX Options
 force force UAS_option_chanceCough = 0.1;
@@ -782,12 +794,12 @@ force force UVO_option_maxDistVoices = 300;
 force force UVO_option_soundsSamplePitch = 1;
 
 // USAF
-force usaf_afterburner_setting_allow_ai = true;
+force force usaf_afterburner_setting_allow_ai = true;
 force force USAF_allowNuke = true;
 force force usaf_debug_setting_enabled_clients = false;
 force force usaf_debug_setting_enabled_server = false;
-force usaf_f35a_allow_das_coverage = true;
-force usaf_f35a_allow_sar_imagery = true;
+force force usaf_f35a_allow_das_coverage = true;
+force force usaf_f35a_allow_sar_imagery = true;
 force force usaf_serviceMenu_setting_allowHangarRearm = false;
 force force usaf_serviceMenu_setting_allowHangarRefuel = false;
 force force usaf_serviceMenu_setting_allowHangarRepair = false;
@@ -798,7 +810,7 @@ force force usaf_serviceMenu_setting_reloadTime = "0";
 force force usaf_serviceMenu_setting_repairTime = "100";
 force force usaf_serviceMenu_setting_replaceSources = false;
 force force usaf_serviceMenu_setting_selectorSearchRadius = "30";
-force usaf_setting_allow_aiFormlights = true;
+force force usaf_setting_allow_aiFormlights = true;
 
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
