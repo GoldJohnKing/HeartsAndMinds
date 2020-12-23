@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8314.7383,128.21579,7008.4272};
-		dir[]={0.32283187,-0.63905412,0.69831324};
-		up[]={0.2682727,0.76890975,0.58028692};
-		aside[]={0.90778911,-3.301684e-006,-0.41966879};
+		pos[]={8421.3203,231.10646,7763.6748};
+		dir[]={0.1549774,-0.18726049,-0.97013664};
+		up[]={0.029600963,0.98219532,-0.18532678};
+		aside[]={-0.98758072,-1.7708662e-006,-0.15776798};
 	};
 };
 binarizationWanted=0;
@@ -691,8 +691,8 @@ class Mission
 		wavesForced=1;
 		windForced=1;
 		year=2020;
-		month=9;
-		day=25;
+		month=6;
+		day=21;
 		hour=12;
 		minute=0;
 		startFogDecay=0.1;
@@ -9750,7 +9750,6 @@ class Mission
 				};
 			};
 			id=1194;
-			atlOffset=7.6293945e-006;
 		};
 		class Item31
 		{
@@ -9764,7 +9763,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{this setCombatMode ""BLUE""; this setVariable [""T1AM_AllowUnit"", false, true];}";
+				init="call{this setCombatMode ""BLUE""; this setVariable [""T1AM_AllowUnit"", false, true]; this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -9772,7 +9771,6 @@ class Mission
 			};
 			id=1195;
 			type="B_Ship_MRLS_01_F";
-			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10273,7 +10271,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8390.9355,132.58867,6781.9736};
+						position[]={8390.9355,132.58844,6781.9736};
 						angles[]={0,3.1415927,0};
 					};
 					side="West";
@@ -10284,7 +10282,7 @@ class Mission
 					};
 					id=1487;
 					type="B_UAV_AI";
-					atlOffset=2.6846466;
+					atlOffset=2.6844177;
 				};
 			};
 			class Attributes
@@ -10313,14 +10311,14 @@ class Mission
 				};
 			};
 			id=1456;
-			atlOffset=2.6846466;
+			atlOffset=2.6844177;
 		};
 		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8390.9355,134.3437,6781.9238};
+				position[]={8390.9355,134.34348,6781.9238};
 				angles[]={0,3.1415927,0};
 			};
 			side="West";
@@ -10328,6 +10326,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -10335,7 +10334,7 @@ class Mission
 			};
 			id=1486;
 			type="B_SAM_System_01_F";
-			atlOffset=2.6846466;
+			atlOffset=2.6844177;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13580,6 +13579,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				textures="Black";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
@@ -13896,6 +13896,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16325,6 +16326,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16369,6 +16371,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16687,6 +16690,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16789,6 +16793,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16891,6 +16896,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -16993,6 +16999,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17329,6 +17336,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17393,6 +17401,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17456,6 +17465,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -17615,6 +17625,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -19281,6 +19292,7 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
+				init="call{this addeventhandler [""fired"", {(_this select 0) setvehicleammo 1}];}";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
