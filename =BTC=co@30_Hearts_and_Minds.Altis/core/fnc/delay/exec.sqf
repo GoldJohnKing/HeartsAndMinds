@@ -25,7 +25,7 @@ btc_delay_createUnit = btc_delay_createUnit + 1; // Edited: Increase function ex
 
 [{
     params [
-        ["_parameters", [], [[]]],
+        "_parameters",
         ["_code", {}, [{}]]
     ];
 
