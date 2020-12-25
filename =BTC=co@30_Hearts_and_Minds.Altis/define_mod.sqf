@@ -37,7 +37,7 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "LMG_min_rf_6p69", // These weapons do not have corresponding magazines in arsenal
     "LMG_min_rf_6p69_camo",
     "LMG_min_rf_6p69_desert",
-    "Tier1_HK416D145_LMT", // These weapons are incompatible with NIArms HK416 weapons
+    "Tier1_HK416D145_LMT", // These Tier One mod weapons are incompatible with NIArms HK416 weapons
     "Tier1_HK416D145_LMT_Desert",
     "Tier1_HK416D145_CTR",
     "Tier1_HK416D145_CTR_Desert",
@@ -80,7 +80,23 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "Tier1_HK416D10_RAHG_CTR_BlackDesert",
     "Tier1_HK416D10_RAHG_IMOD",
     "Tier1_HK416D10_RAHG_IMOD_Desert",
-    "Tier1_HK416D10_RAHG_IMOD_BlackDesert"
+    "Tier1_HK416D10_RAHG_IMOD_BlackDesert",
+    "HK416D10_CTR_SNOW", // These are extra paintings of above Tier One mod weapons
+    "HK416D10_LMT_SNOW",
+    "HK416D10_SMR_CTR_SNOW",
+    "HK416D10_SMR_CTR_SNOW_2",
+    "HK416D10_SMR_CTR_BlackSnow_SNOW",
+    "HK416D10_SMR_IMOD_SNOW",
+    "HK416D10_SMR_IMOD_SNOW_2",
+    "HK416D10_SMR_IMOD_BlackSnow",
+    "HK416D10_SMR_LMT_SNOW",
+    "HK416D145_CTR_SNOW",
+    "HK416D145_LMT_SNOW",
+    "HK416D145_SMR_CTR_SNOW",
+    "HK416D145_SMR_CTR_SNOW_2",
+    "HK416D145_SMR_CTR_BLACKSNOW",
+    "HK416D145_SMR_LMT_SNOW",
+    "HK416D145_SMR_LMT_BLACKSNOW"
 ];
 private _magazines = [
     "Titan_AP"
