@@ -110,9 +110,7 @@ private _items = [
     // "NVGogglesB_gry_F",
     // "NVGogglesB_grn_F",
     // "NVGogglesB_blk_F",
-    "Laserdesignator_02", // There OPFOR items are not functional for BLUFOR units
-    "Laserdesignator_02_ghex_F",
-    "O_IR_Grenade", 
+    "O_IR_Grenade", // These OPFOR items are not functional for BLUFOR units
     "I_IR_Grenade",
     "O_R_IR_Grenade",
     "I_E_IR_Grenade",
