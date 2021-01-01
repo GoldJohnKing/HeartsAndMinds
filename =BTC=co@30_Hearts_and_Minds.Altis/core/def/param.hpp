@@ -123,7 +123,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 70;
+        default = 100;
     };
     class btc_p_mil_static_group_ratio { // Enemy static density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_STATIC_DENSITY"]);
@@ -135,7 +135,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_CIVILIAN_DENSITY"]);
         values[]={0,10,20,30,40,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-        default = 80;
+        default = 100;
     };
     class btc_p_animals_group_ratio { // Animal density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ANIMALS_DENSITY"]);
@@ -387,7 +387,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_SPAWNRAD"]);
         values[]={0,1,2,3,4,5,6,7,8};
         texts[]={"0 m","100 m","200 m",$STR_BTC_HAM_PARAM_OTHER_SPAWNRAD_DEF,"400 m","500 m (Takistan)","600 m","700 m","800 m"}; // texts[]={"0 m","100 m","200 m","300 m","400 m","500 m (Takistan)","600 m","700 m","800 m"};
-        default = 3;
+        default = 2;
     };
     class btc_p_trigger { // Disable city activation when a plane or helicopter (>190Km/h) is flying above:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_DISABLESPAWN"]);
