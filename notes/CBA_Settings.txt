@@ -156,21 +156,21 @@ force force ace_medical_treatment_medicIV = 0;
 force force ace_medical_treatment_medicPAK = 2;
 force force ace_medical_treatment_medicSurgicalKit = 1;
 force force ace_medical_treatment_timeCoefficientPAK = 1;
-force force ace_medical_treatment_treatmentTimeAutoinjector = 3;
-force force ace_medical_treatment_treatmentTimeBodyBag = 8;
-force force ace_medical_treatment_treatmentTimeCPR = 12;
-force force ace_medical_treatment_treatmentTimeIV = 8;
-force force ace_medical_treatment_treatmentTimeSplint = 8;
-force force ace_medical_treatment_treatmentTimeTourniquet = 3;
+force force ace_medical_treatment_treatmentTimeAutoinjector = 2.5;
+force force ace_medical_treatment_treatmentTimeBodyBag = 5;
+force force ace_medical_treatment_treatmentTimeCPR = 10;
+force force ace_medical_treatment_treatmentTimeIV = 7.5;
+force force ace_medical_treatment_treatmentTimeSplint = 5;
+force force ace_medical_treatment_treatmentTimeTourniquet = 2.5;
 force force ace_medical_treatment_woundReopenChance = 1;
-force force ace_medical_treatment_woundStitchTime = 5;
+force force ace_medical_treatment_woundStitchTime = 3;
 
 // ACE 后勤设定
 force force ace_cargo_enable = true;
 force force ace_cargo_loadTimeCoefficient = 1;
 force force ace_cargo_paradropTimeCoefficent = 0.5;
 force force ace_rearm_distance = 25;
-force force ace_rearm_level = 0;
+force force ace_rearm_level = 1;
 force force ace_rearm_supply = 0;
 force force ace_refuel_hoseLength = 25;
 force force ace_refuel_rate = 1;
@@ -485,11 +485,11 @@ force force AGC_showBodyCount = false;
 // Aircraft Turbulence
 force force HELICOPTER_TURBULENCE_ENABLE_MASTER = true;
 force force HELICOPTER_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 40;
+force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 30;
 force force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 5;
 force force PLANE_TURBULENCE_ENABLE_MASTER = true;
 force force PLANE_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force PLANE_TURBULENCE_MAX_TURBULENCE = 40;
+force force PLANE_TURBULENCE_MAX_TURBULENCE = 30;
 force force PLANE_TURBULENCE_MIN_TURBULENCE = 5;
 
 // Anti-Bounce System
