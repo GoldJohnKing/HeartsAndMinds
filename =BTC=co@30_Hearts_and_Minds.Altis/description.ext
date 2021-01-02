@@ -65,7 +65,7 @@ corpseManagerMode = 0;
 disabledAI = 1;
 
 // Edited: Disable unused channel
-disableChannels[] = {0, 2, 4, 5};
+disableChannels[] = {0, 2, 4, 5, 6};
 
 // Edited: Add VCOM Support
 allowFunctionsRecompile = 1;
