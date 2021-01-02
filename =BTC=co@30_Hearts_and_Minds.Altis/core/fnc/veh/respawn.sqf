@@ -79,7 +79,7 @@ _data pushBack (_vehicle getVariable ["btc_EDENinventory", []]);
 }, [_vehicle, _data], _data select 3] call CBA_fnc_waitAndExecute;
 
 if (isServer) then {
-    [btc_rep_malus_veh_killed, _killer] call btc_fnc_rep_change;
+    [btc_rep_malus_veh_killed, _instigator] call btc_fnc_rep_change;
     // Edited: Show notification when friendly vehicles are killed or crushed by players
     private _driver = driver _vehicle;
     if (isPlayer _instigator) then {
@@ -90,5 +90,5 @@ if (isServer) then {
         };
     };
 } else {
-    [btc_rep_malus_veh_killed, _killer] remoteExecCall ["btc_fnc_rep_change", 2];
+    [btc_rep_malus_veh_killed, _instigator] remoteExecCall ["btc_fnc_rep_change", 2];
 };
