@@ -696,7 +696,7 @@ switch (_p_en) do {
             + ["min_rf_gaz_2330_HMG","min_rf_truck_covered","min_rf_gaz_2330_HMG_desert","min_rf_truck_covered_desert","min_rf_t_14","min_rf_t_14_desert","min_rf_t_15","min_rf_t_15_desert","min_rf_2b26_desert","min_rf_2b26","min_rf_sa_22_desert","min_rf_sa_22"]
             + ["I_E_APC_tracked_03_cannon_F","I_E_Truck_02_MRL_F"]
             + ["bad_MBT_02_ru","bad_MBT_04_ru","bad_MBT_04K_ru","bad_ARTY_02_ru","bad_ru_zam7","Bad_APC_Wheeled_02_rcws_F","bad_apc_t_02_ru","bad_ru_zam5","bad_ru_tem5","bad_ru_lsv3","bad_ru_lsv2","bad_apcaa_t_02_ru"];
-        btc_type_mg = ["rhs_KORD_VDV","rhs_KORD_high_VDV","RHS_NSV_TriPod_VDV","RHS_AGS30_TriPod_VDV"] + ["O_G_HMG_02_F","O_G_HMG_02_high_F","O_HMG_01_A_F","O_GMG_01_A_F"] + ["min_rf_AGS_30","min_rf_Kord"];
+        btc_type_mg = ["rhs_KORD_VDV","rhs_KORD_high_VDV","RHS_NSV_TriPod_VDV","RHS_AGS30_TriPod_VDV"] + ["O_HMG_01_F","O_HMG_01_high_F","O_GMG_01_F","O_GMG_01_high_F"] + ["min_rf_AGS_30","min_rf_Kord"];
         btc_type_gl = ["rhs_Metis_9k115_2_vdv","rhs_Kornet_9M133_2_vdv","rhs_SPG9M_VDV"] + ["min_rf_Metis"];
         btc_type_motar = ["O_G_Mortar_01_F","rhs_2b14_82mm_vdv","rhs_D30_vmf","RHS_ZU23_VDV","rhs_Igla_AA_pod_vdv"]; // Edited: Add a new type for enemy mortar and static AA
     };
