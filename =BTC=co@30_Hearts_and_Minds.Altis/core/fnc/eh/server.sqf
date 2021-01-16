@@ -82,9 +82,3 @@ if (btc_p_set_skill) then {
     }, false] call CBA_fnc_addClassEventHandler;
 } forEach btc_civ_type_veh;
 ["ace_tagCreated", btc_fnc_tag_eh] call CBA_fnc_addEventHandler;
-
-// Edited: Disconnect UAV from dead players
-addMissionEventHandler ["entityRespawned", {
-    params ["_entity", "_corpse"];
-    _corpse connectTerminalToUAV objNull;
-}];
