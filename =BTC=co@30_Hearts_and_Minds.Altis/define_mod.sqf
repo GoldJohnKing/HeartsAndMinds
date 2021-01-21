@@ -36,7 +36,9 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "SMA_MK16_EGLM_Green",
     "LMG_min_rf_6p69", // These weapons do not have corresponding magazines in arsenal
     "LMG_min_rf_6p69_camo",
-    "LMG_min_rf_6p69_desert"
+    "LMG_min_rf_6p69_desert",
+    "QBZ95_1", // These weapons introduced by LZB PLA MOD are not compatible with ace ballistics
+    "QBZ95_1_DF"
 ];
 private _magazines = [
     "Titan_AP"
