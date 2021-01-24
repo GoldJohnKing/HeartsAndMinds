@@ -399,7 +399,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_CITYFREE"]);
         values[]={0,1,2,3};
         texts[]={$STR_DISABLED,"1","2","3"};
-        default = 0;
+        default = 2;
     };
     class btc_p_auto_headless { // Autodetect Headless client:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_OTHER_AUTOHEADLESS"]);
