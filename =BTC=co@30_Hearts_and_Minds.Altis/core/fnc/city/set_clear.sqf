@@ -35,7 +35,7 @@ if !(_remainEnemyUnits isEqualTo []) then {
         if (unitIsUAV _vehicle) then {
             _x setDamage 1;
         } else {
-            if (_vehicle isKindOf "StaticWeapon") then { // Edited: Enemy in static weapons will surrender too
+            if (_vehicle isKindOf "StaticWeapon") then { // Edited: Enemy units in static weapons will also surrender
                 private _crew = crew _vehicle;
                 _crew allowGetIn false;
                 {
