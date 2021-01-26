@@ -28,7 +28,7 @@ params [
 if (btc_p_city_free_trigger isEqualTo 0) then {
     _remainEnemyUnits isEqualTo []
 } else {
-    if (count _remainEnemyUnits > btc_p_city_free_trigger) exitWith {false};
+    if (count _remainEnemyUnits >= btc_p_city_free_trigger) exitWith {false};
     _remainEnemyUnits findIf {
         private _veh = vehicle _x;
         !(_veh isKindOf "Man" || {_veh isKindOf "StaticWeapon" || {unitIsUAV _veh}})
