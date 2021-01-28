@@ -41,7 +41,9 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "LMG_Zafir_Winter_F",
     "TEC_LMG_Zafir_Black",
     "QBZ95_1", // These weapons introduced by LZB PLA MOD are not compatible with ace ballistics
-    "QBZ95_1_DF"
+    "QBZ95_1_DF",
+    "USSR_GuitarA", // Guitar will cause player stand up inside vehicles
+    "TR_CXS_Baglama"
 ];
 private _magazines = [
     "Titan_AP"
