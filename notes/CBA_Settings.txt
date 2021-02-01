@@ -170,7 +170,7 @@ force force ace_cargo_enable = true;
 force force ace_cargo_loadTimeCoefficient = 1;
 force force ace_cargo_paradropTimeCoefficent = 0.5;
 force force ace_rearm_distance = 25;
-force force ace_rearm_level = 1;
+force force ace_rearm_level = 0;
 force force ace_rearm_supply = 0;
 force force ace_refuel_hoseLength = 25;
 force force ace_refuel_rate = 1;
@@ -352,8 +352,8 @@ force force ace_viewdistance_enabled = true;
 force force ace_viewdistance_limitViewDistance = 8000;
 force force ace_viewdistance_objectViewDistanceCoeff = 6;
 force force ace_viewdistance_viewDistanceAirVehicle = 12;
-force force ace_viewdistance_viewDistanceLandVehicle = 5;
-force force ace_viewdistance_viewDistanceOnFoot = 4;
+force force ace_viewdistance_viewDistanceLandVehicle = 4;
+force force ace_viewdistance_viewDistanceOnFoot = 3;
 
 // ACE 载具上锁
 force force ace_vehiclelock_defaultLockpickStrength = 10;
@@ -517,6 +517,9 @@ force force orbis_gpws_automaticTransponder = true;
 force force orbis_gpws_defaultVolumeLow = false;
 force force orbis_gpws_personalDefault = "f16";
 
+// BettIR
+force force BettIR_ViewDistance = 300;
+
 // CBA UI
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
@@ -643,6 +646,8 @@ force force diwako_dui_use_layout_editor = false;
 
 // Enhanced Movement Rework
 force force emr_main_allowMidairClimbing = true;
+force force emr_main_animSpeedCoef = 1;
+force force emr_main_animSpeedStaminaCoef = 0.4;
 force force emr_main_blacklistStr = "";
 force force emr_main_climbingEnabled = true;
 force force emr_main_climbOnDuty = 3.4;
@@ -650,6 +655,7 @@ force force emr_main_climbOverDuty = 3;
 force force emr_main_dropDuty = 0.7;
 force force emr_main_enableWalkableSurface = true;
 force force emr_main_enableWeightCheck = false;
+force force emr_main_hintType = 2;
 force force emr_main_jumpDuty = 1;
 force force emr_main_jumpingEnabled = true;
 force force emr_main_jumpingLoadCoefficient = 1;
