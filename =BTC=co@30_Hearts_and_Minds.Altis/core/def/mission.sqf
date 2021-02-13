@@ -1,5 +1,5 @@
 
-btc_version = [1, 20.1, 9];
+btc_version = [1, 20.1, 10];
 diag_log format (["=BTC= HEARTS AND MINDS VERSION %1.%2.%3"] + btc_version);
 
 //Param
@@ -350,7 +350,7 @@ if (isServer) then {
     });
     btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F"];
     btc_model_ieds = btc_type_ieds apply {(toLower getText(_cfgVehicles >> _x >> "model")) select [1]};
-    btc_type_blacklist = btc_type_tags + ["UserTexture1m_F", "Land_RepairDepot_01_tan_F"]; // Edited: Exclude btc_log_object "Land_RepairDepot_01_tan_F" from removable list
+    btc_type_blacklist = btc_type_tags + ["UserTexture1m_F", "Land_RepairDepot_01_tan_F"]; publicVariable "btc_type_blacklist"; // Edited: Exclude btc_log_object "Land_RepairDepot_01_tan_F" from removable list
 
     btc_groundWeaponHolder = [];
 };
