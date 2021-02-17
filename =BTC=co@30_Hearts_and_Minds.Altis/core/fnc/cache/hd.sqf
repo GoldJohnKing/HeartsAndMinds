@@ -36,12 +36,12 @@ params [
     ["_instigator", objNull, [objNull]]
 ];
 
-private _explosive = (getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0);
+// private _explosive = (getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0); // Edited: Allow non-explosive ammos destroy the cache
 
 if (
-    !(_cache getVariable ["btc_fnc_cache_hd_fired", false]) &&
-    {_explosive} &&
-    {_damage > 0.6}
+    !(_cache getVariable ["btc_fnc_cache_hd_fired", false]) // && // Edited: Allow non-explosive ammos destroy the cache
+    // {_explosive} && // Edited: Allow non-explosive ammos destroy the cache
+    // {_damage > 0.6} // Edited: Allow non-explosive ammos destroy the cache
 ) then {
     _cache setVariable ["btc_fnc_cache_hd_fired", true];
 
@@ -77,6 +77,6 @@ if (
     [0] remoteExecCall ["btc_fnc_show_hint", 0];
 
     [btc_cache_n + 1, btc_cache_pictures] call btc_fnc_cache_init;
-} else {
-    0
+// } else { // Edited: Allow non-explosive ammos destroy the cache
+//     0 // Edited: Allow non-explosive ammos destroy the cache
 };

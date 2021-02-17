@@ -92,11 +92,11 @@ for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, de
             ["_destroy_taskID", "", [""]]
         ];
 
-        private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
+        // private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0; // Edited: Allow non-explosive ammos destroy the cache
         if (
-            //  _explosive && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
-            // {_damage > 0.6} && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
-            !(alive _box) && // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
+            //  _explosive && // Edited: Allow non-explosive ammos destroy the cache
+            // {_damage > 0.6} && // Edited: Allow non-explosive ammos destroy the cache
+            !(alive _box) && // Edited: Allow non-explosive ammos destroy the cache
             {!(_destroy_taskID call BIS_fnc_taskState isEqualTo "CANCELED")}
         ) then {
             private _pos = getPos _box;
@@ -110,8 +110,8 @@ for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, de
             }, [_fx], 120] call CBA_fnc_waitAndExecute;
             btc_spect_emp deleteAt (btc_spect_emp find _box);
             publicVariable "btc_spect_emp";
-        // } else { // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
-        //     0 // Edited: Fix mission stuck if ammo cache destroyed by non explosive ammos
+        // } else { // Edited: Allow non-explosive ammos destroy the cache
+        //     0 // Edited: Allow non-explosive ammos destroy the cache
         };
     }, [_destroy_taskID]] call CBA_fnc_addBISEventHandler;
 };
