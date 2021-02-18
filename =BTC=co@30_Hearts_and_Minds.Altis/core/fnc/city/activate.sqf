@@ -60,13 +60,13 @@ private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _radius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
-    private _ratio = (switch _type do {
-        case "Hill" : {random 1};
-        case "NameLocal" : {random 2.5};
-        case "NameVillage" : {random 3.5};
-        case "NameCity" : {random 5};
-        case "NameCityCapital" : {random 6};
-        case "Airport" : {0};
+    private _ratio = (switch _type do { // Edited: Tweak basic amount of ied ratios, default = random 1, random 2.5, random 3.5, random 5, random 6, 0, 0
+        case "Hill" : {3};
+        case "NameLocal" : {5};
+        case "NameVillage" : {5};
+        case "NameCity" : {5 + ceil 2.5};
+        case "NameCityCapital" : {5 + ceil 5};
+        case "Airport" : {5 + ceil 5};
         case "NameMarine" : {0};
     });
 
@@ -101,7 +101,7 @@ if !(_data_units isEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
-        case "Hill" : {3};
+        case "Hill" : {5};
         case "NameLocal" : {5};
         case "NameVillage" : {5};
         case "NameCity" : {5};
@@ -112,7 +112,7 @@ if !(_data_units isEqualTo []) then {
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (ceil (_p_mil_group_ratio * random _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
+        for "_i" from 1 to (ceil (_p_mil_group_ratio * _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
             [_city, _spawningRadius, ceil random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
@@ -129,7 +129,7 @@ if !(_data_units isEqualTo []) then {
                 case "Airport" : {2};
                 default {0};
             });
-            [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof;
+            [+_houses, round (_p_mil_static_group_ratio * _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof; // Edited: Tweak enemy static weapon amount, default = [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city]
         };
 
         // Spawn civilians
@@ -141,7 +141,7 @@ if !(_data_units isEqualTo []) then {
             case "Airport" : {6};
             default {2};
         });
-        [+_houses, round (_p_civ_group_ratio * random _max_number_group), _city] call btc_fnc_civ_populate;
+        [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate; // Edited: Tweak civilian group amount, default = [+_houses, round (_p_civ_group_ratio * random _max_number_group), _city]
     };
 };
 if (btc_p_animals_group_ratio > 0) then {
