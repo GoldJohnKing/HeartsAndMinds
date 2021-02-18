@@ -4,17 +4,6 @@ btc_custom_loc = [
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
-    [getMarkerPos "btc_custom_loc_1", "Airport", "International Airport", 800, true],
-    [getMarkerPos "btc_custom_loc_2", "NameVillage", "Church", 600, true],
-    [getMarkerPos "btc_custom_loc_3", "NameVillage", "Schrattendamm", 600, true],
-    [getMarkerPos "btc_custom_loc_4", "Hill", "Forest Island", 600, true],
-    [getMarkerPos "btc_custom_loc_5", "NameVillage", "The Lighthouse", 600, true],
-    [getMarkerPos "btc_custom_loc_6", "NameVillage", "Bunig", 600, true],
-    [getMarkerPos "btc_custom_loc_7", "Hill", "Schrattenfluh", 600, true],
-    [getMarkerPos "btc_custom_loc_8", "Hill", "Jurabucht", 600, true],
-    [getMarkerPos "btc_custom_loc_9", "Hill", "Heiligholz", 600, true],
-    [getMarkerPos "btc_custom_loc_10", "Hill", "The Valley", 1200, true],
-    [getMarkerPos "btc_custom_loc_11", "Hill", "Rorenwald", 1000, true]
 ];
 
 /*
