@@ -63,7 +63,7 @@ private _defend_taskID = _taskID + "df";
 private _groups = [];
 private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
 for "_i" from 1 to (2 + round random 1) do {
-    _groups pushBack ([btc_fnc_mil_send, [_closest, getPos _terminal, 1, selectRandom btc_type_motorized]] call CBA_fnc_directCall);
+    _groups pushBack ([btc_fnc_mil_send, [_closest, getPos _terminal, 1, selectRandom btc_type_motorized_armed]] call CBA_fnc_directCall); // Edited: Spawn btc_type_motorized_armed (land vehicles only) instead of btc_type_motorized, default = [btc_fnc_mil_send, [_closest, getPos _terminal, 1, selectRandom btc_type_motorized]]
 };
 
 {
@@ -72,7 +72,8 @@ for "_i" from 1 to (2 + round random 1) do {
 
 [_terminal, _launchsite modelToWorld [0, 100, 10]] remoteExecCall ["btc_fnc_log_place_create_camera", [0, -2] select isDedicated];
 
-waitUntil {sleep 5; (_defend_taskID call BIS_fnc_taskCompleted || (grpNull in _groups) || !(_city getVariable ["active", false]))};
+private _timeout = 0; // Edited: Mission will success if timeout reached
+waitUntil {sleep 5; _timeout = _timeout + 5; _defend_taskID call BIS_fnc_taskCompleted || {!(_city getVariable ["active", false]) || {grpNull in _groups || {_timeout > 300}}}}; // Edited: Mission will success if timeout reached & Improve performance, default = {sleep 5; (_defend_taskID call BIS_fnc_taskCompleted || (grpNull in _groups) || !(_city getVariable ["active", false]))}
 
 if (_defend_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
     [[], [_terminal]] call btc_fnc_delete;
