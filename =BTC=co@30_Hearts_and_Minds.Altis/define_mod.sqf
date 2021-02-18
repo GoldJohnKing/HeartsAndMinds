@@ -40,6 +40,8 @@ private _weapons = [ // Edited: Remove imbanlance, useless or buggy equipments
     "LMG_Zafir_F",
     "LMG_Zafir_Winter_F",
     "TEC_LMG_Zafir_Black",
+    "QBZ95_1", // These weapons have buggy magazines
+    "QBZ95_1_DF",
     "USSR_GuitarA", // Guitar will cause player stand up inside vehicles
     "TR_CXS_Baglama"
 ];
