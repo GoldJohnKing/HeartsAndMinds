@@ -61,12 +61,12 @@ private _spawningRadius = _radius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
     private _ratio = (switch _type do { // Edited: Tweak basic amount of ied ratios, default = random 1, random 2.5, random 3.5, random 5, random 6, 0, 0
-        case "Hill" : {3};
-        case "NameLocal" : {5};
-        case "NameVillage" : {5};
-        case "NameCity" : {5 + ceil 2.5};
-        case "NameCityCapital" : {5 + ceil 5};
-        case "Airport" : {5 + ceil 5};
+        case "Hill" : {1 + random 1.5};
+        case "NameLocal" : {1.5 + random 1.5};
+        case "NameVillage" : {1.5 + random 2.5};
+        case "NameCity" : {1.5 + random 2.5};
+        case "NameCityCapital" : {1.5 + random 5};
+        case "Airport" : {1.5 + random 5};
         case "NameMarine" : {0};
     });
 
