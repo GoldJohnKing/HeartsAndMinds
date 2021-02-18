@@ -86,4 +86,4 @@ btc_delay_createUnit = btc_delay_createUnit + 0.75; // Edited: Increase vehicle 
     btc_delay_createUnit = btc_delay_createUnit - 0.75; // Edited: Increase vehicle spawn duration, default = 0.3
 }, _this, btc_delay_createUnit - 0.01] call CBA_fnc_waitAndExecute;
 
-count (_this select 2) * 0.75; // Edited: Increase units inside vehicle spawn duration, default = 0.3
+count (_this select 2) * 0.5; // Edited: Increase units inside vehicle spawn duration, this value should be the same as the delay of btc_fnc_delay_createUnit, default = 0.3
