@@ -48,6 +48,9 @@ private _magazines = [
 ];
 private _items = [
     "USP_CRYE_G3C_CUT_DCU_MC", // This uniform does not have valid textures
+    "WINTER_VIPER_SUIT_GREY", // These uniforms are invincible with ACE Medical System
+    "WINTER_VIPER_SUIT_HEX",
+    "WINTER_VIPER_SUIT_WHITE",
     "ACE_optic_Arco_PIP", // These PIP optics will cause significant fps drop on players who are next to the optic user
     "ACE_optic_Hamr_PIP",
     // "H_HelmetO_ViperSP_hex_F",
