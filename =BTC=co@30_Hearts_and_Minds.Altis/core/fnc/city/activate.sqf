@@ -104,8 +104,8 @@ if !(_data_units isEqualTo []) then {
         case "Hill" : {5};
         case "NameLocal" : {5};
         case "NameVillage" : {5};
-        case "NameCity" : {5};
-        case "NameCityCapital" : {8};
+        case "NameCity" : {8};
+        case "NameCityCapital" : {10};
         case "Airport" : {12};
         case "NameMarine" : {3};
         default {0};
@@ -121,27 +121,27 @@ if !(_data_units isEqualTo []) then {
         private _houses = ([position _city, _spawningRadius/3] call btc_fnc_getHouses) call BIS_fnc_arrayShuffle;
 
         if (_has_en) then {
-            private _max_number_group = (switch _type do {
-                case "NameLocal" : {1};
-                case "NameVillage" : {2};
-                case "NameCity" : {4};
-                case "NameCityCapital" : {5};
-                case "Airport" : {2};
+            private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy static weapons, default = 1,2,4,5,2,0
+                case "NameLocal" : {3};
+                case "NameVillage" : {3};
+                case "NameCity" : {5};
+                case "NameCityCapital" : {8};
+                case "Airport" : {5};
                 default {0};
             });
-            [+_houses, round (_p_mil_static_group_ratio * _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof; // Edited: Tweak enemy static weapon amount, default = [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city]
+            [+_houses, ceil (_p_mil_static_group_ratio * random _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof; // Edited: Tweak enemy static weapon amount, default = round (_p_mil_static_group_ratio * random _max_number_group)
         };
 
         // Spawn civilians
-        private _max_number_group = (switch _type do {
-            case "NameLocal" : {3};
-            case "NameVillage" : {6};
+        private _max_number_group = (switch _type do { // Edited: Tweak basic amount of civilians, default = 3,6,10,19,6,2
+            case "NameLocal" : {5};
+            case "NameVillage" : {8};
             case "NameCity" : {10};
-            case "NameCityCapital" : {19};
-            case "Airport" : {6};
-            default {2};
+            case "NameCityCapital" : {15};
+            case "Airport" : {10};
+            default {3};
         });
-        [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate; // Edited: Tweak civilian group amount, default = [+_houses, round (_p_civ_group_ratio * random _max_number_group), _city]
+        [+_houses, ceil (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate; // Edited: Tweak civilian group amount, default = round (_p_civ_group_ratio * random _max_number_group)
     };
 };
 if (btc_p_animals_group_ratio > 0) then {
@@ -172,15 +172,15 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (ceil (_p_mil_group_ratio * random 4)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (2 + random 3)))
-        [_city, _spawningRadius, ceil random 6, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+    for "_i" from 1 to (4 + round (_p_mil_group_ratio * random 4)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (2 + random 3)))
+        [_city, _spawningRadius, 2 + round random 6, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
     };
-    for "_i" from 1 to (ceil random 8) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
+    for "_i" from 1 to (3 + round random 5) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
         [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (1 + round random 2) do {
+        for "_i" from 1 to (ceil random 3) do { // Edited: Tweak enemy armed vehicle amount, default = (1 + round random 2)
             [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_fnc_mil_send] call btc_fnc_delay_exec;
         };
     };
