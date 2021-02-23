@@ -60,14 +60,18 @@ private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _radius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
-    private _ratio = (switch _type do { // Edited: Tweak basic amount of ied ratios, default = random 1, random 2.5, random 3.5, random 5, random 6, 0, 0
+    private _ratio = (switch _type do { // Edited: Tweak basic amount of ied ratios, default = random 1, random 1, random 2, random 2.5, random 3, random 3.5, random 5, random 6, 0, 0, 0
         case "Hill" : {1 + random 1.5};
+        case "VegetationFir" : {1 + random 1.5};
+        case "BorderCrossing" : {1.5 + random 1.5};
         case "NameLocal" : {1.5 + random 1.5};
-        case "NameVillage" : {1.5 + random 2.5};
-        case "NameCity" : {1.5 + random 2.5};
+        case "StrongpointArea" : {1.5 + random 2.5};
+        case "NameVillage" : {1.5 + random 3};
+        case "NameCity" : {1.5 + random 5};
         case "NameCityCapital" : {1.5 + random 5};
         case "Airport" : {1.5 + random 5};
         case "NameMarine" : {0};
+        default {0};
     });
 
     private _ratio_ied = _ratio;
@@ -100,9 +104,12 @@ if !(_data_units isEqualTo []) then {
     } forEach _data_units;
 } else {
     // Maximum number of enemy group
-    private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,2,3,7,15,15,1,0
+    private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,1,2,2,3,3,7,15,15,1,0
         case "Hill" : {5};
+        case "VegetationFir" : {5};
+        case "BorderCrossing" : {5};
         case "NameLocal" : {5};
+        case "StrongpointArea" : {5};
         case "NameVillage" : {5};
         case "NameCity" : {8};
         case "NameCityCapital" : {10};
@@ -121,8 +128,11 @@ if !(_data_units isEqualTo []) then {
         private _houses = ([position _city, _spawningRadius/3] call btc_fnc_getHouses) call BIS_fnc_arrayShuffle;
 
         if (_has_en) then {
-            private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy static weapons, default = 1,2,4,5,2,0
+            private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy static weapons, default = 1,2,1,2,2,4,5,2,0
+                case "VegetationFir" : {3};
+                case "BorderCrossing" : {3};
                 case "NameLocal" : {3};
+                case "StrongpointArea" : {3};
                 case "NameVillage" : {3};
                 case "NameCity" : {5};
                 case "NameCityCapital" : {8};
@@ -133,8 +143,11 @@ if !(_data_units isEqualTo []) then {
         };
 
         // Spawn civilians
-        private _max_number_group = (switch _type do { // Edited: Tweak basic amount of civilians, default = 3,6,10,19,6,2
+        private _max_number_group = (switch _type do { // Edited: Tweak basic amount of civilians, default = 1,0,3,0,6,10,19,6,2
+            case "VegetationFir" : {3};
+            case "BorderCrossing" : {3};
             case "NameLocal" : {5};
+            case "StrongpointArea" : {5};
             case "NameVillage" : {8};
             case "NameCity" : {10};
             case "NameCityCapital" : {15};
@@ -153,6 +166,7 @@ if (btc_p_animals_group_ratio > 0) then {
         // Spawn animals
         private _max_number_animalsGroup = (switch _type do {
             case "Hill" : {3};
+            case "VegetationFir" : {3};
             case "NameLocal" : {3};
             case "NameVillage" : {2};
             case "NameCity" : {1};
@@ -247,12 +261,15 @@ if !(_city getVariable ["has_suicider", false]) then {
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {
         case "Hill" : {random 1};
+        case "BorderCrossing" : {random 1};
         case "NameLocal" : {random 2.5};
+        case "StrongpointArea" : {random 3};
         case "NameVillage" : {random 3.5};
         case "NameCity" : {random 5};
         case "NameCityCapital" : {random 6};
         case "Airport" : {random 6};
         case "NameMarine" : {0};
+        default {0};
     });
 
     if (_has_en) then {

@@ -737,7 +737,7 @@ btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;
 btc_rep_malus_civ_killed = - 10;
 btc_rep_malus_animal_killed = - 5;
-btc_rep_malus_civ_firenear = - 5;
+btc_rep_malus_civ_suppressed = - 4;
 btc_rep_malus_player_respawn = 0; // Edited: Player respawn does not affect reputation anymore, default = - 10
 btc_rep_malus_veh_killed = 0; // Edited: Player vehicle killed does not affect reputation anymore, default = - 25
 btc_rep_malus_building_damaged = - 2.5;
@@ -748,6 +748,8 @@ btc_AI_skill = _p_skill;
 
 //Headless
 btc_units_owners = [];
+
+btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, independent] find btc_player_side);
 
 // Edited: Add vehicle type list for vehicle side mission to use
 side_vehicle_types = ["RHS_MELB_MH6M","RHS_AH64D","RHS_UH1Y_FFAR","RHS_AH1Z","B_T_LSV_01_armed_F","B_APC_Tracked_01_AA_F","B_AFV_Wheeled_01_up_cannon_F","B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_CRV_F","rhsusf_m1043_d_s_m2","rhsusf_m1043_d_s_mk19","rhsusf_M1230a1_usarmy_d","rhsusf_M1237_M2_usarmy_d","rhsusf_M1237_MK19_usarmy_d","rhsusf_m1245_m2crows_socom_d","rhsusf_m1245_mk19crows_socom_d","rhsusf_m1a2sep1tuskiid_usarmy","RHS_M2A3_BUSKIII","rhsusf_m966_d","B_MBT_01_TUSK_F","B_MBT_01_mlrs_F","B_Heli_Attack_01_dynamicLoadout_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","rhsusf_m1a1aim_tuski_d","rhsusf_M1117_D","rhsusf_m109d_usarmy","rhsusf_M142_usarmy_D","RHS_M6","RHS_M2A2_BUSKI","rhsusf_stryker_m1126_m2_d","rhsusf_stryker_m1126_mk19_d","B_APC_Tracked_01_rcws_F","B_Heli_Light_01_dynamicLoadout_F","RHS_MELB_AH6M","rhsusf_CGRCAT1A2_M2_usmc_d","rhsusf_CGRCAT1A2_Mk19_usmc_d","rhsusf_M1238A1_M2_socom_d","rhsusf_M1238A1_Mk19_socom_d","Leopard_2_d"];
