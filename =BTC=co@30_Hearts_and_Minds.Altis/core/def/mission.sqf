@@ -517,7 +517,9 @@ if (isServer) then {
                 "Land_Pod_Heli_Transport_04_fuel_black_F", // Edited: Add cargo box for refuel
                 "Land_Pod_Heli_Transport_04_medevac_black_F", // Edited: Add cargo box for medevac
                 "ACE_Wheel",
-                "ACE_Track"
+                "ACE_Track",
+                "Coffin_01_F", // Edited: Add coffin
+                "Coffin_02_Flag_F" // Edited: Add coffin
             ]
         ] // + _rearming_magazines // Edited: Remove vehicle ammo boxes
     ];
