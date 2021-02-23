@@ -66,7 +66,7 @@ for "_id" from 0 to (count _locations - 1) do {
         if ((getMarkerPos "YOUR_MARKER_AREA") inArea [_position, 500, 500, 0, false]) exitWith {};
         */
         if ( // Edited: Add safezones
-            (getMarkerPos "btc_base" inArea [_position, 500, 500, 0, false]) ||
+            (getMarkerPos "btc_base" inArea [_position, 1000, 1000, 0, false]) ||
             (getMarkerPos "btc_safe_pos" inArea [_position, 500, 500, 0, false])
         ) exitWith {};
 
