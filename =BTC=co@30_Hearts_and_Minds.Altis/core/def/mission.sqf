@@ -492,7 +492,8 @@ if (isServer) then {
             }),
             [
                 //"Containers"
-
+                "B_Slingload_01_Cargo_F", // Edited: Add containers for cargo
+                "Land_Pod_Heli_Transport_04_box_black_F"
             ] + btc_containers_mat,
             [
                 //"Supplies"
@@ -508,18 +509,18 @@ if (isServer) then {
             ],
             [
                 //"Vehicle logistic"
-                "B_Slingload_01_Ammo_F", // Edited: Add cargo box for ammo
-                "B_Slingload_01_Repair_F", // Edited: Add cargo box for repair
-                "B_Slingload_01_Fuel_F", // Edited: Add cargo box for refuel
-                "B_Slingload_01_Medevac_F", // Edited: Add cargo box for medevac
-                "Land_Pod_Heli_Transport_04_ammo_black_F", // Edited: Add cargo box for ammo
-                "Land_Pod_Heli_Transport_04_repair_black_F", // Edited: Add cargo box for repair
-                "Land_Pod_Heli_Transport_04_fuel_black_F", // Edited: Add cargo box for refuel
-                "Land_Pod_Heli_Transport_04_medevac_black_F", // Edited: Add cargo box for medevac
                 "ACE_Wheel",
                 "ACE_Track",
-                "Coffin_01_F", // Edited: Add coffin
-                "Coffin_02_Flag_F" // Edited: Add coffin
+                "B_Slingload_01_Ammo_F", // Edited: Add containers for vehicle logistic
+                "B_Slingload_01_Repair_F",
+                "B_Slingload_01_Fuel_F",
+                "B_Slingload_01_Medevac_F",
+                "Land_Pod_Heli_Transport_04_ammo_black_F",
+                "Land_Pod_Heli_Transport_04_repair_black_F",
+                "Land_Pod_Heli_Transport_04_fuel_black_F",
+                "Land_Pod_Heli_Transport_04_medevac_black_F",
+                "Coffin_01_F", // Edited: Add coffins
+                "Coffin_02_Flag_F"
             ]
         ] // + _rearming_magazines // Edited: Remove vehicle ammo boxes
     ];
