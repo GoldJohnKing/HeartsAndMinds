@@ -1,4 +1,4 @@
-version=53;
+version=54;
 class EditorData
 {
 	moveGridStep=0.125;
@@ -21,12 +21,13 @@ class EditorData
 	class Camera
 	{
 		pos[]={5165.6367,96.589027,4439.1582};
-		dir[]={0.24585772,-0.71459067,0.65492237};
-		up[]={0.25114486,0.69954199,0.66900563};
-		aside[]={0.93620938,4.8632501e-008,-0.3514533};
+		dir[]={0.19092123,-0.73640263,0.64905632};
+		up[]={0.20781144,0.67654085,0.70647579};
+		aside[]={0.95936257,7.6688593e-008,-0.2821987};
 	};
 };
 binarizationWanted=0;
+sourceName="H&M_Daily";
 addons[]=
 {
 	"A3_Ui_F",
@@ -702,7 +703,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=128;
+		items=127;
 		class Item0
 		{
 			dataType="Marker";
@@ -715,7 +716,7 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={5165.1797,71.589027,4463.2026};
+			position[]={5167.7334,71.589027,4466.873};
 			name="btc_base";
 			type="flag_NATO";
 			id=1;
@@ -22421,15 +22422,6 @@ class Mission
 				};
 				nAttributes=7;
 			};
-		};
-		class Item127
-		{
-			dataType="Marker";
-			position[]={5379.1089,117.044,5650.6108};
-			name="btc_safe_pos";
-			type="Empty";
-			id=2138;
-			atlOffset=-0.00035095215;
 		};
 	};
 	class Connections
