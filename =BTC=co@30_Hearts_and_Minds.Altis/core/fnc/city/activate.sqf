@@ -110,10 +110,10 @@ if !(_data_units isEqualTo []) then {
         case "BorderCrossing" : {5};
         case "NameLocal" : {5};
         case "StrongpointArea" : {5};
-        case "NameVillage" : {5};
-        case "NameCity" : {8};
-        case "NameCityCapital" : {10};
-        case "Airport" : {12};
+        case "NameVillage" : {6};
+        case "NameCity" : {6};
+        case "NameCityCapital" : {8};
+        case "Airport" : {8};
         case "NameMarine" : {3};
         default {0};
     });
