@@ -108,19 +108,19 @@ if !(_data_units isEqualTo []) then {
         case "Hill" : {5};
         case "VegetationFir" : {5};
         case "BorderCrossing" : {5};
-        case "NameLocal" : {5};
-        case "StrongpointArea" : {5};
+        case "NameLocal" : {6};
+        case "StrongpointArea" : {6};
         case "NameVillage" : {6};
-        case "NameCity" : {6};
-        case "NameCityCapital" : {8};
-        case "Airport" : {8};
+        case "NameCity" : {8};
+        case "NameCityCapital" : {10};
+        case "Airport" : {10};
         case "NameMarine" : {3};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (ceil (_p_mil_group_ratio * _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
-            [_city, _spawningRadius, ceil random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
+        for "_i" from 1 to (2 + round (_p_mil_group_ratio * random _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
+            [_city, _spawningRadius, 2 + round random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
         };
     };
 
@@ -187,7 +187,7 @@ if (btc_p_animals_group_ratio > 0) then {
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
     for "_i" from 1 to (4 + round (_p_mil_group_ratio * random 4)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (2 + random 3)))
-        [_city, _spawningRadius, 2 + round random 6, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+        [_city, _spawningRadius, 4 + round random 4, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
     };
     for "_i" from 1 to (3 + round random 5) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
         [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
