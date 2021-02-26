@@ -31,11 +31,10 @@ _city setVariable ["occupied", false];
 
 if !(_remainEnemyUnits isEqualTo []) then {
     {
-        private _vehicle = vehicle _x;
-        if (unitIsUAV _vehicle) then {
+        if (unitIsUAV _x) then {
             _x setDamage 1;
         } else {
-            if (_vehicle isKindOf "StaticWeapon") then { // Edited: Enemy in static weapons will surrender too
+            if (_vehicle isKindOf "StaticWeapon") then { // Edited: Enemy in static weapons will surrender too, default = [_x, true] call ace_captives_fnc_setSurrendered;
                 private _crew = crew _vehicle;
                 _crew allowGetIn false;
                 {
