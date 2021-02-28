@@ -450,33 +450,33 @@ force force ace_tagging_quickTag = 0;
 
 // ACE Vehicle Medical
 force force MIRA_Vehicle_Medical_EnableAVM = true;
-MIRA_Vehicle_Medical_EnableStable = true;
+force force MIRA_Vehicle_Medical_EnableStable = true;
 force force MIRA_Vehicle_Medical_EnableUnstable = true;
-MIRA_Vehicle_Medical_Stable_ThresholdLowBP = 80;
-MIRA_Vehicle_Medical_Stable_ThresholdLowHR = 50;
-MIRA_Vehicle_Medical_Stable_TrackFractures = true;
-MIRA_Vehicle_Medical_Stable_TrackIV = true;
-MIRA_Vehicle_Medical_Stable_TrackLowBP = true;
-MIRA_Vehicle_Medical_Stable_TrackLowHR = true;
-MIRA_Vehicle_Medical_Stable_TrackNeedsBandage = true;
-MIRA_Vehicle_Medical_Stable_TrackSplints = true;
-MIRA_Vehicle_Medical_Stable_TrackStitchableWounds = true;
+force force MIRA_Vehicle_Medical_Stable_ThresholdLowBP = 80;
+force force MIRA_Vehicle_Medical_Stable_ThresholdLowHR = 50;
+force force MIRA_Vehicle_Medical_Stable_TrackFractures = true;
+force force MIRA_Vehicle_Medical_Stable_TrackIV = true;
+force force MIRA_Vehicle_Medical_Stable_TrackLowBP = true;
+force force MIRA_Vehicle_Medical_Stable_TrackLowHR = true;
+force force MIRA_Vehicle_Medical_Stable_TrackNeedsBandage = true;
+force force MIRA_Vehicle_Medical_Stable_TrackSplints = true;
+force force MIRA_Vehicle_Medical_Stable_TrackStitchableWounds = true;
 force force MIRA_Vehicle_Medical_Unstable_ThresholdLowBP = 80;
 force force MIRA_Vehicle_Medical_Unstable_ThresholdLowHR = 50;
 force force MIRA_Vehicle_Medical_Unstable_TrackBleeding = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackCardiacArrest = true;
-MIRA_Vehicle_Medical_Unstable_TrackDead = true;
+force force MIRA_Vehicle_Medical_Unstable_TrackDead = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackIV = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackLegFractures = true;
-MIRA_Vehicle_Medical_Unstable_TrackLegSplints = true;
+force force MIRA_Vehicle_Medical_Unstable_TrackLegSplints = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackLowBP = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackLowHR = true;
 force force MIRA_Vehicle_Medical_Unstable_TrackUnconscious = true;
-MIRA_Vehicle_Medical_Vehicles_EnableCar = true;
-MIRA_Vehicle_Medical_Vehicles_EnableHelicopter = true;
-MIRA_Vehicle_Medical_Vehicles_EnablePlane = true;
-MIRA_Vehicle_Medical_Vehicles_EnableShip = true;
-MIRA_Vehicle_Medical_Vehicles_EnableTank = true;
+force force MIRA_Vehicle_Medical_Vehicles_EnableCar = true;
+force force MIRA_Vehicle_Medical_Vehicles_EnableHelicopter = true;
+force force MIRA_Vehicle_Medical_Vehicles_EnablePlane = true;
+force force MIRA_Vehicle_Medical_Vehicles_EnableShip = true;
+force force MIRA_Vehicle_Medical_Vehicles_EnableTank = true;
 force force MIRA_Vehicle_Medical_VERSION = false;
 force force MIRA_Vehicle_Medical_WarnViewingDead = true;
 
@@ -739,11 +739,11 @@ force force L_Align_enabled = true;
 force force L_Align_steadyShake_enabled = true;
 
 // MrSanchez' Headlamp
-SAN_Headlamp_AI_UpdateRate = 30;
-force SAN_Headlamp_Arcade = true;
-SAN_Headlamp_Multiplayer_UpdateRate = 30;
-force SAN_Headlamp_RenderDistance = 1500;
-SAN_Headlamp_SoundClickEnabled = false;
+force force SAN_Headlamp_AI_UpdateRate = 30;
+force force SAN_Headlamp_Arcade = true;
+force force SAN_Headlamp_Multiplayer_UpdateRate = 30;
+force force SAN_Headlamp_RenderDistance = 1500;
+force force SAN_Headlamp_SoundClickEnabled = true;
 
 // NIArms
 force force niarms_accswitch = true;
