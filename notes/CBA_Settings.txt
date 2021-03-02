@@ -102,8 +102,8 @@ force force ace_switchunits_switchToIndependent = false;
 force force ace_switchunits_switchToWest = false;
 
 // ACE 医疗系统
-force force ace_medical_ai_enabledFor = 0;
-force force ace_medical_AIDamageThreshold = 0.1;
+force force ace_medical_ai_enabledFor = 2;
+force force ace_medical_AIDamageThreshold = 0.15;
 force force ace_medical_bleedingCoefficient = 0.5;
 force force ace_medical_blood_bloodLifetime = 180;
 force force ace_medical_blood_enabledFor = 0;
@@ -734,9 +734,17 @@ force force grad_trenches_functions_smallEnvelopeDigTime = 15;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
 
+// Improved Melee System
+force IMS_BluntWeapon = false;
+force IMS_StealthAI_Ears = 15;
+force IMS_StealthAI_Eyes = 40;
+
 // Laxemann Align
 force force L_Align_enabled = true;
 force force L_Align_steadyShake_enabled = true;
+
+// Lightsaber's And Force
+force IMS_LightSabers_GlobalDamage = 0.25;
 
 // MrSanchez' Headlamp
 force force SAN_Headlamp_AI_UpdateRate = 30;
