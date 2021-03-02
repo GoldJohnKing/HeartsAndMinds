@@ -83,7 +83,7 @@ private _triggers = [];
     _x setUnitPos "DOWN";
     _units pushBack _x;
     //// Create trigger \\\\
-    private _trigger = createTrigger ["EmptyDetector", getPos _city];
+    private _trigger = createTrigger ["EmptyDetector", getPos _city, false];
     _trigger setVariable ["unit", _x];
     _trigger setTriggerArea [5, 5, 0, false, 10]; // Edited: Make player find pilot in a more precise area by narrowing trigger area, default = [50, 50, 0, false, 10]
     _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false]; // Edited: Only player can trigger sub-mission complete, default = [str btc_player_side, "PRESENT", false]
