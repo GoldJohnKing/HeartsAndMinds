@@ -96,7 +96,7 @@ for "_i" from 1 to (3 + round random 2) do { // Edited: Increase checkpoint amou
 
         private _pos = getPos _boxe;
         waitUntil {sleep 5; _destroy_taskID call BIS_fnc_taskCompleted || !(alive _boxe)};
-        if !(_destroy_taskID call BIS_fnc_taskState isEqualTo "CANCELED") then {
+        if (_destroy_taskID call BIS_fnc_taskState isNotEqualTo "CANCELED") then {
             [_destroy_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
             private _fx = "test_EmptyObjectForFireBig" createVehicle _pos; // Edited: Use test_EmptyObjectForFireBig instead of test_EmptyObjectForSmoke to have better performance
             _fx setPos _pos;

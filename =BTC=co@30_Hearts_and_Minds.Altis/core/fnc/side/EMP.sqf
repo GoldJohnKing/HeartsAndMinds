@@ -97,7 +97,7 @@ for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, de
             //  _explosive && // Edited: Allow non-explosive ammos destroy the cache
             // {_damage > 0.6} && // Edited: Allow non-explosive ammos destroy the cache
             !(alive _box) && // Edited: Allow non-explosive ammos destroy the cache
-            {!(_destroy_taskID call BIS_fnc_taskState isEqualTo "CANCELED")}
+            {_destroy_taskID call BIS_fnc_taskState isNotEqualTo "CANCELED"}
         ) then {
             private _pos = getPos _box;
             [_destroy_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
