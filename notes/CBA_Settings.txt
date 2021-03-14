@@ -1,3 +1,6 @@
+// 社群基础模组 - 网路
+force force cba_network_loadoutValidation = 2;
+
 // ACE夜视镜
 force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
@@ -25,6 +28,7 @@ ace_interact_menu_colorShadowMax = [0,0,0,1];
 ace_interact_menu_colorShadowMin = [0,0,0,0.25];
 ace_interact_menu_colorTextMax = [1,1,1,1];
 ace_interact_menu_colorTextMin = [1,1,1,0.25];
+ace_interact_menu_consolidateSingleChild = false;
 force force ace_interact_menu_cursorKeepCentered = false;
 force force ace_interact_menu_cursorKeepCenteredSelfInteraction = true;
 ace_interact_menu_menuAnimationSpeed = 0;
@@ -40,6 +44,7 @@ force ace_interact_menu_useListMenuSelf = false;
 force force ace_interaction_disableNegativeRating = true;
 force force ace_interaction_enableMagazinePassing = true;
 force force ace_interaction_enableTeamManagement = true;
+force force ace_interaction_enableWeaponAttachments = true;
 
 // ACE 使用者介面
 force force ace_ui_allowSelectiveUI = true;
@@ -103,7 +108,7 @@ force force ace_switchunits_switchToWest = false;
 
 // ACE 医疗系统
 force force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.15;
+force force ace_medical_AIDamageThreshold = 0.08;
 force force ace_medical_bleedingCoefficient = 0.5;
 force force ace_medical_blood_bloodLifetime = 180;
 force force ace_medical_blood_enabledFor = 0;
@@ -122,6 +127,7 @@ force force ace_medical_gui_openAfterTreatment = true;
 force force ace_medical_ivFlowRate = 3;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 0.8;
+force force ace_medical_painUnconsciousChance = 0.15;
 force force ace_medical_playerDamageThreshold = 3;
 force force ace_medical_spontaneousWakeUpChance = 1;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
@@ -147,6 +153,7 @@ force force ace_medical_treatment_cprSuccessChance = 1;
 force force ace_medical_treatment_holsterRequired = 0;
 force force ace_medical_treatment_litterCleanupDelay = 90;
 force force ace_medical_treatment_locationEpinephrine = 0;
+force force ace_medical_treatment_locationIV = 0;
 force force ace_medical_treatment_locationPAK = 3;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
@@ -553,6 +560,7 @@ force force orbis_gpws_personalDefault = "f16";
 force force BettIR_ViewDistance = 300;
 
 // CBA UI
+cba_diagnostic_ConsoleIndentType = -1;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
 
@@ -685,6 +693,7 @@ force force emr_main_climbingEnabled = true;
 force force emr_main_climbOnDuty = 3.4;
 force force emr_main_climbOverDuty = 3;
 force force emr_main_dropDuty = 0.7;
+force force emr_main_dropViewElevation = -0.7;
 force force emr_main_enableWalkableSurface = true;
 force force emr_main_enableWeightCheck = false;
 force force emr_main_hintType = 2;
@@ -734,17 +743,9 @@ force force grad_trenches_functions_smallEnvelopeDigTime = 15;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
 
-// Improved Melee System
-force IMS_BluntWeapon = false;
-force IMS_StealthAI_Ears = 15;
-force IMS_StealthAI_Eyes = 40;
-
 // Laxemann Align
 force force L_Align_enabled = true;
 force force L_Align_steadyShake_enabled = true;
-
-// Lightsaber's And Force
-force IMS_LightSabers_GlobalDamage = 0.25;
 
 // MrSanchez' Headlamp
 force force SAN_Headlamp_AI_UpdateRate = 30;
