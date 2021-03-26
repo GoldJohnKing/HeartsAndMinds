@@ -65,7 +65,6 @@ _data pushBack (_vehicle getVariable ["btc_EDENinventory", []]);
 
         if (unitIsUAV _vehicle) then {
             createVehicleCrew _vehicle;
-            (group (driver _vehicle)) setVariable ['Vcm_Disable',true]; // Edited: Add support for VCOM
         };
 
         [_vehicle, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle] call btc_fnc_setVehProperties;

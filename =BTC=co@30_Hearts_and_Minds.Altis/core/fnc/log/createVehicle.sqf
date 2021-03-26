@@ -60,7 +60,6 @@ _veh setVariable ["btc_dont_delete", true];
 
 if (unitIsUAV _veh) then {
     createVehicleCrew _veh;
-    (group (driver _veh)) setVariable ['Vcm_Disable',true]; // Edited: Add support for VCOM
 };
 
 if (_allHitPointsDamage isNotEqualTo []) then {

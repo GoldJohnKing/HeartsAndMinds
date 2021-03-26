@@ -30,13 +30,11 @@ class RscTitles {
 class CfgFunctions {
     #include "core\fnc\eh\functions.hpp"
     // add your own functions below
-    #include "vcom\cfgFunctions.hpp" // Edited: Add VCOM Support
 };
 
 // CBA XEH
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
-    // VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf"; // Edited: Add VCOM Support
     UVO_Faction = call compile preprocessFileLineNumbers "Custom\UVO_Faction.sqf"; // Edited: Support Unit Voice-overs
 };
 
@@ -66,24 +64,6 @@ disabledAI = 1;
 
 // Edited: Disable unused channel
 disableChannels[] = {0, 2, 4, 5, 6};
-
-// Edited: Add VCOM Support
-allowFunctionsRecompile = 1;
-class CfgRemoteExec
-{
-	// List of script functions allowed to be sent from client via remoteExec
-	class Functions
-	{
-		mode = 2;
-		jip = 1;		
-		
-		class vcm_serverask { allowedTargets = 0;jip = 1; };
-		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
-		class SpawnScript { allowedTargets = 0;jip = 1; };
-		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
-		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };	
-	};
-};
 
 // Edited: Add ACE kill statistics tracker provided by ACEX
 class CfgDebriefingSections {
