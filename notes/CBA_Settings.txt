@@ -357,8 +357,8 @@ force force ace_scopes_zeroReferenceTemperature = 15;
 // ACE 视野距离限制器
 force force ace_viewdistance_enabled = true;
 force force ace_viewdistance_limitViewDistance = 12000;
-force force ace_viewdistance_objectViewDistanceCoeff = 5;
-force force ace_viewdistance_viewDistanceAirVehicle = 14;
+force force ace_viewdistance_objectViewDistanceCoeff = 6;
+force force ace_viewdistance_viewDistanceAirVehicle = 12;
 force force ace_viewdistance_viewDistanceLandVehicle = 5;
 force force ace_viewdistance_viewDistanceOnFoot = 3;
 
@@ -456,6 +456,7 @@ force force ace_overpressure_distanceCoefficient = 1;
 force force ace_tagging_quickTag = 0;
 
 // ACE Vehicle Medical
+force force MIRA_Vehicle_Medical_CacheInterval = 0.5;
 force force MIRA_Vehicle_Medical_EnableAVM = true;
 force force MIRA_Vehicle_Medical_EnableStable = true;
 force force MIRA_Vehicle_Medical_EnableUnstable = true;
@@ -468,6 +469,7 @@ force force MIRA_Vehicle_Medical_Stable_TrackLowHR = true;
 force force MIRA_Vehicle_Medical_Stable_TrackNeedsBandage = true;
 force force MIRA_Vehicle_Medical_Stable_TrackSplints = true;
 force force MIRA_Vehicle_Medical_Stable_TrackStitchableWounds = true;
+force force MIRA_Vehicle_Medical_Stable_TrackTourniquets = true;
 force force MIRA_Vehicle_Medical_Unstable_ThresholdLowBP = 80;
 force force MIRA_Vehicle_Medical_Unstable_ThresholdLowHR = 50;
 force force MIRA_Vehicle_Medical_Unstable_TrackBleeding = true;
@@ -742,6 +744,47 @@ force force grad_trenches_functions_shortEnvelopeDigTime = 10;
 force force grad_trenches_functions_smallEnvelopeDigTime = 15;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
+
+// LAMBS Danger
+force force lambs_danger_cqbRange = 75;
+force force lambs_danger_disableAIAutonomousManoeuvres = false;
+force force lambs_danger_disableAIDeployStaticWeapons = false;
+force force lambs_danger_disableAIFindStaticWeapons = false;
+force force lambs_danger_disableAIHideFromTanksAndAircraft = false;
+force force lambs_danger_disableAIPlayerGroup = false;
+force force lambs_danger_disableAIPlayerGroupReaction = false;
+force force lambs_danger_disableAutonomousFlares = false;
+force force lambs_danger_panicChance = 0;
+
+// LAMBS Danger Eventhandlers
+force force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
+force force lambs_eventhandlers_ExplosionReactionTime = 9;
+
+// LAMBS Danger WP
+force force lambs_wp_autoAddArtillery = true;
+
+// LAMBS Main
+force force lambs_main_combatShareRange = 300;
+force force lambs_main_debug_Drawing = false;
+force force lambs_main_debug_FSM = false;
+force force lambs_main_debug_FSM_civ = false;
+force force lambs_main_debug_functions = false;
+force force lambs_main_debug_RenderExpectedDestination = false;
+force force lambs_main_disableAICallouts = false;
+force force lambs_main_disableAIDodge = false;
+force force lambs_main_disableAIFleeing = false;
+force force lambs_main_disableAIGestures = false;
+force force lambs_main_disablePlayerGroupSuppression = false;
+force force lambs_main_indoorMove = 0.15;
+force force lambs_main_maxRevealValue = 1;
+force force lambs_main_minFriendlySuppressionDistance = 5;
+force force lambs_main_minSuppressionRange = 25;
+force force lambs_main_radioBackpack = 5000;
+force force lambs_main_radioDisabled = false;
+force force lambs_main_radioEast = 3000;
+force force lambs_main_radioGuer = 3000;
+force force lambs_main_radioShout = 100;
+force force lambs_main_radioWest = 500;
 
 // Laxemann Align
 force force L_Align_enabled = true;
