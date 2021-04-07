@@ -363,6 +363,9 @@ if (!isDedicated) then {
     btc_fnc_tow_ropeCreate = compileScript ["core\fnc\tow\ropeCreate.sqf"];
     btc_fnc_tow_hitch_points = compileScript ["core\fnc\tow\hitch_points.sqf"];
     btc_fnc_tow_unhook = compileScript ["core\fnc\tow\unhook.sqf"];
+
+    // Edited: Add infantry parajump function at base
+    custom_fnc_parajump = compileScript ["Custom\parajump\parajump.sqf"];
 };
 
 /////////////////////HEADLESS\\\\\\\\\\\\\\\\\\\\\

@@ -19,6 +19,8 @@ class RscTitles {
     };
     #include "core\fnc\lift\rsc.hpp"
     #include "core\fnc\debug\dlg.hpp"
+    // Edited: Add infantry parajump function at base
+    #include "Custom\parajump\ui_cutscene.hpp"
 };
 
 #include "core\def\param.hpp"
@@ -70,5 +72,16 @@ class CfgDebriefingSections {
     class acex_killTracker {
         title = "击杀统计";
         variable = "acex_killTracker_outputText";
+    };
+};
+
+// Edited: Add infantry parajump function at base
+#include "Custom\parajump\ui_map_select.hpp"
+class CfgSounds {
+    sounds[] = {};
+    class parasound	{
+        name = "parasound";
+        sound[] = {"Custom\parajump\ui_sound.ogg", 1.0, 1};
+        titles[] = {};
     };
 };
