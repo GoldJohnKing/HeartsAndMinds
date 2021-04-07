@@ -10432,7 +10432,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{if (isServer) then { " \n "    [this, 0] call ace_cargo_fnc_setSpace; " \n "}; " \n "private _action = [""AI"", ""招募友军单位"", """", { " \n "    (group player) createUnit [""rhsusf_army_ocp_machinegunner"", position player, [], 0, ""NONE""]; " \n "}, {count units group player < 3}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""ACE_MainActions""], _action] call ace_interact_menu_fnc_addActionToObject;}";
 				name="btc_gear_object";
 				disableSimulation=1;
 			};
