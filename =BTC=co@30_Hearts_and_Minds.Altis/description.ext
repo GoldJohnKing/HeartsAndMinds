@@ -35,7 +35,7 @@ class CfgFunctions {
 // CBA XEH
 class Extended_PreInit_EventHandlers {
     #include "core\fnc\eh\xeh_PreInit_EH.hpp"
-    UVO_Faction = call compile preprocessFileLineNumbers "Custom\UVO_Faction.sqf"; // Edited: Support Unit Voice-overs
+    UVO_Faction = compileScript ["Custom\UVO_Faction.sqf"]; // Edited: Support Unit Voice-overs
 };
 
 class Extended_InitPost_EventHandlers {
