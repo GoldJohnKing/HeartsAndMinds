@@ -45,6 +45,7 @@ switch (_typeOf_patrol) do {
     };
     case 1 : {
         _group = createGroup btc_enemy_side;
+        _group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
         _group setVariable ["no_cache", true];
         [_group] call CBA_fnc_clearWaypoints;
 

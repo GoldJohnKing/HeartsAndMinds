@@ -34,6 +34,7 @@ params [
 ];
 
 private _group = createGroup btc_enemy_side;
+_group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
 _group setVariable ["btc_city", _city];
 [_group] call CBA_fnc_clearWaypoints;
 [_group, _pos, selectRandom _statics_type, _dir, _surfaceNormal] call btc_fnc_mil_createVehicle;

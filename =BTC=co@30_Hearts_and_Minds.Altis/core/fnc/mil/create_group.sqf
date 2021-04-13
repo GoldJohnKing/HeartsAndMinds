@@ -56,6 +56,7 @@ _group_structure params ["_numberOfGroup", "_structure"];
 private _groups = [];
 for "_i" from 1 to _numberOfGroup do {
     private _group = createGroup _enemy_side;
+    _group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
     _groups pushBack _group;
     if (_city isEqualType objNull) then {
         _group setVariable ["btc_city", _city];

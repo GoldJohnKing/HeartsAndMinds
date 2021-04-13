@@ -316,6 +316,7 @@ if (_numberOfPatrol < _p_patrol_max) then {
     private _r = (_offset + random _max) min (_p_patrol_max - _numberOfPatrol);
     for "_i" from 1 to round _r do {
         private _group = createGroup btc_enemy_side;
+        _group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
         [[_group, 2, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_fnc_delay_exec; // Edited: Adjust probability of AI patrol types, making it spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]

@@ -45,6 +45,7 @@ if (_units isEqualTo []) then {
     [_x] call btc_fnc_civ_add_weapons;
 
     private _group = createGroup [btc_enemy_side, true];
+    _group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
     _group setVariable ["btc_city", group _x getVariable ["btc_city", objNull]];
     [_x] joinSilent _group;
     
