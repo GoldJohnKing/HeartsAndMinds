@@ -38,7 +38,7 @@ ace_interact_menu_selectorColor = [1,0,0];
 force force ace_interact_menu_shadowSetting = 2;
 ace_interact_menu_textSize = 2;
 ace_interact_menu_useListMenu = false;
-force ace_interact_menu_useListMenuSelf = false;
+ace_interact_menu_useListMenuSelf = false;
 
 // ACE 互动
 force force ace_interaction_disableNegativeRating = true;
@@ -572,54 +572,6 @@ force force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
 
-// CF_BAI
-force force CF_BAI_subskills_maximum_aimingAccuracy = 0.3;
-force force CF_BAI_subskills_maximum_aimingShake = 0.3;
-force force CF_BAI_subskills_maximum_aimingSpeed = 0.8;
-force force CF_BAI_subskills_maximum_commanding = 1;
-force force CF_BAI_subskills_maximum_courage = 1;
-force force CF_BAI_subskills_maximum_general = 1;
-force force CF_BAI_subskills_maximum_reloadSpeed = 1;
-force force CF_BAI_subskills_maximum_spotDistance = 0.8;
-force force CF_BAI_subskills_maximum_spotTime = 0.8;
-force force CF_BAI_subskills_minimum_aimingAccuracy = 0.1;
-force force CF_BAI_subskills_minimum_aimingShake = 0.1;
-force force CF_BAI_subskills_minimum_aimingSpeed = 0.15;
-force force CF_BAI_subskills_minimum_commanding = 0.75;
-force force CF_BAI_subskills_minimum_courage = 0.5;
-force force CF_BAI_subskills_minimum_general = 0.5;
-force force CF_BAI_subskills_minimum_reloadSpeed = 1;
-force force CF_BAI_subskills_minimum_spotDistance = 0.25;
-force force CF_BAI_subskills_minimum_spotTime = 0.25;
-force force CF_BAI_subskills_sleep = 30;
-force force CF_BAI_subskills_terrain_maximum_default = 30;
-force force CF_BAI_subskills_terrain_maximum_world_code = "[[""pja310"",25],[""Panthera3"",25]]";
-force force CF_BAI_subskills_terrain_range = 25;
-
-// CF_BAI_boost
-force force CF_BAI_boost_bulletsToMaxBoost = 10;
-force force CF_BAI_boost_disableBoost = false;
-force force CF_BAI_boost_maxBoost = 1.5;
-force force CF_BAI_boost_minimumShotDistance = 150;
-force force CF_BAI_boost_minimumShotInterval = 0.5;
-force force CF_BAI_boost_targetChangeSleepTime = 1;
-force force CF_BAI_boost_toleranceRange = 30;
-
-// CF_BAI_suppression
-force force CF_BAI_suppression_aimingAccuracy = 0.01;
-force force CF_BAI_suppression_aimingShake = 0.01;
-force force CF_BAI_suppression_aimingSpeed = 0.15;
-force force CF_BAI_suppression_bulletImpact = 0.15;
-force force CF_BAI_suppression_commanding = 0.15;
-force force CF_BAI_suppression_courage = 0.15;
-force force CF_BAI_suppression_decay = 0.005;
-force force CF_BAI_suppression_disableSuppression = false;
-force force CF_BAI_suppression_general = 0.5;
-force force CF_BAI_suppression_heldTime = 15;
-force force CF_BAI_suppression_reloadSpeed = 0.75;
-force force CF_BAI_suppression_spotDistance = 0.15;
-force force CF_BAI_suppression_spotTime = 0.15;
-
 // DUI - Squad Radar - Indicators
 force force diwako_dui_indicators_crew_range_enabled = true;
 force force diwako_dui_indicators_fov_scale = true;
@@ -764,7 +716,7 @@ force force lambs_eventhandlers_ExplosionReactionTime = 9;
 force force lambs_wp_autoAddArtillery = true;
 
 // LAMBS Main
-force force lambs_main_combatShareRange = 300;
+force force lambs_main_combatShareRange = 250;
 force force lambs_main_debug_Drawing = false;
 force force lambs_main_debug_FSM = false;
 force force lambs_main_debug_FSM_civ = false;
@@ -899,6 +851,8 @@ force force usaf_afterburner_setting_allow_ai = true;
 force force USAF_allowNuke = false;
 force force usaf_debug_setting_enabled_clients = false;
 force force usaf_debug_setting_enabled_server = false;
+force force usaf_f35a_allow_das_coverage = true;
+force force usaf_f35a_allow_sar_imagery = true;
 force force usaf_serviceMenu_setting_allowHangarRearm = false;
 force force usaf_serviceMenu_setting_allowHangarRefuel = false;
 force force usaf_serviceMenu_setting_allowHangarRepair = false;
@@ -910,6 +864,7 @@ force force usaf_serviceMenu_setting_repairTime = "100";
 force force usaf_serviceMenu_setting_replaceSources = false;
 force force usaf_serviceMenu_setting_selectorSearchRadius = "30";
 force force usaf_setting_allow_aiFormlights = true;
+force force usaf_utility_core_allow_move_in_cargo = false;
 
 // VET_Unflipping
 force force vet_unflipping_require_serviceVehicle = false;
