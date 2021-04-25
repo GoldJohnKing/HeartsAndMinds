@@ -92,11 +92,10 @@ for "_i" from 0 to (3 + round random 2) do { // Edited: Increase EMP amounts, de
             ["_destroy_taskID", "", [""]]
         ];
 
-        // private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0; // Edited: Allow non-explosive ammos destroy the cache
+        // private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0; // Edited: Allow non-explosive ammos destroy the ammobox
         if (
-            //  _explosive && // Edited: Allow non-explosive ammos destroy the cache
-            // {_damage > 0.6} && // Edited: Allow non-explosive ammos destroy the cache
-            !(alive _box) && // Edited: Allow non-explosive ammos destroy the cache
+            //  _explosive && // Edited: Allow non-explosive ammos destroy the ammobox
+            !(alive _box) && // Edited: Decrease per-time damage requirement of destroying the ammobox, default = {_damage > 0.6}
             {_destroy_taskID call BIS_fnc_taskState isNotEqualTo "CANCELED"}
         ) then {
             private _pos = getPos _box;

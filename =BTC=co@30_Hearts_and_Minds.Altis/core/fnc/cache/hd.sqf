@@ -39,9 +39,9 @@ params [
 // private _explosive = (getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0); // Edited: Allow non-explosive ammos destroy the cache
 
 if (
-    !(_cache getVariable ["btc_fnc_cache_hd_fired", false]) // && // Edited: Allow non-explosive ammos destroy the cache
+    !(_cache getVariable ["btc_fnc_cache_hd_fired", false]) &&
     // {_explosive} && // Edited: Allow non-explosive ammos destroy the cache
-    // {_damage > 0.6} // Edited: Allow non-explosive ammos destroy the cache
+    {_damage > 0.3} // Edited: Decrease per-time damage requirement, default = 0.6
 ) then {
     _cache setVariable ["btc_fnc_cache_hd_fired", true];
 

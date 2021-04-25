@@ -50,5 +50,4 @@ btc_intro_done = [] spawn btc_fnc_intro;
     
     // Edited: Disable unused channel for JIP players, this would be unnecessary since Arma 3 v1.99 will fix the bug
     {_x enableChannel false;} forEach [0, 2, 4, 5, 6];
-
 }] call CBA_fnc_waitUntilAndExecute;

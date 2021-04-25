@@ -36,12 +36,12 @@ params [
     ["_instigator", objNull, [objNull]]
 ];
 
-private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0;
+// private _explosive = getNumber(configFile >> "cfgAmmo" >> _ammo >> "explosive") > 0; // Edited: Allow non-explosive ammos destroy the hideout
 
 if (
-    _explosive &&
+    // _explosive && // Edited: Allow non-explosive ammos destroy the hideout
     {!(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false])} &&
-    {_damage > 0.6}
+    {_damage > 0.3} // Edited: Decrease per-time damage requirement of destroying the hideout, default = 0.6
 ) then {
     _hideout setVariable ["btc_fnc_mil_hd_hideout_fired", true];
 

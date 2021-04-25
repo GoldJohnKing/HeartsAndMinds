@@ -50,7 +50,6 @@ switch (_typeOf_patrol) do {
         [_group] call CBA_fnc_clearWaypoints;
 
         if (_veh_type isEqualTo "") then {_veh_type = selectRandom btc_type_motorized};
-        
         private _return_pos = [_pos, 10, 500, 13, false] call btc_fnc_findsafepos;
 
         _delay = [_group, _return_pos, _veh_type] call btc_fnc_mil_createVehicle;
