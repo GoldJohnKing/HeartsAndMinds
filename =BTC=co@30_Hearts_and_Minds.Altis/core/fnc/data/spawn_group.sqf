@@ -58,7 +58,7 @@ if (_type isEqualTo 7) exitWith {
 private _group = createGroup _side;
 if (_side isEqualTo btc_enemy_side) then { // Edited: Add support for Lambs Danger's reinforcement system
     _group setVariable ["lambs_danger_enableGroupReinforce", true, true];
-}
+};
 _group setVariable ["btc_city", _city];
 if (_type isEqualTo 1) then {
     _array_veh params ["_typeOf", "_posATL", "_dir", "_fuel", ["_vectorUp", []]];

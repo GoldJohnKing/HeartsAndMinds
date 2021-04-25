@@ -40,8 +40,8 @@ params [
 
 if (
     // _explosive && // Edited: Allow non-explosive ammos destroy the hideout
-    {!(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false])} &&
-    {_damage > 0.3} // Edited: Decrease per-time damage requirement of destroying the hideout, default = 0.6
+    !(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false]) && // Edited: Make the code compatible with above changes, default = {!(_hideout getVariable ["btc_fnc_mil_hd_hideout_fired", false])}
+    {_damage > 0.3} // Edited: Decrease per-time damage requirement of destroying the hideout, default = {_damage > 0.6}
 ) then {
     _hideout setVariable ["btc_fnc_mil_hd_hideout_fired", true];
 
