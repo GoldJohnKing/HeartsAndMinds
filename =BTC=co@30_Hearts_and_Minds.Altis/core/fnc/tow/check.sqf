@@ -3,17 +3,18 @@
 Function: btc_fnc_tow_check
 
 Description:
-    _tower ----rope--- (hook)_towed
+    _tower ----rope--- (hook)_towed, Show feedback message when trying to tow a vehicle.
 
 Parameters:
-    _tower - [Object]
-    _towed - [Object]
+    _tower - Tower vehicle. [Object]
+    _towed - Towed vehicle. [Object]
 
 Returns:
+    _canTow - Can tow or not. [Boolean]
 
 Examples:
     (begin example)
-        _result = [] call btc_fnc_tow_check;
+        _canTow = [cursorObject, btc_tow_vehicleSelected] call btc_fnc_tow_check;
     (end)
 
 Author:
@@ -28,21 +29,38 @@ params [
 
 private _array = [_tower] call btc_fnc_log_get_nottowable;
 
-if ((_array findIf {_towed isKindOf _x}) != -1) exitWith {false};
+if ((_array findIf {_towed isKindOf _x}) != -1) exitWith {
+    private _string_array = "";
+    {
+        _string_array = _string_array + ", " + _x;
+    } forEach (([_tower] call btc_fnc_log_get_nottowable) - ["Truck_F"]);
 
-private _model_rear = ([_tower] call btc_fnc_tow_hitch_points) select 1;
-private _model_front = ([_towed] call btc_fnc_tow_hitch_points) select 0;
-private _distance = (_towed modeltoworld _model_front) distance (_tower modeltoworld _model_rear);
-
-if (btc_debug) then {
-    if (isNil "btc_arrow_1") then {
-        btc_arrow_1 = "Sign_Arrow_F" createVehicleLocal [0, 0, 0];
-        btc_arrow_2 = "Sign_Arrow_F" createVehicleLocal [0, 0, 0];
-    };
-    btc_arrow_1 setPosASL AGLtoASL (_tower modelToWorldVisual _model_rear);
-    btc_arrow_2 setPosASL AGLtoASL (_towed modelToWorldVisual _model_front);
+    (format [localize "STR_BTC_HAM_TOW_CANT", _string_array]) call CBA_fnc_notify;
+    false
 };
 
-private _can_tow = (_distance > 1.3) && (_distance < [5, 24] select (_tower isKindOf "Ship"));
+private _model_rear_tower = ([_tower] call btc_fnc_tow_hitch_points) select 1;
+private _model_front_towed = ([_towed] call btc_fnc_tow_hitch_points) select 0;
+private _pos_rearTower = _tower modelToWorld _model_rear_tower;
+private _pos_frontTowed = _towed modelToWorld _model_front_towed;
 
-_can_tow
+if (
+        _pos_rearTower distance _pos_frontTowed < 5 &&
+        {!([_pos_rearTower, ((getDir _tower) + 180) mod 360, 100, _pos_frontTowed] call BIS_fnc_inAngleSector)}
+) exitWith {
+    (localize "STR_BTC_HAM_TOW_TFAR") call CBA_fnc_notify;
+    false
+};
+
+if (
+    !(isNull isVehicleCargo attachedto _tower) ||
+    !(isNull isVehicleCargo attachedto _towed) ||
+    !(isNull isVehicleCargo _tower) ||
+    !(isNull isVehicleCargo _towed) ||
+    !isNull (_tower getVariable ["btc_towing", objNull])
+) exitWith {
+    (localize "STR_BTC_HAM_TOW_ALREADYTOWED") call CBA_fnc_notify;
+    false
+};
+
+true

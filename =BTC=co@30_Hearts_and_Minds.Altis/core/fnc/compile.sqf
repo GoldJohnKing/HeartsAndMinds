@@ -190,6 +190,10 @@ if (isServer) then {
     btc_fnc_task_create = compileScript ["core\fnc\task\create.sqf"];
     btc_fnc_task_setState = compileScript ["core\fnc\task\setState.sqf"];
 
+    //TOW
+    btc_fnc_tow_ropeBreak = compileScript ["core\fnc\tow\ropeBreak.sqf"];
+    btc_fnc_tow_ViV = compileScript ["core\fnc\tow\ViV.sqf"];
+
     //VEH
     btc_fnc_veh_addRespawn = compileScript ["core\fnc\veh\addRespawn.sqf"];
     btc_fnc_veh_killed = compileScript ["core\fnc\veh\killed.sqf"];
@@ -246,10 +250,6 @@ btc_fnc_patrol_disabled = compileScript ["core\fnc\patrol\disabled.sqf"];
 //REP
 btc_fnc_rep_hd = compileScript ["core\fnc\rep\hd.sqf"];
 btc_fnc_rep_suppressed = compileScript ["core\fnc\rep\suppressed.sqf"];
-
-//TOW
-btc_fnc_tow_hook = compile preprocessFileLineNumbers "core\fnc\tow\hook.sqf";
-btc_fnc_tow_check = compile preprocessFileLineNumbers "core\fnc\tow\check.sqf";
 
 //ARSENAL
 btc_fnc_arsenal_ammoUsage = compileScript ["core\fnc\arsenal\ammoUsage.sqf"];
@@ -364,6 +364,8 @@ if (!isDedicated) then {
     btc_fnc_tow_ropeCreate = compileScript ["core\fnc\tow\ropeCreate.sqf"];
     btc_fnc_tow_hitch_points = compileScript ["core\fnc\tow\hitch_points.sqf"];
     btc_fnc_tow_unhook = compileScript ["core\fnc\tow\unhook.sqf"];
+    btc_fnc_tow_unwind = compileScript ["core\fnc\tow\unwind.sqf"];
+    btc_fnc_tow_check = compileScript ["core\fnc\tow\check.sqf"];
 
     // Edited: Add infantry parajump function at base
     custom_fnc_parajump = compileScript ["Custom\parajump\parajump.sqf"];
