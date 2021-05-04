@@ -197,6 +197,12 @@ if (btc_p_arsenal_Type > 0) then {
 };
 if (btc_p_arsenal_Restrict isNotEqualTo 0) then {[btc_gear_object, btc_p_arsenal_Type, btc_p_arsenal_Restrict, btc_custom_arsenal] call btc_fnc_arsenal_data;};
 
+//Door
+_action = ["door_break", localize "STR_BTC_HAM_ACTION_DOOR_BREAK", "\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa", {
+    [btc_fnc_door_break] call CBA_fnc_execNextFrame;
+}, {"ACE_wirecutter" in items player}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions", "ACE_Equipment"], _action] call ace_interact_menu_fnc_addActionToObject;
+
 // Edited: Allow recruit friendly infantries at base
 _action = ["custom_action_recruit", "招募友军单位", "", {(group player) createUnit ["rhsusf_army_ocp_machinegunner", position player, [], 0, "NONE"];}, {count units group player < 3}] call ace_interact_menu_fnc_createAction; 
 [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
