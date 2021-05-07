@@ -60,16 +60,16 @@ private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _radius/2;
 
 if (!(_city getVariable ["initialized", false])) then {
-    private _ratio = (switch _type do { // Edited: Tweak basic amount of ied ratios, default = random 1, random 1, random 2, random 2.5, random 3, random 3.5, random 5, random 6, 0, 0, 0
-        case "Hill" : {1 + random 1.5};
-        case "VegetationFir" : {1 + random 1.5};
-        case "BorderCrossing" : {1.5 + random 1.5};
-        case "NameLocal" : {1.5 + random 1.5};
-        case "StrongpointArea" : {1.5 + random 2.5};
-        case "NameVillage" : {1.5 + random 3};
-        case "NameCity" : {1.5 + random 5};
-        case "NameCityCapital" : {1.5 + random 5};
-        case "Airport" : {1.5 + random 5};
+    private _ratio = (switch _type do {
+        case "Hill" : {random 1};
+        case "VegetationFir" : {random 1};
+        case "BorderCrossing" : {random 2};
+        case "NameLocal" : {random 2.5};
+        case "StrongpointArea" : {random 3};
+        case "NameVillage" : {random 3.5};
+        case "NameCity" : {random 5};
+        case "NameCityCapital" : {random 6};
+        case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
     });
@@ -104,23 +104,23 @@ if (_data_units isNotEqualTo []) then {
     } forEach _data_units;
 } else {
     // Maximum number of enemy group
-    private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy groups, default = 1,1,2,2,3,3,7,15,15,1,0
+    private _max_number_group = (switch _type do {
         case "Hill" : {1};
         case "VegetationFir" : {1};
         case "BorderCrossing" : {2};
         case "NameLocal" : {2};
         case "StrongpointArea" : {3};
         case "NameVillage" : {3};
-        case "NameCity" : {4};
-        case "NameCityCapital" : {5};
-        case "Airport" : {4};
+        case "NameCity" : {7};
+        case "NameCityCapital" : {15};
+        case "Airport" : {15};
         case "NameMarine" : {1};
         default {0};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (2 + round (_p_mil_group_ratio * random _max_number_group)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (1 + random _max_number_group)))
-            [_city, _spawningRadius, 6 + random 2, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1]
+        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {
+            [_city, _spawningRadius, 1 + round random [0, 1, 2], random 1] call btc_fnc_mil_create_group;
         };
     };
 
@@ -128,31 +128,31 @@ if (_data_units isNotEqualTo []) then {
         private _houses = [_city, _spawningRadius/3] call btc_fnc_city_getHouses;
 
         if (_has_en) then {
-            private _max_number_group = (switch _type do { // Edited: Tweak basic amount of enemy static weapons, default = 1,2,1,2,2,4,5,2,0
-                case "VegetationFir" : {3};
-                case "BorderCrossing" : {3};
-                case "NameLocal" : {3};
-                case "StrongpointArea" : {3};
-                case "NameVillage" : {3};
-                case "NameCity" : {5};
-                case "NameCityCapital" : {8};
-                case "Airport" : {8};
+            private _max_number_group = (switch _type do {
+                case "VegetationFir" : {1};
+                case "BorderCrossing" : {2};
+                case "NameLocal" : {1};
+                case "StrongpointArea" : {2};
+                case "NameVillage" : {2};
+                case "NameCity" : {4};
+                case "NameCityCapital" : {5};
+                case "Airport" : {2};
                 default {0};
             });
             [+_houses, round (_p_mil_static_group_ratio * random _max_number_group), _city] call btc_fnc_mil_create_staticOnRoof;
         };
 
         // Spawn civilians
-        private _max_number_group = (switch _type do { // Edited: Tweak basic amount of civilians, default = 1,0,3,0,6,10,19,6,2
-            case "VegetationFir" : {3};
-            case "BorderCrossing" : {3};
-            case "NameLocal" : {5};
-            case "StrongpointArea" : {5};
-            case "NameVillage" : {8};
+        private _max_number_group = (switch _type do {
+            case "VegetationFir" : {1};
+            case "BorderCrossing" : {0};
+            case "NameLocal" : {3};
+            case "StrongpointArea" : {0};
+            case "NameVillage" : {6};
             case "NameCity" : {10};
-            case "NameCityCapital" : {15};
-            case "Airport" : {10};
-            default {3};
+            case "NameCityCapital" : {19};
+            case "Airport" : {6};
+            default {2};
         });
         [+_houses, round (_p_civ_group_ratio * _max_number_group), _city] call btc_fnc_civ_populate;
     };
@@ -186,8 +186,8 @@ if (btc_p_animals_group_ratio > 0) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (4 + round (_p_mil_group_ratio * random 2)) do { // Edited: Tweak enemy group amount, default = (round (_p_mil_group_ratio * (2 + random 3)))
-        [_city, _spawningRadius, 6 + round random 2, random 1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount each group, default = [_city, _spawningRadius, 4 + round random 3, random 1]
+    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 3))) do {
+        [_city, _spawningRadius, 4 + round random 3, random 1] call btc_fnc_mil_create_group;
     };
     for "_i" from 1 to (ceil random 5) do { // Edited: Spawn many enemy static weapons every "spawn_more" city
         [[_city, random _spawningRadius] call CBA_fnc_randPos, btc_type_mg + btc_type_gl, random 360] call btc_fnc_mil_create_static;
@@ -198,7 +198,7 @@ if (_city getVariable ["spawn_more", false]) then {
             [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_fnc_mil_send] call btc_fnc_delay_exec;
         };
     };
-    [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "spawn_more" city
+    [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static; // Edited: Spawn enemy artillery every "spawn_more" city
 };
 
 if (
@@ -216,16 +216,16 @@ if (
                 [[_closest, [_city, _spawningRadius/3] call CBA_fnc_randPos, 1, selectRandom btc_type_motorized_armed], btc_fnc_mil_send] call btc_fnc_delay_exec;
             };
         };
-        [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static;// Edited: Spawn enemy artillery every "cache" city
+        [[_city, 250] call CBA_fnc_randPos, btc_type_motar, random 360] call btc_fnc_mil_create_static; // Edited: Spawn enemy artillery every "cache" city
     };
 };
 
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
     private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 50, 8 + round (_p_mil_group_ratio * random 4), 1.1] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1]
-    [_pos, 100, 4 + round (_p_mil_group_ratio * random 4), _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
-    [_pos, 150, 2 + round (_p_mil_group_ratio * random 4), _wp_sentry] call btc_fnc_mil_create_group; // Edited: Tweak enemy amount and spawn radius of guard group in hideouts, default = [_pos, 120, 1 + round random 2, _wp_sentry]
+    [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1] call btc_fnc_mil_create_group;
+    [_pos, 120, 1 + round random 2, _wp_sentry] call btc_fnc_mil_create_group;
+    [_pos, 120, 1 + round random 2, _wp_sentry] call btc_fnc_mil_create_group;
     private _random = random 1;
     switch (true) do {
         case (_random <= 0.3) : {};
