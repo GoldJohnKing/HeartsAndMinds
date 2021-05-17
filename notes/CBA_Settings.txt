@@ -526,12 +526,12 @@ force force AGC_showBodyCount = false;
 // Aircraft Turbulence
 force force HELICOPTER_TURBULENCE_ENABLE_MASTER = true;
 force force HELICOPTER_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 30;
-force force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 5;
+force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 15;
+force force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 2.5;
 force force PLANE_TURBULENCE_ENABLE_MASTER = true;
 force force PLANE_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force PLANE_TURBULENCE_MAX_TURBULENCE = 30;
-force force PLANE_TURBULENCE_MIN_TURBULENCE = 5;
+force force PLANE_TURBULENCE_MAX_TURBULENCE = 15;
+force force PLANE_TURBULENCE_MIN_TURBULENCE = 2.5;
 
 // Anti-Bounce System
 force force ABS_AssistUnflip = true;
@@ -717,6 +717,7 @@ force force lambs_wp_autoAddArtillery = true;
 
 // LAMBS Main
 force force lambs_main_combatShareRange = 250;
+force force lambs_main_debug_drawAllUnitsInVehicles = false;
 force force lambs_main_debug_Drawing = false;
 force force lambs_main_debug_FSM = false;
 force force lambs_main_debug_FSM_civ = false;
@@ -801,6 +802,32 @@ force force Fat_Lurch_ShowEl = true;
 force force Fat_Lurch_ShowNorth = false;
 force force Fat_Lurch_ShowTarget = true;
 
+// Unit Ambient SFX
+force force uvo_uas_chanceCough = 0.1;
+force force uvo_uas_chanceRadio = 0.5;
+force force uvo_uas_chanceSigh = 0.1;
+force force uvo_uas_chanceWhistle = 0.03;
+force force uvo_uas_distanceCough = 250;
+force force uvo_uas_distanceRadio = 250;
+force force uvo_uas_distanceRadioInVehicle = 100;
+force force uvo_uas_distanceSigh = 150;
+force force uvo_uas_distanceWhistle = 250;
+force force uvo_uas_enableCoughing = true;
+force force uvo_uas_enablePlayers = true;
+force force uvo_uas_enableRadio = true;
+force force uvo_uas_enableRadioPlayers = true;
+force force uvo_uas_enableSighing = true;
+force force uvo_uas_enableWhistling = true;
+force force uvo_uas_intMultiplierCough = 2.5;
+force force uvo_uas_intMultiplierRadio = 2.5;
+force force uvo_uas_intMultiplierSigh = 2.5;
+force force uvo_uas_intMultiplierWhistle = 2.5;
+force force uvo_uas_minIntCough = 60;
+force force uvo_uas_minIntRadio = 20;
+force force uvo_uas_minIntSigh = 60;
+force force uvo_uas_minIntWhistle = 120;
+force force uvo_uas_radioOperator = 1;
+
 // Unit Ambient SFX Options
 force force UAS_option_chanceCough = 0.1;
 force force UAS_option_chanceRadio = 0.5;
@@ -818,25 +845,21 @@ force force UAS_option_intMultiplierRadio = 2.5;
 force force UAS_option_intMultiplierSigh = 2.5;
 force force UAS_option_intMultiplierWhistle = 2.5;
 force force UAS_option_maxDistCough = 250;
-force force UAS_option_maxDistRadio = 300;
+force force UAS_option_maxDistRadio = 250;
 force force UAS_option_maxDistRadioInVehicle = 100;
 force force UAS_option_maxDistSigh = 150;
 force force UAS_option_maxDistWhistle = 250;
 force force UAS_option_minIntervalCough = 60;
-force force UAS_option_minIntervalRadio = 15;
+force force UAS_option_minIntervalRadio = 20;
 force force UAS_option_minIntervalSigh = 60;
 force force UAS_option_minIntervalWhistle = 120;
 
 // Unit Voice-Over Options
 force force UVO_option_clientEnabled = true;
 force force UVO_option_deathShoutsVolume = 3;
-force force UVO_option_enableSentencesCustom_CZ = true;
-force force UVO_option_enableSentencesCustom_RU = true;
 force force UVO_option_enableSentencesEast = true;
 force force UVO_option_enableSentencesGuer = true;
 force force UVO_option_enableSentencesWest = true;
-force force UVO_option_enableUVOCustom_CZ = true;
-force force UVO_option_enableUVOCustom_RU = true;
 force force UVO_option_enableUVOEast = true;
 force force UVO_option_enableUVOGuer = true;
 force force UVO_option_enableUVOWest = true;
@@ -845,6 +868,32 @@ force force UVO_option_killConfirmChancePlayer = 1;
 force force UVO_option_maxDistDeathShouts = 300;
 force force UVO_option_maxDistVoices = 300;
 force force UVO_option_soundsSamplePitch = 1;
+
+// Unit Voice-overs
+force force uvo_main_compatExplosive = "";
+force force uvo_main_compatFlash = "";
+force force uvo_main_compatFrag = "";
+force force uvo_main_compatIncendiary = "";
+force force uvo_main_compatSmoke = "";
+force force uvo_main_deathShoutDistance = 300;
+force force uvo_main_deathShoutVolume = 3;
+force force uvo_main_debug = false;
+force force uvo_main_enablePlayers = true;
+force force uvo_main_hearingDistance = 300;
+force force uvo_main_killConfirmChanceAI = 1;
+force force uvo_main_killConfirmChancePlayer = 1;
+force force uvo_main_killConfirmStealth = false;
+force force uvo_main_sentencesCZ = true;
+force force uvo_main_sentencesEast = true;
+force force uvo_main_sentencesGuer = true;
+force force uvo_main_sentencesRU = true;
+force force uvo_main_sentencesWest = true;
+force force uvo_main_UVOCZ = true;
+force force uvo_main_UVOEast = true;
+force force uvo_main_UVOGuer = true;
+force force uvo_main_UVORU = true;
+force force uvo_main_UVOWest = true;
+force force uvo_main_voicePitch = 1;
 
 // USAF
 force force usaf_afterburner_setting_allow_ai = true;
