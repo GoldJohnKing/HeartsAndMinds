@@ -50,8 +50,6 @@ btc_intro_done = [] spawn btc_fnc_intro;
     
     {_x enableChannel false;} forEach [0, 2, 4, 5, 6]; // Edited: Disable unused channel for JIP players, this would be unnecessary since Arma 3 v1.99 will fix the bug
 
-    setObjectViewDistance 800; // Edited: Force set object view distance for infantries
-    setTerrainGrid 10; // Edited: Force set terrain grid detail
-    setDetailMapBlendPars [100, 250]; // Edited: Force set groud texture detail
+    setDetailMapBlendPars [150, 300]; // Edited: Force set groud texture detail
 
 }] call CBA_fnc_waitUntilAndExecute;

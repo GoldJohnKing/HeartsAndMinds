@@ -42,15 +42,13 @@ _player addEventHandler ["CuratorObjectPlaced", btc_fnc_eh_CuratorObjectPlaced];
 _player addEventHandler ["WeaponAssembled", btc_fnc_civ_add_leaflets];
 [_player, "WeaponAssembled", {[_thisType, _this] call btc_fnc_fob_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
 [_player, "WeaponDisassembled", {[_thisType, _this] call btc_fnc_fob_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
-_player addEventHandler ["GetInMan", { // Edited: Add radio channel handle on player get in vehicles & Force set terrain grid and groud texture detail, default = ["GetInMan", {_this call btc_fnc_ied_deleteLoop}]
+_player addEventHandler ["GetInMan", { // Edited: Add radio channel handle on player get in vehicles & Force set groud texture detail, default = ["GetInMan", {_this call btc_fnc_ied_deleteLoop}]
     _this call btc_fnc_ied_deleteLoop;
     4 enableChannel true;
     if (_this select 2 isKindOf "Air") then {
-        setTerrainGrid 50;
         setDetailMapBlendPars [50, 150];
     } else {
-        setTerrainGrid 30;
-        setDetailMapBlendPars [75, 250];
+        setDetailMapBlendPars [100, 250];
     }
 }];
 _player addEventHandler ["GetOutMan", {
@@ -59,9 +57,7 @@ _player addEventHandler ["GetOutMan", {
         btc_ied_deleteOn = -1;
     };
     4 enableChannel false; // Edited: Add radio channel handle on player get out vehicles
-    setObjectViewDistance 800; // Edited: Force set object view distance for infantries
-    setTerrainGrid 10; // Edited: Force set terrain grid detail
-    setDetailMapBlendPars [100, 250]; // Edited: Force set groud texture detail
+    setDetailMapBlendPars [150, 300]; // Edited: Force set groud texture detail
 }];
 _player addEventHandler ["WeaponAssembled", {
     params ["_player", "_static"];
