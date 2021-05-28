@@ -15,7 +15,7 @@
 	CHVD_carObj = 800;
 	CHVD_airObj = 3000;
 
-	CHVD_footTerrain = 6.25;
+	CHVD_footTerrain = 12.5;
 	CHVD_carTerrain = 25;
 	CHVD_airTerrain = 50;
 	
