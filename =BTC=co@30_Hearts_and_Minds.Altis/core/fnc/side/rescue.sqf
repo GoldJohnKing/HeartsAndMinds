@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_side_rescue
+Function: btc_side_fnc_rescue
 
 Description:
     Fill me when you edit me !
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [false, "btc_fnc_side_rescue"] spawn btc_fnc_side_create;
+        [false, "btc_side_fnc_rescue"] spawn btc_side_fnc_create;
     (end)
 
 Author:
@@ -27,7 +27,7 @@ params [
 //// Choose an occupied City \\\\
 private _useful = btc_city_all select {!(isNull _x) && _x getVariable ["occupied", false] && !((_x getVariable ["type", ""]) in ["NameLocal", "Hill", "NameMarine"])};
 
-if (_useful isEqualTo []) exitWith {[] spawn btc_fnc_side_create;};
+if (_useful isEqualTo []) exitWith {[] spawn btc_side_fnc_create;};
 
 private _city = selectRandom _useful;
 
@@ -67,9 +67,9 @@ private _pilot = _group createUnit [_crew, _pos, [], 15, "NONE"]; // Edited: Cha
 _pilot setVariable ['GCblackList', true]; // Edited: Make the mission compatible with Advanced Garbage Collector Mod
 _pilot setVariable ["btc_dont_delete", true]; // Edited: Make pilot body persistent even if city deactivate
 
-[_taskID, 13, getPos _city, _city getVariable "name"] call btc_fnc_task_create;
+[_taskID, 13, getPos _city, _city getVariable "name"] call btc_task_fnc_create;
 private _find_taskID = _taskID + "mv";
-[[_find_taskID, _taskID], 20, objNull, _crew] call btc_fnc_task_create;
+[[_find_taskID, _taskID], 20, objNull, _crew] call btc_task_fnc_create;
 private _back_taskID = _taskID + "bk";
 
 private _units = [];
@@ -86,7 +86,7 @@ private _triggers = [];
     _trigger setVariable ["unit", _x];
     _trigger setTriggerArea [5, 5, 0, false, 10]; // Edited: Make player find pilot in a more precise area by narrowing trigger area, default = [50, 50, 0, false, 10]
     _trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false]; // Edited: Only player can trigger sub-mission complete, default = [str btc_player_side, "PRESENT", false]
-    _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; _unit setCaptive true; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;", _find_taskID, _back_taskID, _taskID], ""]; // Edited: Prevent pilot from running around by prevent him from joining player group and set him captive, default = "_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_fnc_task_create;"
+    _trigger setTriggerStatements ["this", format ["_unit = thisTrigger getVariable 'unit'; _unit setCaptive true; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_task_fnc_create;", _find_taskID, _back_taskID, _taskID], ""]; // Edited: Prevent pilot from running around by prevent him from joining player group and set him captive, default = "_unit = thisTrigger getVariable 'unit'; [_unit] join (thisList select 0); _unit setUnitPos 'UP'; ['%1', 'SUCCEEDED'] call BIS_fnc_taskSetState; [['%2', '%3'], 21, btc_create_object_point, typeOf btc_create_object_point, true] call btc_task_fnc_create;"
     _trigger attachTo [_x, [0, 0, 0]];
     _triggers pushBack _trigger;
 } forEach units _group;
@@ -109,11 +109,11 @@ if (_units select {alive _x} isEqualTo []) then {
             _thisArgs params ["_taskID"];
 
             if (_unit inArea [[-5000, -5000, 0], 10, 10, 0, false]) exitWith {}; // Detect if the body is inside a bodybag (https://github.com/acemod/ACE3/blob/44050df98b00e579e5b5a79c0d76d4d1138b4baa/addons/medical_treatment/functions/fnc_placeInBodyBag.sqf#L40)
-            [_taskID, "FAILED"] call btc_fnc_task_setState;
+            [_taskID, "FAILED"] call btc_task_fnc_setState;
         }, [_taskID]] call CBA_fnc_addBISEventHandler;
 
         private _unitBodyBag_taskID = _bodyBag_taskID + str(_forEachIndex);
-        [[_unitBodyBag_taskID, _taskID], 34, _x, [([_x] call ace_dogtags_fnc_getDogtagData) select 0, typeOf _x]] call btc_fnc_task_create;
+        [[_unitBodyBag_taskID, _taskID], 34, _x, [([_x] call ace_dogtags_fnc_getDogtagData) select 0, typeOf _x]] call btc_task_fnc_create;
         ["ace_placedInBodyBag", {
             params ["_patient", "_bodyBag"];
             _thisArgs params ["_unit", "_unitBodyBag_taskID", "_taskID", "_IDDeleted"];
@@ -125,7 +125,7 @@ if (_units select {alive _x} isEqualTo []) then {
                 [_unitBodyBag_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
 
                 private _base_taskID = _taskID + "bs";
-                [[_base_taskID, _taskID], 35, btc_create_object_point, [([_patient] call ace_dogtags_fnc_getDogtagData) select 0, typeOf btc_create_object_point]] call btc_fnc_task_create;
+                [[_base_taskID, _taskID], 35, btc_create_object_point, [([_patient] call ace_dogtags_fnc_getDogtagData) select 0, typeOf btc_create_object_point]] call btc_task_fnc_create;
 
                 [_bodyBag, "Deleted", {
                     params [
@@ -134,7 +134,7 @@ if (_units select {alive _x} isEqualTo []) then {
                     _thisArgs params ["_taskID"];
 
                     if (_taskID call BIS_fnc_taskCompleted) exitWith {};
-                    [_taskID, "FAILED"] call btc_fnc_task_setState;
+                    [_taskID, "FAILED"] call btc_task_fnc_setState;
                 }, [_taskID]] call CBA_fnc_addBISEventHandler;
             };
             _this
@@ -159,6 +159,6 @@ if (_units select {alive _x} isEqualTo []) then {
 
 if (_taskID call BIS_fnc_taskState in ["CANCELED", "FAIL"]) exitWith {};
 
-_rep call btc_fnc_rep_change;
+_rep call btc_rep_fnc_change;
 
-[_taskID, "SUCCEEDED"] call btc_fnc_task_setState;
+[_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

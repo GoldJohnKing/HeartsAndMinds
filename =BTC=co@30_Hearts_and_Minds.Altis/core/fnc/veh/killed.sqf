@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_veh_killed
+Function: btc_veh_fnc_killed
 
 Description:
     Create marker wreck and change reputation on vehicle destruction.
@@ -15,7 +15,7 @@ Returns:
 
 Examples:
     (begin example)
-        [btc_veh_12] call btc_fnc_veh_killed;
+        [btc_veh_12] call btc_veh_fnc_killed;
     (end)
 
 Author:
@@ -38,7 +38,7 @@ _marker setMarkerColor "ColorRed";
 _vehicle setVariable ["marker", _marker];
 if (_allowRepChange) then {
     if (isServer) then {
-        [btc_rep_malus_veh_killed, _killer] call btc_fnc_rep_change;
+        [btc_rep_malus_veh_killed, _killer] call btc_rep_fnc_change;
         // Edited: Show notification when friendly vehicles are killed or crushed by players
         private _driver = driver _vehicle;
         if (isPlayer _instigator) then {
@@ -49,6 +49,6 @@ if (_allowRepChange) then {
             };
         };
     } else {
-        [btc_rep_malus_veh_killed, _killer] remoteExecCall ["btc_fnc_rep_change", 2];
+        [btc_rep_malus_veh_killed, _killer] remoteExecCall ["btc_rep_fnc_change", 2];
     };
 };

@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function: btc_fnc_city_init
+Function: btc_city_fnc_init
 
 Description:
     Create cities all over the map and store those properties.
@@ -12,7 +12,7 @@ Returns:
 
 Examples:
     (begin example)
-        [] call btc_fnc_city_init;
+        [] call btc_city_fnc_init;
     (end)
 
 Author:
@@ -59,7 +59,7 @@ for "_id" from 0 to (count _locations - 1) do {
         };
         private _name = getText(_current >> "name");
         private _radius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _radius = (_radius max 300) min 500; // Edited: Increase city radius, default = (_radius max 160) min 800
+        _radius = (_radius max 300) min 500; // Edited: Tweak city radius, default = (_radius max 160) min 800
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
@@ -74,12 +74,12 @@ for "_id" from 0 to (count _locations - 1) do {
             (getMarkerPos "btc_safezone_3" inArea [_position, 100, 100, 0, false])
         ) exitWith {};
 
-        [_position, _type, _name, _radius, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
+        [_position, _type, _name, _radius, random 1 > _is_free_probability, _id] call btc_city_fnc_create;
     };
 };
 
 if !(isNil "btc_custom_loc") then {
-    {_x call btc_fnc_city_create;} forEach btc_custom_loc;
+    {_x call btc_city_fnc_create;} forEach btc_custom_loc;
 };
 
 btc_city_all = btc_city_all apply {if (isNil "_x") then {objNull} else {_x}};
