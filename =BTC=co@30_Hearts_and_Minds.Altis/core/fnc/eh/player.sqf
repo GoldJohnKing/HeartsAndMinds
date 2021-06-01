@@ -42,7 +42,7 @@ _player addEventHandler ["CuratorObjectPlaced", btc_eh_fnc_CuratorObjectPlaced];
 _player addEventHandler ["WeaponAssembled", btc_civ_fnc_add_leaflets];
 [_player, "WeaponAssembled", {[_thisType, _this] call btc_fob_fnc_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
 [_player, "WeaponDisassembled", {[_thisType, _this] call btc_fob_fnc_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
-_player addEventHandler ["GetInMan", { // Edited: Add radio channel handle on player get in vehicles & Force set groud texture detail, default = ["GetInMan", {_this call btc_fnc_ied_deleteLoop}]
+_player addEventHandler ["GetInMan", { // Edited: Add radio channel handle on player get in vehicles & Force set groud texture detail, default = ["GetInMan", {_this call btc_ied_fnc_deleteLoop}]
     _this call btc_ied_fnc_deleteLoop;
     4 enableChannel true;
     if (_this select 2 isKindOf "Air") then {

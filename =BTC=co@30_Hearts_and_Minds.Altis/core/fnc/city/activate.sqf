@@ -337,7 +337,7 @@ if (_numberOfPatrol < _p_patrol_max) then {
         _group setVariable ["lambs_danger_enableGroupReinforce", true, true]; // Edited: Add support for Lambs Danger's reinforcement system
         btc_patrol_active pushBack _group;
         _group setVariable ["no_cache", true];
-        [[_group, 2, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol] call btc_delay_fnc_exec; // Edited: Adjust probability of AI patrol types, making it spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_fnc_mil_create_patrol]
+        [[_group, 2, _city, _radius + btc_patrol_area], btc_mil_fnc_create_patrol] call btc_delay_fnc_exec; // Edited: Adjust probability of AI patrol types, making it spawn more enemy vehicles, default = [_group, 1 + round random 1, _city, _radius + btc_patrol_area], btc_mil_fnc_create_patrol]
     };
 };
 //Traffic

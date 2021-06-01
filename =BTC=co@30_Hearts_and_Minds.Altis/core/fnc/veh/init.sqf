@@ -49,11 +49,11 @@ switch true do {
         _action = ["Cut_ropes", localize "STR_ACE_Fastroping_Interaction_cutRopes", "\z\ace\addons\logistics_wirecutter\ui\wirecutter_ca.paa", {[] call btc_lift_fnc_destroyRopes;}, {btc_ropes_deployed && {(driver vehicle player) isEqualTo player}}] call ace_interact_menu_fnc_createAction;
         [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
         // Edited: Make Air vehicles towable
-        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_fnc_tow_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_tow", localize "STR_BTC_HAM_ACTION_VEHINIT_TOW", "\z\ace\addons\attach\UI\attach_ca.paa", {_target call btc_tow_fnc_ropeCreate;}, {!isNull btc_tow_vehicleSelected && {btc_tow_vehicleSelected != _target}}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
         _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_HOOK", "\z\ace\addons\attach\UI\attach_ca.paa", {btc_tow_vehicleSelected = _target; (localize "STR_BTC_HAM_TOW_HOOK") call CBA_fnc_notify;}, {true}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
-        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call btc_fnc_tow_unhook;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
+        _action = ["log_hook", localize "STR_BTC_HAM_ACTION_VEHINIT_UHOOK", "\z\ace\addons\attach\UI\detach_ca.paa", {_target call _tow;}, {!isNull (_target getVariable ["btc_towing", objNull]);}] call ace_interact_menu_fnc_createAction;
         [_type, 0, ["ACE_MainActions", "Logistic"], _action] call ace_interact_menu_fnc_addActionToClass;
     };
 };
