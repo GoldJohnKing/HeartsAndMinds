@@ -40,7 +40,7 @@ _toRemove append (allDead select {
 
 _toRemove call CBA_fnc_deleteEntity;
 
-if (btc_delay_createUnit < 0.001) then { // Don't remove group during units creation.
+if (btc_delay_time < 0.001) then { // Don't remove group during units creation.
     // Edited: Also delete AI groups that are far from players
     private _patrolsToRemove = [];
     private _patrolGroupsToRemove = ((btc_patrol_active + btc_civ_veh_active) select {
