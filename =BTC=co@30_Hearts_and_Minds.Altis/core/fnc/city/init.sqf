@@ -58,8 +58,8 @@ for "_id" from 0 to (count _locations - 1) do {
             };
         };
         private _name = getText(_current >> "name");
-        private _radius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _radius = (_radius max 300) min 500; // Edited: Tweak city radius, default = (_radius max 160) min 800
+        private _cachingRadius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
+        _cachingRadius = (_cachingRadius max 300) min 500; // Edited: Tweak city radius, default = (_cachingRadius max 160) min 800
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
@@ -74,7 +74,7 @@ for "_id" from 0 to (count _locations - 1) do {
             (getMarkerPos "btc_safezone_3" inArea [_position, 100, 100, 0, false])
         ) exitWith {};
 
-        [_position, _type, _name, _radius, random 1 > _is_free_probability, _id] call btc_city_fnc_create;
+        [_position, _type, _name, _cachingRadius, random 1 > _is_free_probability, _id] call btc_city_fnc_create;
     };
 };
 
