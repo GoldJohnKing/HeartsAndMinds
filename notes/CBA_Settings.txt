@@ -1,5 +1,5 @@
 // 社群基础模组 - 网路
-force force cba_network_loadoutValidation = 2;
+force force cba_network_loadoutValidation = 0;
 
 // ACE夜视镜
 force force ace_nightvision_aimDownSightsBlur = 0;
@@ -355,12 +355,12 @@ force force ace_scopes_zeroReferenceHumidity = 0;
 force force ace_scopes_zeroReferenceTemperature = 15;
 
 // ACE 视野距离限制器
-force force ace_viewdistance_enabled = true;
-force force ace_viewdistance_limitViewDistance = 12000;
-force force ace_viewdistance_objectViewDistanceCoeff = 6;
-force force ace_viewdistance_viewDistanceAirVehicle = 12;
-force force ace_viewdistance_viewDistanceLandVehicle = 5;
-force force ace_viewdistance_viewDistanceOnFoot = 3;
+force force ace_viewdistance_enabled = false;
+force force ace_viewdistance_limitViewDistance = 6000;
+force force ace_viewdistance_objectViewDistanceCoeff = 4;
+force force ace_viewdistance_viewDistanceAirVehicle = 8;
+force force ace_viewdistance_viewDistanceLandVehicle = 2;
+force force ace_viewdistance_viewDistanceOnFoot = 2;
 
 // ACE 载具上锁
 force force ace_vehiclelock_defaultLockpickStrength = 10;
@@ -440,8 +440,8 @@ force force ace_gforces_enabledFor = 2;
 // ACE Trenches
 force force ace_trenches_bigEnvelopeDigDuration = 25;
 force force ace_trenches_bigEnvelopeRemoveDuration = 15;
-force force ace_trenches_smallEnvelopeDigDuration = 20;
-force force ace_trenches_smallEnvelopeRemoveDuration = 12;
+force force ace_trenches_smallEnvelopeDigDuration = 15;
+force force ace_trenches_smallEnvelopeRemoveDuration = 10;
 
 // ACE Uncategorized
 force force ace_fastroping_requireRopeItems = false;
@@ -675,6 +675,11 @@ force force js_jc_fa18_interactionRadiusMod = 1;
 force force js_jc_fa18_mav_tdcDepressRequiredForMove = true;
 force force js_jc_fa18_showLabels = false;
 
+// Fawks' Enhanced NVGs
+force force PDT_EnhancedNVG_NVG_Blacklist = "";
+force force PDT_EnhancedNVG_NVG_Effect = "AmberPhosphor";
+force force PDT_EnhancedNVG_Using_ACE = true;
+
 // Goobin's Gameplay Enhancements Core
 gge_core_var_debugMode = false;
 
@@ -696,6 +701,9 @@ force force grad_trenches_functions_shortEnvelopeDigTime = 10;
 force force grad_trenches_functions_smallEnvelopeDigTime = 15;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
+
+// Headlamps
+force force Headlamps_Settings_AllowAll = true;
 
 // LAMBS Danger
 force force lambs_danger_cqbRange = 75;
@@ -743,13 +751,6 @@ force force lambs_main_radioWest = 500;
 force force L_Align_enabled = true;
 force force L_Align_steadyShake_enabled = true;
 
-// MrSanchez' Headlamp
-force force SAN_Headlamp_AI_UpdateRate = 30;
-force force SAN_Headlamp_Arcade = true;
-force force SAN_Headlamp_Multiplayer_UpdateRate = 30;
-force force SAN_Headlamp_RenderDistance = 1500;
-force force SAN_Headlamp_SoundClickEnabled = true;
-
 // NIArms
 force force niarms_accswitch = true;
 force force niarms_magSwitch = true;
@@ -780,14 +781,14 @@ force force T1AM_AllowMapClick = true;
 force force T1AM_AuthorizedClasses = "";
 force force T1AM_AuthorizedVariables = "";
 force force T1AM_AuthorizeEveryone = true;
-force force T1AM_DEBUG_DisableInitialMiss = true;
+force force T1AM_DEBUG_DisableInitialMiss = false;
 force force T1AM_DEBUG_DisableRandomSpread = false;
 force force T1AM_Debug_Mode = false;
 force force T1AM_DEBUG_ShowRounds = false;
-force force T1AM_ExcludedArtyClasses = "";
+force force T1AM_ExcludedArtyClasses = """B_Ship_MRLS_01_F""";
 force force T1AM_ExcludedArtyVariables = "";
 force force T1AM_ModEnabled = true;
-force force T1AM_PrepTimes = 0;
+force force T1AM_PrepTimes = 1;
 force force T1AM_ShowOtherRadioMessages = 0;
 force force T1AM_ShowTrpMarkers = true;
 
@@ -926,8 +927,8 @@ force force vet_unflipping_vehicle_mass_limit = 100000;
 // Zeus Enhanced
 force force zen_camera_adaptiveSpeed = true;
 force force zen_camera_defaultSpeedCoef = 1;
-force force zen_camera_fastSpeedCoef = 1;
-force force zen_camera_followTerrain = true;
+force force zen_camera_fastSpeedCoef = 3;
+force force zen_camera_followTerrain = false;
 force force zen_common_ascensionMessages = false;
 force force zen_common_autoAddObjects = false;
 force force zen_common_cameraBird = false;
