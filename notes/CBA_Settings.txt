@@ -541,6 +541,47 @@ force force ABS_minAngle = 60;
 force force ABS_NoAutoUnflipPlayer = false;
 force force ABS_perFrameKey = true;
 
+// Arma Maps
+force force JD_CustomMap_colorBackground = [0.969,0.957,0.949,1];
+force force JD_CustomMap_colorCountlines = [0.572,0.354,0.188,0.25];
+force force JD_CustomMap_colorCountlinesWater = [0.491,0.577,0.702,0.3];
+force force JD_CustomMap_colorForest = [0.624,0.78,0.388,0.5];
+force force JD_CustomMap_colorForestBorder = [0,0,0,0];
+force force JD_CustomMap_colorGrid = [0.1,0.1,0.1,0.6];
+force force JD_CustomMap_colorGridMap = [0.1,0.1,0.1,0.6];
+force force JD_CustomMap_colorInactive = [1,1,1,0.5];
+force force JD_CustomMap_colorLevels = [0.286,0.177,0.094,0.5];
+force force JD_CustomMap_colorMainCountlines = [0.572,0.354,0.188,0.5];
+force force JD_CustomMap_colorMainCountlinesWater = [0.491,0.577,0.702,0.6];
+force force JD_CustomMap_colorMainRoads = [0.9,0.5,0.3,1];
+force force JD_CustomMap_colorMainRoadsFill = [1,0.6,0.4,1];
+force force JD_CustomMap_colorNames = [0.1,0.1,0.1,0.9];
+force force JD_CustomMap_colorOutside = [0,0,0,1];
+force force JD_CustomMap_colorPowerLines = [0.1,0.1,0.1,1];
+force force JD_CustomMap_colorRailWay = [0.8,0.2,0,1];
+force force JD_CustomMap_colorRoads = [0.7,0.7,0.7,1];
+force force JD_CustomMap_colorRoadsFill = [1,1,1,1];
+force force JD_CustomMap_colorRocks = [0,0,0,0.3];
+force force JD_CustomMap_colorRocksBorder = [0,0,0,0];
+force force JD_CustomMap_colorSea = [0.467,0.631,0.851,0.5];
+force force JD_CustomMap_colorTracks = [0.84,0.76,0.65,0.15];
+force force JD_CustomMap_colorTracksFill = [0.84,0.76,0.65,1];
+force force JD_CustomMap_colorTrails = [0.84,0.76,0.65,0.15];
+force force JD_CustomMap_colorTrailsFill = [0.84,0.76,0.65,0.65];
+force force JD_CustomMap_LocationHill = [0,0,0,1];
+force force JD_CustomMap_LocationNameLocal = [0.44,0.38,0.3,1];
+force force JD_CustomMap_LocationNameMarine = [0.05,0.4,0.8,0.8];
+force force JD_CustomMap_LocationNames = [0,0,0,1];
+force force JD_CustomMap_LocationRockArea = [0,0,0,1];
+force force JD_CustomMap_LocationStrategic = [0.25,0.4,0.2,0.7];
+force force JD_CustomMap_LocationVegetationBroadleaf = [0,0,0,1];
+force force JD_CustomMap_MainBackground = [0.2,0.2,0.2,1];
+force force JD_Map_ColorPreset = "Default";
+force force JD_Map_CountlinesEnabled = true;
+force force JD_Map_drawShaded = 0.4;
+force force JD_Map_GridEnabled = true;
+force force JD_Map_shadedSea = 0.8;
+
 // AWESome Aerodynamics
 force force orbis_aerodynamics_enabled = true;
 force force orbis_aerodynamics_pylonDragMultiplierGlobal = 1;
@@ -572,70 +613,107 @@ force force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
 
-// DUI - Squad Radar - Indicators
-force force diwako_dui_indicators_crew_range_enabled = true;
-force force diwako_dui_indicators_fov_scale = true;
-force force diwako_dui_indicators_icon_buddy = true;
-force force diwako_dui_indicators_icon_leader = true;
-force force diwako_dui_indicators_icon_medic = true;
-force force diwako_dui_indicators_range = 50;
-force force diwako_dui_indicators_range_crew = 300;
-force force diwako_dui_indicators_range_scale = true;
-force force diwako_dui_indicators_show = true;
-force force diwako_dui_indicators_size = 1;
-force force diwako_dui_indicators_style = "standard";
-force force diwako_dui_indicators_useACENametagsRange = true;
+// CQB Weapon Stance
+DEVAS_CQB_GunReady = "Random";
+DEVAS_CQB_HighReady = "Random";
+DEVAS_CQB_LowReady = "Random";
+DEVAS_CQB_Ready_Click = "Left";
 
-// DUI - Squad Radar - Main
+// DUI - 小队雷达 - 主要
 force force diwako_dui_ace_hide_interaction = false;
 force force diwako_dui_colors = "ace";
 force force diwako_dui_font = "RobotoCondensed";
 force force diwako_dui_icon_style = "standard";
+force force diwako_dui_main_hide_dialog = true;
 force force diwako_dui_main_hide_ui_by_default = false;
 force force diwako_dui_main_squadBlue = [0,0,1,1];
 force force diwako_dui_main_squadGreen = [0,1,0,1];
 force force diwako_dui_main_squadMain = [1,1,1,1];
 force force diwako_dui_main_squadRed = [1,0,0,1];
 force force diwako_dui_main_squadYellow = [1,1,0,1];
+force force diwako_dui_main_trackingColor = [0.93,0.26,0.93,1];
+force force diwako_dui_reset_ui_pos = false;
 
-// DUI - Squad Radar - Radar
+// DUI - 小队雷达 - 名牌
+force force diwako_dui_nametags_deadColor = [0.2,0.2,0.2,1];
+force force diwako_dui_nametags_deadRenderDistance = 3.5;
+force force diwako_dui_nametags_drawRank = true;
+force force diwako_dui_nametags_enabled = true;
+force force diwako_dui_nametags_enableFOVBoost = true;
+force force diwako_dui_nametags_enableOcclusion = true;
+force force diwako_dui_nametags_fadeInTime = 0.05;
+force force diwako_dui_nametags_fadeOutTime = 0.5;
+force force diwako_dui_nametags_fontGroup = "RobotoCondensedLight";
+force force diwako_dui_nametags_fontGroupNameSize = 8;
+force force diwako_dui_nametags_fontName = "RobotoCondensedBold";
+force force diwako_dui_nametags_fontNameSize = 10;
+force force diwako_dui_nametags_groupColor = [1,1,1,1];
+force force diwako_dui_nametags_groupFontShadow = 1;
+force force diwako_dui_nametags_groupNameOtherGroupColor = [0.6,0.85,0.6,1];
+force force diwako_dui_nametags_nameFontShadow = 1;
+force force diwako_dui_nametags_nameOtherGroupColor = [0.2,1,0,1];
+force force diwako_dui_nametags_renderDistance = 40;
+force force diwako_dui_nametags_showUnconAsDead = true;
+force force diwako_dui_nametags_useLIS = true;
+force force diwako_dui_nametags_useSideIsFriendly = true;
+
+// DUI - 小队雷达 - 标记
+force force diwako_dui_indicators_crew_range_enabled = false;
+force force diwako_dui_indicators_fov_scale = false;
+force force diwako_dui_indicators_icon_buddy = true;
+force force diwako_dui_indicators_icon_leader = true;
+force force diwako_dui_indicators_icon_medic = true;
+force force diwako_dui_indicators_range = 25;
+force force diwako_dui_indicators_range_crew = 300;
+force force diwako_dui_indicators_range_scale = false;
+force force diwako_dui_indicators_show = true;
+force force diwako_dui_indicators_size = 1;
+force force diwako_dui_indicators_style = "standard";
+force force diwako_dui_indicators_useACENametagsRange = true;
+
+// DUI - 小队雷达 - 雷达
 force force diwako_dui_compass_hide_alone_group = false;
 force force diwako_dui_compass_hide_blip_alone_group = false;
-force force diwako_dui_compass_icon_scale = 1.25;
+force force diwako_dui_compass_icon_scale = 1;
 force force diwako_dui_compass_opacity = 1;
 force force diwako_dui_compass_style = ["\z\diwako_dui\addons\radar\UI\compass_styles\standard\compass_limited.paa","\z\diwako_dui\addons\radar\UI\compass_styles\standard\compass.paa"];
-force force diwako_dui_compassRange = 45;
+force force diwako_dui_compassRange = 35;
 force force diwako_dui_compassRefreshrate = 0;
 force force diwako_dui_dir_showMildot = false;
-force force diwako_dui_dir_size = 1;
+force force diwako_dui_dir_size = 1.25;
 force force diwako_dui_distanceWarning = 3;
 force force diwako_dui_enable_compass = true;
 force force diwako_dui_enable_compass_dir = 2;
 force force diwako_dui_enable_occlusion = true;
-force force diwako_dui_enable_occlusion_cone = 150;
-force force diwako_dui_hudScaling = 1.25;
+force force diwako_dui_enable_occlusion_cone = 360;
+force force diwako_dui_hudScaling = 1.33333;
 force force diwako_dui_namelist = true;
 force force diwako_dui_namelist_bg = 0;
 force force diwako_dui_namelist_only_buddy_icon = false;
-force force diwako_dui_namelist_size = 1;
+force force diwako_dui_namelist_size = 1.5396;
 force force diwako_dui_namelist_text_shadow = 2;
 force force diwako_dui_namelist_width = 215;
 force force diwako_dui_radar_ace_finger = true;
-force force diwako_dui_radar_compassRangeCrew = 300;
+force force diwako_dui_radar_ace_medic = true;
+force force diwako_dui_radar_compassRangeCrew = 500;
+force force diwako_dui_radar_dir_padding = 25;
+force force diwako_dui_radar_dir_shadow = 2;
 force force diwako_dui_radar_group_by_vehicle = true;
+force force diwako_dui_radar_icon_opacity = 1;
+force force diwako_dui_radar_icon_opacity_no_player = true;
+force force diwako_dui_radar_icon_priority_setting = 1;
 force force diwako_dui_radar_icon_scale_crew = 6;
 force force diwako_dui_radar_leadingZeroes = true;
 force force diwako_dui_radar_namelist_hideWhenLeader = false;
-force force diwako_dui_radar_namelist_vertical_spacing = 1.02857;
-force force diwako_dui_radar_occlusion_fade_time = 5;
+force force diwako_dui_radar_namelist_vertical_spacing = 0.75;
+diwako_dui_radar_occlusion_fade_in_time = 1;
+force force diwako_dui_radar_occlusion_fade_time = 10;
 force force diwako_dui_radar_pointer_color = [1,0.5,0,1];
 force force diwako_dui_radar_pointer_style = "standard";
 force force diwako_dui_radar_show_cardinal_points = true;
 force force diwako_dui_radar_sortType = "fireteam";
 force force diwako_dui_radar_sqlFirst = true;
-force force diwako_dui_radar_trackingColor = [0.93,0.26,0.93,1];
-force force diwako_dui_radar_vehicleCompassEnabled = true;
-force force diwako_dui_reset_ui_pos = false;
+force force diwako_dui_radar_vehicleCompassEnabled = false;
 force force diwako_dui_use_layout_editor = false;
 
 // Enhanced Movement Rework
@@ -783,6 +861,7 @@ force force T1AM_AuthorizedVariables = "";
 force force T1AM_AuthorizeEveryone = true;
 force force T1AM_DEBUG_DisableInitialMiss = false;
 force force T1AM_DEBUG_DisableRandomSpread = false;
+force force T1AM_DEBUG_ForceVanillaGrid = false;
 force force T1AM_Debug_Mode = false;
 force force T1AM_DEBUG_ShowRounds = false;
 force force T1AM_ExcludedArtyClasses = """B_Ship_MRLS_01_F""";
