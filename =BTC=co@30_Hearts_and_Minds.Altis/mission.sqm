@@ -88,7 +88,6 @@ addons[]=
 	"A3_Structures_F_Mil_Flags",
 	"FIR_F14D_F",
 	"JS_JC_FA18",
-	"orbis_gpws",
 	"A3_Air_F_Heli_Light_01",
 	"Kimi_HMDs_Helos",
 	"A3_Air_F_Beta_Heli_Attack_02",
@@ -124,7 +123,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=75;
+		items=74;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -455,9 +454,10 @@ class AddonsMetaData
 		};
 		class Item50
 		{
-			className="orbis_gpws";
-			name="AWESome - GPWS";
-			author="Orbis2358";
+			className="air_f_vietnam_c";
+			name="air_f_vietnam_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
 		};
 		class Item51
 		{
@@ -610,13 +610,6 @@ class AddonsMetaData
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="波希米亚互动工作室";
-			url="https://www.arma3.com";
-		};
-		class Item74
-		{
-			className="air_f_vietnam_c";
-			name="air_f_vietnam_c";
-			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
 	};
