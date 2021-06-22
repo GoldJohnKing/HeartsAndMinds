@@ -4,9 +4,6 @@ btc_custom_loc = [
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine", "StrongpointArea", "BorderCrossing", "VegetationFir"
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
-    [getMarkerPos "btc_safezone_1","NameMarine","Dan Them Them (丹天天)",300,true], // Edited: Add custom cities
-    [getMarkerPos "btc_safezone_2","NameVillage","West Hanoi (西河内)",300,true],
-    [getMarkerPos "btc_safezone_3","NameMarine","Ha Long Bay (下龙湾)",500,true]
 ];
 
 /*

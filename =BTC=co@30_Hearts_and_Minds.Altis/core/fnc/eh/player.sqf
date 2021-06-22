@@ -42,14 +42,14 @@ _player addEventHandler ["CuratorObjectPlaced", btc_eh_fnc_CuratorObjectPlaced];
 _player addEventHandler ["WeaponAssembled", btc_civ_fnc_add_leaflets];
 [_player, "WeaponAssembled", {[_thisType, _this] call btc_fob_fnc_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
 [_player, "WeaponDisassembled", {[_thisType, _this] call btc_fob_fnc_rallypointAssemble;}] call CBA_fnc_addBISEventHandler;
-_player addEventHandler ["GetInMan", { // Edited: Add radio channel handle on player get in vehicles & Force set groud texture detail, default = ["GetInMan", {_this call btc_ied_fnc_deleteLoop}]
+_player addEventHandler ["GetInMan", { // Edited: Default = ["GetInMan", {_this call btc_ied_fnc_deleteLoop}]
     _this call btc_ied_fnc_deleteLoop;
-    4 enableChannel true;
-    if (_this select 2 isKindOf "Air") then {
-        setDetailMapBlendPars [50, 150];
-    } else {
-        setDetailMapBlendPars [100, 250];
-    }
+    4 enableChannel true; // Edited: Add radio channel handle on player get in vehicles
+    // if (_this select 2 isKindOf "Air") then { // Edited: Force set groud texture detail for performance optimization
+    //     setDetailMapBlendPars [50, 150];
+    // } else {
+    //     setDetailMapBlendPars [100, 250];
+    // }
 }];
 _player addEventHandler ["GetOutMan", {
     if (btc_ied_deleteOn > -1) then {
@@ -57,7 +57,7 @@ _player addEventHandler ["GetOutMan", {
         btc_ied_deleteOn = -1;
     };
     4 enableChannel false; // Edited: Add radio channel handle on player get out vehicles
-    setDetailMapBlendPars [150, 300]; // Edited: Force set groud texture detail
+    // setDetailMapBlendPars [150, 300]; // Edited: Force set groud texture detail for performance optimization
 }];
 _player addEventHandler ["WeaponAssembled", {
     params ["_player", "_static"];
