@@ -31,7 +31,7 @@ class RscTitles {
 
 class CfgFunctions {
     // add your own functions below
-    #include "Custom\CHVD\chvd_functions.hpp" // Edited: Add CH View Distance
+    #include "Custom\CHVD\chvd_functions.hpp" // Edited: Add CH View Distance for performance optimization
 };
 
 // CBA XEH

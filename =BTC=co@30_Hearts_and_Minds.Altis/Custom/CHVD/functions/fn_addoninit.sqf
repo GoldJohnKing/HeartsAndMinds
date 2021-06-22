@@ -7,17 +7,17 @@
 	CHVD_carSyncMode = 0;
 	CHVD_airSyncMode = 0;
 
-	CHVD_foot = 1000;
-	CHVD_car = 1000;
-	CHVD_air = 5000;
+	CHVD_foot = 1800;
+	CHVD_car = 2400;
+	CHVD_air = 7500;
 
-	CHVD_footObj = 800;
-	CHVD_carObj = 800;
-	CHVD_airObj = 3000;
+	CHVD_footObj = 1500;
+	CHVD_carObj = 2000;
+	CHVD_airObj = 6000;
 
-	CHVD_footTerrain = 12.5;
-	CHVD_carTerrain = 25;
-	CHVD_airTerrain = 50;
+	CHVD_footTerrain = 0;
+	CHVD_carTerrain = 6.25;
+	CHVD_airTerrain = 12.5;
 	
 	CHVD_vehType = 0; // 0 = foot, 1 = car, 2 = air
 
