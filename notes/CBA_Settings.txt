@@ -292,7 +292,7 @@ force force ace_frag_enabled = true;
 force force ace_frag_maxTrack = 10;
 force force ace_frag_maxTrackPerFrame = 10;
 force force ace_frag_reflectionsEnabled = true;
-force force ace_frag_spallEnabled = true;
+force force ace_frag_spallEnabled = false;
 
 // ACE 武器按键
 force force ace_common_persistentLaserEnabled = true;
@@ -526,11 +526,11 @@ force force AGC_showBodyCount = false;
 // Aircraft Turbulence
 force force HELICOPTER_TURBULENCE_ENABLE_MASTER = true;
 force force HELICOPTER_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 15;
+force force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 10;
 force force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 2.5;
 force force PLANE_TURBULENCE_ENABLE_MASTER = true;
 force force PLANE_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force force PLANE_TURBULENCE_MAX_TURBULENCE = 15;
+force force PLANE_TURBULENCE_MAX_TURBULENCE = 10;
 force force PLANE_TURBULENCE_MIN_TURBULENCE = 2.5;
 
 // Anti-Bounce System
@@ -582,23 +582,6 @@ force force JD_Map_drawShaded = 0.4;
 force force JD_Map_GridEnabled = true;
 force force JD_Map_shadedSea = 0.8;
 
-// AWESome Aerodynamics
-force force orbis_aerodynamics_enabled = true;
-force force orbis_aerodynamics_pylonDragMultiplierGlobal = 1;
-force force orbis_aerodynamics_pylonMassMultiplierGlobal = 1;
-force force orbis_aerodynamics_windMultiplier = 1;
-
-// AWESome Cockpit
-force force orbis_cockpit_checklistUnits = "KM/H";
-force force orbis_cockpit_groundMultiplier = 1;
-force force orbis_cockpit_shakeEnabled = true;
-force force orbis_cockpit_speedMultiplier = 1;
-
-// AWESome GPWS
-force force orbis_gpws_automaticTransponder = true;
-force force orbis_gpws_defaultVolumeLow = false;
-force force orbis_gpws_personalDefault = "f16";
-
 // BettIR
 force force BettIR_ViewDistance = 300;
 
@@ -624,7 +607,7 @@ force force diwako_dui_ace_hide_interaction = false;
 force force diwako_dui_colors = "ace";
 force force diwako_dui_font = "RobotoCondensed";
 force force diwako_dui_icon_style = "standard";
-force force diwako_dui_main_hide_dialog = true;
+force force diwako_dui_main_hide_dialog = false;
 force force diwako_dui_main_hide_ui_by_default = false;
 force force diwako_dui_main_squadBlue = [0,0,1,1];
 force force diwako_dui_main_squadGreen = [0,1,0,1];
@@ -755,7 +738,7 @@ force force js_jc_fa18_showLabels = false;
 
 // Fawks' Enhanced NVGs
 force force PDT_EnhancedNVG_NVG_Blacklist = "";
-force force PDT_EnhancedNVG_NVG_Effect = "AmberPhosphor";
+force force PDT_EnhancedNVG_NVG_Effect = "GreenPhosphor";
 force force PDT_EnhancedNVG_Using_ACE = true;
 
 // Goobin's Gameplay Enhancements Core
@@ -782,6 +765,7 @@ force force grad_trenches_functions_vehicleEnvelopeDigTime = 75;
 
 // Headlamps
 force force Headlamps_Settings_AllowAll = true;
+force force Headlamps_Settings_ExtraCompatibleItems = "[]";
 
 // LAMBS Danger
 force force lambs_danger_cqbRange = 75;
@@ -813,6 +797,7 @@ force force lambs_main_disableAICallouts = false;
 force force lambs_main_disableAIDodge = false;
 force force lambs_main_disableAIFleeing = false;
 force force lambs_main_disableAIGestures = false;
+force force lambs_main_disableAutonomousMunitionSwitching = false;
 force force lambs_main_disablePlayerGroupSuppression = false;
 force force lambs_main_indoorMove = 0.15;
 force force lambs_main_maxRevealValue = 1;
