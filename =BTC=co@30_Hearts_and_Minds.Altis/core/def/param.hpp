@@ -117,7 +117,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ISOCCUPIED_DENSITY"]);
         values[]={0,10,20,30,40,45,50,60,70,80,90,100};
         texts[]={"0%","10%","20%","30%","40%","45%","50%","60%","70%","80%","90%","100%"};
-        default = 20;
+        default = 80;
     };
     class btc_p_mil_group_ratio { // Enemy density:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_SPWAN_ENEMY_DENSITY"]);
